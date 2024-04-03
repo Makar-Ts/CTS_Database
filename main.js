@@ -106,7 +106,7 @@ $(document).ready(function() {
             $("#resources").html(str);
         }
 
-        $("#weight").text(data.stats.weight+"kg");
+        $("#weight").text(data.stats.weight+"t");
 
 
         stats_str = ""
