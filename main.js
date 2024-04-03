@@ -172,11 +172,54 @@ $(document).ready(function() {
                 <tr><th>Blowout</th><td>${blowout}</td></tr>
                 <tr><th>Hull Aim</th><td>${hull_aim}</td></tr>
                 <tr><th>APS</th><td>${aps}</td></tr>
+                <tr><th>Crew</th><td>${data.stats.crew.join(", ")}</td></tr>
                 ${gun}
                 </table>`
                 break;
             case "turrets":
+                var aps, blowout, gun;
 
+                switch (data.stats.weaponry.blowout) {
+                    case -1:
+                        blowout = "None";
+                        break;
+                    case 0:
+                        blowout = "Partial";
+                        break;
+                    case 1:
+                        blowout = "Yes";
+                        break;
+                    default:
+                        blowout = "None";
+                        break;
+                }
+
+                if (data.stats.weaponry.aps) { aps = "Yes"; }
+                else { aps = "No"; }
+
+                if (data.stats.weaponry.fcs != -1) {
+                    fcs = `Up to ${data.stats.weaponry.fcs}km`;
+                } else { fcs = "No"; }
+
+                stats_str += `
+                <table>
+                <tr><th colspan="2" class="stat_header">Armor</th></tr>
+                <tr><th>Front</th><td>${data.stats.armor.front}mm</td></tr>
+                <tr><th>Back</th><td>${data.stats.armor.back}mm</td></tr>
+                <tr><th>Side</th><td>${data.stats.armor.side}mm</td></tr>
+                <tr><th colspan="2" class="stat_header">Movement</th></tr>
+                <tr><th>Up Limit</th><td>${data.stats.weaponry.gun.limits.up}</td></tr>
+                <tr><th>Down Limit</th><td>-${data.stats.weaponry.gun.limits.down}</td></tr>
+                <tr><th>Vertical Speed</th><td>${data.stats.weaponry.gun.speed.vertical}</td></tr>
+                <tr><th>Horizontal Speed</th><td>${data.stats.weaponry.gun.speed.horizontal}</td></tr>
+                <tr><th colspan="2" class="stat_header">Weaponry</th></tr>
+                <tr><th>Ammo Storage</th><td>${data.stats.weaponry.ammo_storage}</td></tr>
+                <tr><th>Stabilizer</th><td>${data.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
+                <tr><th>APS</th><td>${aps}</td></tr>
+                <tr><th>FCS</th><td>${fcs}</td></tr>
+                <tr><th>Blowout</th><td>${blowout}</td></tr>
+                <tr><th>Crew</th><td>${data.stats.crew.join(", ")}</td></tr>
+                </table>`
                 break;
             case "guns":
 
@@ -191,7 +234,6 @@ $(document).ready(function() {
 
         count = 1
         for (let key of Object.keys(data.paired)) {
-            console.log(count);
             $(`#paired_${count}`).text(data.paired[key]);
             switch (key) {
                 case "hull":
@@ -204,6 +246,7 @@ $(document).ready(function() {
                     $(`#paired_${count}_text`).text("Gun");
                     break;
                 default:
+                    console.log(key);
                     break;
             }
             count++;

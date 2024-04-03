@@ -42,7 +42,7 @@
     "based_on": "TKS/TK-3 [Poland]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"L3": {
@@ -87,7 +87,7 @@
     "based_on": "L3/33 / CV/33 Italy]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"Battlepass I": {
@@ -122,8 +122,8 @@
     },
     "based_on": "Panzer I C [Germany]",
     "paired": {
-        "gun": "Battlepass I",
-        "turrret": ""
+        "gun": "",
+        "turret": "Battlepass I"
     }
 }
 ,"10TP": {
@@ -158,8 +158,8 @@
     },
     "based_on": "10TP [Poland]",
     "paired": {
-        "gun": "10TP",
-        "turrret": ""
+        "gun": "",
+        "turret": "10TP"
     }
 }
 ,"UE-57": {
@@ -203,8 +203,8 @@
     },
     "based_on": "UE-57 [France]",
     "paired": {
-        "gun": "",
-        "turrret": "57mm Ue"
+        "gun": "57mm Ue",
+        "turret": ""
     }
 }
 ,"Ke-ni": {
@@ -239,8 +239,8 @@
     },
     "based_on": "Type 93 Ke-ni [Japan]",
     "paired": {
-        "gun": "Ke-ni",
-        "turrret": ""
+        "gun": "",
+        "turret": "Ke-ni"
     }
 }
 ,"Speedster": {
@@ -275,8 +275,8 @@
     },
     "based_on": "T7 Combat Car [USA]",
     "paired": {
-        "gun": "Recon",
-        "turrret": "28mm Mosquito"
+        "gun": "28mm Mosquito",
+        "turret": "Recon"
     }
 }
 ,"Kettenkrad": {
@@ -320,8 +320,8 @@
     },
     "based_on": "Sd.Kfz. 2 [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "12.7mm M2"
+        "gun": "12.7mm M2",
+        "turret": ""
     }
 }
 ,"LTD-3": {
@@ -366,7 +366,7 @@
     "based_on": "L3 [Fake]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"FT": {
@@ -401,8 +401,8 @@
     },
     "based_on": "Renault FT [France]",
     "paired": {
-        "gun": "FT",
-        "turrret": ""
+        "gun": "",
+        "turret": "FT"
     }
 }
 ,"Forklift": {
@@ -438,7 +438,7 @@
     "based_on": "Forklift [Forklift]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"ASU-57": {
@@ -482,8 +482,8 @@
     },
     "based_on": "ASU-57 [USSR]",
     "paired": {
-        "gun": "",
-        "turrret": "57mm ASU"
+        "gun": "57mm ASU",
+        "turret": ""
     }
 }
 ,"SARC": {
@@ -518,8 +518,8 @@
     },
     "based_on": "SARC Mk. VI [South Africa]",
     "paired": {
-        "gun": "SARC",
-        "turrret": "40mm QF-2"
+        "gun": "40mm QF-2",
+        "turret": "SARC"
     }
 }
 ,"T-60": {
@@ -554,8 +554,8 @@
     },
     "based_on": "T-60 [USSR]",
     "paired": {
-        "gun": "T-60",
-        "turrret": "20mm TN"
+        "gun": "20mm TN",
+        "turret": "T-60"
     }
 }
 ,"Crusader": {
@@ -590,8 +590,8 @@
     },
     "based_on": "Crusader [UK]",
     "paired": {
-        "gun": "Crusader [2] Crusader AA",
-        "turrret": "40mm QF-2 [1] 40mm Flak [4] 57mm Crusader"
+        "gun": "40mm QF-2 [1] 40mm Flak [4] 57mm Crusader",
+        "turret": "Crusader [2] Crusader AA"
     }
 }
 ,"M113": {
@@ -626,8 +626,8 @@
     },
     "based_on": "M113 [USA]",
     "paired": {
-        "gun": "VADS [5] TOW",
-        "turrret": "20mm Vulcan [1] TOW-HE [8] TOW"
+        "gun": "20mm Vulcan [1] TOW-HE [8] TOW",
+        "turret": "VADS [5] TOW"
     }
 }
 ,"M22": {
@@ -662,8 +662,8 @@
     },
     "based_on": "M22 Locust [USA]",
     "paired": {
-        "gun": "M22",
-        "turrret": "37mm M6"
+        "gun": "37mm M6",
+        "turret": "M22"
     }
 }
 ,"Humber": {
@@ -698,8 +698,8 @@
     },
     "based_on": "Humber Armoured Car [UK]",
     "paired": {
-        "gun": "Humber",
-        "turrret": "37mm M6 [1] 15mm ZB-53"
+        "gun": "37mm M6 [1] 15mm ZB-53",
+        "turret": "Humber"
     }
 }
 ,"Universal Carrier": {
@@ -743,8 +743,8 @@
     },
     "based_on": "Universal Carrier [UK]",
     "paired": {
-        "gun": "",
-        "turrret": "40mm QF-2"
+        "gun": "40mm QF-2",
+        "turret": ""
     }
 }
 ,"BT-7": {
@@ -779,8 +779,8 @@
     },
     "based_on": "BT-7 [USSR] BT-42 [Finland]",
     "paired": {
-        "gun": "BT-7 [1] BT-42",
-        "turrret": "45mm 20-K [1] 114mm Finnisher"
+        "gun": "45mm 20-K [1] 114mm Finnisher",
+        "turret": "BT-7 [1] BT-42"
     }
 }
 ,"BTrackless-7": {
@@ -815,8 +815,8 @@
     },
     "based_on": "BT-7 [USSR] BT-42 [Finland]",
     "paired": {
-        "gun": "BT-7 [1] BT-42",
-        "turrret": "45mm 20-K [1] 114mm Finnisher"
+        "gun": "45mm 20-K [1] 114mm Finnisher",
+        "turret": "BT-7 [1] BT-42"
     }
 }
 ,"EGG Mk 5": {
@@ -851,8 +851,8 @@
     },
     "based_on": "Egg [Fake]",
     "paired": {
-        "gun": "EGG Mk 5",
-        "turrret": "45mm EGG"
+        "gun": "45mm EGG",
+        "turret": "EGG Mk 5"
     }
 }
 ,"Fung": {
@@ -897,7 +897,7 @@
     "based_on": "Fung [Fake]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"Trigonometry": {
@@ -941,8 +941,8 @@
     },
     "based_on": "Speedster [Fake]",
     "paired": {
-        "gun": "",
-        "turrret": "None"
+        "gun": "None",
+        "turret": ""
     }
 }
 ,"Sherman": {
@@ -977,8 +977,8 @@
     },
     "based_on": "M4A2 Sherman [USA]",
     "paired": {
-        "gun": "M4A2 [3] Sherman [4] Calliope",
-        "turrret": "75mm Freedom [3] 76mm Freedom"
+        "gun": "75mm Freedom [3] 76mm Freedom",
+        "turret": "M4A2 [3] Sherman [4] Calliope"
     }
 }
 ,"Battlepass III": {
@@ -1013,8 +1013,8 @@
     },
     "based_on": "Panzer III M [Germany]",
     "paired": {
-        "gun": "Battlepass III",
-        "turrret": "50mm KwK 39"
+        "gun": "50mm KwK 39",
+        "turret": "Battlepass III"
     }
 }
 ,"Battlepass IV G": {
@@ -1049,8 +1049,8 @@
     },
     "based_on": "Panzer IV G [Germany]",
     "paired": {
-        "gun": "Battlepass IV G",
-        "turrret": "75mm Ikonisch"
+        "gun": "75mm Ikonisch",
+        "turret": "Battlepass IV G"
     }
 }
 ,"Chi-Nu": {
@@ -1085,8 +1085,8 @@
     },
     "based_on": "Type 3 Chi-Nu [Japan]",
     "paired": {
-        "gun": "Chi-Nu",
-        "turrret": "75mm Type 3"
+        "gun": "75mm Type 3",
+        "turret": "Chi-Nu"
     }
 }
 ,"MT-LB": {
@@ -1121,8 +1121,8 @@
     },
     "based_on": "MT-LB [USSR]",
     "paired": {
-        "gun": "ZU Platform",
-        "turrret": "ZU-23 (Twin)"
+        "gun": "ZU-23 (Twin)",
+        "turret": "ZU Platform"
     }
 }
 ,"Ke Tao 2021": {
@@ -1157,8 +1157,8 @@
     },
     "based_on": "Ke Tao 2020 [Fake]",
     "paired": {
-        "gun": "Cavalry 2021 [3] Shield",
-        "turrret": "40mm Pom Pom [2] 105mm Howitzer"
+        "gun": "40mm Pom Pom [2] 105mm Howitzer",
+        "turret": "Cavalry 2021 [3] Shield"
     }
 }
 ,"Basspanzer": {
@@ -1193,8 +1193,8 @@
     },
     "based_on": "Ke Tao 2021 [Fake]",
     "paired": {
-        "gun": "Basspanzer",
-        "turrret": "Basskanone"
+        "gun": "Basskanone",
+        "turret": "Basspanzer"
     }
 }
 ,"Centaur": {
@@ -1229,8 +1229,8 @@
     },
     "based_on": "Cromwell [UK] Charioteer [UK]",
     "paired": {
-        "gun": "Centaur [3] Charioteer",
-        "turrret": "75mm Empire [3] 84mm 20pdr Type B"
+        "gun": "75mm Empire [3] 84mm 20pdr Type B",
+        "turret": "Centaur [3] Charioteer"
     }
 }
 ,"Battlepass IV H": {
@@ -1265,8 +1265,8 @@
     },
     "based_on": "Panzer IV H [Germany]",
     "paired": {
-        "gun": "Battlepass IV H",
-        "turrret": "75mm Ikonisch"
+        "gun": "75mm Ikonisch",
+        "turret": "Battlepass IV H"
     }
 }
 ,"Quack": {
@@ -1301,8 +1301,8 @@
     },
     "based_on": "AMX 40 [France]",
     "paired": {
-        "gun": "Quack",
-        "turrret": "75mm Quack"
+        "gun": "75mm Quack",
+        "turret": "Quack"
     }
 }
 ,"Car": {
@@ -1338,7 +1338,7 @@
     "based_on": "Car [Roblox]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"Ke Tao 2020 (!)": {
@@ -1373,8 +1373,8 @@
     },
     "based_on": "None [Fake]",
     "paired": {
-        "gun": "Cavalry 2020 [3] Shield",
-        "turrret": "40mm Pom Pom [2] 105mm Howitzer"
+        "gun": "40mm Pom Pom [2] 105mm Howitzer",
+        "turret": "Cavalry 2020 [3] Shield"
     }
 }
 ,"Cromwheel": {
@@ -1409,8 +1409,8 @@
     },
     "based_on": "Cromwell [UK] Charioteer [UK]",
     "paired": {
-        "gun": "Centaur",
-        "turrret": "75mm Empire"
+        "gun": "75mm Empire",
+        "turret": "Centaur"
     }
 }
 ,"KV-1": {
@@ -1445,8 +1445,8 @@
     },
     "based_on": "KV-1 [USSR]",
     "paired": {
-        "gun": "KV-2 [4] KV-1E",
-        "turrret": "152mm Devastator"
+        "gun": "152mm Devastator",
+        "turret": "KV-2 [4] KV-1E"
     }
 }
 ,"SARL42": {
@@ -1481,8 +1481,8 @@
     },
     "based_on": "SARL 42 [France]",
     "paired": {
-        "gun": "SARL42",
-        "turrret": "None"
+        "gun": "None",
+        "turret": "SARL42"
     }
 }
 ,"M109": {
@@ -1517,8 +1517,8 @@
     },
     "based_on": "M109A6 Paladin [USA]",
     "paired": {
-        "gun": "M109",
-        "turrret": "155mm Heavy Hitter"
+        "gun": "155mm Heavy Hitter",
+        "turret": "M109"
     }
 }
 ,"Shed": {
@@ -1562,8 +1562,8 @@
     },
     "based_on": "SU-100Y [USSR]",
     "paired": {
-        "gun": "",
-        "turrret": "130mm B-13"
+        "gun": "130mm B-13",
+        "turret": ""
     }
 }
 ,"AMX CDC": {
@@ -1598,8 +1598,8 @@
     },
     "based_on": "AMX CDC [France]",
     "paired": {
-        "gun": "AMX CDC",
-        "turrret": ""
+        "gun": "",
+        "turret": "AMX CDC"
     }
 }
 ,"Pumi": {
@@ -1634,8 +1634,8 @@
     },
     "based_on": "Sd.Kfz. 234 [Germany]",
     "paired": {
-        "gun": "Pumi 234/1 [2] Pumi 234/2 [3] Pumi 407",
-        "turrret": "20mm sdkfzG [3] 50mm KwK 39 II"
+        "gun": "20mm sdkfzG [3] 50mm KwK 39 II",
+        "turret": "Pumi 234/1 [2] Pumi 234/2 [3] Pumi 407"
     }
 }
 ,"Projekty T-17": {
@@ -1670,8 +1670,8 @@
     },
     "based_on": "ShPTK-LP [Czechoslovakia]",
     "paired": {
-        "gun": "Projekty T-17",
-        "turrret": ""
+        "gun": "",
+        "turret": "Projekty T-17"
     }
 }
 ,"FV107": {
@@ -1706,8 +1706,8 @@
     },
     "based_on": "FV107 Scimitar [UK]",
     "paired": {
-        "gun": "FV107",
-        "turrret": "30mm Rarden"
+        "gun": "30mm Rarden",
+        "turret": "FV107"
     }
 }
 ,"2S1": {
@@ -1742,8 +1742,8 @@
     },
     "based_on": "2S1 Gvozdika [USSR]",
     "paired": {
-        "gun": "2S1",
-        "turrret": "122mm 2A18"
+        "gun": "122mm 2A18",
+        "turret": "2S1"
     }
 }
 ,"Type 63": {
@@ -1779,7 +1779,7 @@
     "based_on": "Type 63 [China]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"T-34": {
@@ -1814,8 +1814,8 @@
     },
     "based_on": "T-34 [USSR]",
     "paired": {
-        "gun": "T-34-85",
-        "turrret": "85mm ZIS-S"
+        "gun": "85mm ZIS-S",
+        "turret": "T-34-85"
     }
 }
 ,"XM800T": {
@@ -1850,8 +1850,8 @@
     },
     "based_on": "XM800T [USA]",
     "paired": {
-        "gun": "XM800T",
-        "turrret": "20mm M139"
+        "gun": "20mm M139",
+        "turret": "XM800T"
     }
 }
 ,"ELC": {
@@ -1886,8 +1886,8 @@
     },
     "based_on": "AMX ELC bis [France]",
     "paired": {
-        "gun": "ELC",
-        "turrret": "90mm Marteau"
+        "gun": "90mm Marteau",
+        "turret": "ELC"
     }
 }
 ,"M18": {
@@ -1922,8 +1922,8 @@
     },
     "based_on": "M18 Hellcat [USA]",
     "paired": {
-        "gun": "M18",
-        "turrret": "76mm Freedom"
+        "gun": "76mm Freedom",
+        "turret": "M18"
     }
 }
 ,"T-35": {
@@ -1958,8 +1958,8 @@
     },
     "based_on": "T-35 [USSR]",
     "paired": {
-        "gun": "T-35",
-        "turrret": ""
+        "gun": "",
+        "turret": "T-35"
     }
 }
 ,"Speedsta": {
@@ -2003,8 +2003,8 @@
     },
     "based_on": "Speedster [Fake]",
     "paired": {
-        "gun": "",
-        "turrret": "190mm Bruh"
+        "gun": "190mm Bruh",
+        "turret": ""
     }
 }
 ,"Cabin": {
@@ -2048,8 +2048,8 @@
     },
     "based_on": "SU-152 [USSR]",
     "paired": {
-        "gun": "",
-        "turrret": "152mm ML-20S"
+        "gun": "152mm ML-20S",
+        "turret": ""
     }
 }
 ,"Ka-Chi": {
@@ -2084,8 +2084,8 @@
     },
     "based_on": "Type 3 Ka-Chi [Japan]",
     "paired": {
-        "gun": "Ka-Chi",
-        "turrret": "47mm Type 1"
+        "gun": "47mm Type 1",
+        "turret": "Ka-Chi"
     }
 }
 ,"M4 HCR2": {
@@ -2120,8 +2120,8 @@
     },
     "based_on": "M4 Sherman w/ HCR2 [USA]",
     "paired": {
-        "gun": "M4 HCR2",
-        "turrret": "75mm Freedom"
+        "gun": "75mm Freedom",
+        "turret": "M4 HCR2"
     }
 }
 ,"Battlepacks III Concrete": {
@@ -2165,8 +2165,8 @@
     },
     "based_on": "Stug III F [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "75mm Ikonisch"
+        "gun": "75mm Ikonisch",
+        "turret": ""
     }
 }
 ,"Battlepacks": {
@@ -2210,8 +2210,8 @@
     },
     "based_on": "Sturmtiger [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "38cm Doomsday"
+        "gun": "38cm Doomsday",
+        "turret": ""
     }
 }
 ,"Battlepass VI": {
@@ -2246,8 +2246,8 @@
     },
     "based_on": "Tiger I [Germany]",
     "paired": {
-        "gun": "Battlepass VI",
-        "turrret": "8.8cm Ikonisch"
+        "gun": "8.8cm Ikonisch",
+        "turret": "Battlepass VI"
     }
 }
 ,"BMP": {
@@ -2282,8 +2282,8 @@
     },
     "based_on": "BMP-2 [USSR]",
     "paired": {
-        "gun": "BMP-1 [4] BMP-2",
-        "turrret": "30mm 2A42"
+        "gun": "30mm 2A42",
+        "turret": "BMP-1 [4] BMP-2"
     }
 }
 ,"AMX-10RC": {
@@ -2318,8 +2318,8 @@
     },
     "based_on": "AMX-10RC [France]",
     "paired": {
-        "gun": "AMX-10RC",
-        "turrret": "105mm F2 48 Calibre"
+        "gun": "105mm F2 48 Calibre",
+        "turret": "AMX-10RC"
     }
 }
 ,"LTG": {
@@ -2363,8 +2363,8 @@
     },
     "based_on": "Gavalov Tank/LTG[USSR]",
     "paired": {
-        "gun": "",
-        "turrret": "None/85mm ZIS-S"
+        "gun": "None/85mm ZIS-S",
+        "turret": ""
     }
 }
 ,"Lorraine": {
@@ -2399,8 +2399,8 @@
     },
     "based_on": "Lorraine 40t [France]",
     "paired": {
-        "gun": "Lorraine",
-        "turrret": "100mm Brochette"
+        "gun": "100mm Brochette",
+        "turret": "Lorraine"
     }
 }
 ,"Yoyota HMMWV (S)": {
@@ -2444,8 +2444,8 @@
     },
     "based_on": "Humvee [USA]",
     "paired": {
-        "gun": "",
-        "turrret": "12.7mm M2 [1] 40mm MK19 GMG"
+        "gun": "12.7mm M2 [1] 40mm MK19 GMG",
+        "turret": ""
     }
 }
 ,"HM41": {
@@ -2480,8 +2480,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "TM41",
-        "turrret": "75mm TG2"
+        "gun": "75mm TG2",
+        "turret": "TM41"
     }
 }
 ,"Battlepacks Sturmmorser": {
@@ -2525,8 +2525,8 @@
     },
     "based_on": "Sturmtiger [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "38cm RW61"
+        "gun": "38cm RW61",
+        "turret": ""
     }
 }
 ,"Yoyota HMMWV": {
@@ -2561,8 +2561,8 @@
     },
     "based_on": "Humvee [USA]",
     "paired": {
-        "gun": "TOW",
-        "turrret": "40mm MK19 GMG [6] TOW-HE [8] TOW"
+        "gun": "40mm MK19 GMG [6] TOW-HE [8] TOW",
+        "turret": "TOW"
     }
 }
 ,"Ferret (!)": {
@@ -2606,8 +2606,8 @@
     },
     "based_on": "TKS Tankette (?) [Poland]",
     "paired": {
-        "gun": "",
-        "turrret": "90mm Needle"
+        "gun": "90mm Needle",
+        "turret": ""
     }
 }
 ,"Panzerro": {
@@ -2642,8 +2642,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "La Pizza",
-        "turrret": "Rigatoni 2"
+        "gun": "Rigatoni 2",
+        "turret": "La Pizza"
     }
 }
 ,"XM800TX": {
@@ -2678,8 +2678,8 @@
     },
     "based_on": "XM800T [Fake]",
     "paired": {
-        "gun": "XM800TX",
-        "turrret": "75mm AT-43 [3] 20mm M139 (?) [4] 99.7mm Fusiler LARP"
+        "gun": "75mm AT-43 [3] 20mm M139 (?) [4] 99.7mm Fusiler LARP",
+        "turret": "XM800TX"
     }
 }
 ,"Strf 90": {
@@ -2714,8 +2714,8 @@
     },
     "based_on": "CV90 [Sweden]",
     "paired": {
-        "gun": "Strf 90",
-        "turrret": "40mm Bofors L/70"
+        "gun": "40mm Bofors L/70",
+        "turret": "Strf 90"
     }
 }
 ,"Battlepass VI (B)": {
@@ -2750,8 +2750,8 @@
     },
     "based_on": "Tiger II [Germany]",
     "paired": {
-        "gun": "Battlepass VI (B)",
-        "turrret": "8.8cm Ikonisch II"
+        "gun": "8.8cm Ikonisch II",
+        "turret": "Battlepass VI (B)"
     }
 }
 ,"FV4202": {
@@ -2786,8 +2786,8 @@
     },
     "based_on": "FV4202 [UK]",
     "paired": {
-        "gun": "FV4202",
-        "turrret": "84mm 20pdr Type B"
+        "gun": "84mm 20pdr Type B",
+        "turret": "FV4202"
     }
 }
 ,"Dragoon 300": {
@@ -2822,8 +2822,8 @@
     },
     "based_on": "Dragoon 300 LFV-90 [USA]",
     "paired": {
-        "gun": "Dragoon 300",
-        "turrret": "90mm CSE"
+        "gun": "90mm CSE",
+        "turret": "Dragoon 300"
     }
 }
 ,"M48A3": {
@@ -2858,8 +2858,8 @@
     },
     "based_on": "M48A1 [USA]",
     "paired": {
-        "gun": "M48A3 [5] M48 Super",
-        "turrret": "90mm M41"
+        "gun": "90mm M41",
+        "turret": "M48A3 [5] M48 Super"
     }
 }
 ,"OF-40": {
@@ -2894,8 +2894,8 @@
     },
     "based_on": "Palmaria [Italy] Otomatic [Italy]",
     "paired": {
-        "gun": "OTO",
-        "turrret": "76mm OTO"
+        "gun": "76mm OTO",
+        "turret": "OTO"
     }
 }
 ,"M3 Bradley": {
@@ -2930,8 +2930,8 @@
     },
     "based_on": "M3 Bradley [USA]",
     "paired": {
-        "gun": "M3 Bradley",
-        "turrret": "25mm Bushmaster"
+        "gun": "25mm Bushmaster",
+        "turret": "M3 Bradley"
     }
 }
 ,"ERC": {
@@ -2967,7 +2967,7 @@
     "based_on": "Panhard ERC [France]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"Bagelpanzer": {
@@ -3002,8 +3002,8 @@
     },
     "based_on": "Begleitpanzer 57 [Germany]",
     "paired": {
-        "gun": "Bagelpanzer",
-        "turrret": "57mm Pom Pom Mk. X"
+        "gun": "57mm Pom Pom Mk. X",
+        "turret": "Bagelpanzer"
     }
 }
 ,"P.43": {
@@ -3038,8 +3038,8 @@
     },
     "based_on": "P.43 [Italy]",
     "paired": {
-        "gun": "P.43",
-        "turrret": ""
+        "gun": "",
+        "turret": "P.43"
     }
 }
 ,"Ru 251": {
@@ -3074,8 +3074,8 @@
     },
     "based_on": "RU 251 [Germany]",
     "paired": {
-        "gun": "Ru 251",
-        "turrret": "90mm BK90"
+        "gun": "90mm BK90",
+        "turret": "Ru 251"
     }
 }
 ,"IS-2 Mod. 1944": {
@@ -3110,8 +3110,8 @@
     },
     "based_on": "IS-2 mod. 1944 [USSR]",
     "paired": {
-        "gun": "IS-2 Mod. 1944",
-        "turrret": "122mm D-25T"
+        "gun": "122mm D-25T",
+        "turret": "IS-2 Mod. 1944"
     }
 }
 ,"O-I": {
@@ -3146,8 +3146,8 @@
     },
     "based_on": "O-I Tank [Japan]",
     "paired": {
-        "gun": "O-I",
-        "turrret": "150mm Type 96 Howitzer [4] 105mmm Type 92"
+        "gun": "150mm Type 96 Howitzer [4] 105mmm Type 92",
+        "turret": "O-I"
     }
 }
 ,"AMX-13": {
@@ -3182,8 +3182,8 @@
     },
     "based_on": "AMX-13 [France]",
     "paired": {
-        "gun": "FL-10 [5] FL-10 HOT",
-        "turrret": "75mm SA50 [5] 90mm CN90 F3"
+        "gun": "75mm SA50 [5] 90mm CN90 F3",
+        "turret": "FL-10 [5] FL-10 HOT"
     }
 }
 ,"LAV": {
@@ -3218,8 +3218,8 @@
     },
     "based_on": "LAV-25 [USA] LAV-AD [USA]",
     "paired": {
-        "gun": "",
-        "turrret": "25mm Bushmaster"
+        "gun": "25mm Bushmaster",
+        "turret": ""
     }
 }
 ,"Centurion Mk5": {
@@ -3254,8 +3254,8 @@
     },
     "based_on": "Centurion [UK]",
     "paired": {
-        "gun": "Centurion Mk3 [6] FV4005",
-        "turrret": "84mm 20pdr Type B [7] 105mm Royal [10] 183mm QF L4A1"
+        "gun": "84mm 20pdr Type B [7] 105mm Royal [10] 183mm QF L4A1",
+        "turret": "Centurion Mk3 [6] FV4005"
     }
 }
 ,"Battlepacks VI (B)": {
@@ -3299,8 +3299,8 @@
     },
     "based_on": "Jagdtiger [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "128mm German Punch"
+        "gun": "128mm German Punch",
+        "turret": ""
     }
 }
 ,"M551": {
@@ -3335,8 +3335,8 @@
     },
     "based_on": "M551 Sheridan [USA]",
     "paired": {
-        "gun": "M551",
-        "turrret": "152mm M81 Gun Launcher"
+        "gun": "152mm M81 Gun Launcher",
+        "turret": "M551"
     }
 }
 ,"Battlepacks 4-5": {
@@ -3380,8 +3380,8 @@
     },
     "based_on": "KanJPz 4-5 [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "90mm BK90"
+        "gun": "90mm BK90",
+        "turret": ""
     }
 }
 ,"M26": {
@@ -3416,8 +3416,8 @@
     },
     "based_on": "M26 Pershing [USA]",
     "paired": {
-        "gun": "M26",
-        "turrret": "90mm Freedom II"
+        "gun": "90mm Freedom II",
+        "turret": "M26"
     }
 }
 ,"TOG II*": {
@@ -3452,8 +3452,8 @@
     },
     "based_on": "TOG II* [UK]",
     "paired": {
-        "gun": "TOG II*",
-        "turrret": "94mm 28 Pdr"
+        "gun": "94mm 28 Pdr",
+        "turret": "TOG II*"
     }
 }
 ,"Dragoon 300 \"Free Wifi\"": {
@@ -3488,8 +3488,8 @@
     },
     "based_on": "Dragoon 300 LFV-90 [USA] V-150[Phillipines]",
     "paired": {
-        "gun": "Dragoon 300",
-        "turrret": "90mm CSE"
+        "gun": "90mm CSE",
+        "turret": "Dragoon 300"
     }
 }
 ,"Jeek": {
@@ -3533,8 +3533,8 @@
     },
     "based_on": "Willys MB [USA]",
     "paired": {
-        "gun": "",
-        "turrret": "106mm Recoilless"
+        "gun": "106mm Recoilless",
+        "turret": ""
     }
 }
 ,"Centurion AVRE": {
@@ -3569,8 +3569,8 @@
     },
     "based_on": "Centurion AVRE [UK]",
     "paired": {
-        "gun": "Centurion AVRE",
-        "turrret": "165mm Demolition Charge Projector"
+        "gun": "165mm Demolition Charge Projector",
+        "turret": "Centurion AVRE"
     }
 }
 ,"Ghana IFV": {
@@ -3605,8 +3605,8 @@
     },
     "based_on": "Kantanka SPG [Ghana]",
     "paired": {
-        "gun": "Ghana IFV",
-        "turrret": ""
+        "gun": "",
+        "turret": "Ghana IFV"
     }
 }
 ,"Meerkat DSV": {
@@ -3642,7 +3642,7 @@
     "based_on": "None",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"BT-7BM": {
@@ -3677,8 +3677,8 @@
     },
     "based_on": "BT-7 [Fake]",
     "paired": {
-        "gun": "BT-7BM",
-        "turrret": "45mm 20-K"
+        "gun": "45mm 20-K",
+        "turret": "BT-7BM"
     }
 }
 ,"Trolley": {
@@ -3723,7 +3723,7 @@
     "based_on": "None",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"M48A3 Camo": {
@@ -3758,8 +3758,8 @@
     },
     "based_on": "M48A1 [USA]",
     "paired": {
-        "gun": "M48A3 Camo",
-        "turrret": "90mm M41"
+        "gun": "90mm M41",
+        "turret": "M48A3 Camo"
     }
 }
 ,"Fake M1": {
@@ -3804,7 +3804,7 @@
     "based_on": "MT-LB \"Airsoft Abrams\" [Russia/Homemade]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"T-55": {
@@ -3839,8 +3839,8 @@
     },
     "based_on": "T-55 [USSR]",
     "paired": {
-        "gun": "T-55",
-        "turrret": "100mm Molotok"
+        "gun": "100mm Molotok",
+        "turret": "T-55"
     }
 }
 ,"Chieftain": {
@@ -3875,8 +3875,8 @@
     },
     "based_on": "Chieftain Mk. 3 [UK]",
     "paired": {
-        "gun": "Chieftain",
-        "turrret": "120mm L11A1"
+        "gun": "120mm L11A1",
+        "turret": "Chieftain"
     }
 }
 ,"R3": {
@@ -3920,8 +3920,8 @@
     },
     "based_on": "OTO R3 Capraia [Italy]",
     "paired": {
-        "gun": "",
-        "turrret": "20mm Oerlikon"
+        "gun": "20mm Oerlikon",
+        "turret": ""
     }
 }
 ,"Wiesel": {
@@ -3965,8 +3965,8 @@
     },
     "based_on": "Wiesel AWC [Germany]",
     "paired": {
-        "gun": "",
-        "turrret": "TOW"
+        "gun": "TOW",
+        "turret": ""
     }
 }
 ,"Type 74": {
@@ -4001,8 +4001,8 @@
     },
     "based_on": "Type 74 [Japan]",
     "paired": {
-        "gun": "Type 74",
-        "turrret": "105mm Royal"
+        "gun": "105mm Royal",
+        "turret": "Type 74"
     }
 }
 ,"BMD-4": {
@@ -4037,8 +4037,8 @@
     },
     "based_on": "BMD-4 [USSR]",
     "paired": {
-        "gun": "BMD-4",
-        "turrret": "100mm 2A70"
+        "gun": "100mm 2A70",
+        "turret": "BMD-4"
     }
 }
 ,"XT1A IXWA": {
@@ -4073,8 +4073,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "Universal Turret",
-        "turrret": "58mm Fusiler I"
+        "gun": "58mm Fusiler I",
+        "turret": "Universal Turret"
     }
 }
 ,"Puma": {
@@ -4109,8 +4109,8 @@
     },
     "based_on": "Puma [Italy]",
     "paired": {
-        "gun": "TOW (from 4x4)",
-        "turrret": "TOW"
+        "gun": "TOW",
+        "turret": "TOW (from 4x4)"
     }
 }
 ,"IS-3": {
@@ -4145,8 +4145,8 @@
     },
     "based_on": "IS-3 [USSR]",
     "paired": {
-        "gun": "IS-3",
-        "turrret": "122mm D-25T"
+        "gun": "122mm D-25T",
+        "turret": "IS-3"
     }
 }
 ,"MMWT": {
@@ -4181,8 +4181,8 @@
     },
     "based_on": "Harimau / Kaplan MT [Indonesia / Turkey]",
     "paired": {
-        "gun": "MMWT",
-        "turrret": "105mm High Pressure CV"
+        "gun": "105mm High Pressure CV",
+        "turret": "MMWT"
     }
 }
 ,"XT2R Export Early": {
@@ -4217,8 +4217,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "Export",
-        "turrret": "58mm Fusiler I"
+        "gun": "58mm Fusiler I",
+        "turret": "Export"
     }
 }
 ,"XTPR Expeditionary": {
@@ -4253,8 +4253,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "XTPR Expeditionary [7] Expeditionary",
-        "turrret": "112mm HATG"
+        "gun": "112mm HATG",
+        "turret": "XTPR Expeditionary [7] Expeditionary"
     }
 }
 ,"Rooikat": {
@@ -4289,8 +4289,8 @@
     },
     "based_on": "Rooikat [South Africa]",
     "paired": {
-        "gun": "Rooikat [7] ZA-35",
-        "turrret": "105mm GT-7"
+        "gun": "105mm GT-7",
+        "turret": "Rooikat [7] ZA-35"
     }
 }
 ,"B1 Centauro": {
@@ -4325,8 +4325,8 @@
     },
     "based_on": "B1 Centauro [Italy]",
     "paired": {
-        "gun": "B1 Centauro",
-        "turrret": "105mm OTO"
+        "gun": "105mm OTO",
+        "turret": "B1 Centauro"
     }
 }
 ,"AMX-50": {
@@ -4361,8 +4361,8 @@
     },
     "based_on": "AMX 50 [France]",
     "paired": {
-        "gun": "Lorraine",
-        "turrret": "100mm Brochette"
+        "gun": "100mm Brochette",
+        "turret": "Lorraine"
     }
 }
 ,"Type-96A": {
@@ -4397,8 +4397,8 @@
     },
     "based_on": "Type 96A [China]",
     "paired": {
-        "gun": "Type-96A",
-        "turrret": "125mm 2A46M"
+        "gun": "125mm 2A46M",
+        "turret": "Type-96A"
     }
 }
 ,"Strv 103A": {
@@ -4442,8 +4442,8 @@
     },
     "based_on": "Strv 103 [Sweden]",
     "paired": {
-        "gun": "",
-        "turrret": "105mm L74"
+        "gun": "105mm L74",
+        "turret": ""
     }
 }
 ,"Progetto": {
@@ -4478,8 +4478,8 @@
     },
     "based_on": "Progetto C50 mod. 66 [Wargaming]",
     "paired": {
-        "gun": "Progetto C50",
-        "turrret": ""
+        "gun": "",
+        "turret": "Progetto C50"
     }
 }
 ,"Yoyota HMMWV (TOW)": {
@@ -4523,8 +4523,8 @@
     },
     "based_on": "Humvee [USA]",
     "paired": {
-        "gun": "",
-        "turrret": "TOW-HE [8] TOW"
+        "gun": "TOW-HE [8] TOW",
+        "turret": ""
     }
 }
 ,"The Battlepass": {
@@ -4559,8 +4559,8 @@
     },
     "based_on": "Maus [Germamy]",
     "paired": {
-        "gun": "The Battlepass",
-        "turrret": "128mm German Punch"
+        "gun": "128mm German Punch",
+        "turret": "The Battlepass"
     }
 }
 ,"T-64A": {
@@ -4595,8 +4595,8 @@
     },
     "based_on": "T-64A [USSR]",
     "paired": {
-        "gun": "T-64A",
-        "turrret": "125mm 2A26"
+        "gun": "125mm 2A26",
+        "turret": "T-64A"
     }
 }
 ,"XT3R  Faux": {
@@ -4631,8 +4631,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "XT3R Faux",
-        "turrret": "XL1K"
+        "gun": "XL1K",
+        "turret": "XT3R Faux"
     }
 }
 ,"Strv 103C": {
@@ -4676,8 +4676,8 @@
     },
     "based_on": "Strv 103C [Sweden]",
     "paired": {
-        "gun": "",
-        "turrret": "105mm L74"
+        "gun": "105mm L74",
+        "turret": ""
     }
 }
 ,"Battlepass 50M": {
@@ -4712,8 +4712,8 @@
     },
     "based_on": "E-50 [Germany] E-50M [Wargaming]",
     "paired": {
-        "gun": "Battlepass 50M",
-        "turrret": "8.8 cm Kw.K L/100"
+        "gun": "8.8 cm Kw.K L/100",
+        "turret": "Battlepass 50M"
     }
 }
 ,"L'bunkre": {
@@ -4757,8 +4757,8 @@
     },
     "based_on": "AMX 50 Foch [France]",
     "paired": {
-        "gun": "",
-        "turrret": "Canon de 120mm"
+        "gun": "Canon de 120mm",
+        "turret": ""
     }
 }
 ,"T-55AM1": {
@@ -4793,8 +4793,8 @@
     },
     "based_on": "T-55AM1 [USSR]",
     "paired": {
-        "gun": "T-55AM1",
-        "turrret": "100mm Molotok"
+        "gun": "100mm Molotok",
+        "turret": "T-55AM1"
     }
 }
 ,"Trackedauro": {
@@ -4829,8 +4829,8 @@
     },
     "based_on": "B1 Centauro [Fake]",
     "paired": {
-        "gun": "B1 Centauro",
-        "turrret": "105mm OTO"
+        "gun": "105mm OTO",
+        "turret": "B1 Centauro"
     }
 }
 ,"The Santapass": {
@@ -4865,8 +4865,8 @@
     },
     "based_on": "Maus [Germamy]",
     "paired": {
-        "gun": "The Santapass",
-        "turrret": "128mm Festive Punch"
+        "gun": "128mm Festive Punch",
+        "turret": "The Santapass"
     }
 }
 ,"Battlepass CEO": {
@@ -4901,8 +4901,8 @@
     },
     "based_on": "Panzer III M [Germany]",
     "paired": {
-        "gun": "Battlepass III",
-        "turrret": "50mm KwK 39"
+        "gun": "50mm KwK 39",
+        "turret": "Battlepass III"
     }
 }
 ,"Motorcycle": {
@@ -4946,8 +4946,8 @@
     },
     "based_on": "Motorcycle [Motorcycle]",
     "paired": {
-        "gun": "",
-        "turrret": "20mm FS"
+        "gun": "20mm FS",
+        "turret": ""
     }
 }
 ,"Chieftain SID": {
@@ -4982,8 +4982,8 @@
     },
     "based_on": "Chieftain SID [UK]",
     "paired": {
-        "gun": "Chieftain SID",
-        "turrret": "120mm L11A1"
+        "gun": "120mm L11A1",
+        "turret": "Chieftain SID"
     }
 }
 ,"Battlepass-100 (!)": {
@@ -5018,8 +5018,8 @@
     },
     "based_on": "E-100 [Germany]",
     "paired": {
-        "gun": "The Battlepass (?)",
-        "turrret": "128mm German Punch"
+        "gun": "128mm German Punch",
+        "turret": "The Battlepass (?)"
     }
 }
 ,"HSTV-L": {
@@ -5054,8 +5054,8 @@
     },
     "based_on": "HSTV-L [USA]",
     "paired": {
-        "gun": "HSTV-L",
-        "turrret": "75mm XM274"
+        "gun": "75mm XM274",
+        "turret": "HSTV-L"
     }
 }
 ,"Speedsta II": {
@@ -5100,7 +5100,7 @@
     "based_on": "Speedster [Fake]",
     "paired": {
         "gun": "",
-        "turrret": ""
+        "turret": ""
     }
 }
 ,"Puma TOW": {
@@ -5144,8 +5144,8 @@
     },
     "based_on": "Puma (4x4) [Italy]",
     "paired": {
-        "gun": "",
-        "turrret": "TOW-HE [8] TOW"
+        "gun": "TOW-HE [8] TOW",
+        "turret": ""
     }
 }
 ,"T-72A": {
@@ -5180,8 +5180,8 @@
     },
     "based_on": "T-72A [USSR]",
     "paired": {
-        "gun": "T-72A [9] TOS-1",
-        "turrret": "125mm 2A46M"
+        "gun": "125mm 2A46M",
+        "turret": "T-72A [9] TOS-1"
     }
 }
 ,"K15A Mirage": {
@@ -5216,8 +5216,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "K15A Mirage",
-        "turrret": "None"
+        "gun": "None",
+        "turret": "K15A Mirage"
     }
 }
 ,"Ariete": {
@@ -5252,8 +5252,8 @@
     },
     "based_on": "C1 Ariete [Italy]",
     "paired": {
-        "gun": "Ariete",
-        "turrret": ""
+        "gun": "",
+        "turret": "Ariete"
     }
 }
 ,"Challenger 1": {
@@ -5288,8 +5288,8 @@
     },
     "based_on": "Challenger 1 [UK]",
     "paired": {
-        "gun": "Challenger 1",
-        "turrret": "120mm L15"
+        "gun": "120mm L15",
+        "turret": "Challenger 1"
     }
 }
 ,"Export": {
@@ -5324,8 +5324,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "Export",
-        "turrret": "58mm Fusiler I [8] 62.7mm Fusiler II"
+        "gun": "58mm Fusiler I [8] 62.7mm Fusiler II",
+        "turret": "Export"
     }
 }
 ,"B1 Centauro MK II": {
@@ -5360,8 +5360,8 @@
     },
     "based_on": "B1 Centauro [Italy]",
     "paired": {
-        "gun": "B1 Centauro MK II",
-        "turrret": "105mm OTO"
+        "gun": "105mm OTO",
+        "turret": "B1 Centauro MK II"
     }
 }
 ,"NANO": {
@@ -5405,8 +5405,8 @@
     },
     "based_on": "Marker UGV [Russia]",
     "paired": {
-        "gun": "",
-        "turrret": "12.7mm M2 [1] 30mm 2A42"
+        "gun": "12.7mm M2 [1] 30mm 2A42",
+        "turret": ""
     }
 }
 ,"Type 90": {
@@ -5441,8 +5441,8 @@
     },
     "based_on": "Type 90 [Japan]",
     "paired": {
-        "gun": "Type 90",
-        "turrret": "120mm L44"
+        "gun": "120mm L44",
+        "turret": "Type 90"
     }
 }
 ,"Challenger 2": {
@@ -5477,8 +5477,8 @@
     },
     "based_on": "Challenger 2 [UK]",
     "paired": {
-        "gun": "Challenger 2",
-        "turrret": ""
+        "gun": "",
+        "turret": "Challenger 2"
     }
 }
 ,"M1": {
@@ -5513,8 +5513,8 @@
     },
     "based_on": "M1 Abrams [USA]",
     "paired": {
-        "gun": "M1 [10] M1 FREEDOM [10] M1 Special",
-        "turrret": "105mm M68 [10] 120mm Eagle"
+        "gun": "105mm M68 [10] 120mm Eagle",
+        "turret": "M1 [10] M1 FREEDOM [10] M1 Special"
     }
 }
 ,"Leopard 2": {
@@ -5549,8 +5549,8 @@
     },
     "based_on": "Leopard 2A4 [Germany] Vickers Mk 7/2 [UK]",
     "paired": {
-        "gun": "Leopard 2A4 [11] Vickers 7/1",
-        "turrret": "120mm L44 [11] 120mm L15"
+        "gun": "120mm L44 [11] 120mm L15",
+        "turret": "Leopard 2A4 [11] Vickers 7/1"
     }
 }
 ,"Contender 1E": {
@@ -5585,8 +5585,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "Contender 1E",
-        "turrret": "None"
+        "gun": "None",
+        "turret": "Contender 1E"
     }
 }
 ,"Cyber_Panzer": {
@@ -5630,8 +5630,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "",
-        "turrret": "None"
+        "gun": "None",
+        "turret": ""
     }
 }
 ,"Black Night": {
@@ -5666,8 +5666,8 @@
     },
     "based_on": "Challenger 2 LEP [UK]",
     "paired": {
-        "gun": "Black Night",
-        "turrret": ""
+        "gun": "",
+        "turret": "Black Night"
     }
 }
 ,"M1 Generous Dynamics": {
@@ -5702,8 +5702,8 @@
     },
     "based_on": "M1 Abrams [USA] M1A1 [USA]",
     "paired": {
-        "gun": "M1 Merry Chrysler",
-        "turrret": "105mm M68"
+        "gun": "105mm M68",
+        "turret": "M1 Merry Chrysler"
     }
 }
 ,"T-80BV": {
@@ -5738,8 +5738,8 @@
     },
     "based_on": "T-80BV [USSR]",
     "paired": {
-        "gun": "None",
-        "turrret": "125mm 2A46M"
+        "gun": "125mm 2A46M",
+        "turret": "None"
     }
 }
 ,"EXM-2AG/117": {
@@ -5774,8 +5774,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "EXM-2AG/117",
-        "turrret": "117mm Betwixt"
+        "gun": "117mm Betwixt",
+        "turret": "EXM-2AG/117"
     }
 }
 ,"EXM-SFSTC": {
@@ -5810,8 +5810,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "EXM-SFSTC",
-        "turrret": "49.7mm DbGPAC"
+        "gun": "49.7mm DbGPAC",
+        "turret": "EXM-SFSTC"
     }
 }
 ,"T-72B3": {
@@ -5846,8 +5846,8 @@
     },
     "based_on": "T-72B3 [Russia]",
     "paired": {
-        "gun": "T-72B3 [11] Terminator 2",
-        "turrret": "125mm 2A46M [11] 30mm Terminator"
+        "gun": "125mm 2A46M [11] 30mm Terminator",
+        "turret": "T-72B3 [11] Terminator 2"
     }
 }
 ,"Type 10": {
@@ -5882,8 +5882,8 @@
     },
     "based_on": "Type 10 [Japan]",
     "paired": {
-        "gun": "Type 10",
-        "turrret": "120mm TKG"
+        "gun": "120mm TKG",
+        "turret": "Type 10"
     }
 }
 ,"T-90M": {
@@ -5918,8 +5918,8 @@
     },
     "based_on": "T-90M [Russia]",
     "paired": {
-        "gun": "T-90M",
-        "turrret": "125mm 2A46M"
+        "gun": "125mm 2A46M",
+        "turret": "T-90M"
     }
 }
 ,"Leopard 2 Type C": {
@@ -5954,8 +5954,8 @@
     },
     "based_on": "Leopard 2A4 [Germany]",
     "paired": {
-        "gun": "Leopard 2A4",
-        "turrret": "120mm L44"
+        "gun": "120mm L44",
+        "turret": "Leopard 2A4"
     }
 }
 ,"Challenger 2 ATDU": {
@@ -5990,8 +5990,8 @@
     },
     "based_on": "Challenger 2 TES \"Megatron\" [UK]",
     "paired": {
-        "gun": "Challenger 2 ATDU",
-        "turrret": ""
+        "gun": "",
+        "turret": "Challenger 2 ATDU"
     }
 }
 ,"Yoyota MK2E": {
@@ -6035,8 +6035,8 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "",
-        "turrret": "166mm Peacemaker"
+        "gun": "166mm Peacemaker",
+        "turret": ""
     }
 }
 ,"T-14 Armata": {
@@ -6080,8 +6080,8 @@
     },
     "based_on": "T-14 Armata [Russia]",
     "paired": {
-        "gun": "",
-        "turrret": "125mm 2A821M"
+        "gun": "125mm 2A821M",
+        "turret": ""
     }
 }
 ,"Object 148 Prototype": {
@@ -6125,8 +6125,8 @@
     },
     "based_on": "T-14 Armata [Russia]",
     "paired": {
-        "gun": "",
-        "turrret": "125mm 2A821M"
+        "gun": "125mm 2A821M",
+        "turret": ""
     }
 }
 
@@ -6141,9 +6141,9 @@
     "stats": {
         "weight": 1.97,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 20,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6155,8 +6155,8 @@
                 "reload_multiplier": 0.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 25,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 8.9,
@@ -6181,9 +6181,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 40,
+            "back": 30,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 2.1,
@@ -6195,8 +6195,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 18,
+                    "down": 13
                 },
                 "speed": {
                     "vertical": 4,
@@ -6221,9 +6221,9 @@
     "stats": {
         "weight": 2.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 14,
+            "side": 4
         },
         "weaponry": {
             "ammo_storage": 0.9,
@@ -6235,8 +6235,8 @@
                 "reload_multiplier": 0.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 45,
+                    "down": 15
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -6261,9 +6261,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 17,
+            "back": 29,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 0.9,
@@ -6275,8 +6275,8 @@
                 "reload_multiplier": 0.54,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -6301,9 +6301,9 @@
     "stats": {
         "weight": 3.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 25,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 1.4,
@@ -6315,8 +6315,8 @@
                 "reload_multiplier": 0.54,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -6341,9 +6341,9 @@
     "stats": {
         "weight": 1.40,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 5,
+            "back": 5,
+            "side": 5
         },
         "weaponry": {
             "ammo_storage": 0.2,
@@ -6355,8 +6355,8 @@
                 "reload_multiplier": 0.5,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 18,
+                    "down": 15
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -6381,9 +6381,9 @@
     "stats": {
         "weight": 2.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 80,
+            "back": 20,
+            "side": 14
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6395,8 +6395,8 @@
                 "reload_multiplier": 0.54,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 3,
@@ -6421,9 +6421,9 @@
     "stats": {
         "weight": 3.40,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 4.1,
@@ -6435,8 +6435,8 @@
                 "reload_multiplier": 0.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 16,
@@ -6461,9 +6461,9 @@
     "stats": {
         "weight": 2.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 16,
+            "back": 6,
+            "side": 6
         },
         "weaponry": {
             "ammo_storage": 6.9,
@@ -6475,8 +6475,8 @@
                 "reload_multiplier": 1.12,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -6515,8 +6515,8 @@
                 "reload_multiplier": 0.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 35,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -6541,9 +6541,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6555,8 +6555,8 @@
                 "reload_multiplier": 0.54,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -6581,9 +6581,9 @@
     "stats": {
         "weight": 2.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 14,
+            "side": 3
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6595,8 +6595,8 @@
                 "reload_multiplier": 0.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 70,
+                    "down": 4
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -6621,9 +6621,9 @@
     "stats": {
         "weight": 1.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 4.4,
@@ -6635,8 +6635,8 @@
                 "reload_multiplier": 0.75,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 17,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -6661,9 +6661,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 20,
+            "back": 10,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6675,8 +6675,8 @@
                 "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 27,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 22.9,
@@ -6701,9 +6701,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 39,
+            "back": 19,
+            "side": 16
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6715,8 +6715,8 @@
                 "reload_multiplier": 0.58,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -6741,9 +6741,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 34,
+            "back": 15,
+            "side": 13
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6755,8 +6755,8 @@
                 "reload_multiplier": 1.06,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -6795,8 +6795,8 @@
                 "reload_multiplier": 0.6,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 24,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 2.9,
@@ -6821,9 +6821,9 @@
     "stats": {
         "weight": 1.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6835,8 +6835,8 @@
                 "reload_multiplier": 0.7,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 2.5,
@@ -6861,9 +6861,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6875,8 +6875,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 10,
@@ -6901,9 +6901,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -6915,8 +6915,8 @@
                 "reload_multiplier": 1.00,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -6941,9 +6941,9 @@
     "stats": {
         "weight": 3.75,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 63,
+            "side": 63
         },
         "weaponry": {
             "ammo_storage": 7.8,
@@ -6955,8 +6955,8 @@
                 "reload_multiplier": 1.00,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -6981,9 +6981,9 @@
     "stats": {
         "weight": 5.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 26,
+            "back": 16,
+            "side": 16
         },
         "weaponry": {
             "ammo_storage": 0.8,
@@ -6995,8 +6995,8 @@
                 "reload_multiplier": 1.11,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 35,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 15,
@@ -7021,9 +7021,9 @@
     "stats": {
         "weight": 2.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 13.1,
@@ -7035,8 +7035,8 @@
                 "reload_multiplier": 0.58,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 70,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -7075,8 +7075,8 @@
                 "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -7101,9 +7101,9 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 14,
+            "side": 14
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7115,8 +7115,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -7141,9 +7141,9 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 14,
+            "side": 14
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7155,8 +7155,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 11,
@@ -7181,9 +7181,9 @@
     "stats": {
         "weight": 7.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 82,
+            "back": 33,
+            "side": 16
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7195,8 +7195,8 @@
                 "reload_multiplier": 0.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 30,
@@ -7221,9 +7221,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7235,8 +7235,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -7261,9 +7261,9 @@
     "stats": {
         "weight": 2.54,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 82,
+            "back": 33,
+            "side": 16
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7275,8 +7275,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 30,
@@ -7301,9 +7301,9 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 30,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7315,8 +7315,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -7341,9 +7341,9 @@
     "stats": {
         "weight": 2.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 70,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 0.5,
@@ -7355,8 +7355,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 4,
@@ -7381,9 +7381,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7395,8 +7395,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -7421,9 +7421,9 @@
     "stats": {
         "weight": 4.30,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 25,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7435,8 +7435,8 @@
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -7461,9 +7461,9 @@
     "stats": {
         "weight": 5.0,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 82,
+            "back": 33,
+            "side": 16
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7475,8 +7475,8 @@
                 "reload_multiplier": 0.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -7501,9 +7501,9 @@
     "stats": {
         "weight": 2.10,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 25,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 8.8,
@@ -7515,8 +7515,8 @@
                 "reload_multiplier": 0.81,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 114.6,
@@ -7541,9 +7541,9 @@
     "stats": {
         "weight": 4.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 10,
+            "side": 35
         },
         "weaponry": {
             "ammo_storage": 6.2,
@@ -7555,8 +7555,8 @@
                 "reload_multiplier": 1.00,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 10,
@@ -7581,9 +7581,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 90,
+            "back": 52,
+            "side": 75
         },
         "weaponry": {
             "ammo_storage": 10.0,
@@ -7595,8 +7595,8 @@
                 "reload_multiplier": 1.07,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 22,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 2.9,
@@ -7621,9 +7621,9 @@
     "stats": {
         "weight": 12.30,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 63,
+            "side": 63
         },
         "weaponry": {
             "ammo_storage": 2.3,
@@ -7635,8 +7635,8 @@
                 "reload_multiplier": 1.00,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -7661,9 +7661,9 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 25.8,
@@ -7675,8 +7675,8 @@
                 "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -7701,9 +7701,9 @@
     "stats": {
         "weight": 12.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 75,
+            "back": 30,
+            "side": 70
         },
         "weaponry": {
             "ammo_storage": 19.6,
@@ -7715,8 +7715,8 @@
                 "reload_multiplier": 1.54,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 12,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 2.9,
@@ -7741,9 +7741,9 @@
     "stats": {
         "weight": 15.95,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 100,
+            "back": 80,
+            "side": 80
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7755,8 +7755,8 @@
                 "reload_multiplier": 1.09,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 16,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 2.5,
@@ -7781,9 +7781,9 @@
     "stats": {
         "weight": 12.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 100,
+            "back": 80,
+            "side": 80
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7795,8 +7795,8 @@
                 "reload_multiplier": 1.09,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -7821,9 +7821,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 7.1,
@@ -7835,8 +7835,8 @@
                 "reload_multiplier": 1.04,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -7861,9 +7861,9 @@
     "stats": {
         "weight": 14.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 33,
+            "back": 15,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 65.5,
@@ -7875,8 +7875,8 @@
                 "reload_multiplier": 1.56,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 75,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 7,
@@ -7901,9 +7901,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 19,
+            "back": 10,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 33.5,
@@ -7915,8 +7915,8 @@
                 "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 70,
+                    "down": 3
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -7941,9 +7941,9 @@
     "stats": {
         "weight": 12.30,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 63,
+            "side": 63
         },
         "weaponry": {
             "ammo_storage": 7.8,
@@ -7955,8 +7955,8 @@
                 "reload_multiplier": 1.00,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 2.2,
@@ -7981,9 +7981,9 @@
     "stats": {
         "weight": 7.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 111,
+            "back": 40,
+            "side": 40
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -7995,8 +7995,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 5,
@@ -8021,9 +8021,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 20,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 6.1,
@@ -8035,8 +8035,8 @@
                 "reload_multiplier": 1.00,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 6.9,
@@ -8061,9 +8061,9 @@
     "stats": {
         "weight": 12.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 45,
+            "back": 30,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 9.5,
@@ -8075,8 +8075,8 @@
                 "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 40.7,
@@ -8101,9 +8101,9 @@
     "stats": {
         "weight": 6.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 40,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 6.2,
@@ -8115,8 +8115,8 @@
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 13,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -8141,9 +8141,9 @@
     "stats": {
         "weight": 4.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 4.6,
@@ -8155,8 +8155,8 @@
                 "reload_multiplier": 1.25,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 30,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -8181,9 +8181,9 @@
     "stats": {
         "weight": 4.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 42,
+            "back": 25,
+            "side": 42
         },
         "weaponry": {
             "ammo_storage": 11.9,
@@ -8195,8 +8195,8 @@
                 "reload_multiplier": 1.35,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 10,
@@ -8221,9 +8221,9 @@
     "stats": {
         "weight": 10.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 20,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 22.1,
@@ -8235,8 +8235,8 @@
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 12,
@@ -8261,9 +8261,9 @@
     "stats": {
         "weight": 19.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 90,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 11.9,
@@ -8275,8 +8275,8 @@
                 "reload_multiplier": 1.11,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 19,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 12,
@@ -8315,8 +8315,8 @@
                 "reload_multiplier": 0.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 80,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -8341,9 +8341,9 @@
     "stats": {
         "weight": 3.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -8355,8 +8355,8 @@
                 "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 8.7,
@@ -8381,9 +8381,9 @@
     "stats": {
         "weight": 11.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 152,
+            "back": 75,
+            "side": 75
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -8395,8 +8395,8 @@
                 "reload_multiplier": 1.07,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 25,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 4,
@@ -8421,9 +8421,9 @@
     "stats": {
         "weight": 17.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -8435,8 +8435,8 @@
                 "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -8461,9 +8461,9 @@
     "stats": {
         "weight": 6.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 25,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 8.8,
@@ -8475,8 +8475,8 @@
                 "reload_multiplier": 1.0,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -8501,9 +8501,9 @@
     "stats": {
         "weight": 12.30,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 63,
+            "side": 63
         },
         "weaponry": {
             "ammo_storage": 7.8,
@@ -8515,8 +8515,8 @@
                 "reload_multiplier": 1.0,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -8541,9 +8541,9 @@
     "stats": {
         "weight": 9.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 102,
+            "back": 32,
+            "side": 50
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -8555,8 +8555,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 7,
@@ -8595,8 +8595,8 @@
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 90,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -8621,9 +8621,9 @@
     "stats": {
         "weight": 11.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 1.7,
@@ -8635,8 +8635,8 @@
                 "reload_multiplier": 1.12,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -8661,9 +8661,9 @@
     "stats": {
         "weight": 27.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 150,
+            "back": 70,
+            "side": 150
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -8675,8 +8675,8 @@
                 "reload_multiplier": 1.45,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 3,
@@ -8701,9 +8701,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 90,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 13.2,
@@ -8715,8 +8715,8 @@
                 "reload_multiplier": 1.6,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 19,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -8741,9 +8741,9 @@
     "stats": {
         "weight": 22.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 100,
+            "back": 100,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 9.8,
@@ -8755,8 +8755,8 @@
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 3
                 },
                 "speed": {
                     "vertical": 2.9,
@@ -8781,9 +8781,9 @@
     "stats": {
         "weight": 10.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 14,
+            "back": 14,
+            "side": 14
         },
         "weaponry": {
             "ammo_storage": 37.9,
@@ -8795,8 +8795,8 @@
                 "reload_multiplier": 1.8,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 18,
@@ -8821,22 +8821,22 @@
     "stats": {
         "weight": 17.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 152,
+            "back": 86,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 0.7,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.06,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 8.7,
@@ -8861,9 +8861,9 @@
     "stats": {
         "weight": 27.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 186,
+            "back": 80,
+            "side": 80
         },
         "weaponry": {
             "ammo_storage": 21.7,
@@ -8875,8 +8875,8 @@
                 "reload_multiplier": 1.1,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -8901,9 +8901,9 @@
     "stats": {
         "weight": 16.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 101,
+            "back": 76,
+            "side": 76
         },
         "weaponry": {
             "ammo_storage": 6.5,
@@ -8915,8 +8915,8 @@
                 "reload_multiplier": 1.1,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 4,
@@ -8941,9 +8941,9 @@
     "stats": {
         "weight": 30.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 114,
+            "back": 50,
+            "side": 70
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -8955,8 +8955,8 @@
                 "reload_multiplier": 1.14,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 2.9,
@@ -8981,9 +8981,9 @@
     "stats": {
         "weight": 20.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 152,
+            "back": 86,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 0.7,
@@ -8995,8 +8995,8 @@
                 "reload_multiplier": 1.52,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 8,
@@ -9021,9 +9021,9 @@
     "stats": {
         "weight": 1.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -9035,8 +9035,8 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 25,
@@ -9061,22 +9061,22 @@
     "stats": {
         "weight": 7.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 15,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 4.1,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.7,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -9101,9 +9101,9 @@
     "stats": {
         "weight": 19.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 90,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 11.9,
@@ -9115,8 +9115,8 @@
                 "reload_multiplier": 1.11,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 19,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 12,
@@ -9141,22 +9141,22 @@
     "stats": {
         "weight": 18.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 130,
+            "back": 35,
+            "side": 65
         },
         "weaponry": {
             "ammo_storage": 13.7,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.1,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 9,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 23,
@@ -9181,22 +9181,22 @@
     "stats": {
         "weight": 12.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 30,
+            "back": 20,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 15.0,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -9221,22 +9221,22 @@
     "stats": {
         "weight": 10.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 200,
+            "back": 90,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 4.5,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.15,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 3.4,
@@ -9261,22 +9261,22 @@
     "stats": {
         "weight": 19.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 250,
+            "back": 70,
+            "side": 90
         },
         "weaponry": {
             "ammo_storage": 11.9,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.11,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 19,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 12,
@@ -9301,9 +9301,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 23,
@@ -9315,8 +9315,8 @@
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 24,
@@ -9341,22 +9341,22 @@
     "stats": {
         "weight": 15.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 290,
+            "back": 100,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 23.6,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.19,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 18,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -9381,22 +9381,22 @@
     "stats": {
         "weight": 10.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 20,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 4.0,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.12,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 35,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -9421,22 +9421,22 @@
     "stats": {
         "weight": 14.50,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 24.8,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.45,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -9461,9 +9461,9 @@
     "stats": {
         "weight": 6.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 40,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 6.2,
@@ -9475,8 +9475,8 @@
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 13,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -9501,22 +9501,22 @@
     "stats": {
         "weight": 18.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 250,
+            "back": 45,
+            "side": 86
         },
         "weaponry": {
             "ammo_storage": 11.6,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 3.1,
@@ -9541,9 +9541,9 @@
     "stats": {
         "weight": 23.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 270,
+            "back": 60,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -9555,8 +9555,8 @@
                 "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 8,
@@ -9581,22 +9581,22 @@
     "stats": {
         "weight": 2.60,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 20,
+            "back": 10,
+            "side": 16
         },
         "weaponry": {
             "ammo_storage": 23.7,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.42,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 74,
+                    "down": 4
                 },
                 "speed": {
                     "vertical": 30,
@@ -9621,9 +9621,9 @@
     "stats": {
         "weight": 10.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 200,
+            "back": 100,
+            "side": 120
         },
         "weaponry": {
             "ammo_storage": 42.9,
@@ -9635,8 +9635,8 @@
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 3
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -9661,22 +9661,22 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 40,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 9.9,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 14.3,
@@ -9701,22 +9701,22 @@
     "stats": {
         "weight": 6.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 80,
+            "back": 10,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 7.0,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.11,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 10,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -9741,9 +9741,9 @@
     "stats": {
         "weight": 55.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 232,
+            "back": 200,
+            "side": 180
         },
         "weaponry": {
             "ammo_storage": 42.4,
@@ -9755,8 +9755,8 @@
                 "reload_multiplier": 1.39,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 23,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 2.5,
@@ -9781,22 +9781,22 @@
     "stats": {
         "weight": 7.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 10,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 38.2,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.7,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 81,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -9821,22 +9821,22 @@
     "stats": {
         "weight": 8.90,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 8,
+            "side": 14
         },
         "weaponry": {
             "ammo_storage": 10.9,
             "blowout": 1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 24,
+                    "down": 15
                 },
                 "speed": {
                     "vertical": 57.3,
@@ -9861,22 +9861,22 @@
     "stats": {
         "weight": 9.30,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 12.6,
             "blowout": 1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.24,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 42,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 19,
@@ -9910,13 +9910,13 @@
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 45,
+                    "down": 8
                 },
                 "speed": {
                     "vertical": 11.5,
@@ -9941,22 +9941,22 @@
     "stats": {
         "weight": 15.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 290,
+            "back": 100,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 23.6,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.19,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 18,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -9981,22 +9981,22 @@
     "stats": {
         "weight": 23.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 250,
+            "back": 45,
+            "side": 86
         },
         "weaponry": {
             "ammo_storage": 12.3,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -10021,9 +10021,9 @@
     "stats": {
         "weight": 55.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 232,
+            "back": 200,
+            "side": 180
         },
         "weaponry": {
             "ammo_storage": 42.4,
@@ -10035,8 +10035,8 @@
                 "reload_multiplier": 1.39,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 23,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 2.5,
@@ -10061,22 +10061,22 @@
     "stats": {
         "weight": 13.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 435,
+            "back": 60,
+            "side": 165
         },
         "weaponry": {
             "ammo_storage": 20.5,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.37,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 13,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 10,
@@ -10101,22 +10101,22 @@
     "stats": {
         "weight": 9.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 25,
+            "back": 25,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 13.8,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.53,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 60,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -10141,22 +10141,22 @@
     "stats": {
         "weight": 13.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 26,
+            "back": 26,
+            "side": 26
         },
         "weaponry": {
             "ammo_storage": 37.2,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 2.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 60,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 40.1,
@@ -10181,22 +10181,22 @@
     "stats": {
         "weight": 6.90,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 160,
+            "back": 30,
+            "side": 40
         },
         "weaponry": {
             "ammo_storage": 18.1,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 45,
+                    "down": 17
                 },
                 "speed": {
                     "vertical": 48.5,
@@ -10221,22 +10221,22 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 253,
+            "back": 40,
+            "side": 40
         },
         "weaponry": {
             "ammo_storage": 25.2,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 12,
+                    "down": 15
                 },
                 "speed": {
                     "vertical": 8.6,
@@ -10261,22 +10261,22 @@
     "stats": {
         "weight": 9.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 140,
+            "back": 15,
+            "side": 60
         },
         "weaponry": {
             "ammo_storage": 9.9,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 14.3,
@@ -10301,22 +10301,22 @@
     "stats": {
         "weight": 10.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 375,
+            "back": 100,
+            "side": 280
         },
         "weaponry": {
             "ammo_storage": 37.8,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.37,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 14,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 10.7,
@@ -10341,9 +10341,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 20,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 0.1,
@@ -10355,8 +10355,8 @@
                 "reload_multiplier": 1.0,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 70,
+                    "down": 1
                 },
                 "speed": {
                     "vertical": 5.7,
@@ -10395,8 +10395,8 @@
                 "reload_multiplier": 1.69,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 12,
+                    "down": 15
                 },
                 "speed": {
                     "vertical": 2.9,
@@ -10421,22 +10421,22 @@
     "stats": {
         "weight": 23.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 350,
+            "back": 35,
+            "side": 260
         },
         "weaponry": {
             "ammo_storage": 20.6,
             "blowout": 1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 17.2,
@@ -10461,22 +10461,22 @@
     "stats": {
         "weight": 3.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 25.3,
             "blowout": -1,
             "aps": false,
             "fcs": 5,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 60,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 34.4,
@@ -10501,22 +10501,22 @@
     "stats": {
         "weight": 20.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 350,
+            "back": 20,
+            "side": 170
         },
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.29,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 7.3,
@@ -10541,22 +10541,22 @@
     "stats": {
         "weight": 18.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 590,
+            "back": 40,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 23.0,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 12,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 10,
@@ -10581,22 +10581,22 @@
     "stats": {
         "weight": 24.80,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 380,
+            "back": 25,
+            "side": 75
         },
         "weaponry": {
             "ammo_storage": 25,
             "blowout": 1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.55,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 10,
+                    "down": 7
                 },
                 "speed": {
                     "vertical": 7,
@@ -10621,22 +10621,22 @@
     "stats": {
         "weight": 8.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 340,
+            "back": 20,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 30.3,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.45,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 45,
@@ -10661,22 +10661,22 @@
     "stats": {
         "weight": 21.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 510,
+            "back": 45,
+            "side": 210
         },
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
             "aps": false,
             "fcs": 1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 9,
@@ -10701,22 +10701,22 @@
     "stats": {
         "weight": 20.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 655,
+            "back": 30,
+            "side": 67
         },
         "weaponry": {
             "ammo_storage": 17.8,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -10741,22 +10741,22 @@
     "stats": {
         "weight": 20.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 400,
+            "back": 15,
+            "side": 160
         },
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.29,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 7.3,
@@ -10781,22 +10781,22 @@
     "stats": {
         "weight": 20.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 400,
+            "back": 15,
+            "side": 160
         },
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.29,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 7.3,
@@ -10821,22 +10821,22 @@
     "stats": {
         "weight": 9.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 20,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 71.6,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.12,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 85,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -10861,22 +10861,22 @@
     "stats": {
         "weight": 20.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 540,
+            "back": 15,
+            "side": 170
         },
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.35,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 7.3,
@@ -10901,22 +10901,22 @@
     "stats": {
         "weight": 15.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 350,
+            "back": 120,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 22.7,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.38,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 22.9,
@@ -10941,22 +10941,22 @@
     "stats": {
         "weight": 25.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 450,
+            "back": 32,
+            "side": 30
         },
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -10981,22 +10981,22 @@
     "stats": {
         "weight": 16.40,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 60,
+            "back": 60,
+            "side": 60
         },
         "weaponry": {
             "ammo_storage": 9.1,
             "blowout": -1,
             "aps": true,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 28.6,
@@ -11021,22 +11021,22 @@
     "stats": {
         "weight": 13.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 470,
+            "back": 40,
+            "side": 310
         },
         "weaponry": {
             "ammo_storage": 18.4,
             "blowout": 1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.35,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 10,
@@ -11061,22 +11061,22 @@
     "stats": {
         "weight": 12.40,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 510,
+            "back": 15,
+            "side": 160
         },
         "weaponry": {
             "ammo_storage": 17.3,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.35,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 9,
@@ -11101,22 +11101,22 @@
     "stats": {
         "weight": 13.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 440,
+            "back": 75,
+            "side": 230
         },
         "weaponry": {
             "ammo_storage": 20.5,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.49,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 13,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 10,
@@ -11141,22 +11141,22 @@
     "stats": {
         "weight": 22.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 690,
+            "back": 25,
+            "side": 110
         },
         "weaponry": {
             "ammo_storage": 18.7,
             "blowout": 0,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.62,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 15,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 7,
@@ -11181,22 +11181,22 @@
     "stats": {
         "weight": 32.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 700,
+            "back": 45,
+            "side": 45
         },
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -11221,22 +11221,22 @@
     "stats": {
         "weight": 25.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 750,
+            "back": 26,
+            "side": 260
         },
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
             "aps": true,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
@@ -11261,22 +11261,22 @@
     "stats": {
         "weight": 13.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 800,
+            "back": 50,
+            "side": 110
         },
         "weaponry": {
             "ammo_storage": 44.2,
             "blowout": 0,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.49,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 13,
+                    "down": 6
                 },
                 "speed": {
                     "vertical": 10,
@@ -11301,22 +11301,22 @@
     "stats": {
         "weight": 10.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 64,
+            "back": 30,
+            "side": 44
         },
         "weaponry": {
             "ammo_storage": 33.6,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.7,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 90,
+                    "down": 20
                 },
                 "speed": {
                     "vertical": 45.8,
@@ -11341,22 +11341,22 @@
     "stats": {
         "weight": 11.20,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 20,
+            "side": 20
         },
         "weaponry": {
             "ammo_storage": 19.4,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.17,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 45,
+                    "down": 5
                 },
                 "speed": {
                     "vertical": 30,
@@ -11381,22 +11381,22 @@
     "stats": {
         "weight": 16.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 10,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 11.4,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 0.7,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 85,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 40.1,
@@ -11421,22 +11421,22 @@
     "stats": {
         "weight": 30.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 10,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 69.6,
             "blowout": -1,
             "aps": false,
             "fcs": 3,
-            "stabilizer": false,
+            "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.6,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180
+                    "up": 20,
+                    "down": 10
                 },
                 "speed": {
                     "vertical": 34.4,
@@ -15220,7 +15220,7 @@
     }
 }
 ,"TOW-HE": {
-    "description": "TOW but HE",
+    "description": "E",
     "tier": 8,
     "rarity": "Epic",
     "obtain": "Blueprints",

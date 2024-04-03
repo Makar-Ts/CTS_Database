@@ -104,10 +104,16 @@ body {
 
 .stat_header {
     border-bottom: 1px solid #ffffff;
+    font-size: 1.2em;
+}
+
+#name {
+    font-size: 2em;
 }
 
 .stats {
     padding-left: 40px;
+    padding-right: 40px;
 }
 
 .footer {

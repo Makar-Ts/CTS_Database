@@ -45,6 +45,7 @@ for i in range(1, len(data[0])-1):
     
     armor = list(map(lambda x: x.split("(")[0].replace("~", ""), data[5][i].split("/")))
     if len(armor) != 3:
+        print("armor:", armor, data[0][i].replace("\n", "\\n").replace('"', '\\"'))
         armor = [0, 0, 0, 0]
     
     speed = data[6][i].split("/")
@@ -68,6 +69,7 @@ for i in range(1, len(data[0])-1):
     elif "Suspension Only".lower() in data[11][i].lower():
         aim = 1
     else:
+        print("aim:", data[11][i], data[0][i].replace("\n", "\\n").replace('"', '\\"'))
         aim = -1
     
     
@@ -79,6 +81,7 @@ for i in range(1, len(data[0])-1):
         
         reload_multi = data[12][i].replace(",", ".").split()
         if len(reload_multi) != 2:
+            print("reload:", reload_multi, data[0][i].replace("\n", "\\n").replace('"', '\\"'))
             reload_multi = [reload_multi[0], "0"]
         
         limits_hor = data[13][i].split("/")
@@ -123,11 +126,9 @@ for i in range(1, len(data[0])-1):
         weapon_gun=hull_gun,
         crew='["'+data[16][i].replace("\n", '", "')+'"]',
         based_on=as_string(" ".join(data[18][i].split())),
-        paired_gun=as_string(" ".join(data[19][i].split()[:-1])),
-        paired_turret=as_string(" ".join(data[20][i].split()[:-1]))
+        paired_gun=as_string(" ".join(data[20][i].split()[:-1])),
+        paired_turret=as_string(" ".join(data[19][i].split()[:-1]))
     )
-    
-    print(string)
     
     hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "")
     
@@ -164,8 +165,9 @@ for i in range(1, len(data[22])-1):
         ammo = ammo.split()[0]
     
     
-    armor = list(map(lambda x: x.split("(")[0].replace("~", ""), data[34][i].split("/")))
+    armor = list(map(lambda x: x.split("(")[0].replace("~", ""), data[26][i].split("/")))
     if len(armor) != 3:
+        print("armor:",armor, data[22][i].replace("\n", "\\n").replace('"', '\\"'))
         armor = [0, 0, 0, 0]
     
     aps = data[34][i].replace("N/A", "No")
@@ -175,7 +177,7 @@ for i in range(1, len(data[22])-1):
         aps = "false"
         
     stab = data[27][i].replace("N/A", "No")
-    if "Yes" in aps:
+    if "Yes" in stab:
         stab = "true"
     else:
         stab = "false"
@@ -184,6 +186,7 @@ for i in range(1, len(data[22])-1):
     
     reload_multi = data[32][i].replace(",", ".").split()
     if len(reload_multi) != 2:
+        print("reload:", reload_multi, data[22][i].replace("\n", "\\n").replace('"', '\\"'))
         reload_multi = [reload_multi[0], "0"]
 
     limits_ver = data[29][i].split("/")
@@ -208,8 +211,8 @@ for i in range(1, len(data[22])-1):
         weapon_stabilizer=stab,
         weapon_gun_reload_multi=reload_multi[0],
         weapon_gun_reload_multi_caliber=reload_multi[1].replace("(", "").replace(")", "").replace("mm", ""),
-        weapon_gun_limits_up=limits_hor[1],
-        weapon_gun_limits_down=limits_hor[0].replace("-", ""),
+        weapon_gun_limits_up=limits_ver[1],
+        weapon_gun_limits_down=limits_ver[0].replace("-", ""),
         weapon_gun_speed_vertical=speed[1][1:],
         weapon_gun_speed_horizontal=speed[0][1:],
         crew='["'+data[35][i].replace("\n", '", "')+'"]',
@@ -217,8 +220,6 @@ for i in range(1, len(data[22])-1):
         paired_gun=as_string(" ".join(data[39][i].split()[:-1])),
         paired_hull=as_string(" ".join(data[38][i].split()[:-1]))
     )
-    
-    print(string)
     
     turrets_string += string.replace("#VALUE!", "0").replace("°", "")
     
@@ -307,8 +308,6 @@ for i in range(1, len(data[41])-1):
         paired_turret=as_string(" ".join(data[56][i].split()[:-1])),
         paired_hull=as_string(" ".join(data[57][i].split()[:-1]))
     )
-    
-    print(string)
     
     guns_string += string.replace("#VALUE!", "0").replace("°", "")
     

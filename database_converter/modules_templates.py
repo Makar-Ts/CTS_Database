@@ -44,7 +44,7 @@ HULL = """"{name}": {{
     "based_on": {based_on},
     "paired": {{
         "gun": {paired_gun},
-        "turrret": {paired_turret}
+        "turret": {paired_turret}
     }}
 }}
 """
