@@ -82,6 +82,9 @@ $(document).ready(function() {
         plain = ""
         if ($(this).data("type") == "hulls" | $(this).data("type") == "turrets") { plain = " Plain"; }
         $("#item_img_container").text("Image loading...");
+        document.getElementById('item_img').onerror = function(event) {
+            $("#item_img_container").text("No img, sorry Т_Т");
+        };
         $("#item_img").attr('src', `./img/${$(this).data("type")}/Tier ${data.tier}/${hull}${plain}.png`)
         $('#item_img').css('display', 'none');
         
