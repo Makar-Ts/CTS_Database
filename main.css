@@ -116,6 +116,11 @@ body {
     padding-right: 40px;
 }
 
+.stats_ammunition {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .footer {
     left: 0;
     bottom: 0;

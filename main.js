@@ -1,6 +1,16 @@
 const filePath = "./database.json";
 var database;
 
+var ammo_stats_titles = {
+    "fuse_sensitive": ["Fuse Sensitive", "mm"],
+    "fuse_delay": ["Fuse Delay", "m"],
+    "explosive_mass": ["Explosive Mass", ""],
+    "fuse_radius": ["Fuse Radius", "m"],
+    "arming_distance": ["Arming Distance", "m"],
+    "range": ["Range", "km"]
+};
+
+
 $("#item_container").hide();
 
 function fetchJSONFile(path, callback) { // thx ChatGPT
@@ -227,7 +237,34 @@ $(document).ready(function() {
                 </table>`
                 break;
             case "guns":
+                var ammos = "";
+                data.stats.weaponry.ammunition.forEach(element => {
+                    ammo_stats = ""
+                    for (var key of Object.keys(element.stats)) {
+                        if (element.stats[key] == -1) continue;
 
+                        ammo_stats += `<tr><th>${ammo_stats_titles[key][0]}</th><td>${element.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
+                    }
+
+                    ammos += `<tr><th colspan="2" class="stat_header">${element.type}</th></tr>
+                    <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
+                    <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
+                    <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
+                    <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
+                    <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
+                    ${ammo_stats}`
+                });
+                
+                stats_str += `
+                <table>
+                <tr><th colspan="2" class="stat_header">Weaponry</th></tr>
+                <tr><th>Reload</th><td>${data.stats.weaponry.reload}s</td></tr>
+                <tr><th>Accuracy</th><td>${data.stats.weaponry.accuracy}</td></tr>
+                <tr><th>Ammo Volume</th><td>${data.stats.weaponry.ammo_volume}</td></tr>
+                <tr><th>Caliber</th><td>${data.stats.weaponry["caliber:"]}mm</td></tr>
+                <tr><th colspan="2" class="stat_header">Ammunition</th></tr>
+                </table>
+                <div class="stats_ammunition"><table>${ammos}</table></div>`
                 break;
             default:
                 break;
