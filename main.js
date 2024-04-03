@@ -49,7 +49,7 @@ $(document).ready(function() {
         
         str = ""
 
-        count = 5;
+        count = 10;
         for (let key of Object.keys(database.hulls)) {
             if (key.toLowerCase().includes(search_for)) {
                 str += `<tr class="search_result_item" data-item="${key}" data-type="hulls"><td>Hull: &nbsp;&nbsp;${key}</td></tr>`
@@ -59,7 +59,7 @@ $(document).ready(function() {
             if (count <= 0) { break; }
         }
 
-        count = 5;
+        count = 10;
         for (let key of Object.keys(database.turrets)) {
             if (key.toLowerCase().includes(search_for)) {
                 str += `<tr class="search_result_item" data-item="${key}" data-type="turrets"><td>Turret: ${key}</td></tr>`
@@ -69,7 +69,7 @@ $(document).ready(function() {
             if (count <= 0) { break; }
         }
 
-        count = 5;
+        count = 10;
         for (let key of Object.keys(database.guns)) {
             if (key.toLowerCase().includes(search_for)) {
                 str += `<tr class="search_result_item" data-item="${key}" data-type="guns"><td>Gun: &nbsp;&nbsp;&nbsp;${key}</td></tr>`
