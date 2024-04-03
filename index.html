@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resource Calculator</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="search_container">
+        <input type="search" id="search_input" placeholder="Search part..." class="search_input">
+
+        <div class="search_results">
+            <br>
+            <table id="search_results">
+            </table>
+        </div>
+    </div>
+
+    <div class="item_container">
+        <table id="item_container">
+            <tr><th colspan="2" id="name">Name</th></tr>
+            <tr><td colspan="2"><img src=""></td></tr>
+            <tr><th>Description</th><td id="description">Test123</td></tr>
+            <tr><th>Tier</th><td id="tier">Test123</td></tr>
+            <tr><th>Rarity</th><td id="rarity">Test123</td></tr>
+            <tr><th>Obtain</th><td id="obtain">Test123</td></tr>
+            <tr><th>Resources</th><td id="resources">Test123</td></tr>
+            <tr><th colspan="2">Stats</th></tr>
+            <tr><th>Weight</th><td id="weight"></td></tr>
+            <div id="stats"></div>
+            <tr><th>Based on</th><td id="based_on"></td></tr>
+            <tr><th colspan="2">Paired</th></tr>
+            <tr><th id="paired_1_text">Turret</th><td id="paired_1"></td></tr>
+            <tr><th id="paired_2_text">Gun</th><td id="paired_2"></td></tr>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>  
+    <script src="./database.json"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

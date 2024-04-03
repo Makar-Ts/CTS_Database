@@ -1,0 +1,109 @@
+html {
+    font-family:Consolas, monospace;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+button {
+    background-color: rgb(0, 0, 0);
+    border-color: white;
+    color: rgb(255, 255, 255);
+}
+
+table {
+    width: 100%;
+}
+
+p {
+    margin: 0.2em 0 0.2em 0;
+}
+
+h2 {
+    margin-bottom: 0.3em;
+}
+
+.search_container {
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+.search_input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-family:Consolas, monospace;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    z-index: 20;
+}
+
+.search_results {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    top: 20px;
+    z-index: 1;
+}
+
+.search_results td {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.search_results tr:hover td{
+    background-color: rgba(0, 0, 0, 0.393);
+    width: 10%;
+}
+
+.item_container {
+    padding-top: 30px;
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+.item_container table {
+    border-collapse: collapse;
+}
+
+.item_container th {
+    vertical-align: text-top;
+    width: 30%
+}
+
+.item_container td {
+    vertical-align: text-top;
+    width: 70%
+}
+
+.item_container th, td{
+    padding: 0.3em 0 0.3em 0;
+}
+
+.item_container tr {
+    border-bottom: 1px solid #ffffff;
+}
+
+
+@media (orientation: portrait) {
+    .search_container {
+        width: 100%;
+        position: relative;
+        left: 0%;
+    }
+
+    .item_container {
+        width: 100%;
+        position: relative;
+        left: 0%;
+    }
+}
