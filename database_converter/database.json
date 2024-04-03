@@ -31,9 +31,9 @@
                 "reload_multiplier_caliber": 75,
                 "limits": {
                     "up": 25,
-                    "down": 25,
+                    "down": 7,
                     "left": 25,
-                    "right": -7
+                    "right": 25
                 }
             }
         },
@@ -75,10 +75,10 @@
                 "reload_multiplier": 0.72,
                 "reload_multiplier_caliber": 50,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 15,
-                    "right": -8
+                    "up": 15,
+                    "down": 8,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -192,10 +192,10 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 72,
                 "limits": {
-                    "up": 7,
+                    "up": 20,
                     "down": 7,
-                    "left": 20,
-                    "right": -7
+                    "left": 7,
+                    "right": 7
                 }
             }
         },
@@ -309,10 +309,10 @@
                 "reload_multiplier": 0.6,
                 "reload_multiplier_caliber": 42,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -354,10 +354,10 @@
                 "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 57,
                 "limits": {
-                    "up": 15,
-                    "down": 15,
-                    "left": 12,
-                    "right": -8
+                    "up": 12,
+                    "down": 8,
+                    "left": 15,
+                    "right": 15
                 }
             }
         },
@@ -471,10 +471,10 @@
                 "reload_multiplier": 0.79,
                 "reload_multiplier_caliber": 57,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -732,10 +732,10 @@
                 "reload_multiplier": 0.98,
                 "reload_multiplier_caliber": 72,
                 "limits": {
-                    "up": 15,
-                    "down": 5,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 5,
+                    "right": 15
                 }
             }
         },
@@ -885,10 +885,10 @@
                 "reload_multiplier": 5.0,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 86,
-                    "right": -69
+                    "up": 86,
+                    "down": 69,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -930,10 +930,10 @@
                 "reload_multiplier": 1.07,
                 "reload_multiplier_caliber": 85,
                 "limits": {
-                    "up": 0,
-                    "down": 0,
-                    "left": 6,
-                    "right": -6
+                    "up": 6,
+                    "down": 6,
+                    "left": 0,
+                    "right": 0
                 }
             }
         },
@@ -1551,10 +1551,10 @@
                 "reload_multiplier": 1.37,
                 "reload_multiplier_caliber": 130,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -1992,10 +1992,10 @@
                 "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 120,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -2037,10 +2037,10 @@
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 130,
                 "limits": {
-                    "up": 12,
-                    "down": 12,
-                    "left": 20,
-                    "right": -3
+                    "up": 20,
+                    "down": 3,
+                    "left": 12,
+                    "right": 12
                 }
             }
         },
@@ -2154,10 +2154,10 @@
                 "reload_multiplier": 1.15,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 20,
-                    "right": -6
+                    "up": 20,
+                    "down": 6,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -2200,9 +2200,9 @@
                 "reload_multiplier_caliber": 170,
                 "limits": {
                     "up": 20,
-                    "down": 20,
+                    "down": 12,
                     "left": 20,
-                    "right": -12
+                    "right": 20
                 }
             }
         },
@@ -2352,10 +2352,10 @@
                 "reload_multiplier": 1.12,
                 "reload_multiplier_caliber": 90,
                 "limits": {
-                    "up": 90,
-                    "down": 90,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 90,
+                    "right": 90
                 }
             }
         },
@@ -2433,10 +2433,10 @@
                 "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 57,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 35,
-                    "right": -17
+                    "up": 35,
+                    "down": 17,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -2514,10 +2514,10 @@
                 "reload_multiplier": 1.64,
                 "reload_multiplier_caliber": 170,
                 "limits": {
-                    "up": 16,
-                    "down": 16,
-                    "left": 40,
-                    "right": -5
+                    "up": 40,
+                    "down": 5,
+                    "left": 16,
+                    "right": 16
                 }
             }
         },
@@ -2595,10 +2595,10 @@
                 "reload_multiplier": 1.11,
                 "reload_multiplier_caliber": 89,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 20,
-                    "right": -16
+                    "up": 20,
+                    "down": 16,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -3288,10 +3288,10 @@
                 "reload_multiplier": 1.37,
                 "reload_multiplier_caliber": 126,
                 "limits": {
-                    "up": 10,
-                    "down": 10,
-                    "left": 14,
-                    "right": -7
+                    "up": 14,
+                    "down": 7,
+                    "left": 10,
+                    "right": 10
                 }
             }
         },
@@ -3370,9 +3370,9 @@
                 "reload_multiplier_caliber": 120,
                 "limits": {
                     "up": 15,
-                    "down": 15,
+                    "down": 8,
                     "left": 15,
-                    "right": -8
+                    "right": 15
                 }
             }
         },
@@ -3522,10 +3522,10 @@
                 "reload_multiplier": 1.24,
                 "reload_multiplier_caliber": 106,
                 "limits": {
-                    "up": 4,
-                    "down": 4,
-                    "left": 20,
-                    "right": -8
+                    "up": 20,
+                    "down": 8,
+                    "left": 4,
+                    "right": 4
                 }
             }
         },
@@ -3711,10 +3711,10 @@
                 "reload_multiplier": 0.20,
                 "reload_multiplier_caliber": 17,
                 "limits": {
-                    "up": 5,
-                    "down": 5,
-                    "left": 12,
-                    "right": -15
+                    "up": 12,
+                    "down": 15,
+                    "left": 5,
+                    "right": 5
                 }
             }
         },
@@ -3792,10 +3792,10 @@
                 "reload_multiplier": 0.9,
                 "reload_multiplier_caliber": 67,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 20,
-                    "right": -12
+                    "up": 20,
+                    "down": 12,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -3909,10 +3909,10 @@
                 "reload_multiplier": 0.24,
                 "reload_multiplier_caliber": 20,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 60,
-                    "right": -10
+                    "up": 60,
+                    "down": 10,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -3954,10 +3954,10 @@
                 "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 57,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 12,
-                    "right": -8
+                    "up": 12,
+                    "down": 8,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -4431,10 +4431,10 @@
                 "reload_multiplier": 1.54,
                 "reload_multiplier_caliber": 152,
                 "limits": {
-                    "up": 3,
-                    "down": 3,
-                    "left": 20,
-                    "right": -15
+                    "up": 20,
+                    "down": 15,
+                    "left": 3,
+                    "right": 3
                 }
             }
         },
@@ -4512,10 +4512,10 @@
                 "reload_multiplier": 1.69,
                 "reload_multiplier_caliber": 180,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 12,
-                    "right": -18
+                    "up": 12,
+                    "down": 18,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -4665,10 +4665,10 @@
                 "reload_multiplier": 1.54,
                 "reload_multiplier_caliber": 152,
                 "limits": {
-                    "up": 3,
-                    "down": 3,
-                    "left": 20,
-                    "right": -15
+                    "up": 20,
+                    "down": 15,
+                    "left": 3,
+                    "right": 3
                 }
             }
         },
@@ -4746,10 +4746,10 @@
                 "reload_multiplier": 1.54,
                 "reload_multiplier_caliber": 152,
                 "limits": {
-                    "up": 9,
-                    "down": 9,
-                    "left": 17,
-                    "right": -6
+                    "up": 17,
+                    "down": 6,
+                    "left": 9,
+                    "right": 9
                 }
             }
         },
@@ -4935,10 +4935,10 @@
                 "reload_multiplier": 1.0,
                 "reload_multiplier_caliber": 75,
                 "limits": {
-                    "up": 14,
-                    "down": 5,
-                    "left": 85,
-                    "right": -15
+                    "up": 85,
+                    "down": 15,
+                    "left": 5,
+                    "right": 14
                 }
             }
         },
@@ -5088,10 +5088,10 @@
                 "reload_multiplier": 1.06,
                 "reload_multiplier_caliber": 84,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 30,
-                    "right": -12
+                    "up": 30,
+                    "down": 12,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -5133,10 +5133,10 @@
                 "reload_multiplier": 1.69,
                 "reload_multiplier_caliber": 180,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 12,
-                    "right": -15
+                    "up": 12,
+                    "down": 15,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -5394,10 +5394,10 @@
                 "reload_multiplier": 0.5,
                 "reload_multiplier_caliber": 35,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 40,
-                    "right": -12
+                    "up": 40,
+                    "down": 12,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -5619,10 +5619,10 @@
                 "reload_multiplier": 1.5,
                 "reload_multiplier_caliber": 145,
                 "limits": {
-                    "up": 20,
-                    "down": 20,
-                    "left": 45,
-                    "right": -4
+                    "up": 45,
+                    "down": 4,
+                    "left": 20,
+                    "right": 20
                 }
             }
         },
@@ -6024,10 +6024,10 @@
                 "reload_multiplier": 1.7,
                 "reload_multiplier_caliber": 180,
                 "limits": {
-                    "up": 125,
-                    "down": 125,
-                    "left": 35,
-                    "right": -13
+                    "up": 35,
+                    "down": 13,
+                    "left": 125,
+                    "right": 125
                 }
             }
         },
@@ -6069,10 +6069,10 @@
                 "reload_multiplier": 1.25,
                 "reload_multiplier_caliber": 107,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 14,
-                    "right": -7
+                    "up": 14,
+                    "down": 7,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },
@@ -6114,10 +6114,10 @@
                 "reload_multiplier": 1.25,
                 "reload_multiplier_caliber": 107,
                 "limits": {
-                    "up": 180,
-                    "down": 180,
-                    "left": 14,
-                    "right": -7
+                    "up": 14,
+                    "down": 7,
+                    "left": 180,
+                    "right": 180
                 }
             }
         },

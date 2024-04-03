@@ -90,10 +90,10 @@ for i in range(1, len(data[0])-1):
         hull_gun = templates.HULL_GUN.format(
             reload_multi=reload_multi[0],
             reload_multi_caliber=reload_multi[1].replace("(", "").replace(")", "").replace("mm", ""),
-            limits_up=limits_hor[1],
-            limits_down=limits_hor[0].replace("-", ""),
-            limits_left=limits_ver[1].replace("-", ""),
-            limits_right=limits_ver[0]
+            limits_up=limits_ver[1],
+            limits_down=limits_ver[0].replace("-", ""),
+            limits_left=limits_hor[0].replace("-", ""),
+            limits_right=limits_hor[1]
         )
     
     aps = data[15][i].replace("N/A", "No")
