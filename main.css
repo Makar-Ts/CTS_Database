@@ -22,10 +22,17 @@ h2 {
     margin-bottom: 0.3em;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .search_container {
     width: 50%;
     position: relative;
     left: 25%;
+    flex: 1 0 auto;
 }
 
 .search_input {
@@ -69,6 +76,7 @@ h2 {
     width: 50%;
     position: relative;
     left: 25%;
+    flex: 300 0 auto;
 }
 
 .item_container table {
@@ -89,8 +97,28 @@ h2 {
     padding: 0.3em 0 0.3em 0;
 }
 
-.item_container tr {
+.stat_header {
     border-bottom: 1px solid #ffffff;
+}
+
+.stats {
+    padding-left: 40px;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(41, 41, 41);
+    border-top: 1px solid #ffffff;
+    padding: 10px;
+    margin-top: 50px;
+    z-index: 1;
+    flex: 0 0 auto;
+}
+
+#tab_logic {
+    overflow: auto;
 }
 
 

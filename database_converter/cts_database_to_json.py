@@ -61,15 +61,15 @@ for i in range(1, len(data[0])-1):
                 blowout = 1
         ammo = ammo.split()[0]
     
-    match(data[11][i]):
-        case "No":
-            aim=0
-        case "Yes":
-            aim=2
-        case "Suspension only":
-            aim=1
-        case _:
-            aim=-1
+    if "No" in data[11][i]:
+        aim = 0
+    elif "Yes" in data[11][i]:
+        aim = 2
+    elif "Suspension Only".lower() in data[11][i].lower():
+        aim = 1
+    else:
+        aim = -1
+    
     
     if data[12][i] == "N/A":
         have_gun = "false"

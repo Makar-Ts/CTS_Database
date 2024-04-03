@@ -5432,7 +5432,7 @@
         "weaponry": {
             "ammo_storage": 15.9,
             "blowout": -1,
-            "hull_aim": -1,
+            "hull_aim": 1,
             "aps": false,
             "have_gun": false,
             "gun": {}
@@ -5873,7 +5873,7 @@
         "weaponry": {
             "ammo_storage": 24.5,
             "blowout": -1,
-            "hull_aim": -1,
+            "hull_aim": 1,
             "aps": false,
             "have_gun": false,
             "gun": {}
@@ -15220,7 +15220,7 @@
     }
 }
 ,"TOW-HE": {
-    "description": "E",
+    "description": "TOW but HE",
     "tier": 8,
     "rarity": "Epic",
     "obtain": "Blueprints",

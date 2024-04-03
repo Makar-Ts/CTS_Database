@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Resource Calculator</title>
+    <title>CTS Database</title>
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
@@ -21,21 +21,26 @@
 
     <div class="item_container">
         <table id="item_container">
-            <tr><th colspan="2" id="name">Name</th></tr>
-            <tr><td colspan="2"><img src=""></td></tr>
+            <tr><th colspan="2" id="name" class="stat_header">Name</th></tr>
+            <tr><td colspan="2" class="stat_header"><img src=""></td></tr>
             <tr><th>Description</th><td id="description">Test123</td></tr>
             <tr><th>Tier</th><td id="tier">Test123</td></tr>
             <tr><th>Rarity</th><td id="rarity">Test123</td></tr>
             <tr><th>Obtain</th><td id="obtain">Test123</td></tr>
             <tr><th>Resources</th><td id="resources">Test123</td></tr>
-            <tr><th colspan="2">Stats</th></tr>
+            <tr><th colspan="2" class="stat_header">Stats</th></tr>
             <tr><th>Weight</th><td id="weight"></td></tr>
-            <div id="stats"></div>
+            <tr><td colspan="2" id="stats" class="stats"></td></tr>
             <tr><th>Based on</th><td id="based_on"></td></tr>
-            <tr><th colspan="2">Paired</th></tr>
+            <tr><th colspan="2" class="stat_header">Paired</th></tr>
             <tr><th id="paired_1_text">Turret</th><td id="paired_1"></td></tr>
             <tr><th id="paired_2_text">Gun</th><td id="paired_2"></td></tr>
         </table>
+    </div>
+
+    <div class="footer">
+        Credits:<br>
+        &nbsp;&nbsp;CTS Database by @theseasofenvy: <a href="https://docs.google.com/spreadsheets/d/1DzSz5p-lAJEM74g005gZm5Vp7Ot5k8I_ESVeUJSpSXw/edit#gid=1416330682">google docks</a>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>  
