@@ -77,10 +77,15 @@ body {
     position: relative;
     left: 25%;
     flex: 300 0 auto;
+
 }
 
 .item_container table {
     border-collapse: collapse;
+}
+
+.item_container img {
+    width: 100%;
 }
 
 .item_container th {
@@ -90,11 +95,11 @@ body {
 
 .item_container td {
     vertical-align: text-top;
-    width: 70%
+    width: 70%;
 }
 
 .item_container th, td{
-    padding: 0.3em 0 0.3em 0;
+    padding: 0.3em 0.2em 0.3em 0.2em;
 }
 
 .stat_header {

@@ -78,6 +78,10 @@ $(document).ready(function() {
         var data = database[$(this).data("type")][hull]
         console.log(hull);
         $('#search_input').val(hull);
+
+        plain = ""
+        if ($(this).data("type") == "hulls" | $(this).data("type") == "turrets") { plain = " Plain"; }
+        $("#item_img").attr('src', `./img/${$(this).data("type")}/Tier ${data.tier}/${hull}${plain}.png`)
         
         $("#name").text(hull);
         $("#description").text(data.description);
