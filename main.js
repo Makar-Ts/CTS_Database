@@ -81,7 +81,9 @@ $(document).ready(function() {
 
         plain = ""
         if ($(this).data("type") == "hulls" | $(this).data("type") == "turrets") { plain = " Plain"; }
+        $("#item_img_container").text("Image loading...");
         $("#item_img").attr('src', `./img/${$(this).data("type")}/Tier ${data.tier}/${hull}${plain}.png`)
+        $('#item_img').css('display', 'none');
         
         $("#name").text(hull);
         $("#description").text(data.description);
@@ -255,4 +257,10 @@ $(document).ready(function() {
 
         $("#item_container").show();
     }); 
+
+    $('#item_img').on('load', function() {
+        $("#item_img_container").text("")
+        $('#item_img').css('display', 'block');
+        console.log('loaded');
+    }).attr('src', imgUrl);
 })
