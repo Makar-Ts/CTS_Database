@@ -1,3 +1,12 @@
+var ammo_stats_titles = {
+    "fuse_sensitive": ["Fuse Sensitive", "mm"],
+    "fuse_delay": ["Fuse Delay", "m"],
+    "explosive_mass": ["Explosive Mass", ""],
+    "fuse_radius": ["Fuse Radius", "m"],
+    "arming_distance": ["Arming Distance", "m"],
+    "range": ["Range", "km"]
+};
+
 function calculateStringForItem(data, type) {
     stats_str = ""
     switch (type) {

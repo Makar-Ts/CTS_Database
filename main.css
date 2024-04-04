@@ -35,6 +35,7 @@ a {
 .tabs_container {
     width: 50%;
     position: relative;
+    text-align: center;
     left: 25%;
     flex: 1 0 auto;
 }
@@ -42,8 +43,9 @@ a {
 .tabs_container div {
     position:relative;
     display: inline-block;
-    width: 49%;
-    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    width: 32.5%;
     border: 1px solid #ffffff;
     border-bottom: none;
     border-radius: 5px;
@@ -118,7 +120,7 @@ a {
     border: 1px solid #ffffff;
     border-radius: 8px;
     top: 20px;
-    z-index: 1;
+    z-index: 18;
 }
 
 .search_results td {
@@ -207,6 +209,10 @@ a {
         width: 100%;
         position: relative;
         left: 0%;
+    }
+
+    .tabs_container div {
+        width: 32%;
     }
 
     .search_container {
