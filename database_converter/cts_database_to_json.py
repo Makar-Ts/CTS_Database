@@ -130,7 +130,7 @@ for i in range(1, len(data[0])-1):
         paired_turret=as_string(" ".join(data[19][i].split()[:-1]))
     )
     
-    hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "")
+    hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "").replace(" (!)", "")
     
 for i in range(1, len(data[22])-1):
     if data[22][i] == "": break
@@ -221,7 +221,7 @@ for i in range(1, len(data[22])-1):
         paired_hull=as_string(" ".join(data[38][i].split()[:-1]))
     )
     
-    turrets_string += string.replace("#VALUE!", "0").replace("°", "")
+    turrets_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
     
 for i in range(1, len(data[41])-1):
     if data[41][i] == "": break
@@ -309,7 +309,7 @@ for i in range(1, len(data[41])-1):
         paired_hull=as_string(" ".join(data[57][i].split()[:-1]))
     )
     
-    guns_string += string.replace("#VALUE!", "0").replace("°", "")
+    guns_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
     
 
 

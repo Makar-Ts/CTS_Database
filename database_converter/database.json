@@ -1341,7 +1341,7 @@
         "turret": ""
     }
 }
-,"Ke Tao 2020 (!)": {
+,"Ke Tao 2020": {
     "description": "Received by playing the first open test.",
     "tier": 3,
     "rarity": "Mythical",
@@ -2565,7 +2565,7 @@
         "turret": "TOW"
     }
 }
-,"Ferret (!)": {
+,"Ferret": {
     "description": "yahhh",
     "tier": 5,
     "rarity": "Epic",
@@ -4986,7 +4986,7 @@
         "turret": "Chieftain SID"
     }
 }
-,"Battlepass-100 (!)": {
+,"Battlepass-100": {
     "description": "leaks?",
     "tier": 8,
     "rarity": "Mythical",
@@ -7452,7 +7452,7 @@
         "gun": "105mm Howitzer"
     }
 }
-,"Cavalry 2020 (!)": {
+,"Cavalry 2020": {
     "description": "Received by playing the first open test.",
     "tier": 3,
     "rarity": "Uncommon",
@@ -8532,7 +8532,7 @@
         "gun": "75mm Freedom"
     }
 }
-,"Comet (!)": {
+,"Comet": {
     "description": "God Save The King.",
     "tier": 5,
     "rarity": "Uncommon",
@@ -10732,7 +10732,7 @@
         "gun": ""
     }
 }
-,"M1 FREEDOM (!)": {
+,"M1 FREEDOM": {
     "description": "You didn't win. The British retreated for round 2 Britain Boogaloo",
     "tier": 10,
     "rarity": "Legendary",
@@ -10812,7 +10812,7 @@
         "gun": "105mm M68"
     }
 }
-,"Future (!)": {
+,"Future": {
     "description": "warfare 2077",
     "tier": 10,
     "rarity": "Legendary",
@@ -11817,7 +11817,7 @@
         "turret": ""
     }
 }
-,"20mm M61 Vulcan (!)": {
+,"20mm M61 Vulcan": {
     "description": "You did it! But at what cost? (You sold your soul to Faux)",
     "tier": 1,
     "rarity": "Legendary",
@@ -11849,7 +11849,7 @@
         "turret": "VADS"
     }
 }
-,"130mm TG50 (!)": {
+,"130mm TG50": {
     "description": "any leakers?",
     "tier": 1,
     "rarity": "Rare",
@@ -13621,7 +13621,7 @@
         "turret": ""
     }
 }
-,"20mm Oerlikon (Real and Fixed) (!)": {
+,"20mm Oerlikon (Real and Fixed)": {
     "description": "REAL MEN WILL USE THIS",
     "tier": 5,
     "rarity": "Epic",
@@ -15220,7 +15220,7 @@
     }
 }
 ,"TOW-HE": {
-    "description": "E",
+    "description": "TOW but HE",
     "tier": 8,
     "rarity": "Epic",
     "obtain": "Blueprints",
@@ -15255,7 +15255,7 @@
         "turret": "TOW"
     }
 }
-,"128mm Festive Punch (!)": {
+,"128mm Festive Punch": {
     "description": "merry xmas",
     "tier": 8,
     "rarity": "Epic",
@@ -16284,7 +16284,7 @@
         "turret": "Strf 90"
     }
 }
-,"120mm Eagle (!)": {
+,"120mm Eagle": {
     "description": "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defense, promote the general Welfare, and",
     "tier": 10,
     "rarity": "Mythical",
@@ -16319,7 +16319,7 @@
         "turret": "M1 FREEDOM"
     }
 }
-,"Pan (!)": {
+,"Pan": {
     "description": "description",
     "tier": 10,
     "rarity": "Legendary",
@@ -16355,7 +16355,7 @@
         "turret": ""
     }
 }
-,"117mm Amidst (!)": {
+,"117mm Amidst": {
     "description": "description",
     "tier": 10,
     "rarity": "Legendary",
@@ -16405,7 +16405,7 @@
         "turret": ""
     }
 }
-,"Scud (!)": {
+,"Scud": {
     "description": "description",
     "tier": 10,
     "rarity": "Rare",
