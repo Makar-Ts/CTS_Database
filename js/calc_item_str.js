@@ -108,6 +108,7 @@ function calculateStringForItem(data, type) {
             <tr><th>Vertical Speed</th><td>${data.stats.weaponry.gun.speed.vertical}</td></tr>
             <tr><th>Horizontal Speed</th><td>${data.stats.weaponry.gun.speed.horizontal}</td></tr>
             <tr><th colspan="2" class="stat_header">Weaponry</th></tr>
+            <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier}</td></tr>
             <tr><th>Ammo Storage</th><td>${data.stats.weaponry.ammo_storage}</td></tr>
             <tr><th>Stabilizer</th><td>${data.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
