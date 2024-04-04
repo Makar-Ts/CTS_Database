@@ -11,10 +11,6 @@ var ammo_stats_titles = {
     "range": ["Range", "km"]
 };
 
-
-$("#item_container").hide();
-
-
 function fetchJSONFile(path, callback) { // thx ChatGPT
     fetch(path)
         .then(response => {
@@ -34,6 +30,7 @@ function fetchJSONFile(path, callback) { // thx ChatGPT
 
 $(document).ready(function() {
     item_html = $(".item_container").html();
+    $("#item_container_z").hide();
     console.log(item_html);
 
     fetchJSONFile(filePath, (error, data) => {

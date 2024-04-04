@@ -6,12 +6,17 @@
     <title>CTS Database</title>
     <link rel="stylesheet" href="./../main.css">
     <style>
-        .item_container table {
+        .item_table {
             border-bottom: 5px solid #ffffff;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
+    <div class="tabs_container">
+        <a href="./../"><div><p>Search</p></div></a><a href="./"><div><p>By categories</p></div></a>
+    </div>
+
     <div class="search_container">
         <select id="type" class="type_search_select">
             <option value="hulls">Hulls</option>
@@ -35,7 +40,7 @@
     </div>
 
     <div class="item_container">
-        <table id="item_container_z">
+        <table id="item_container_z" class="item_table">
             <tr><th colspan="2" id="name" class="stat_header">Name</th></tr>
             <tr><td colspan="2" class="stat_header"><div id="item_img_container"></div><img src="" id="item_img" loading="eager"></td></tr>
             <tr><th>Description</th><td id="description">Test123</td></tr>
