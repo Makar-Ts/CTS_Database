@@ -47,6 +47,37 @@ body {
     z-index: 20;
 }
 
+.type_search_select, .tier_search_select {
+    width: 45%;
+    border-radius: 8px;
+    font-size: 1em;
+    padding: 0.2em;
+    margin-left: 5px;
+}
+
+.button_search {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 26px;
+    height: 26px;
+    border: none;
+    margin-left: 5px;
+}
+
+.button_search:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+.button_search:active {
+    background-color: rgb(166, 166, 166);
+}
+
+.button_search img {
+    width: 100%;
+    height: 100%;
+}
+
 .search_results {
     position: absolute;
     width: 100%;

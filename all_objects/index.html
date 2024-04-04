@@ -1,26 +1,41 @@
-<!DOCTYPE html>
-
 <html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CTS Database</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./../main.css">
+    <style>
+        .item_container table {
+            border-bottom: 5px solid #ffffff;
+        }
+    </style>
 </head>
 <body>
     <div class="search_container">
-        <input type="search" id="search_input" placeholder="Search part..." class="search_input">
-
-        <div class="search_results">
-            <br>
-            <table id="search_results">
-            </table>
-        </div>
+        <select id="type" class="type_search_select">
+            <option value="hulls">Hulls</option>
+            <option value="turrets">Turrets</option>
+            <option value="guns">Guns</option>
+        </select><select id="tier" class="tier_search_select">
+            <option value=1>Tier 1</option>
+            <option value=2>Tier 2</option>
+            <option value=3>Tier 3</option>
+            <option value=4>Tier 4</option>
+            <option value=5>Tier 5</option>
+            <option value=6>Tier 6</option>
+            <option value=7>Tier 7</option>
+            <option value=8>Tier 8</option>
+            <option value=9>Tier 9</option>
+            <option value=10>Tier 10</option>
+            <option value=11>Tier 11</option>
+            <option value=12>Tier 12</option>
+        </select>
+        <button id="search" type="button" class="button_search"><img src="./../img/search.ico"></button>
     </div>
 
     <div class="item_container">
-        <table id="item_container">
+        <table id="item_container_z">
             <tr><th colspan="2" id="name" class="stat_header">Name</th></tr>
             <tr><td colspan="2" class="stat_header"><div id="item_img_container"></div><img src="" id="item_img" loading="eager"></td></tr>
             <tr><th>Description</th><td id="description">Test123</td></tr>
@@ -44,8 +59,8 @@
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>  
-    <script src="./database.json"></script>
-    <script src="./js/calc_item_str.js"></script>
+    <script src="./../database.json"></script>
+    <script src="./../js/calc_item_str.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
