@@ -1,4 +1,5 @@
 const filePath = "./../database.json";
+const fileImgPath = "./../imgPaths.json";
 var database;
 var item_html;
 
@@ -46,6 +47,19 @@ $(document).ready(function() {
         }
     });
 
+    fetchJSONFile(fileImgPath, (error, data) => {
+        if (error) {
+            console.error('Error reading JSON file:', error);
+            return;
+        } else {
+            console.log('JSON file content:', data);
+            
+            img_database = data;
+
+            console.log(data.hulls["TKS"]);
+        }
+    });
+
     $('#search').click(function (e) {
         str = "";
         ids = [];
@@ -77,7 +91,7 @@ $(document).ready(function() {
             $(`#item_container_${i} `+'#item_img').on('load', function() {
                 $(this).css('display', 'block');
                 console.log('loaded');
-            }).attr('src', `./../img/${type}/Tier ${data.tier}/${hull}${plain}.png`);
+            }).attr('src', "./."+img_database[type][hull]);
             $(`#item_container_${i} `+'#item_img').css('display', 'none');
             
             $(`#item_container_${i} `+"#name").text(hull);

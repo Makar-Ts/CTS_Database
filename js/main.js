@@ -1,5 +1,6 @@
 const filePath = "./database.json";
-var database;
+const fileImgPath = "./imgPaths.json";
+var database, img_database;
 
 var ammo_stats_titles = {
     "fuse_sensitive": ["Fuse Sensitive", "mm"],
@@ -38,6 +39,19 @@ $(document).ready(function() {
             console.log('JSON file content:', data);
             
             database = data;
+
+            console.log(data.hulls["TKS"]);
+        }
+    });
+
+    fetchJSONFile(fileImgPath, (error, data) => {
+        if (error) {
+            console.error('Error reading JSON file:', error);
+            return;
+        } else {
+            console.log('JSON file content:', data);
+            
+            img_database = data;
 
             console.log(data.hulls["TKS"]);
         }
@@ -95,7 +109,7 @@ $(document).ready(function() {
         document.getElementById('item_img').onerror = function(event) {
             $("#item_img_container").text("No img, sorry Т_Т");
         };
-        $("#item_img").attr('src', `./img/${$(this).data("type")}/Tier ${data.tier}/${hull}${plain}.png`)
+        $("#item_img").attr('src', img_database[$(this).data("type")][hull]);
         $('#item_img').css('display', 'none');
         
         $("#name").text(hull);
