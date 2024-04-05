@@ -5,6 +5,9 @@ var item_html;
 var item1_type = "", item1_name, item1_data;
 var item2_type = "", item2_name, item2_data;
 
+$("#search_results_1").hide();
+$("#search_results_2").hide();
+
 function fetchJSONFile(path, callback) { // thx ChatGPT
     fetch(path)
         .then(response => {
@@ -175,15 +178,29 @@ $(document).ready(function() {
         createCompareList();
     });
 
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('.search_result_item-2').length) {
+            if ($("#search_results_2").is(':visible')) {
+                $("#search_results_2").hide();
+            }
+        }
+
+        if (!$(event.target).closest('.search_result_item-1').length) {
+            if ($("#search_results_1").is(':visible')) {
+                $("#search_results_1").hide();
+            }
+        }
+    });
+
     $('#item_img1').on('load', function() {
         $("#item_img_container1").text("")
-        $('#item_img1').css('display', 'block');
+        $('#item_img1').css('display', 'inline-block');
         console.log('loaded');
     })
 
     $('#item_img2').on('load', function() {
         $("#item_img_container2").text("")
-        $('#item_img2').css('display', 'block');
+        $('#item_img2').css('display', 'inline-block');
         console.log('loaded');
     })
 });
@@ -593,7 +610,7 @@ function calculateStringFor2Items(data1, data2, type) {
                 </td>
             </tr>
             <tr><th colspan="3" class="stat_header">Ammunition</th></tr>
-            <tr><td><div class="stats_ammunition"><table>${ammos}</table></div></td><td><div class="stats_ammunition"><table>${ammos2}</table></div></td></tr>
+            <tr><td colspan="3" style="text-align: center; white-space: nowrap;"><div class="stats_ammunition"><table>${ammos}</table></div><div class="stats_ammunition"><table>${ammos2}</table></div></td></tr>
             </table>`
             break;
         default:

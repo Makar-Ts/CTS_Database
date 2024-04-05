@@ -12,9 +12,16 @@
         }
 
         .item_container img {
-            width: 100%;
-            margin: 0px;
-            padding: 0px;
+            display: inline-block; 
+            width: 49%; 
+            min-width: 10px;
+            white-space: nowrap;
+        }
+
+        .stats_ammunition {
+            display: inline-block; 
+            width: 40%; 
+            min-width: 10px;
         }
     </style>
 </head>
@@ -48,7 +55,11 @@
     <div class="item_container">
         <table id="item_container" class="item_table">
             <tr><th colspan="3" id="name" class="stat_header">Name</th></tr>
-            <tr><td colspan="3" class="stat_header" style=""><img src="" id="item_img1" loading="eager"><img src="" id="item_img2" loading="eager"></td></tr>
+            <tr>
+                <td colspan="3" class="stat_header" style="text-align: center;">
+                    <img src="" id="item_img1" loading="eager" style="margin-right: 0.1em;"><img src="" id="item_img2" loading="eager">
+                </td>
+            </tr>
             <tr><th>Description</th><td id="description1">Test123</td><td id="description2">Test123</td></tr>
             <tr><th>Tier</th><td id="tier1">Test123</td><td id="tier2">Test123</td></tr>
             <tr><th>Rarity</th><td id="rarity1">Test123</td><td id="rarity2">Test123</td></tr>
