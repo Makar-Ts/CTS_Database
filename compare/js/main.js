@@ -397,7 +397,7 @@ function calculateStringFor2Items(data1, data2, type) {
             <tr><th>Max Forward</th><td>${data1.stats.speed.forward}km/h</td>
                 <td style="color: ${redOrGreen(data1.stats.speed.forward,data2.stats.speed.forward)};">${data2.stats.speed.forward}km/h</td></tr>
             <tr><th>Max Backward</th><td>${data1.stats.speed.backward}km/h</td>
-                <td style="color: ${redOrGreen(data1.stats.speed.backward,data2.stats.speed.backward)};">${data2.stats.speed.backward}km/h</td></tr>
+                <td style="color: ${redOrGreen(data2.stats.speed.backward,data1.stats.speed.backward)};">${data2.stats.speed.backward}km/h</td></tr>
             <tr><th>Torque</th><td>${data1.stats.speed.torque}k</td>
                 <td style="color: ${redOrGreen(data1.stats.speed.torque,data2.stats.speed.torque)};">${data2.stats.speed.torque}k</td></tr>
             <tr><th>Traverse Rate</th><td>${data1.stats.speed.rate}</td>
