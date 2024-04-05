@@ -5022,6 +5022,51 @@
         "turret": "The Battlepass (?)"
     }
 }
+,"AFG MK 1": {
+    "description": "ARGGGG",
+    "tier": 8,
+    "rarity": "Mythical",
+    "obtain": "Joe Shack, Unobtainable (April Fool 2024)",
+    "resources": {},
+    "stats": {
+        "weight": 210.7,
+        "armor": {
+            "front": 300,
+            "back": 120,
+            "side": 200
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 15,
+            "backward": -15,
+            "torque": 17,
+            "rate": 35
+        },
+        "weaponry": {
+            "ammo_storage": 47.8,
+            "blowout": -1,
+            "hull_aim": -1,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.0,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 13,
+                    "down": 13,
+                    "left": 130,
+                    "right": 130
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Loader1", "Loader2", "Driver", "Driver1", "Driver2"]
+    },
+    "based_on": "",
+    "paired": {
+        "gun": "",
+        "turret": ""
+    }
+}
 ,"HSTV-L": {
     "description": "spookston",
     "tier": 9,
