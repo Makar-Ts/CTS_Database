@@ -246,7 +246,7 @@ function createCompareList() {
     $("#weight1").text(item1_data.stats.weight+"t");
     $("#based_on1").text(item1_data.based_on);
 
-    $("#weight2").text(item2_data.stats.weight+"t");
+    $("#weight2").text(item2_data.stats.weight+"t").attr("style", `color: ${redOrGreen(item2_data.stats.weight,item1_data.stats.weight)};`);
     $("#based_on2").text(item2_data.based_on);
 
     $("#stats").html(calculateStringFor2Items(item1_data, item2_data, item1_type));
@@ -279,6 +279,16 @@ function createCompareList() {
 
 
     $("#item_container").show();
+}
+
+function redOrGreen(num1, num2) {
+    if (num1 > num2) {
+        return "red";
+    } else if (num1 < num2) {
+        return "lime";
+    } else {
+        return "white";
+    }
 }
 
 function calculateStringFor2Items(data1, data2, type) {
@@ -358,32 +368,49 @@ function calculateStringFor2Items(data1, data2, type) {
             if (data1.stats.weaponry.have_gun & data2.stats.weaponry.have_gun) {
                 gun = `
                 <tr><th colspan="3" class="stat_header">Gun Mount</th></tr>
-                <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier} (${data1.stats.weaponry.gun.reload_multiplier_caliber}mm)</td><td>${data2.stats.weaponry.gun.reload_multiplier} (${data2.stats.weaponry.gun.reload_multiplier_caliber}mm)</td></tr>
+                <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier} (${data1.stats.weaponry.gun.reload_multiplier_caliber}mm)</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier,data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier} (${data2.stats.weaponry.gun.reload_multiplier_caliber}mm)</td></tr>
                 <tr><th colspan="3" class="stat_header">Gun Limits</th></tr>
-                <tr><th>Up</th><td>${data1.stats.weaponry.gun.limits.up}</td><td>${data2.stats.weaponry.gun.limits.up}</td></tr>
-                <tr><th>Down</th><td>-${data1.stats.weaponry.gun.limits.down}</td><td>-${data2.stats.weaponry.gun.limits.down}</td></tr>
-                <tr><th>Left</th><td>${data1.stats.weaponry.gun.limits.left}</td><td>${data2.stats.weaponry.gun.limits.left}</td></tr>
-                <tr><th>Right</th><td>${data1.stats.weaponry.gun.limits.right}</td><td>${data2.stats.weaponry.gun.limits.right}</td></tr>
+                <tr><th>Up</th><td>${data1.stats.weaponry.gun.limits.up}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.up,data2.stats.weaponry.gun.limits.up)};">${data2.stats.weaponry.gun.limits.up}</td></tr>
+                <tr><th>Down</th><td>-${data1.stats.weaponry.gun.limits.down}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.down,data2.stats.weaponry.gun.limits.down)};">-${data2.stats.weaponry.gun.limits.down}</td></tr>
+                <tr><th>Left</th><td>${data1.stats.weaponry.gun.limits.left}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.left,data2.stats.weaponry.gun.limits.left)};">${data2.stats.weaponry.gun.limits.left}</td></tr>
+                <tr><th>Right</th><td>${data1.stats.weaponry.gun.limits.right}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.right,data2.stats.weaponry.gun.limits.right)};">${data2.stats.weaponry.gun.limits.right}</td></tr>
                 `;
             }
 
             stats_str += `
             <table>
             <tr><th colspan="3" class="stat_header">Armor</th></tr>
-            <tr><th>Front</th><td>${data1.stats.armor.front}mm</td><td>${data2.stats.armor.front}mm</td></tr>
-            <tr><th>Back</th><td>${data1.stats.armor.back}mm</td><td>${data2.stats.armor.back}mm</td></tr>
-            <tr><th>Side</th><td>${data1.stats.armor.side}mm</td><td>${data2.stats.armor.side}mm</td></tr>
+            <tr><th>Front</th><td>${data1.stats.armor.front}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.armor.front,data2.stats.armor.front)};">${data2.stats.armor.front}mm</td></tr>
+            <tr><th>Back</th><td>${data1.stats.armor.back}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.armor.back,data2.stats.armor.back)};">${data2.stats.armor.back}mm</td></tr>
+            <tr><th>Side</th><td>${data1.stats.armor.side}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.armor.side,data2.stats.armor.side)};">${data2.stats.armor.side}mm</td></tr>
             <tr><th colspan="3" class="stat_header">Movement</th></tr>
-            <tr><th>Acceleration</th><td>${data1.stats.speed.acceleration}</td><td>${data2.stats.speed.acceleration}</td></tr>
-            <tr><th>Max Forward</th><td>${data1.stats.speed.forward}km/h</td><td>${data2.stats.speed.forward}km/h</td></tr>
-            <tr><th>Max Backward</th><td>${data1.stats.speed.backward}km/h</td><td>${data2.stats.speed.backward}km/h</td></tr>
-            <tr><th>Torque</th><td>${data1.stats.speed.torque}k</td><td>${data2.stats.speed.torque}k</td></tr>
-            <tr><th>Traverse Rate</th><td>${data1.stats.speed.rate}</td><td>${data2.stats.speed.rate}</td></tr>
+            <tr><th>Acceleration</th><td>${data1.stats.speed.acceleration}</td>
+                <td style="color: ${redOrGreen(data1.stats.speed.acceleration,data2.stats.speed.acceleration)};">${data2.stats.speed.acceleration}</td></tr>
+            <tr><th>Max Forward</th><td>${data1.stats.speed.forward}km/h</td>
+                <td style="color: ${redOrGreen(data1.stats.speed.forward,data2.stats.speed.forward)};">${data2.stats.speed.forward}km/h</td></tr>
+            <tr><th>Max Backward</th><td>${data1.stats.speed.backward}km/h</td>
+                <td style="color: ${redOrGreen(data1.stats.speed.backward,data2.stats.speed.backward)};">${data2.stats.speed.backward}km/h</td></tr>
+            <tr><th>Torque</th><td>${data1.stats.speed.torque}k</td>
+                <td style="color: ${redOrGreen(data1.stats.speed.torque,data2.stats.speed.torque)};">${data2.stats.speed.torque}k</td></tr>
+            <tr><th>Traverse Rate</th><td>${data1.stats.speed.rate}</td>
+                <td style="color: ${redOrGreen(data1.stats.speed.rate,data2.stats.speed.rate)};">${data2.stats.speed.rate}</td></tr>
             <tr><th colspan="3" class="stat_header">Weaponry</th></tr>
-            <tr><th>Ammo Storage</th><td>${data1.stats.weaponry.ammo_storage}</td><td>${data2.stats.weaponry.ammo_storage}</td></tr>
-            <tr><th>Blowout</th><td>${blowout}</td><td>${blowout2}</td></tr>
-            <tr><th>Hull Aim</th><td>${hull_aim}</td><td>${hull_aim2}</td></tr>
-            <tr><th>APS</th><td>${aps}</td><td>${aps2}</td></tr>
+            <tr><th>Ammo Storage</th><td>${data1.stats.weaponry.ammo_storage}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.ammo_storage,data2.stats.weaponry.ammo_storage)};">${data2.stats.weaponry.ammo_storage}</td></tr>
+            <tr><th>Blowout</th><td>${blowout}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.blowout,data2.stats.weaponry.blowout)};">${blowout2}</td></tr>
+            <tr><th>Hull Aim</th><td>${hull_aim}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.hull_aim,data2.stats.weaponry.hull_aim)};">${hull_aim2}</td></tr>
+            <tr><th>APS</th><td>${aps}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.aps,data2.stats.weaponry.aps)};">${aps2}</td></tr>
             <tr><th>Crew</th><td>${data1.stats.crew.join(", ")}</td><td>${data2.stats.crew.join(", ")}</td></tr>
             ${gun}
             </table>`
@@ -439,21 +466,34 @@ function calculateStringFor2Items(data1, data2, type) {
             stats_str += `
             <table>
             <tr><th colspan="3" class="stat_header">Armor</th></tr>
-            <tr><th>Front</th><td>${data1.stats.armor.front}mm</td><td>${data2.stats.armor.front}mm</td></tr>
-            <tr><th>Back</th><td>${data1.stats.armor.back}mm</td><td>${data2.stats.armor.back}mm</td></tr>
-            <tr><th>Side</th><td>${data1.stats.armor.side}mm</td><td>${data2.stats.armor.side}mm</td></tr>
+            <tr><th>Front</th><td>${data1.stats.armor.front}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.armor.front,data2.stats.armor.front)};">${data2.stats.armor.front}mm</td></tr>
+            <tr><th>Back</th><td>${data1.stats.armor.back}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.armor.back,data2.stats.armor.back)};">${data2.stats.armor.back}mm</td></tr>
+            <tr><th>Side</th><td>${data1.stats.armor.side}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.armor.side,data2.stats.armor.side)};">${data2.stats.armor.side}mm</td></tr>
             <tr><th colspan="3" class="stat_header">Movement</th></tr>
-            <tr><th>Up Limit</th><td>${data1.stats.weaponry.gun.limits.up}</td><td>${data2.stats.weaponry.gun.limits.up}</td></tr>
-            <tr><th>Down Limit</th><td>-${data1.stats.weaponry.gun.limits.down}</td><td>-${data2.stats.weaponry.gun.limits.down}</td></tr>
-            <tr><th>Vertical Speed</th><td>${data1.stats.weaponry.gun.speed.vertical}</td><td>${data2.stats.weaponry.gun.speed.vertical}</td></tr>
-            <tr><th>Horizontal Speed</th><td>${data1.stats.weaponry.gun.speed.horizontal}</td><td>${data2.stats.weaponry.gun.speed.horizontal}</td></tr>
+            <tr><th>Up Limit</th><td>${data1.stats.weaponry.gun.limits.up}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.up,data2.stats.weaponry.gun.limits.up)};">${data2.stats.weaponry.gun.limits.up}</td></tr>
+            <tr><th>Down Limit</th><td>-${data1.stats.weaponry.gun.limits.down}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.down,data2.stats.weaponry.gun.limits.down)};">-${data2.stats.weaponry.gun.limits.down}</td></tr>
+            <tr><th>Vertical Speed</th><td>${data1.stats.weaponry.gun.speed.vertical}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.speed.vertical,data2.stats.weaponry.gun.speed.vertical)};">${data2.stats.weaponry.gun.speed.vertical}</td></tr>
+            <tr><th>Horizontal Speed</th><td>${data1.stats.weaponry.gun.speed.horizontal}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.speed.horizontal,data2.stats.weaponry.gun.speed.horizontal)};">${data2.stats.weaponry.gun.speed.horizontal}</td></tr>
             <tr><th colspan="3" class="stat_header">Weaponry</th></tr>
-            <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier}</td><td>${data2.stats.weaponry.gun.reload_multiplier}</td></tr>
-            <tr><th>Ammo Storage</th><td>${data1.stats.weaponry.ammo_storage}</td><td>${data2.stats.weaponry.ammo_storage}</td></tr>
-            <tr><th>Stabilizer</th><td>${data1.stats.weaponry.stabilizer ? "Yes" : "No"}</td><td>${data2.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
-            <tr><th>APS</th><td>${aps}</td><td>${aps2}</td></tr>
-            <tr><th>FCS</th><td>${fcs}</td><td>${fcs2}</td></tr>
-            <tr><th>Blowout</th><td>${blowout}</td><td>${blowout2}</td></tr>
+            <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier, data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier}</td></tr>
+            <tr><th>Ammo Storage</th><td>${data1.stats.weaponry.ammo_storage}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.ammo_storage, data2.stats.weaponry.ammo_storage)};">${data2.stats.weaponry.ammo_storage}</td></tr>
+            <tr><th>Stabilizer</th><td>${data1.stats.weaponry.stabilizer ? "Yes" : "No"}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.stabilizer, data2.stats.weaponry.stabilizer)};">${data2.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
+            <tr><th>APS</th><td>${aps}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.aps, data2.stats.weaponry.aps)};">${aps2}</td></tr>
+            <tr><th>FCS</th><td>${fcs}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.fcs, data2.stats.weaponry.fcs)};">${fcs2}</td></tr>
+            <tr><th>Blowout</th><td>${blowout}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.blowout, data2.stats.weaponry.blowout)};">${blowout2}</td></tr>
             <tr><th>Crew</th><td>${data1.stats.crew.join(", ")}</td><td>${data2.stats.crew.join(", ")}</td></tr>
             </table>`
             break;
@@ -496,10 +536,34 @@ function calculateStringFor2Items(data1, data2, type) {
             stats_str += `
             <table>
             <tr><th colspan="3" class="stat_header">Weaponry</th></tr>
-            <tr><th>Reload</th><td>${data1.stats.weaponry.reload}s</td><td>${data2.stats.weaponry.reload}s</td></tr>
-            <tr><th>Accuracy</th><td>${data1.stats.weaponry.accuracy}</td><td>${data2.stats.weaponry.accuracy}</td></tr>
-            <tr><th>Ammo Volume</th><td>${data1.stats.weaponry.ammo_volume}</td><td>${data2.stats.weaponry.ammo_volume}</td></tr>
-            <tr><th>Caliber</th><td>${data1.stats.weaponry["caliber:"]}mm</td><td>${data2.stats.weaponry["caliber:"]}mm</td></tr>
+            <tr>
+            <th>Reload</th>
+                <td>${data1.stats.weaponry.reload}s</td>
+                <td style="color: ${redOrGreen(data2.stats.weaponry.reload, data1.stats.weaponry.reload)};">
+                    ${data2.stats.weaponry.reload}s
+                </td>
+            </tr>
+            <tr>
+                <th>Accuracy</th>
+                <td>${data1.stats.weaponry.accuracy}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.accuracy, data2.stats.weaponry.accuracy)};">
+                    ${data2.stats.weaponry.accuracy}
+                </td>
+            </tr>
+            <tr>
+                <th>Ammo Volume</th>
+                <td>${data1.stats.weaponry.ammo_volume}</td>
+                <td style="color: ${redOrGreen(data2.stats.weaponry.ammo_volume, data1.stats.weaponry.ammo_volume)};">
+                    ${data2.stats.weaponry.ammo_volume}
+                </td>
+            </tr>
+            <tr>
+                <th>Caliber</th>
+                <td>${data1.stats.weaponry["caliber:"]}mm</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry["caliber:"], data2.stats.weaponry["caliber:"])};">
+                    ${data2.stats.weaponry["caliber:"]}mm
+                </td>
+            </tr>
             <tr><th colspan="3" class="stat_header">Ammunition</th></tr>
             <tr><td><div class="stats_ammunition"><table>${ammos}</table></div></td><td><div class="stats_ammunition"><table>${ammos2}</table></div></td></tr>
             </table>`
