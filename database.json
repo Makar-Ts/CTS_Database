@@ -5059,7 +5059,7 @@
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Loader1", "Loader2", "Driver", "Driver1", "Driver2"]
+        "crew": ["Commander", "Loader", "Loader1", "Loader2", "Driver", "Driver1", "Driver2", "Gunner", "Gunner1", "Gunner2"]
     },
     "based_on": "",
     "paired": {
