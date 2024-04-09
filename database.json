@@ -5045,7 +5045,7 @@
         "weaponry": {
             "ammo_storage": 47.8,
             "blowout": -1,
-            "hull_aim": -1,
+            "hull_aim": 0,
             "aps": false,
             "have_gun": true,
             "gun": {
