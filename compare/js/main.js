@@ -270,7 +270,20 @@ function createCompareList() {
 
     count = 1
     for (let key of Object.keys(item1_data.paired)) {
-        $(`#paired_${count}1`).text(item1_data.paired[key]);
+        var names = extractWeaponNames(item1_data.paired[key]);
+        var html_paired = "";
+
+        console.log("Paired & extracted: "+item1_data.paired[key]+" | "+names);
+
+        for (let index = 0; index < names.length; index++) {
+            const element = names[index];
+            
+            element_format = element.split('[')[0];
+
+            html_paired += `<a href="${"../"}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
+        }
+
+        $(`#paired_${count}1`).html(html_paired);
         switch (key) {
             case "hull":
                 $(`#paired_${count}_text`).text("Hull");
@@ -290,7 +303,20 @@ function createCompareList() {
 
     count = 1
     for (let key of Object.keys(item2_data.paired)) {
-        $(`#paired_${count}2`).text(item2_data.paired[key]);
+        var names = extractWeaponNames(item2_data.paired[key]);
+        var html_paired = "";
+
+        console.log("Paired & extracted: "+item2_data.paired[key]+" | "+names);
+
+        for (let index = 0; index < names.length; index++) {
+            const element = names[index];
+            
+            element_format = element.split('[')[0];
+
+            html_paired += `<a href="${"../"}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
+        }
+
+        $(`#paired_${count}2`).html(html_paired);
         count++;
     }
 

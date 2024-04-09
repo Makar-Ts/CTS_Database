@@ -7,6 +7,11 @@ var ammo_stats_titles = {
     "range": ["Range", "km"]
 };
 
+function extractWeaponNames(inputString) {
+    const regex = /\s*\[\d+\]\s*/;
+    return inputString.split(regex).map(item => item.trim()).filter(Boolean);
+}
+
 function calculateStringForItem(data, type) {
     stats_str = ""
     switch (type) {

@@ -626,7 +626,7 @@
     },
     "based_on": "M113 [USA]",
     "paired": {
-        "gun": "20mm Vulcan [1] TOW-HE [8] TOW",
+        "gun": "20mm M61 Vulcan [1] TOW-HE [8] TOW",
         "turret": "VADS [5] TOW"
     }
 }
@@ -8374,7 +8374,7 @@
     "based_on": "M163 VADS [USA]",
     "paired": {
         "hull": "M113",
-        "gun": "20mm Vulcan"
+        "gun": "20mm M61 Vulcan"
     }
 }
 ,"Pumi 407": {

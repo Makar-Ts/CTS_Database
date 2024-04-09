@@ -1,6 +1,7 @@
 const filePath = "./database.json";
 const fileImgPath = "./imgPaths.json";
 var database, img_database;
+var database_loaded = false, img_database_loaded = false;
 
 var ammo_stats_titles = {
     "fuse_sensitive": ["Fuse Sensitive", "mm"],
@@ -41,6 +42,10 @@ $(document).ready(function() {
             database = data;
 
             console.log(data.hulls["TKS"]);
+
+            database_loaded = true;
+
+            if (database_loaded & img_database_loaded) whenDatabasesLoaded();
         }
     });
 
@@ -54,8 +59,13 @@ $(document).ready(function() {
             img_database = data;
 
             console.log(data.hulls["TKS"]);
+
+            img_database_loaded = true;
+
+            if (database_loaded & img_database_loaded) whenDatabasesLoaded();
         }
     });
+
 
     $('#search_input').bind('input', function (e) {
         $("#search_results").show();
@@ -97,65 +107,11 @@ $(document).ready(function() {
     });
 
     $(document).on('click', '.search_result_item', function() {
-        $("#search_results").hide();
         var hull = $(this).data("item");
-        var data = database[$(this).data("type")][hull]
-        console.log(hull);
-        $('#search_input').val(hull);
+        var type = $(this).data("type");
+        var data = database[type][hull];
 
-        plain = ""
-        if ($(this).data("type") == "hulls" | $(this).data("type") == "turrets") { plain = " Plain"; }
-        $("#item_img_container").text("Image loading...");
-        document.getElementById('item_img').onerror = function(event) {
-            $("#item_img_container").text("No img, sorry Т_Т");
-        };
-        $("#item_img").attr('src', img_database[$(this).data("type")][hull]);
-        $('#item_img').css('display', 'none');
-        
-        $("#name").text(hull);
-        $("#description").text(data.description);
-        $("#tier").text(data.tier);
-        $("#rarity").text(data.rarity);
-        $("#obtain").text(data.obtain);
-
-        if (data.resources.length == 0) {
-            $("#resources").closest('tr').hide();
-        } else {
-            $("#resources").closest('tr').show();
-
-            str = ""
-            for (let key of Object.keys(data.resources)) {
-                str += `${key}: ${data.resources[key]}<br>`;
-            }
-            $("#resources").html(str);
-        }
-
-        $("#weight").text(data.stats.weight+"t");
-        $("#stats").html(calculateStringForItem(data, $(this).data("type")));
-        $("#based_on").text(data.based_on);
-
-        count = 1
-        for (let key of Object.keys(data.paired)) {
-            $(`#paired_${count}`).text(data.paired[key]);
-            switch (key) {
-                case "hull":
-                    $(`#paired_${count}_text`).text("Hull");
-                    break;
-                case "turret":
-                    $(`#paired_${count}_text`).text("Turret");
-                    break;
-                case "gun":
-                    $(`#paired_${count}_text`).text("Gun");
-                    break;
-                default:
-                    console.log(key);
-                    break;
-            }
-            count++;
-        }
-
-
-        $("#item_container").show();
+        setSearchOutput(hull, type, data);
     }); 
 
     $('#item_img').on('load', function() {
@@ -164,3 +120,97 @@ $(document).ready(function() {
         console.log('loaded');
     }).attr('src', imgUrl);
 })
+
+
+
+function whenDatabasesLoaded() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    console.log(urlParams.get("name") + " | " + urlParams.get("type"));
+    if (urlParams.get("type") != undefined && urlParams.get("name") != undefined) {
+        setSearchOutput(urlParams.get("name"), urlParams.get("type"), database[urlParams.get("type")][urlParams.get("name")]);
+    }
+}
+
+function setSearchOutput(hull, type, data) {
+    if (!database_loaded) {
+        alert('Database is not loaded, please wait...');
+        return;
+    } else if (!img_database_loaded) {
+        alert('Image Database is not loaded, please wait...')
+        return;
+    }
+
+    window.history.pushState("", "why this shit is here", `/${""}?type=${type}&name=${hull}`)
+
+    $("#search_results").hide();
+    console.log(hull);
+    $('#search_input').val(hull);
+
+    plain = ""
+    if (type == "hulls" | type == "turrets") { plain = " Plain"; }
+    $("#item_img_container").text("Image loading...");
+    document.getElementById('item_img').onerror = function(event) {
+        $("#item_img_container").text("No img, sorry Т_Т");
+    };
+    $("#item_img").attr('src', img_database[type][hull]);
+    $('#item_img').css('display', 'none');
+    
+    $("#name").text(hull);
+    $("#description").text(data.description);
+    $("#tier").text(data.tier);
+    $("#rarity").text(data.rarity);
+    $("#obtain").text(data.obtain);
+
+    if (data.resources.length == 0) {
+        $("#resources").closest('tr').hide();
+    } else {
+        $("#resources").closest('tr').show();
+
+        str = ""
+        for (let key of Object.keys(data.resources)) {
+            str += `${key}: ${data.resources[key]}<br>`;
+        }
+        $("#resources").html(str);
+    }
+
+    $("#weight").text(data.stats.weight+"t");
+    $("#stats").html(calculateStringForItem(data, type));
+    $("#based_on").text(data.based_on);
+
+    count = 1
+    for (let key of Object.keys(data.paired)) {
+        var names = extractWeaponNames(data.paired[key]);
+        var html_paired = "";
+
+        console.log("Paired & extracted: "+data.paired[key]+" | "+names);
+
+        for (let index = 0; index < names.length; index++) {
+            const element = names[index];
+            
+            element_format = element.split('[')[0];
+
+            html_paired += `<a href="${""}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
+        }
+
+        $(`#paired_${count}`).html(html_paired);
+        switch (key) {
+            case "hull":
+                $(`#paired_${count}_text`).text("Hull");
+                break;
+            case "turret":
+                $(`#paired_${count}_text`).text("Turret");
+                break;
+            case "gun":
+                $(`#paired_${count}_text`).text("Gun");
+                break;
+            default:
+                console.log(key);
+                break;
+        }
+        count++;
+    }
+
+
+    $("#item_container").show();
+}

@@ -118,7 +118,22 @@ $(document).ready(function() {
 
             count = 1
             for (let key of Object.keys(data.paired)) {
-                $(`#item_container_${i} `+`#paired_${count}`).text(data.paired[key]);
+                var names = extractWeaponNames(data.paired[key]);
+                var html_paired = "";
+
+                console.log("Paired & extracted: "+data.paired[key]+" | "+names);
+
+                for (let index = 0; index < names.length; index++) {
+                    const element = names[index];
+                    
+                    element_format = element.split('[')[0];
+
+                    if (element_format == "None") continue;
+
+                    html_paired += `<a href="${"../"}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
+                }
+
+                $(`#item_container_${i} `+`#paired_${count}`).html(html_paired);
                 switch (key) {
                     case "hull":
                         $(`#item_container_${i} `+`#paired_${count}_text`).text("Hull");
