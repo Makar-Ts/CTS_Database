@@ -280,7 +280,7 @@ function createCompareList() {
             
             element_format = element.split('[')[0];
 
-            html_paired += `<a href="${window.location.origin+window.location.pathname}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
+            html_paired += `<a href="${window.location.origin+window.location.pathname+"../"}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
         }
 
         $(`#paired_${count}1`).html(html_paired);
@@ -312,7 +312,8 @@ function createCompareList() {
             const element = names[index];
             
             element_format = element.split('[')[0];
-
+            
+            console.log(window.location.origin+window.location.pathname+"../");
             html_paired += `<a href="${window.location.origin+window.location.pathname+"../"}?type=${key+'s'}&name=${element_format}">${element_format}</a> ${index+1 != names.length ? "|" : ""} `;
         }
 
