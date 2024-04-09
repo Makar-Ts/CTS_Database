@@ -141,7 +141,8 @@ function setSearchOutput(hull, type, data) {
         return;
     }
 
-    window.history.pushState("", "why this shit is here", `/${""}?type=${type}&name=${hull}`)
+    console.log(window.location);
+    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${type}&name=${hull}`)
 
     $("#search_results").hide();
     console.log(hull);
