@@ -2718,6 +2718,51 @@
         "turret": "Strf 90"
     }
 }
+,"Taifun II": {
+    "description": "Eurofighter Typhoon",
+    "tier": 5,
+    "rarity": "Rare",
+    "obtain": "Monthly Reward, April 2024",
+    "resources": {},
+    "stats": {
+        "weight": 20,
+        "armor": {
+            "front": 30,
+            "back": 12,
+            "side": 15
+        },
+        "speed": {
+            "acceleration": 12,
+            "forward": 71,
+            "backward": -71,
+            "torque": 20,
+            "rate": 32
+        },
+        "weaponry": {
+            "ammo_storage": 33.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.12,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 18,
+                    "down": 12,
+                    "left": 15,
+                    "right": 15
+                }
+            }
+        },
+        "crew": ["Driver", "Loader", "Commander", "Gunner"]
+    },
+    "based_on": "Taifun II [Switzerland]",
+    "paired": {
+        "gun": "105mm Royal",
+        "turret": ""
+    }
+}
 ,"Battlepass VI (B)": {
     "description": "Greatest German Engineering!",
     "tier": 6,
@@ -5064,6 +5109,51 @@
     "based_on": "",
     "paired": {
         "gun": "",
+        "turret": ""
+    }
+}
+,"Battlepacks Leopard": {
+    "description": "panzerkampf 103",
+    "tier": 8,
+    "rarity": "Epic",
+    "obtain": "Monthly Reward, April 2024",
+    "resources": {},
+    "stats": {
+        "weight": 30,
+        "armor": {
+            "front": 80,
+            "back": 30,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 11,
+            "forward": 60,
+            "backward": -35,
+            "torque": 12,
+            "rate": 80
+        },
+        "weaponry": {
+            "ammo_storage": 44.4,
+            "blowout": -1,
+            "hull_aim": 2,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.5,
+                "reload_multiplier_caliber": 145,
+                "limits": {
+                    "up": 15,
+                    "down": 7,
+                    "left": 3,
+                    "right": 3
+                }
+            }
+        },
+        "crew": ["Driver", "Loader", "Commander", "Gunner"]
+    },
+    "based_on": "Jagd Leopard 1 [Fake]",
+    "paired": {
+        "gun": "105mm Royal",
         "turret": ""
     }
 }
