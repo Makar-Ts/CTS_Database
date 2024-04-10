@@ -59,14 +59,18 @@ $(document).ready(function() {
     $('#search_input_1').bind('input', function (e) {
         $("#search_results_1").show();
         item1_type = "";
-        var search_for = $('#search_input_1').val().toLowerCase().replace("-", "").replace(" ", "")
+        var search_for = $('#search_input_1').val().toLowerCase().replace("-", "").replace(" ", "");
+        var greek_search_for = replaceGreekNumerals($('#search_input_1').val()).toLowerCase().replace("-", "").replace(" ", "");
         
         str = ""
 
         if (item2_type == "hulls" | item2_type == "") {
             count = 10;
             for (let key of Object.keys(database.hulls)) {
-                if (key.toLowerCase().replace("-", "").replace(" ", "").includes(search_for)) {
+                var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
+                var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+
+                if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                     str += `<tr class="search_result_item-1" data-item="${key}" data-type="hulls"><td>Hull: &nbsp;&nbsp;${key}</td></tr>`
                     count--;
                 }
@@ -78,7 +82,10 @@ $(document).ready(function() {
         if (item2_type == "turrets" | item2_type == "") {
             count = 10;
             for (let key of Object.keys(database.turrets)) {
-                if (key.toLowerCase().replace("-", "").replace(" ", "").includes(search_for)) {
+                var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
+                var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+
+                if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                     str += `<tr class="search_result_item-1" data-item="${key}" data-type="turrets"><td>Turret: ${key}</td></tr>`
                     count--;
                 }
@@ -90,7 +97,10 @@ $(document).ready(function() {
         if (item2_type == "guns" | item2_type == "") {
             count = 10;
             for (let key of Object.keys(database.guns)) {
-                if (key.toLowerCase().replace("-", "").replace(" ", "").includes(search_for)) {
+                var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
+                var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+
+                if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                     str += `<tr class="search_result_item-1" data-item="${key}" data-type="guns"><td>Gun: &nbsp;&nbsp;&nbsp;${key}</td></tr>`
                     count--;
                 }
@@ -105,14 +115,18 @@ $(document).ready(function() {
     $('#search_input_2').bind('input', function (e) {
         $("#search_results_2").show();
         item2_type = "";
-        var search_for = $('#search_input_2').val().toLowerCase().replace("-", "").replace(" ", "")
+        var search_for = $('#search_input_2').val().toLowerCase().replace("-", "").replace(" ", "");
+        var greek_search_for = replaceGreekNumerals($('#search_input_2').val()).toLowerCase().replace("-", "").replace(" ", "");
         
         str = ""
 
         if (item1_type == "hulls" | item1_type == "") {
             count = 10;
             for (let key of Object.keys(database.hulls)) {
-                if (key.toLowerCase().replace("-", "").replace(" ", "").includes(search_for)) {
+                var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
+                var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+
+                if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                     str += `<tr class="search_result_item-2" data-item="${key}" data-type="hulls"><td>Hull: &nbsp;&nbsp;${key}</td></tr>`
                     count--;
                 }
@@ -124,7 +138,10 @@ $(document).ready(function() {
         if (item1_type == "turrets" | item1_type == "") {
             count = 10;
             for (let key of Object.keys(database.turrets)) {
-                if (key.toLowerCase().replace("-", "").replace(" ", "").includes(search_for)) {
+                var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
+                var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+
+                if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                     str += `<tr class="search_result_item-2" data-item="${key}" data-type="turrets"><td>Turret: ${key}</td></tr>`
                     count--;
                 }
@@ -136,7 +153,10 @@ $(document).ready(function() {
         if (item1_type == "guns" | item1_type == "") {
             count = 10;
             for (let key of Object.keys(database.guns)) {
-                if (key.toLowerCase().replace("-", "").replace(" ", "").includes(search_for)) {
+                var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
+                var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+
+                if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                     str += `<tr class="search_result_item-2" data-item="${key}" data-type="guns"><td>Gun: &nbsp;&nbsp;&nbsp;${key}</td></tr>`
                     count--;
                 }
