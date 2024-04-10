@@ -7,6 +7,27 @@ var ammo_stats_titles = {
     "range": ["Range", "km"]
 };
 
+function replaceGreekNumerals(str) {
+    const greekNumerals = {
+        'I': '1',
+        'II': '2',
+        'III': '3',
+        'IV': '4',
+        'V': '5',
+        'VI': '6',
+        'VII': '7',
+        'VIII': '8',
+        'IX': '9',
+        'X': '10'
+    };
+
+    // Создаем регулярное выражение для поиска греческих цифр, которые стоят отдельно
+    const regex = new RegExp(`\\b(${Object.keys(greekNumerals).join('|')})\\b`, 'g');
+
+    // Заменяем греческие цифры на арабские
+    return str.replace(regex, match => greekNumerals[match]);
+}
+
 function extractWeaponNames(inputString) {
     const regex = /\s*\[\d+\]\s*/;
     return inputString.split(regex).map(item => item.trim()).filter(Boolean);

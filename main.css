@@ -179,6 +179,7 @@ a {
 
 .item_container img {
     width: 100%;
+    vertical-align: top;
 }
 
 .item_container th {
