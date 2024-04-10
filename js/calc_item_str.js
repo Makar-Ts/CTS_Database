@@ -1,3 +1,7 @@
+//y = -0.00000970477*(x**2)+0.00906669*x+0.381528
+//D = 0.00906669**2+4*0.00000970477*(0.381528-y)
+//x = (-0.00906669-sqrt(D))/(-0.00000970477*2)
+
 var ammo_stats_titles = {
     "fuse_sensitive": ["Fuse Sensitive", "mm"],
     "fuse_delay": ["Fuse Delay", "m"],
@@ -26,6 +30,18 @@ function replaceGreekNumerals(str) {
 
     // Заменяем греческие цифры на арабские
     return str.replace(regex, match => greekNumerals[match]);
+}
+
+function calculateCaliberFromMultiplier(mult) {
+    if (mult === undefined | mult > 2.46 | mult < 0.4) return 0;
+
+    var D = 0.00906669**2+4*0.00000970477*(0.381528-mult)
+    if (D < 0) {
+        console.log('Discriminant < 0');
+        return 0;
+    }
+
+    return (-0.00906669+Math.sqrt(D))/(-0.00000970477*2)
 }
 
 function extractWeaponNames(inputString) {
@@ -74,9 +90,14 @@ function calculateStringForItem(data, type) {
 
             gun = ""
             if (data.stats.weaponry.have_gun) {
+                reload_multiplier_caliber = data.stats.weaponry.gun.reload_multiplier_caliber;
+                if (data.stats.weaponry.gun.reload_multiplier_caliber == 0) {
+                    reload_multiplier_caliber = Math.round(calculateCaliberFromMultiplier(data.stats.weaponry.gun.reload_multiplier));
+                }
+
                 gun = `
                 <tr><th colspan="2" class="stat_header">Gun Mount</th></tr>
-                <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier} (${data.stats.weaponry.gun.reload_multiplier_caliber}mm)</td></tr>
+                <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber}mm)</td></tr>
                 <tr><th colspan="2" class="stat_header">Gun Limits</th></tr>
                 <tr><th>Up</th><td>${data.stats.weaponry.gun.limits.up}</td></tr>
                 <tr><th>Down</th><td>-${data.stats.weaponry.gun.limits.down}</td></tr>
@@ -131,6 +152,11 @@ function calculateStringForItem(data, type) {
                 fcs = `Up to ${data.stats.weaponry.fcs}km`;
             } else { fcs = "No"; }
 
+            reload_multiplier_caliber = data.stats.weaponry.gun.reload_multiplier_caliber;
+            if (data.stats.weaponry.gun.reload_multiplier_caliber == 0) {
+                reload_multiplier_caliber = Math.round(calculateCaliberFromMultiplier(data.stats.weaponry.gun.reload_multiplier));
+            }
+
             stats_str += `
             <table>
             <tr><th colspan="2" class="stat_header">Armor</th></tr>
@@ -143,7 +169,7 @@ function calculateStringForItem(data, type) {
             <tr><th>Vertical Speed</th><td>${data.stats.weaponry.gun.speed.vertical}</td></tr>
             <tr><th>Horizontal Speed</th><td>${data.stats.weaponry.gun.speed.horizontal}</td></tr>
             <tr><th colspan="2" class="stat_header">Weaponry</th></tr>
-            <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier}</td></tr>
+            <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber}mm)</td></tr>
             <tr><th>Ammo Storage</th><td>${data.stats.weaponry.ammo_storage}</td></tr>
             <tr><th>Stabilizer</th><td>${data.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
