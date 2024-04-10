@@ -50,9 +50,15 @@ a {
     border: 1px solid #ffffff;
     border-bottom: none;
     border-radius: 5px;
-    background-color: #292929;
+    background-color: #191919;
+    color: #9a9a9a;
     padding-bottom: 10px;
     top: 10px;
+}
+
+#tabs_active {
+    background-color: #292929;
+    color: rgb(255, 255, 255);
 }
 
 .tabs_container div:hover {
@@ -84,21 +90,32 @@ a {
 }
 
 .type_search_select, .tier_search_select {
-    width: 45%;
+    font-family:Consolas, monospace;
+    width: 42%;
     border-radius: 8px;
     font-size: 1em;
-    padding: 0.2em;
-    margin-left: 5px;
+    padding: 10px;
+}
+
+.tier_search_select {
+    margin-left: 1%;
 }
 
 .button_search {
+    font-family:Consolas, monospace;
     position: absolute;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    width: 26px;
-    height: 26px;
+    width: 14%;
+    /*height: -webkit-calc(1em + 20px);*/
+    height: 43px;
     border: none;
-    margin-left: 5px;
+    margin-left: 1%;
+}
+
+.button_search img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .button_search:hover {
@@ -107,11 +124,6 @@ a {
 
 .button_search:active {
     background-color: rgb(166, 166, 166);
-}
-
-.button_search img {
-    width: 100%;
-    height: 100%;
 }
 
 .search_results {
