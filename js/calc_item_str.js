@@ -32,16 +32,35 @@ function replaceGreekNumerals(str) {
     return str.replace(regex, match => greekNumerals[match]);
 }
 
-function calculateCaliberFromMultiplier(mult) {
-    if (mult === undefined | mult > 2.46 | mult < 0.4) return 0;
+function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max);
+}
 
-    var D = 0.00906669**2+4*0.00000970477*(0.381528-mult)
-    if (D < 0) {
-        console.log('Discriminant < 0');
-        return 0;
+function calculateCaliberFromMultiplier(rm) {
+    // var mult = clamp(rm*2/(gc**(1/3)-2.27),                      orig formula, thx faux
+    //                  0, 
+    //                  clamp(rm2, 0, 1+clamp(Math.sqrt(gc) -5.91, 
+    //                                                 0, 
+    //                                                 rm2)));
+
+    // var D = 0.00906669**2+4*0.00000970477*(0.381528-mult)        formula from some dude
+    // if (D < 0) {
+    //     console.log('Discriminant < 0');
+    //     return 0;
+    // }
+
+    // return (-0.00906669+Math.sqrt(D))/(-0.00000970477*2)
+    var rm2 = rm <= 1 ? 1.0 : rm; 
+    var effective_caliber = (rm*2+2.27)**3;
+    var clamp_detect = clamp(rm2, 0, 1+clamp(Math.sqrt(effective_caliber) -5.91, 
+                                             0, 
+                                             rm2))
+    var clamp_detect_caliber = (clamp_detect*2+2.27)**3;
+    if (effective_caliber > clamp_detect_caliber) {
+        effective_caliber = clamp_detect_caliber;
     }
-
-    return (-0.00906669+Math.sqrt(D))/(-0.00000970477*2)
+    
+    return effective_caliber;
 }
 
 function extractWeaponNames(inputString) {
