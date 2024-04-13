@@ -3,10 +3,10 @@ $(document).ready(function() {
         var elem = $($(this).attr("data"));
         var deg = 90;
         if (elem.is(':visible')) {
-            elem.hide();
+            elem.slideUp(100); 
         } else {
             deg = 270;
-            elem.show();  
+            elem.slideDown(100); 
         }
 
         var rotate = 'rotate(' + deg + 'deg)';

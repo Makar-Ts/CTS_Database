@@ -165,48 +165,52 @@
         </h2>
         <div id="ammo_types" style="display: none;">
             There are <strong>2 classes</strong> of ammo in the game:<br>
-            -| <p style="color: lime; display:inline-block;"><strong>CE (Chemical Energy):</strong></p> <br>
-            ---| HE&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_HE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            -| <p style="color: lime; display:inline-block;"><strong>CE (Chemical Energy):</strong></p>
+            <div style="padding: 0.3em 0 0 2em;">
+            HE&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_HE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_HE" style="display: none;">
                 <strong>High Explosive:</strong>
                 Explodes on contact, which, if penetrated, deals massive damage
             </p>
-            ---| HEAT <button type="button" class="show_button" data="#ammo_types_HEAT"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            HEAT <button type="button" class="show_button" data="#ammo_types_HEAT"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_HEAT" style="display: none;">
                 <strong>High Explosive Anti Tank:</strong>
-                Generates few of shrapnel, but does a lot of damage if it hits the module
+                Generates fewer spall, but does a lot of damage if it hits the module
             </p>
-            ---| HESH <button type="button" class="show_button" data="#ammo_types_HESH"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            HESH <button type="button" class="show_button" data="#ammo_types_HESH"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_HESH" style="display: none;">
                 <strong>High Explosive Squash Head:</strong>
                 Same as HE, but has more penetration but less explosive power
             </p>
-            ---| ATGM <button type="button" class="show_button" data="#ammo_types_ATGM"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            ATGM <button type="button" class="show_button" data="#ammo_types_ATGM"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_ATGM" style="display: none;">
                 <strong>Anti Tank Guided Missle:</strong>
                 HEAT, but can be guided after the shot is fired
             </p>
-            -| <p style="color: blue; display:inline-block;"><strong>KE (Kinetic Energy):</strong></p> <br>
-            ---| AP&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_AP"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            </div>
+            -| <p style="color: blue; display:inline-block;"><strong>KE (Kinetic Energy):</strong></p>
+            <div style="padding: 0.3em 0 0 2em;">
+            AP&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_AP"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_AP" style="display: none;">
                 <strong>Armor Piercing:</strong>
                 Pierces armor, generating shrapnel
             </p>
-            ---| APDS <button type="button" class="show_button" data="#ammo_types_APDS"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            APDS <button type="button" class="show_button" data="#ammo_types_APDS"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_APDS" style="display: none;">
                 <strong>Armor Piercing Discarding Sabot:</strong>
                 Better at penetrating sloped armor than AP, but generates less shrapnel
             </p>
-            ---| APFSDS <button type="button" class="show_button" data="#ammo_types_APFSDS"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            APFSDS <button type="button" class="show_button" data="#ammo_types_APFSDS"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_APFSDS" style="display: none;">
                 <strong>Armor Piercing Fin Stabilised Discarding Sabot:</strong>
                 Same as APDS, but even better at penetrating sloped armor
             </p>
-            ---| APHE&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_APHE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            APHE&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_APHE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="ammo_types_APHE" style="display: none;">
                 <strong>Armor Piercing High Explosive:</strong>
                 Pierces armor and explodes inside the tank, which does a large amount of damage
             </p>
+            </div>
             <div class="grid_container" style="padding: 1em 0 1em 0;">
             <img src="./../img/wiki/image4.png">
             <p>When CE rounds penetrate, they <strong>travel a set distance</strong> before dissipating, <strong>creating spall</strong> out of penetrated armour. This spall tends to be more sporadic than KE spall, <strong>sometimes damaging modules</strong> parallel.</p>
@@ -222,6 +226,31 @@
             Guns have a <strong>caliber penalty</strong>. It affects <strong>reloading</strong> (the larger the caliber, the longer the reload will be). Here you can <strong>calculate the reload time</strong> taking into account caliber, gun inital reload and turret reload multiplier:<br>
             <div style="padding: 0.3em 0 0.3em 0;"><input type="number" id="reload_input_cal" placeholder="Caliber" class="reload_input"><input type="number" id="reload_input_init_rel" placeholder="Inital reload" class="reload_input"><input type="number" id="reload_input_rel_mult" placeholder="Reload mult." class="reload_input"><button type="button" class="reload_button" id="reload_button"><img src="./../img/search.ico"></button></div>
             <div class="ammo_types" id="reload_answer_container"></div>
+        </div>
+        <h2>Game Modes: 
+            <button type="button" class="show_button" data="#game_modes"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="game_modes" style="display: none;">
+            All game modes are <strong>ticket-based</strong>. Depending on the actions on the map, <strong>they will decrease</strong>. If one team's number of tickets <strong>drops to 0, it loses</strong>. If time runs out and the teams still have tickets, the team with <strong>the most tickets will win</strong>.<br><br>
+            There are <strong>4 game modes</strong> in the game at the moment:
+            <div style="padding: 0.3em 0 0 2em;">
+            Team Deathmatch <button type="button" class="show_button" data="#game_modes_TD"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="game_modes_TD" style="display: none;"> <!--1000-->
+                At the beginning of the game, <strong>1000 tickets are given</strong>. For each <strong>player respawn, 40 tickets</strong> are taken away from the team. There are <strong>no points</strong> in this mode.
+            </p>
+            Skirmish <button type="button" class="show_button" data="#game_modes_S"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="game_modes_S" style="display: none;"> <!--1200-->
+                At the beginning of the game, <strong>1200 tickets are given</strong>. For each <strong>player respawn, 20 tickets</strong> are taken away from the team. There will be <strong>one point in the center</strong> of the map. If one team captures it, the opposing team will lose tickets.
+            </p>
+            Defence&nbsp; <button type="button" class="show_button" data="#game_modes_Def"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="game_modes_Def" style="display: none;"> <!--1200-->
+                At the beginning of the game <strong>1200 tickets are given</strong>. For each <strong>player respawn, 30 tickets</strong> are taken away from the team. Each team has <strong>a "home" point</strong>. If the other team captures it, it is almost guaranteed to win.
+            </p>
+            Conquest <button type="button" class="show_button" data="#game_modes_Con"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="game_modes_Con" style="display: none;"> <!--1200-->
+                At the beginning of the game <strong>1200 tickets are given</strong>. For each <strong>player respawn, 20 tickets</strong> are taken away from the team. There will be a total of <strong>3 points</strong> on the map. If two of them are captured by one team, tickets will be drained from the opposite team.
+            </p>
+            </div>
         </div>
         <h2>FCS, Radar and compute: 
             <button type="button" class="show_button" data="#radar"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>

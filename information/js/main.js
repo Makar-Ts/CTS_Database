@@ -2,6 +2,8 @@
 const username = 'Makar-Ts';
 const repository = 'CTS_Database';
 
+$('#commits-container').hide();
+
 // Функция для получения данных с GitHub API
 async function getCommits() {
     const apiUrl = `https://api.github.com/repos/${username}/${repository}/commits`;
@@ -34,6 +36,8 @@ async function displayCommits() {
         commitElement.setAttribute("style", 'padding-bottom: 5px; margin-left: 20px; margin-bottom: 15px; border-bottom: 1px solid #ffffff;');
         commitsContainer.appendChild(commitElement);
     });
+
+    $('#commits-container').slideDown(1000);
 }
 
 // Вызываем функцию для отображения коммитов
