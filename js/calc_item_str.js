@@ -36,6 +36,18 @@ function clamp(num, min, max) {
     return Math.min(Math.max(num, min), max);
 }
 
+function calculateCaliberPenalty(gc, rm) {
+    var rm2 = rm <= 1 ? 1.0 : rm; 
+
+    var mult = clamp(rm*2/(gc**(1/3)-2.27),
+                     0, 
+                     clamp(rm2, 0, 1+clamp(Math.sqrt(gc) -5.91, 
+                                                    0, 
+                                                    rm2)));
+
+    return mult;
+}
+
 function calculateCaliberFromMultiplier(rm) {
     // var mult = clamp(rm*2/(gc**(1/3)-2.27),                      orig formula, thx faux
     //                  0, 

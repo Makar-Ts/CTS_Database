@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CTS Database - Search</title>
+    <link rel="stylesheet" href="./../main.css">
+    <style>
+        .item_container {
+            padding-top: 0px;
+            padding-left: 1%;
+            padding-right: 1%;
+            width: 48%;
+        }
+
+        .reload_input {
+            position: relative;
+            padding: 10px;
+            font-size: 1em;
+            font-family:Consolas, monospace;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .reload_button {
+            background-color: white;
+            height: 43px;
+            width: 43px;
+            padding: 0px;
+            font-size: 1.8em;
+            font-family:Consolas, monospace;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .reload_button:hover {
+            background-color: rgb(198, 198, 198);
+        }
+        
+        .reload_button:active {
+            background-color: rgb(166, 166, 166);
+        }
+
+        .reload_button img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: transform 0.1s;
+        }
+
+        .grid_container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            row-gap: 10px;  
+            column-gap: 10px;
+        }
+
+        .grid_container img {
+            border-radius: 8px;
+        }
+
+        @media (orientation: portrait) {
+            .item_container {
+                width: 100%;
+                position: relative;
+                left: 0%;
+            }
+
+            .grid_container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs_container">
+        <a href="./../information/"><div style="width: 5%;"><p>i</p></div></a><a href="./"><div style="width: 5%;" id="tabs_active"><p>W</p></div></a><a href="./../"><div><p>Search</p></div></a><a href="./../all_objects/"><div><p>By categories</p></div></a><a href="./../compare/"><div><p>Compare</p></div></a>
+    </div>
+
+    <div class="item_container">
+        <h1>CTS Wiki: </h1>
+        <h2>Damage system:
+            <button type="button" class="show_button" data="#damage_system"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="damage_system" style="display: none;">
+            The damage system is <strong> based on modules</strong>. When they are hit by <strong>shrapnel/shell/explosion</strong> they are damaged. Damage is <strong>indicated by the color</strong> of the module 
+            (<p style="color: lime; display:inline-block;">green</p> > 
+            <p style="color: yellow;display:inline-block;">yellow</p> > 
+            <p style="color: orange;display:inline-block;">orange</p> > 
+            <p style="color: red;display:inline-block;">red</p> >
+            <p style="color: black;display:inline-block;">black</p> (destroyed)). <br><br>
+
+            Damage interface pops up on the top right when you hit an enemy tank. <p style="color: lime; display:inline-block;">Green</p> indicates pre-contact shell,
+            <p style="color: red; display:inline-block;">red</p> indicates post-pen shell,
+            <p style="color: yellow; display:inline-block;">yellow</p> indicates spall,
+            <p style="color: blue; display:inline-block;">blue</p> indicates ricochet.<br><br>
+
+            Some modules cause <strong>negative effects</strong> when damaged:
+            <div style="padding: 0.3em 0 0 2em;">
+            Fuel tank &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_fuel_tank"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_fuel_tank" style="display: none;">
+                If set on fire, it will gradually damage modules and crews in a radius. This will also stop repairs.
+            </p>
+            Track | Wheel <button type="button" class="show_button" data="#damage_system_track"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_track" style="display: none;">
+                Does not allow the damaged module to move (in case of wheels, gradually reduces the speed, depending on the number of damaged wheels)
+            </p>
+            Radiator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_rad"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_rad" style="display: none;">
+                If broken, the engine will be set on fire if it breaks.
+            </p>
+            Engine | Transmission <button type="button" class="show_button" data="#damage_system_engine"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_engine" style="display: none;">
+                The more damaged they are, the lower your top speed is. Either one stops movement if broken.
+            </p>
+            Cannon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_cannon"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_cannon" style="display: none;">
+                The more damaged it is, the (negligibly) less accurate your shots are.
+            </p>
+            Breech &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_breech"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_breech" style="display: none;">
+                The more damaged it is, the higher the chance of non-firing, forcing you to wait 5s then reload your gun.
+            </p>
+            Horizontal drive | Vertical drive <button type="button" class="show_button" data="#damage_system_drive"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_drive" style="display: none;">
+                The more damaged it is, the slower the traverse.
+            </p>
+            Ammunition &nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_ammo"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_ammo" style="display: none;">
+                When destroyed, it destroys the entire crew along with the tank.<br><br>
+                
+                Ammunition can be blowout-protected. This can be checked when inspecting a part and pointing at an ammo hitbox without x-ray.
+            </p>
+            Secondary &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_second"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_second" style="display: none;">
+                If destroyed, you can't fire a secondary.
+            </p>
+            APS | APS radar <button type="button" class="show_button" data="#damage_system_aps"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_aps" style="display: none;">
+                APS stops working in the sector where it is damaged
+            </p>
+            Tracking Radar | Search Radar <button type="button" class="show_button" data="#damage_system_radar"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_radar" style="display: none;">
+                Inability to track / detect targets
+            </p>
+            Driver &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_driver"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_driver" style="display: none;">
+                Losing a driver does not allow you to drive the tank if there is no other living driver.
+            </p>
+            Gunner &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_gunner"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_gunner" style="display: none;">
+                Losing a gunner does not allow the gun to be aimed if there is no other alive gunner.
+            </p>
+            Loader &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_loader"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="damage_system_loader" style="display: none;">
+                Losing a loader incurs a 2x reload penalty. If a turret does not have a loader, that means it is autoloaded.
+            </p>
+            </div>
+        </div>
+        <h2>Ammo types: 
+            <button type="button" class="show_button" data="#ammo_types"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="ammo_types" style="display: none;">
+            There are <strong>2 classes</strong> of ammo in the game:<br>
+            -| <p style="color: lime; display:inline-block;"><strong>CE (Chemical Energy):</strong></p> <br>
+            ---| HE&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_HE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_HE" style="display: none;">
+                <strong>High Explosive:</strong>
+                Explodes on contact, which, if penetrated, deals massive damage
+            </p>
+            ---| HEAT <button type="button" class="show_button" data="#ammo_types_HEAT"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_HEAT" style="display: none;">
+                <strong>High Explosive Anti Tank:</strong>
+                Generates few of shrapnel, but does a lot of damage if it hits the module
+            </p>
+            ---| HESH <button type="button" class="show_button" data="#ammo_types_HESH"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_HESH" style="display: none;">
+                <strong>High Explosive Squash Head:</strong>
+                Same as HE, but has more penetration but less explosive power
+            </p>
+            ---| ATGM <button type="button" class="show_button" data="#ammo_types_ATGM"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_ATGM" style="display: none;">
+                <strong>Anti Tank Guided Missle:</strong>
+                HEAT, but can be guided after the shot is fired
+            </p>
+            -| <p style="color: blue; display:inline-block;"><strong>KE (Kinetic Energy):</strong></p> <br>
+            ---| AP&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_AP"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_AP" style="display: none;">
+                <strong>Armor Piercing:</strong>
+                Pierces armor, generating shrapnel
+            </p>
+            ---| APDS <button type="button" class="show_button" data="#ammo_types_APDS"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_APDS" style="display: none;">
+                <strong>Armor Piercing Discarding Sabot:</strong>
+                Better at penetrating sloped armor than AP, but generates less shrapnel
+            </p>
+            ---| APFSDS <button type="button" class="show_button" data="#ammo_types_APFSDS"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_APFSDS" style="display: none;">
+                <strong>Armor Piercing Fin Stabilised Discarding Sabot:</strong>
+                Same as APDS, but even better at penetrating sloped armor
+            </p>
+            ---| APHE&nbsp;&nbsp; <button type="button" class="show_button" data="#ammo_types_APHE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <p class="ammo_types" id="ammo_types_APHE" style="display: none;">
+                <strong>Armor Piercing High Explosive:</strong>
+                Pierces armor and explodes inside the tank, which does a large amount of damage
+            </p>
+            <div class="grid_container" style="padding: 1em 0 1em 0;">
+            <img src="./../img/wiki/image4.png">
+            <p>When CE rounds penetrate, they <strong>travel a set distance</strong> before dissipating, <strong>creating spall</strong> out of penetrated armour. This spall tends to be more sporadic than KE spall, <strong>sometimes damaging modules</strong> parallel.</p>
+            <img src="./../img/wiki/image5.png">
+            <p>When KE rounds penetrate, their <strong>penetration only depletes when going through armour</strong>. Hence they are not as weak against spaced areas. However, their <strong>cone of spall is more focused</strong>.</p>
+            </div>
+            Both have their uses, with KE being more preferred in top tier with the <strong>proliferation of composite and spaced armour</strong>.
+        </div>
+        <h2>Reload formula: 
+            <button type="button" class="show_button" data="#reload_formula"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="reload_formula" style="display: none;">
+            Guns have a <strong>caliber penalty</strong>. It affects <strong>reloading</strong> (the larger the caliber, the longer the reload will be). Here you can <strong>calculate the reload time</strong> taking into account caliber, gun inital reload and turret reload multiplier:<br>
+            <div style="padding: 0.3em 0 0.3em 0;"><input type="number" id="reload_input_cal" placeholder="Caliber" class="reload_input"><input type="number" id="reload_input_init_rel" placeholder="Inital reload" class="reload_input"><input type="number" id="reload_input_rel_mult" placeholder="Reload mult." class="reload_input"><button type="button" class="reload_button" id="reload_button"><img src="./../img/search.ico"></button></div>
+            <div class="ammo_types" id="reload_answer_container"></div>
+        </div>
+        <h2>FCS, Radar and compute: 
+            <button type="button" class="show_button" data="#radar"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="radar" class="grid_container" style="display: none;">
+            <img src="./../img/wiki/image3.png">
+            <div>Radar <strong>detects tanks in line-of-sight</strong> from the search radar itself, not the centre of your tank. Circles indicate friendlies, squares indicate foes.</div>
+            <img src="./../img/wiki/image1.png">
+            <div>Compute requires you to <strong>tag a target</strong> by clicking T on them, but <strong>only if the centre of their tank is in line-of-sight</strong> of the tracking radar. The guidance <strong>takes into account your speed, and their speed</strong> as well. This is especially useful with artillery guns.</div>
+            <img src="./../img/wiki/image2.png">
+            <div>FCS is displayed as a <strong>white cross</strong> on your screen, which indicates <strong>where your shot will land</strong>. This <strong>takes into account only your speed</strong>, and works up to a stated (often sufficient) distance.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Credits:<br>
+        &nbsp;&nbsp;CTS Database by @theseasofenvy: <a href="https://docs.google.com/spreadsheets/d/1DzSz5p-lAJEM74g005gZm5Vp7Ot5k8I_ESVeUJSpSXw/edit#gid=1416330682">google docs</a><br>
+        &nbsp;&nbsp;Wiki made by @adam_and_steve: <a href="https://docs.google.com/document/d/1qcGJEEm2EQKLHUpsA8wF2UB8RH_YHT8g2bEHsImYyEU/edit">google docs</a>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>  
+    <script src="./../js/calc_item_str.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
