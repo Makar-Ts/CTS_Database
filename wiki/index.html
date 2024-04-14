@@ -56,10 +56,15 @@
             grid-template-columns: 1fr 3fr;
             row-gap: 10px;  
             column-gap: 10px;
+            grid-auto-rows: auto;
         }
 
         .grid_container img {
             border-radius: 8px;
+        }
+
+        .maps_container .grid_container {
+            grid-template-columns: 2fr 1fr;
         }
 
         @media (orientation: portrait) {
@@ -118,7 +123,7 @@
             </p>
             Cannon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_cannon"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="damage_system_cannon" style="display: none;">
-                The more damaged it is, the (negligibly) less accurate your shots are.
+                The more damage, the (negligible) less accuracy and penetration your shots have. 
             </p>
             Breech &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="show_button" data="#damage_system_breech"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
             <p class="ammo_types" id="damage_system_breech" style="display: none;">
@@ -250,6 +255,102 @@
             <p class="ammo_types" id="game_modes_Con" style="display: none;"> <!--1200-->
                 At the beginning of the game <strong>1200 tickets are given</strong>. For each <strong>player respawn, 20 tickets</strong> are taken away from the team. There will be a total of <strong>3 points</strong> on the map. If two of them are captured by one team, tickets will be drained from the opposite team.
             </p>
+            </div>
+        </div>
+        <h2>Maps: 
+            <button type="button" class="show_button" data="#maps"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="maps" style="display: none;" class="maps_container">
+            3Fort <button type="button" class="show_button" data="#3Fort"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="3Fort" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/3Fort.png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong>Where have I seen this map from??</strong></i>
+                </p>
+            </div>
+            Advance to Yew Key <button type="button" class="show_button" data="#YewKey"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="YewKey" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Advance to Yew Key.png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong>Vigilance will be your greatest friend.</strong></i>
+                </p>
+            </div>
+            Afghantis <button type="button" class="show_button" data="#Afghantis"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="Afghantis" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Afghantis.png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong>Wait... Is this the rigging place?</strong></i>
+                </p>
+            </div>
+            Arctic Sea <button type="button" class="show_button" data="#ArcticSea"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="ArcticSea" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Arctic Sea.png">
+                <p>In map rotate: yes<br>
+                   Description: <i><strong>Brrr... make sure to check your surroundings.</strong></i>
+                </p>
+            </div>
+            Fields of AE <button type="button" class="show_button" data="#FieldsofAE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="FieldsofAE" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Fields of AE.png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong>X Æ A-12</strong></i>
+                </p>
+            </div>
+            Karelia <button type="button" class="show_button" data="#Karelia"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="Karelia" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Karelia.png">
+                <p>In map rotate: no<br>
+                    Description: <i><strong>Bumpy terrain. Use a mobile vehicle!</strong></i>
+                </p>
+            </div>
+            Nuclear Winter <button type="button" class="show_button" data="#NuclearWinter"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="NuclearWinter" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Nuclear Winter.png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong>⚠️ We just nuked the building ⚠️</strong></i>
+                </p>
+            </div>
+            Production Line <button type="button" class="show_button" data="#ProductionLine"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="ProductionLine" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Production Line.png">
+                <p>In map rotate: <strong>yes</strong><br>
+                   Description: <i><strong>The machinery...</strong></i>
+                </p>
+            </div>
+            Red Desert <button type="button" class="show_button" data="#RedDesert"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="RedDesert" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/Red Desert.png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong>Desert costruction site. Beware of sharp shooters!</strong></i>
+                </p>
+            </div>
+            The Moon <button type="button" class="show_button" data="#TheMoon"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="TheMoon" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/The Moon.png">
+                <p>In map rotate: no<br>
+                    Description: <i><strong>Wait... Combustion engines don't work in space! Why's there still sounds?! Literally unplayable...</strong></i>
+                </p>
+            </div>
+            The Square <button type="button" class="show_button" data="#TheSquare"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="TheSquare" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/The Square.png">
+                <p>In map rotate: no<br>
+                    Description: <i><strong>Don't ask what happened in 1984...</strong></i>
+                </p>
+            </div>
+            The Square (full) <button type="button" class="show_button" data="#TheSquarefull"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="TheSquarefull" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/The Square (full).png">
+                <p>In map rotate: no<br>
+                    Description: <i><strong>Don't ask what happened in 1984...</strong></i>
+                </p>
+            </div>
+            [BASEPLATE] <button type="button" class="show_button" data="#BASEPLATE"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button><br>
+            <div class="grid_container ammo_types" id="BASEPLATE" style="display: none; grid-column-start: 1; grid-column-end: 3;">
+                <img src="./../img/wiki/maps/[BASEPLATE].png">
+                <p>In map rotate: yes<br>
+                    Description: <i><strong></strong></i>
+                </p>
             </div>
         </div>
         <h2>FCS, Radar and compute: 
