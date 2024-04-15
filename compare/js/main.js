@@ -4,6 +4,7 @@ var database;
 var item_html;
 var item1_type = "", item1_name, item1_data;
 var item2_type = "", item2_name, item2_data;
+var database_loaded = false, img_database_loaded = false;
 
 $("#search_results_1").hide();
 $("#search_results_2").hide();
@@ -40,6 +41,10 @@ $(document).ready(function() {
             database = data;
 
             console.log(database.hulls["TKS"]);
+
+            database_loaded = true;
+
+            if (database_loaded & img_database_loaded) whenDatabasesLoaded();
         }
     });
 
@@ -53,6 +58,10 @@ $(document).ready(function() {
             img_database = data;
 
             console.log(data.hulls["TKS"]);
+
+            img_database_loaded = true;
+
+            if (database_loaded & img_database_loaded) whenDatabasesLoaded();
         }
     });
 
@@ -225,6 +234,33 @@ $(document).ready(function() {
     })
 });
 
+function whenDatabasesLoaded() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get("type") != undefined && urlParams.get("name1") != undefined && urlParams.get("name2") != undefined) {
+        $("#search_results_1").hide();
+        var hull = urlParams.get("name1");
+        var data = database[urlParams.get("type")][hull]
+        item1_type = urlParams.get("type");
+        item1_name = hull;
+        item1_data = data;
+        console.log(hull);
+        $('#search_input_1').val(hull);
+
+        $("#search_results_2").hide();
+        var hull = urlParams.get("name2");
+        var data = database[urlParams.get("type")][hull]
+        item2_type = urlParams.get("type");
+        item2_name = hull;
+        item2_data = data;
+        console.log(hull);
+        $('#search_input_2').val(hull);
+
+        createCompareList();
+    }
+}
+
+
 
 var ammo_stats_titles = {
     "fuse_sensitive": ["Fuse Sensitive", "mm"],
@@ -249,6 +285,8 @@ function createCompareList() {
     };
     $("#item_img2").attr('src', "./."+img_database[item2_type][item2_name]);
     $('#item_img2').css('display', 'none');
+
+    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${item1_type}&name1=${item1_name}&name2=${item2_name}`);
     
     $("#name").text(item1_name + " vs " + item2_name);
     $("#description1").text(item1_data.description);  $("#description2").text(item2_data.description);
@@ -446,6 +484,22 @@ function calculateStringFor2Items(data1, data2, type) {
                 `;
             }
 
+            crew1 = getCrewNumber(data1.stats.crew);
+            crew_str1 = ""
+            for (var key of Object.keys(crew1)) {
+                if (crew1[key] != 0) {
+                    crew_str1 += `${key} x${crew1[key]}<br>`
+                }
+            }
+
+            crew2 = getCrewNumber(data2.stats.crew);
+            crew_str2 = ""
+            for (var key of Object.keys(crew2)) {
+                if (crew2[key] != 0) {
+                    crew_str2 += `<p style="color: ${redOrGreen(crew1[key], crew2[key])};">${key} x${crew2[key]}<p>`
+                }
+            }
+
             stats_str += `
             <table>
             <tr><th colspan="3" class="stat_header">Armor</th></tr>
@@ -475,7 +529,7 @@ function calculateStringFor2Items(data1, data2, type) {
                 <td style="color: ${redOrGreen(data1.stats.weaponry.hull_aim,data2.stats.weaponry.hull_aim)};">${hull_aim2}</td></tr>
             <tr><th>APS</th><td>${aps}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.aps,data2.stats.weaponry.aps)};">${aps2}</td></tr>
-            <tr><th>Crew</th><td>${data1.stats.crew.join(", ")}</td><td>${data2.stats.crew.join(", ")}</td></tr>
+            <tr><th>Crew</th><td>${crew_str1}</td><td>${crew_str2}</td></tr>
             ${gun}
             </table>`
             break;

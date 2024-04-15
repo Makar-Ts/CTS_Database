@@ -48,6 +48,25 @@ function calculateCaliberPenalty(gc, rm) {
     return mult;
 }
 
+function getCrewNumber(crew_arr) {
+    crews = {
+        "Gunner": 0,
+        "Driver": 0,
+        "Commander": 0,
+        "Loader": 0
+    }
+
+    crew_arr.forEach(element => {
+        for (var key of Object.keys(crews)) {
+            if (element.includes(key)) {
+                crews[key] += 1;
+            }
+        }
+    });
+
+    return crews;
+}
+
 function calculateCaliberFromMultiplier(rm) {
     // var mult = clamp(rm*2/(gc**(1/3)-2.27),                      orig formula, thx faux
     //                  0, 
@@ -137,6 +156,14 @@ function calculateStringForItem(data, type) {
                 `;
             }
 
+            crew = getCrewNumber(data.stats.crew);
+            crew_str = ""
+            for (var key of Object.keys(crew)) {
+                if (crew[key] != 0) {
+                    crew_str += `${key} x${crew[key]}<br>`
+                }
+            }
+
             stats_str += `
             <table>
             <tr><th colspan="2" class="stat_header">Armor</th></tr>
@@ -154,7 +181,7 @@ function calculateStringForItem(data, type) {
             <tr><th>Blowout</th><td>${blowout}</td></tr>
             <tr><th>Hull Aim</th><td>${hull_aim}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
-            <tr><th>Crew</th><td>${data.stats.crew.join(", ")}</td></tr>
+            <tr><th>Crew</th><td>${crew_str}</td></tr>
             ${gun}
             </table>`
             break;
@@ -188,6 +215,14 @@ function calculateStringForItem(data, type) {
                 reload_multiplier_caliber = Math.round(calculateCaliberFromMultiplier(data.stats.weaponry.gun.reload_multiplier));
             }
 
+            crew = getCrewNumber(data.stats.crew);
+            crew_str = ""
+            for (var key of Object.keys(crew)) {
+                if (crew[key] != 0) {
+                    crew_str += `${key} x${crew[key]}<br>`
+                }
+            }
+
             stats_str += `
             <table>
             <tr><th colspan="2" class="stat_header">Armor</th></tr>
@@ -206,7 +241,7 @@ function calculateStringForItem(data, type) {
             <tr><th>APS</th><td>${aps}</td></tr>
             <tr><th>FCS</th><td>${fcs}</td></tr>
             <tr><th>Blowout</th><td>${blowout}</td></tr>
-            <tr><th>Crew</th><td>${data.stats.crew.join(", ")}</td></tr>
+            <tr><th>Crew</th><td>${crew_str}</td></tr>
             </table>`
             break;
         case "guns":
