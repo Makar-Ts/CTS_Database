@@ -468,10 +468,21 @@ function calculateStringFor2Items(data1, data2, type) {
 
             gun = ""
             if (data1.stats.weaponry.have_gun & data2.stats.weaponry.have_gun) {
+                reload_multiplier_caliber1 = data1.stats.weaponry.gun.reload_multiplier_caliber;
+                if (data1.stats.weaponry.gun.reload_multiplier_caliber == 0) {
+                    reload_multiplier_caliber1 = Math.round(calculateCaliberFromMultiplier(data1.stats.weaponry.gun.reload_multiplier));
+                }
+
+                reload_multiplier_caliber2 = data2.stats.weaponry.gun.reload_multiplier_caliber;
+                if (data2.stats.weaponry.gun.reload_multiplier_caliber == 0) {
+                    reload_multiplier_caliber2 = Math.round(calculateCaliberFromMultiplier(data2.stats.weaponry.gun.reload_multiplier));
+                }
+
+
                 gun = `
                 <tr><th colspan="3" class="stat_header">Gun Mount</th></tr>
-                <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier} (${data1.stats.weaponry.gun.reload_multiplier_caliber}mm)</td>
-                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier,data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier} (${data2.stats.weaponry.gun.reload_multiplier_caliber}mm)</td></tr>
+                <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber1}mm)</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier,data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber2}mm)</td></tr>
                 <tr><th colspan="3" class="stat_header">Gun Limits</th></tr>
                 <tr><th>Up</th><td>${data1.stats.weaponry.gun.limits.up}</td>
                     <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.up,data2.stats.weaponry.gun.limits.up)};">${data2.stats.weaponry.gun.limits.up}</td></tr>
@@ -526,7 +537,8 @@ function calculateStringFor2Items(data1, data2, type) {
             <tr><th>Blowout</th><td>${blowout}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.blowout,data2.stats.weaponry.blowout)};">${blowout2}</td></tr>
             <tr><th>Hull Aim</th><td>${hull_aim}</td>
-                <td style="color: ${redOrGreen(data1.stats.weaponry.hull_aim,data2.stats.weaponry.hull_aim)};">${hull_aim2}</td></tr>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.hull_aim == -1 ? 0 : data1.stats.weaponry.hull_aim,
+                                               data2.stats.weaponry.hull_aim == -1 ? 0 : data2.stats.weaponry.hull_aim)};">${hull_aim2}</td></tr>
             <tr><th>APS</th><td>${aps}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.aps,data2.stats.weaponry.aps)};">${aps2}</td></tr>
             <tr><th>Crew</th><td>${crew_str1}</td><td>${crew_str2}</td></tr>
@@ -600,8 +612,8 @@ function calculateStringFor2Items(data1, data2, type) {
             <tr><th>Horizontal Speed</th><td>${data1.stats.weaponry.gun.speed.horizontal}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.gun.speed.horizontal,data2.stats.weaponry.gun.speed.horizontal)};">${data2.stats.weaponry.gun.speed.horizontal}</td></tr>
             <tr><th colspan="3" class="stat_header">Weaponry</th></tr>
-            <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier}</td>
-                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier, data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier}</td></tr>
+            <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier} (${Math.round(calculateCaliberFromMultiplier(data1.stats.weaponry.gun.reload_multiplier))}mm)</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier, data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier} (${Math.round(calculateCaliberFromMultiplier(data2.stats.weaponry.gun.reload_multiplier))}mm)</td></tr>
             <tr><th>Ammo Storage</th><td>${data1.stats.weaponry.ammo_storage}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.ammo_storage, data2.stats.weaponry.ammo_storage)};">${data2.stats.weaponry.ammo_storage}</td></tr>
             <tr><th>Stabilizer</th><td>${data1.stats.weaponry.stabilizer ? "Yes" : "No"}</td>
