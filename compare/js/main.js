@@ -629,70 +629,113 @@ function calculateStringFor2Items(data1, data2, type) {
             break;
         case "guns":
             var ammos = "", ammos2 = "";
-            data1.stats.weaponry.ammunition.forEach(element => {
-                ammo_stats = ""
-                for (var key of Object.keys(element.stats)) {
-                    if (element.stats[key] == -1) continue;
 
-                    ammo_stats += `<tr><th>${ammo_stats_titles[key][0]}</th><td>${element.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
+            var gun2_alreadyCheckedAmmos = [];
+            var gun2_rows = [];
+
+            data1.stats.weaponry.ammunition.forEach(element => {
+                ammo_stats = "", ammo_stats2 = "";
+
+                var foundElement = data2.stats.weaponry.ammunition.find(function(Felement) {
+                    let one = Felement.type.split(" ")[0].replace("HEATFS", "HEAT");
+                    let two = element.type.split(" ")[0].replace("HEATFS", "HEAT");
+
+                    return (one == two);
+                });
+
+                for (var key of Object.keys(element.stats)) {
+                    if (element.stats[key] != -1) {
+                        ammo_stats += `<tr><th>${ammo_stats_titles[key][0]}</th><td>${element.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
+                    }
+
+                    if (foundElement == undefined) continue;
+                    if (foundElement.stats[key] == -1 || foundElement.stats[key] == undefined) continue;
+                    
+                    ammo_stats2 += `<tr><th>${ammo_stats_titles[key][0]}</th>
+                        <td style="color: ${redOrGreen(element.stats[key], foundElement.stats[key])};">${foundElement.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
                 }
 
-                ammos += `<tr><th colspan="3" class="stat_header">${element.type}</th></tr>
+                var indexof = data1.stats.weaponry.ammunition.indexOf(element) + 1;
+
+                ammos += `<div style="
+                grid-column: 1;
+                grid-row: ${indexof};
+                width: 100%;
+                "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                 <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
                 <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
                 <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
                 <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
                 <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
-                ${ammo_stats}`
+                ${ammo_stats}</table></div>`
+
+                if (foundElement) {
+                    gun2_alreadyCheckedAmmos.push(data2.stats.weaponry.ammunition.indexOf(foundElement))
+                    gun2_rows.push(indexof);
+
+                    ammos2 += `<div style="
+                    grid-column: 2;
+                    grid-row: ${indexof};
+                    width: 100%;
+                    "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
+                    <tr><th>Penetration</th>
+                    <td style="color: ${redOrGreen(element.penetration["0"], foundElement.penetration["0"])};">0deg: ${foundElement.penetration["0"]}mm</td></tr>
+                    <tr><th></th><td style="color: ${redOrGreen(element.penetration["30"], foundElement.penetration["30"])};">30deg: ${foundElement.penetration["30"]}mm</td></tr>
+                    <tr><th></th><td style="color: ${redOrGreen(element.penetration["60"], foundElement.penetration["60"])};">60deg: ${foundElement.penetration["60"]}mm</td></tr>
+                    <tr><th>Velocity</th><td style="color: ${redOrGreen(element.velocity, foundElement.velocity)};">${foundElement.velocity}m/s</td></tr>
+                    <tr><th>Ricochet Angle</th><td style="color: ${redOrGreen(element.ricochet_angle, foundElement.ricochet_angle)};">${foundElement.ricochet_angle}deg</td></tr>
+                    ${ammo_stats2}</table></div>`;
+                }
             });
 
+            
             data2.stats.weaponry.ammunition.forEach(element => {
+                var indexof = data2.stats.weaponry.ammunition.indexOf(element);
                 ammo_stats = ""
 
-                var foundElement = data1.stats.weaponry.ammunition.find(function(Felement) {
-                    return Felement.type.split(" ")[0] == element.type.split(" ")[0];
-                });
+                if (gun2_alreadyCheckedAmmos.indexOf(indexof) != -1) return;
 
-                console.log(element.type.split(" ")[0]);
-                console.log(foundElement);
+                if (gun2_rows.indexOf(indexof + 1) != -1) {
+                    var indexof = gun2_rows[gun2_rows.length-1]+1;
 
-                for (var key of Object.keys(element.stats)) {
-                    if (element.stats[key] == -1) continue;
-                    
-                    if (foundElement) {
-                        if (foundElement.stats[key] | foundElement.stats[key] != 1) {
-                            ammo_stats += `<tr><th>${ammo_stats_titles[key][0]}</th>
-                                <td style="color: ${redOrGreen(foundElement.stats[key], element.stats[key])};">${element.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
-                        
-                            continue;
+                    for (var i = 0; i < gun2_rows.length-1; i++) {
+                        if (gun2_rows[i+1]-gun2_rows[i] > 1) {
+                            indexof = gun2_rows[i]+1;
+
+                            break;
                         }
                     }
 
+                    console.log(indexof);
+                }
+
+                gun2_rows.push(indexof);
+                console.log(element.type.split(" ")[0]);
+
+                for (var key of Object.keys(element.stats)) {
+                    if (element.stats[key] == -1) continue;
+
                     ammo_stats += `<tr><th>${ammo_stats_titles[key][0]}</th><td>${element.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
                 }
-                
-                if (foundElement) {
-                    ammos2 += `<tr><th colspan="3" class="stat_header">${element.type}</th></tr>
-                    <tr><th>Penetration</th>
-                        <td style="color: ${redOrGreen(foundElement.penetration["0"], element.penetration["0"])};">0deg: ${element.penetration["0"]}mm</td></tr>
-                    <tr><th></th><td style="color: ${redOrGreen(foundElement.penetration["30"], element.penetration["30"])};">30deg: ${element.penetration["30"]}mm</td></tr>
-                    <tr><th></th><td style="color: ${redOrGreen(foundElement.penetration["60"], element.penetration["60"])};">60deg: ${element.penetration["60"]}mm</td></tr>
-                    <tr><th>Velocity</th><td style="color: ${redOrGreen(foundElement.velocity, element.velocity)};">${element.velocity}m/s</td></tr>
-                    <tr><th>Ricochet Angle</th><td style="color: ${redOrGreen(foundElement.ricochet_angle, element.ricochet_angle)};">${element.ricochet_angle}deg</td></tr>
-                    ${ammo_stats}`;
-                } else {
-                    ammos2 += `<tr><th colspan="3" class="stat_header">${element.type}</th></tr>
-                    <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
-                    <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
-                    <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
-                    <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
-                    <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
-                    ${ammo_stats}`;
-                }
+
+                ammos2 += `<div style="
+                grid-column: 2;
+                grid-row: ${indexof};
+                width: 100%;
+                "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
+                <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
+                <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
+                <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
+                <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
+                <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
+                ${ammo_stats}</table></div>`;
             });
             
             stats_str += `
-            <table>
+            <table style="
+                width: 100%;
+                table-layout: fixed;
+            ">
             <tr><th colspan="3" class="stat_header">Weaponry</th></tr>
             <tr>
             <th>Reload</th>
@@ -723,7 +766,10 @@ function calculateStringFor2Items(data1, data2, type) {
                 </td>
             </tr>
             <tr><th colspan="3" class="stat_header">Ammunition</th></tr>
-            <tr><td colspan="3" style="text-align: center; white-space: nowrap;"><div class="stats_ammunition"><table>${ammos}</table></div><div class="stats_ammunition"><table>${ammos2}</table></div></td></tr>
+            <tr><td colspan="3"><div style="
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 10px;">${ammos}${ammos2}</div></td></tr>
             </table>`
             break;
         default:
