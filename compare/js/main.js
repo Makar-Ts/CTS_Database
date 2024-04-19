@@ -655,11 +655,11 @@ function calculateStringFor2Items(data1, data2, type) {
                         <td style="color: ${redOrGreen(element.stats[key], foundElement.stats[key])};">${foundElement.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
                 }
 
-                var indexof = data1.stats.weaponry.ammunition.indexOf(element) + 1;
+                var indexof = data1.stats.weaponry.ammunition.indexOf(element);
 
                 ammos += `<div style="
                 grid-column: 1;
-                grid-row: ${indexof};
+                grid-row: ${indexof + 1};
                 width: 100%;
                 "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                 <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
@@ -675,7 +675,7 @@ function calculateStringFor2Items(data1, data2, type) {
 
                     ammos2 += `<div style="
                     grid-column: 2;
-                    grid-row: ${indexof};
+                    grid-row: ${indexof + 1};
                     width: 100%;
                     "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                     <tr><th>Penetration</th>
@@ -695,7 +695,7 @@ function calculateStringFor2Items(data1, data2, type) {
 
                 if (gun2_alreadyCheckedAmmos.indexOf(indexof) != -1) return;
 
-                if (gun2_rows.indexOf(indexof + 1) != -1) {
+                if (gun2_rows.indexOf(indexof) != -1) {
                     var indexof = gun2_rows[gun2_rows.length-1]+1;
 
                     for (var i = 0; i < gun2_rows.length-1; i++) {
@@ -705,8 +705,6 @@ function calculateStringFor2Items(data1, data2, type) {
                             break;
                         }
                     }
-
-                    console.log(indexof);
                 }
 
                 gun2_rows.push(indexof);
@@ -720,7 +718,7 @@ function calculateStringFor2Items(data1, data2, type) {
 
                 ammos2 += `<div style="
                 grid-column: 2;
-                grid-row: ${indexof};
+                grid-row: ${indexof + 1};
                 width: 100%;
                 "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                 <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
