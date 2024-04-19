@@ -3,12 +3,12 @@
 //x = (-0.00906669-sqrt(D))/(-0.00000970477*2)
 
 var ammo_stats_titles = {
-    "fuse_sensitive": ["Fuse Sensitive", "mm"],
-    "fuse_delay": ["Fuse Delay", "m"],
-    "explosive_mass": ["Explosive Mass", ""],
-    "fuse_radius": ["Fuse Radius", "m"],
-    "arming_distance": ["Arming Distance", "m"],
-    "range": ["Range", "km"]
+    "fuse_sensitive": ["Fuse Sensitive", "mm", 1],
+    "fuse_delay": ["Fuse Delay", "m", 1],
+    "explosive_mass": ["Explosive Mass", "", 1],
+    "fuse_radius": ["Fuse Radius", "m", 1],
+    "arming_distance": ["Arming Distance", "m", -1],
+    "range": ["Range", "km", 1]
 };
 
 function replaceGreekNumerals(str) {

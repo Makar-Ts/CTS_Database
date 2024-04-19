@@ -260,17 +260,6 @@ function whenDatabasesLoaded() {
     }
 }
 
-
-
-var ammo_stats_titles = {
-    "fuse_sensitive": ["Fuse Sensitive", "mm"],
-    "fuse_delay": ["Fuse Delay", "m"],
-    "explosive_mass": ["Explosive Mass", ""],
-    "fuse_radius": ["Fuse Radius", "m"],
-    "arming_distance": ["Arming Distance", "m"],
-    "range": ["Range", "km"]
-};
-
 function createCompareList() {
     $("#item_img_container1").text("Image loading...");
     document.getElementById('item_img1').onerror = function(event) {
@@ -650,9 +639,14 @@ function calculateStringFor2Items(data1, data2, type) {
 
                     if (foundElement == undefined) continue;
                     if (foundElement.stats[key] == -1 || foundElement.stats[key] == undefined) continue;
+
+                    let color = redOrGreen(element.stats[key], foundElement.stats[key]);
+                    if (ammo_stats_titles[key][2] == -1) color = redOrGreen(foundElement.stats[key], element.stats[key]);
+
+                    console.log(ammo_stats_titles[key] + " ammo stat")
                     
                     ammo_stats2 += `<tr><th>${ammo_stats_titles[key][0]}</th>
-                        <td style="color: ${redOrGreen(element.stats[key], foundElement.stats[key])};">${foundElement.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
+                        <td style="color: ${color};">${foundElement.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
                 }
 
                 var indexof = data1.stats.weaponry.ammunition.indexOf(element);
