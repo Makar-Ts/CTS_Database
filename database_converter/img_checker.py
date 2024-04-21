@@ -1,15 +1,23 @@
 import json
 import os, sys
 
-def check_image_existence(data):
-    for category, items in data.items():
+def check_image_existence(data, database):
+    for category, items in database.items():
         print(f"======================== Checking images for {category}: ========================")
         for name, img_path in items.items():
-            if not os.path.exists(sys.path[0]+"\\..\\"+img_path):
-                print(f"Image for '{name}' in '{category}' does not exist at '{img_path}'")
+            if not name in data[category]:
+                print(f"⬛ Image for '{name}' in '{category}' does not exist in DATABASE")
+                continue
+            
+            if not os.path.exists(sys.path[0]+"\\..\\"+data[category][name]):
+                print(f"⬜ Image for '{name}' in '{category}' does not exist at '{data[category][name]}'")
 
 # Read JSON data from file
 with open(sys.path[0]+"\\..\\imgPaths.json", "r") as file:
     json_data = json.load(file)
 
-check_image_existence(json_data)
+with open(sys.path[0]+"\\..\\database.json", "r", encoding="utf-16") as database:
+    print(database)
+    database_data = json.load(database)
+
+check_image_existence(json_data, database_data)

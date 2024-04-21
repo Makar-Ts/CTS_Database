@@ -84,7 +84,7 @@
         },
         "crew": ["Driver", "Gunner"]
     },
-    "based_on": "L3/33 / CV/33 Italy]",
+    "based_on": "L3/33 / CV/33 [Italy]",
     "paired": {
         "gun": "",
         "turret": ""
@@ -626,7 +626,7 @@
     },
     "based_on": "M113 [USA]",
     "paired": {
-        "gun": "20mm M61 Vulcan [1] TOW-HE [8] TOW",
+        "gun": "20mm Vulcan [1] TOW-HE [8] TOW",
         "turret": "VADS [5] TOW"
     }
 }
@@ -687,7 +687,7 @@
             "rate": 2.24
         },
         "weaponry": {
-            "ammo_storage": 0,
+            "ammo_storage": 2.7,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -2165,7 +2165,7 @@
     },
     "based_on": "Stug III F [Germany]",
     "paired": {
-        "gun": "75mm Ikonisch",
+        "gun": "105mm German Slap [3] 75mm Ikonisch",
         "turret": ""
     }
 }
@@ -4968,7 +4968,7 @@
             "forward": 155,
             "backward": -13,
             "torque": 12,
-            "rate": 1.96
+            "rate": 1.68
         },
         "weaponry": {
             "ammo_storage": 5.6,
@@ -5031,87 +5031,6 @@
         "turret": "Chieftain SID"
     }
 }
-,"Battlepass-100": {
-    "description": "leaks?",
-    "tier": 8,
-    "rarity": "Mythical",
-    "obtain": "Unobtainable",
-    "resources": {},
-    "stats": {
-        "weight": 98.20,
-        "armor": {
-            "front": 200,
-            "back": 120,
-            "side": 80
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 31,
-            "backward": -11,
-            "torque": 60,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 27.5,
-            "blowout": -1,
-            "hull_aim": -1,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "E-100 [Germany]",
-    "paired": {
-        "gun": "128mm German Punch",
-        "turret": "The Battlepass (?)"
-    }
-}
-,"AFG MK 1": {
-    "description": "ARGGGG",
-    "tier": 8,
-    "rarity": "Mythical",
-    "obtain": "Joe Shack, Unobtainable (April Fool 2024)",
-    "resources": {},
-    "stats": {
-        "weight": 210.7,
-        "armor": {
-            "front": 300,
-            "back": 120,
-            "side": 200
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 15,
-            "backward": -15,
-            "torque": 17,
-            "rate": 35
-        },
-        "weaponry": {
-            "ammo_storage": 47.8,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "reload_multiplier": 1.0,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 13,
-                    "down": 13,
-                    "left": 130,
-                    "right": 130
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Loader1", "Loader2", "Driver", "Driver1", "Driver2", "Gunner", "Gunner1", "Gunner2"]
-    },
-    "based_on": "",
-    "paired": {
-        "gun": "",
-        "turret": ""
-    }
-}
 ,"Battlepacks Leopard": {
     "description": "panzerkampf 103",
     "tier": 8,
@@ -5119,7 +5038,7 @@
     "obtain": "Monthly Reward, April 2024",
     "resources": {},
     "stats": {
-        "weight": 30,
+        "weight": 30.00,
         "armor": {
             "front": 80,
             "back": 30,
@@ -5149,12 +5068,93 @@
                 }
             }
         },
-        "crew": ["Driver", "Loader", "Commander", "Gunner"]
+        "crew": ["Driver", "Gunner", "Commander", "Loader"]
     },
     "based_on": "Jagd Leopard 1 [Fake]",
     "paired": {
         "gun": "105mm Royal",
         "turret": ""
+    }
+}
+,"AFG MK 1": {
+    "description": "ARGGGGG ",
+    "tier": 8,
+    "rarity": "Epic",
+    "obtain": "Joe's Shack, April 1st 2024",
+    "resources": {},
+    "stats": {
+        "weight": 210.70,
+        "armor": {
+            "front": 300,
+            "back": 120,
+            "side": 200
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 15,
+            "backward": -15,
+            "torque": 17,
+            "rate": 35
+        },
+        "weaponry": {
+            "ammo_storage": 47.8,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.0,
+                "reload_multiplier_caliber": 75,
+                "limits": {
+                    "up": 13,
+                    "down": 13,
+                    "left": 130,
+                    "right": 130
+                }
+            }
+        },
+        "crew": ["Driver", "Driver1", "Driver2", "Commander", "Loader", "Loader1", "Loader2", "Gunner", "Gunner1", "Gunner2"]
+    },
+    "based_on": "None",
+    "paired": {
+        "gun": "66mm NUCLEAR WEAPON 5000",
+        "turret": ""
+    }
+}
+,"Battlepass-100": {
+    "description": "",
+    "tier": 8,
+    "rarity": "Mythical",
+    "obtain": "Unobtainable",
+    "resources": {},
+    "stats": {
+        "weight": 98.20,
+        "armor": {
+            "front": 200,
+            "back": 120,
+            "side": 80
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 31,
+            "backward": -11,
+            "torque": 60,
+            "rate": 30
+        },
+        "weaponry": {
+            "ammo_storage": 27.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "E-100 [Germany]",
+    "paired": {
+        "gun": "128mm German Punch",
+        "turret": "The Battlepass (?)"
     }
 }
 ,"HSTV-L": {
@@ -6075,7 +6075,7 @@
             "forward": 72,
             "backward": -35,
             "torque": 22,
-            "rate": 40
+            "rate": 34
         },
         "weaponry": {
             "ammo_storage": 19.2,
@@ -6136,7 +6136,7 @@
     "obtain": "Blueprints",
     "resources": {"Iron": 340, "Steel": 200, "Aluminum": 350, "Chrominum": 75, "Titanium": 50, "Stabiliser": 3, "Carbon Fibre": 75, "Circuitry": 15, "Composite": 50, "Camera Module": 4, "IR Camera Module": 2, "Computer Systems": 2, "Cyberware": 25},
     "stats": {
-        "weight": 90.00,
+        "weight": 35.00,
         "armor": {
             "front": 220,
             "back": 40,
@@ -6181,7 +6181,7 @@
     "obtain": "Blueprints",
     "resources": {"Iron": 400, "Steel": 140, "Aluminum": 400, "Titanium": 50, "Composite": 50, "IR Camera Module": 2, "Computer Systems": 2, "Cyberware": 20},
     "stats": {
-        "weight": 44.00,
+        "weight": 55.00,
         "armor": {
             "front": 1250,
             "back": 80,
@@ -6195,7 +6195,7 @@
             "rate": 40
         },
         "weaponry": {
-            "ammo_storage": 0,
+            "ammo_storage": 46.7,
             "blowout": -1,
             "hull_aim": 0,
             "aps": true,
@@ -6240,7 +6240,7 @@
             "rate": 40
         },
         "weaponry": {
-            "ammo_storage": 0,
+            "ammo_storage": 46.7,
             "blowout": -1,
             "hull_aim": 0,
             "aps": true,
@@ -6381,7 +6381,7 @@
         },
         "crew": ["Commander", "Gunner"]
     },
-    "based_on": "T7 Combat Car [USA]",
+    "based_on": "M1 Combat Car [USA]",
     "paired": {
         "hull": "Speedster",
         "gun": "28mm Mosquito"
@@ -8464,7 +8464,7 @@
     "based_on": "M163 VADS [USA]",
     "paired": {
         "hull": "M113",
-        "gun": "20mm M61 Vulcan"
+        "gun": "20mm Vulcan"
     }
 }
 ,"Pumi 407": {
@@ -10107,44 +10107,44 @@
         "gun": "100mm Molotok"
     }
 }
-,"Chieftain SID": {
-    "description": "the ch but stealth",
+,"TOW": {
+    "description": "She's stronger now! What's she so worried about though?",
     "tier": 8,
     "rarity": "Epic",
-    "obtain": "Monthly Reward, February 2024",
+    "obtain": "Epic Crate Drop",
     "resources": {},
     "stats": {
-        "weight": 23.00,
+        "weight": 1.00,
         "armor": {
-            "front": 250,
-            "back": 45,
-            "side": 86
+            "front": 0,
+            "back": 0,
+            "side": 0
         },
         "weaponry": {
-            "ammo_storage": 12.3,
+            "ammo_storage": 7.8,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": true,
+            "stabilizer": false,
             "gun": {
-                "reload_multiplier": 1.34,
+                "reload_multiplier": 1.69,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
-                    "down": 10
+                    "up": 14,
+                    "down": 15
                 },
                 "speed": {
-                    "vertical": 5.7,
-                    "horizontal": 22.6
+                    "vertical": 20,
+                    "horizontal": 45
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Gunner"]
     },
-    "based_on": "Chieftain SID [UK]",
+    "based_on": "there's a lot [many]",
     "paired": {
-        "hull": "Chieftain SID",
-        "gun": "120mm L11A1"
+        "hull": "M113 [2] Yoyota HMMWV [6] Puma (from 4x4)",
+        "gun": "TOW-HE [8] TOW"
     }
 }
 ,"The Santapass": {
@@ -10185,6 +10185,46 @@
     "paired": {
         "hull": "The Santapass",
         "gun": "128mm Festive Punch"
+    }
+}
+,"Chieftain SID": {
+    "description": "the ch but stealth",
+    "tier": 8,
+    "rarity": "Mythical",
+    "obtain": "Monthly Reward, February 2024",
+    "resources": {},
+    "stats": {
+        "weight": 23.00,
+        "armor": {
+            "front": 250,
+            "back": 45,
+            "side": 86
+        },
+        "weaponry": {
+            "ammo_storage": 12.3,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "gun": {
+                "reload_multiplier": 1.34,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 10
+                },
+                "speed": {
+                    "vertical": 5.7,
+                    "horizontal": 22.6
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Chieftain SID [UK]",
+    "paired": {
+        "hull": "Chieftain SID",
+        "gun": "120mm L11A1"
     }
 }
 ,"T-72A": {
@@ -10299,7 +10339,7 @@
                 }
             }
         },
-        "crew": ["Loader", "Gunner1", "Gunner2"]
+        "crew": ["Commander ", "Gunner1", "Gunner2"]
     },
     "based_on": "Otomatic [Italy]",
     "paired": {
@@ -10507,46 +10547,6 @@
         "gun": "TOS M2 Browning"
     }
 }
-,"TOW": {
-    "description": "Great day outside isn't it? Why not shoulder mount a missile while you're at it! WARNING: Only capable of mountiing light weapons. DOES NOT COME WITH A TOW MISSILE!",
-    "tier": 9,
-    "rarity": "Legendary",
-    "obtain": "Unobtainable(Joe's Shack, Offsale), Offsale",
-    "resources": {},
-    "stats": {
-        "weight": 1.00,
-        "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
-        },
-        "weaponry": {
-            "ammo_storage": 0,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "gun": {
-                "reload_multiplier": 1.69,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 12,
-                    "down": 15
-                },
-                "speed": {
-                    "vertical": 2.9,
-                    "horizontal": 45
-                }
-            }
-        },
-        "crew": ["Gunner"]
-    },
-    "based_on": "there's a lot [many]",
-    "paired": {
-        "hull": "M113 [2] Yoyota HMMWV [6] Puma (from 4x4)",
-        "gun": "TOW-HE [8] TOW"
-    }
-}
 ,"Contender 1E": {
     "description": "PHMETALL K14E Contender (Export Variant)",
     "tier": 10,
@@ -10681,7 +10681,7 @@
             "side": 100
         },
         "weaponry": {
-            "ammo_storage": 23.0,
+            "ammo_storage": 27.9,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
@@ -11068,7 +11068,7 @@
     }
 }
 ,"Challenger 2": {
-    "description": "�? 3Million Tea making facility.",
+    "description": " ? 3Million Tea making facility.",
     "tier": 11,
     "rarity": "Mythical",
     "obtain": "Joe's Shack",
@@ -15706,51 +15706,55 @@
         "turret": "TOS-1"
     }
 }
-,"120mm L11A1": {
-    "description": "Something to use with your chieftan larp!",
+,"66mm NUCLEAR WEAPON 5000": {
+    "description": "Built-into AFG MK 1 [8]",
     "tier": 8,
     "rarity": "Legendary",
-    "obtain": "Blueprints, Offsale",
-    "resources": {"Iron": 71, "Steel": 32, "Aluminum": 63, "Chromium": 29},
+    "obtain": "Joe's Shack, April 1st 2024",
+    "resources": {},
     "stats": {
-        "weight": 1.20,
+        "weight": 0.70,
         "weaponry": {
-            "reload": 7.3,
-            "accuracy": 260,
-            "ammo_volume": 1.14,
-            "caliber:": 120,
+            "reload": 6.0,
+            "accuracy": 161,
+            "ammo_volume": 0.29,
+            "caliber:": 66,
             "ammunition": [{
-    "type": "HESH ",
+    "type": "APHE ",
     "penetration": {
-        "0":  152,
-        "30":  152,
-        "60":  152
+        "0":  60,
+        "30":  51,
+        "60": 27
     },
-    "velocity":  623,
-    "ricochet_angle":  77,
+    "velocity": 830,
+    "ricochet_angle": 77,
     "stats": {
-        "explosive_mass": " 6.56kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
+        "fuse_sensitive": 14,
+        "fuse_delay": 1.2,
+        "explosive_mass": " 84g"
     }
 },
 {
-    "type": "APDS ",
+    "type": "HE ",
     "penetration": {
-        "0":  279,
-        "30":  237,
-        "60":  112
+        "0":  20,
+        "30":  20,
+        "60":  20
     },
-    "velocity":  1445,
-    "ricochet_angle":  71,
-    "stats": {}
+    "velocity":  600,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 262g",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
-    "based_on": "Royal Ordnance L11A1 [UK]",
+    "based_on": "None (?)",
     "paired": {
-        "hull": "",
-        "turret": "Chieftain [8] Chieftain SID"
+        "hull": "AFG MK 1",
+        "turret": ""
     }
 }
 ,"105mm F2 48 Calibre": {
@@ -16181,7 +16185,7 @@
     },
     "based_on": "Royal Ordnance L7A1 [UK]",
     "paired": {
-        "hull": "",
+        "hull": "Taifun II [5] Battlepacks Leopard",
         "turret": "Centurion Mk3 [6] Type 74 [7] M48 Super"
     }
 }
@@ -16785,7 +16789,7 @@
         "turret": "XT3R Faux"
     }
 }
-,"76mm Oto": {
+,"76mm OTO": {
     "description": "otototototototo",
     "tier": 11,
     "rarity": "Mythical",
@@ -16844,7 +16848,7 @@
     "based_on": "OTO Melara 76mm [Italy]",
     "paired": {
         "hull": "",
-        "turret": "Oto"
+        "turret": "OTO"
     }
 }
 ,"125mm 2A46M": {
