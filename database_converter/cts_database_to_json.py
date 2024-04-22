@@ -1,15 +1,15 @@
-import csv, sys
+import csv, sys, os.path
 import re
 import codecs
 import modules_templates as templates
 
-HULLS_OFFSET = 0
+HULLS_OFFSET = 0    #Index offset
 TURRETS_OFFSET = 22
 GUNS_OFFSET = 41
 
 DATABASE_NAME = input()
-DATABASE_PATH = sys.path[0]+"\\"+DATABASE_NAME
-JSON_PATH = sys.path[0]+"\\"+"database.json"
+DATABASE_PATH = os.path.join(sys.path[0], DATABASE_NAME)
+JSON_PATH = os.path.join(sys.path[0], "database.json")
 
 def as_string(a): return '"'+a.replace('"', '\\"')+'"'
 
@@ -18,11 +18,14 @@ data = []
 with open(DATABASE_PATH, 'r') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=';')
     for row in spamreader:
-        data.append(row)
+        data.append(row) #csv to 2d matrix
 
 hulls_string = ""
 turrets_string = ""
 guns_string = ""
+
+
+#  HULLS PARCING
 
 for i in range(1, len(data[HULLS_OFFSET+0])-1):
     if data[HULLS_OFFSET+0][i] == "": break
@@ -44,7 +47,7 @@ for i in range(1, len(data[HULLS_OFFSET+0])-1):
         
         obtain_str = "Blueprints"+add_obtain
         resources = '{"' + ', "'.join(map(lambda x: x.replace(":", '":'), arr)) +'}'
-    else:
+    else: # Joe Shack or Monthly reward
         obtain_str = obtain_str_prev+add_obtain
         resources = "{}"
     
@@ -67,7 +70,7 @@ for i in range(1, len(data[HULLS_OFFSET+0])-1):
                 blowout = 1
         ammo = ammo.split()[0]
     
-    if "No" in data[HULLS_OFFSET+11][i]:
+    if "No" in data[HULLS_OFFSET+11][i]: #Hull aim
         aim = 0
     elif "Yes" in data[HULLS_OFFSET+11][i]:
         aim = 2
@@ -136,7 +139,10 @@ for i in range(1, len(data[HULLS_OFFSET+0])-1):
     )
     
     hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "").replace(" (!)", "")
+
     
+# TURRETS PARCING
+
 for i in range(1, len(data[TURRETS_OFFSET])-1):
     if data[TURRETS_OFFSET][i] == "": break
     
@@ -212,7 +218,7 @@ for i in range(1, len(data[TURRETS_OFFSET])-1):
         weapon_ammo_storage=ammo,
         weapon_blowout=blowout,
         weapon_aps=aps,
-        weapon_fcs=fcs if fcs.isdigit() else -1,
+        weapon_fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
         weapon_stabilizer=stab,
         weapon_gun_reload_multi=reload_multi[0],
         weapon_gun_reload_multi_caliber=reload_multi[1].replace("(", "").replace(")", "").replace("mm", ""),
@@ -228,6 +234,9 @@ for i in range(1, len(data[TURRETS_OFFSET])-1):
     
     turrets_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
     
+
+# GUNS PARCING
+
 for i in range(1, len(data[GUNS_OFFSET])-1):
     if data[GUNS_OFFSET][i] == "": break
     
@@ -249,7 +258,7 @@ for i in range(1, len(data[GUNS_OFFSET])-1):
     
     ammunition = ""
     for j in range(4):
-        dtd = data[GUNS_OFFSET+9+j][i].split("\n")
+        dtd = data[GUNS_OFFSET+9+j][i].split("\n") #Ammo stats
         
         if dtd[0] == "": break
         
