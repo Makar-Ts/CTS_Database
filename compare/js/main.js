@@ -644,6 +644,16 @@ function calculateStringFor2Items(data1, data2, type) {
                     if (ammo_stats_titles[key][2] == -1) color = redOrGreen(foundElement.stats[key], element.stats[key]);
 
                     console.log(ammo_stats_titles[key] + " ammo stat")
+
+                    if (key == "explosive_mass") {
+                        mass1 = +element.stats[key].replace("kg", "").replace("g", "")
+                        mass2 = +foundElement.stats[key].replace("kg", "").replace("g", "")
+
+                        if (!element.stats[key].includes("kg")) mass1 = mass1 / 1000
+                        if (!foundElement.stats[key].includes("kg")) mass2 = mass2 / 1000
+
+                        color = redOrGreen(mass1, mass2);
+                    }
                     
                     ammo_stats2 += `<tr><th>${ammo_stats_titles[key][0]}</th>
                         <td style="color: ${color};">${foundElement.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;

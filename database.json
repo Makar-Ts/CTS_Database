@@ -10004,7 +10004,7 @@
             "ammo_storage": 12.6,
             "blowout": 1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 4.0,
             "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.24,
@@ -10324,7 +10324,7 @@
             "ammo_storage": 37.2,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 1.5,
             "stabilizer": true,
             "gun": {
                 "reload_multiplier": 2.4,
@@ -10364,7 +10364,7 @@
             "ammo_storage": 18.1,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 0.75,
             "stabilizer": true,
             "gun": {
                 "reload_multiplier": 1.2,
@@ -15355,7 +15355,7 @@
     }
 }
 ,"TOW-HE": {
-    "description": "TOW but HE",
+    "description": "E",
     "tier": 8,
     "rarity": "Epic",
     "obtain": "Blueprints",
@@ -15710,7 +15710,7 @@
     "description": "Built-into AFG MK 1 [8]",
     "tier": 8,
     "rarity": "Legendary",
-    "obtain": "Joe's Shack, April 1st 2024",
+    "obtain": "Joe's Shack, April 1st 2024Built-Into AFG MK 1",
     "resources": {},
     "stats": {
         "weight": 0.70,
@@ -15724,13 +15724,13 @@
     "penetration": {
         "0":  60,
         "30":  51,
-        "60": 27
+        "60":  27
     },
-    "velocity": 830,
-    "ricochet_angle": 77,
+    "velocity":  830,
+    "ricochet_angle":  77,
     "stats": {
-        "fuse_sensitive": 14,
-        "fuse_delay": 1.2,
+        "fuse_sensitive":  14,
+        "fuse_delay":  1.2,
         "explosive_mass": " 84g"
     }
 },

@@ -1474,14 +1474,9 @@ Pen @ 30°: 4mm
 Pen @ 60°: 1mm
 Velocity: 130m/s
 Ricochet Angle: 65°";"APHE 
-Pen @ 0° : 60mm 
-Pen @ 30°: APHE             0°     30°     60°?
-Penetration:    60mm  / 51mm  / 27mm
-Velocity:                     830m/s
-Ricochet Angle:                  77°
-Fuse Sensitivity/Delay:  14mm / 1.2m
-Explosive Mass:                  84g
-Pen @ 60°: APHE             0°     30°     60°?
+Pen @ 0° : 60mm
+Pen @ 30°: 51mm
+Pen @ 60°: 27mm
 Velocity: 830m/s
 Ricochet Angle: 77°
 Fuse Sens: 14mm
@@ -1984,7 +1979,7 @@ Velocity: 1000m/s
 Ricochet Angle: 71°";;;;"HE 
 Pen @ 0° : 20mm
 Pen @ 30°: 20mm
-Pen @ 60°: HE               0°     30°     60°?
+Pen @ 60°: 20mm
 Velocity: 600m/s
 Ricochet Angle: 80°
 Expl. Mass: 262g";"HE 

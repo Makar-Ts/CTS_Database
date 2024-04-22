@@ -332,5 +332,5 @@ output_string = templates.DATABASE.format(
     turrets=turrets_string,
     guns=guns_string
 )
-with codecs.open(JSON_PATH,mode='w',encoding='utf-16') as f:
+with codecs.open(JSON_PATH,mode='w',encoding='utf-8') as f:
     f.write(output_string)
