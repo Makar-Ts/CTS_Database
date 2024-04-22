@@ -40,21 +40,24 @@ a {
     left: 25%;
     flex: 1 0 auto;
     white-space: nowrap;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr 4fr 4fr;
+    top: 10px;
+}
+
+.tabs_container a {
+    text-decoration: none;
 }
 
 .tabs_container div {
-    position:relative;
-    display: inline-block;
     vertical-align: middle;
-    display: inline-block;
-    width: 29.49%;
     border: 1px solid #ffffff;
     border-bottom: none;
     border-radius: 5px;
     background-color: #191919;
     color: #9a9a9a;
     padding-bottom: 10px;
-    top: 10px;
 }
 
 #tabs_active {
@@ -274,10 +277,6 @@ a {
         width: 100%;
         position: relative;
         left: 0%;
-    }
-
-    .tabs_container div {
-        width: 32%;
     }
 
     .search_container {
