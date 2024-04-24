@@ -1,5 +1,9 @@
 const filePath = "./../database.json";
 const fileImgPath = "./../imgPaths.json";
+const ammoTypeGridStyle = `width: 100%;
+
+`
+
 var database;
 var item_html;
 var item1_type = "", item1_name, item1_data;
@@ -662,9 +666,9 @@ function calculateStringFor2Items(data1, data2, type) {
                 var indexof = data1.stats.weaponry.ammunition.indexOf(element);
 
                 ammos += `<div style="
-                grid-column: 1;
                 grid-row: ${indexof + 1};
-                width: 100%;
+                grid-column: 1;
+                ${ammoTypeGridStyle}
                 "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                 <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
                 <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
@@ -678,9 +682,10 @@ function calculateStringFor2Items(data1, data2, type) {
                     gun2_rows.push(indexof);
 
                     ammos2 += `<div style="
-                    grid-column: 2;
                     grid-row: ${indexof + 1};
-                    width: 100%;
+                    grid-column: 2;
+                    ${ammoTypeGridStyle}
+                    font-size: clamp(0.2em, 100%, 1em);
                     "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                     <tr><th>Penetration</th>
                     <td style="color: ${redOrGreen(element.penetration["0"], foundElement.penetration["0"])};">0deg: ${foundElement.penetration["0"]}mm</td></tr>
@@ -721,9 +726,9 @@ function calculateStringFor2Items(data1, data2, type) {
                 }
 
                 ammos2 += `<div style="
-                grid-column: 2;
                 grid-row: ${indexof + 1};
-                width: 100%;
+                grid-column: 2;
+                ${ammoTypeGridStyle}
                 "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
                 <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
                 <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
