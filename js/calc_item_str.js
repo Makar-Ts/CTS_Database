@@ -99,7 +99,7 @@ function extractWeaponNames(inputString) {
     return inputString.split(regex).map(item => item.trim()).filter(Boolean);
 }
 
-function calculateStringForItem(data, type) {
+function calculateStringForItem(data, type, aps_img) {
     stats_str = ""
     switch (type) {
         case "hulls":
@@ -181,6 +181,7 @@ function calculateStringForItem(data, type) {
             <tr><th>Blowout</th><td>${blowout}</td></tr>
             <tr><th>Hull Aim</th><td>${hull_aim}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
+            ${data.stats.weaponry.aps ? `<tr><th>Protection</th><td><img src="${aps_img}"></td></tr>` : ""}
             <tr><th>Crew</th><td>${crew_str}</td></tr>
             ${gun}
             </table>`
@@ -239,6 +240,7 @@ function calculateStringForItem(data, type) {
             <tr><th>Ammo Storage</th><td>${data.stats.weaponry.ammo_storage}</td></tr>
             <tr><th>Stabilizer</th><td>${data.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
+            ${data.stats.weaponry.aps ? `<tr><th>Protection</th><td><img src="${aps_img}"></td></tr>` : ""}
             <tr><th>FCS</th><td>${fcs}</td></tr>
             <tr><th>Blowout</th><td>${blowout}</td></tr>
             <tr><th>Crew</th><td>${crew_str}</td></tr>

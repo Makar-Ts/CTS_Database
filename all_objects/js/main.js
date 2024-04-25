@@ -113,7 +113,7 @@ $(document).ready(function() {
             }
 
             $(`#item_container_${i} `+"#weight").text(data.stats.weight+"t");
-            $(`#item_container_${i} `+"#stats").html(calculateStringForItem(data, type));
+            $(`#item_container_${i} `+"#stats").html(calculateStringForItem(data, type, `./../img/aps/${hull}.png`));
             $(`#item_container_${i} `+"#based_on").text(data.based_on);
 
             count = 1

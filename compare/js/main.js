@@ -318,6 +318,8 @@ function createCompareList() {
     $("#based_on2").text(item2_data.based_on);
 
     $("#stats").html(calculateStringFor2Items(item1_data, item2_data, item1_type));
+    $("#aps_img1").attr("src", `./../img/aps/${item1_name}.png`);
+    $("#aps_img2").attr("src", `./../img/aps/${item2_name}.png`);
 
     count = 1
     for (let key of Object.keys(item1_data.paired)) {
@@ -534,6 +536,9 @@ function calculateStringFor2Items(data1, data2, type) {
                                                data2.stats.weaponry.hull_aim == -1 ? 0 : data2.stats.weaponry.hull_aim)};">${hull_aim2}</td></tr>
             <tr><th>APS</th><td>${aps}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.aps,data2.stats.weaponry.aps)};">${aps2}</td></tr>
+            ${data1.stats.weaponry.aps || data2.stats.weaponry.aps ? `<tr><th>Protection</th>
+                ${data1.stats.weaponry.aps ? "<td><img src=\"\" id=\"aps_img1\"></td>" : "<td></td>"}
+                ${data2.stats.weaponry.aps ? "<td><img src=\"\" id=\"aps_img2\"></td>" : "<td></td>"}</tr>` : ""}
             <tr><th>Crew</th><td>${crew_str1}</td><td>${crew_str2}</td></tr>
             ${gun}
             </table>`
@@ -613,6 +618,9 @@ function calculateStringFor2Items(data1, data2, type) {
                 <td style="color: ${redOrGreen(data1.stats.weaponry.stabilizer, data2.stats.weaponry.stabilizer)};">${data2.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
             <tr><th>APS</th><td>${aps}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.aps, data2.stats.weaponry.aps)};">${aps2}</td></tr>
+            ${data1.stats.weaponry.aps || data2.stats.weaponry.aps ? `<tr><th>Protection</th>
+                ${data1.stats.weaponry.aps ? "<td><img src=\"\" id=\"aps_img1\"></td>" : "<td></td>"}
+                ${data2.stats.weaponry.aps ? "<td><img src=\"\" id=\"aps_img2\"></td>" : "<td></td>"}</tr>` : ""}
             <tr><th>FCS</th><td>${fcs}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.fcs, data2.stats.weaponry.fcs)};">${fcs2}</td></tr>
             <tr><th>Blowout</th><td>${blowout}</td>

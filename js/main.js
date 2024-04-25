@@ -186,7 +186,7 @@ function setSearchOutput(hull, type, data) {
     }
 
     $("#weight").text(data.stats.weight+"t");
-    $("#stats").html(calculateStringForItem(data, type));
+    $("#stats").html(calculateStringForItem(data, type, `./img/aps/${hull}.png`));
     $("#based_on").text(data.based_on);
 
     count = 1
