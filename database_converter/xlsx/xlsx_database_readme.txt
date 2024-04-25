@@ -1,0 +1,2 @@
+Sorry, i cant add .xlsx database to the github repository because it too big (~130mb)
+You can download the .xlsx file at: https://docs.google.com/spreadsheets/d/1DzSz5p-lAJEM74g005gZm5Vp7Ot5k8I_ESVeUJSpSXw/edit#gid=1416330682
