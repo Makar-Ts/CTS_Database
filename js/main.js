@@ -2,6 +2,7 @@ const filePath = "./database.json";
 const fileImgPath = "./imgPaths.json";
 var database, img_database;
 var database_loaded = false, img_database_loaded = false;
+detectColorScheme();
 
 var ammo_stats_titles = {
     "fuse_sensitive": ["Fuse Sensitive", "mm"],

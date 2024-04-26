@@ -1,6 +1,7 @@
 // Замените 'username' и 'repository' на соответствующие значения вашего репозитория
 const username = 'Makar-Ts';
 const repository = 'CTS_Database';
+detectColorScheme();
 
 $('#commits-container').hide();
 
@@ -33,7 +34,7 @@ async function displayCommits() {
             <br>
             <small>Date: ${commitDate.toLocaleString()}</small>
         `;
-        commitElement.setAttribute("style", 'padding-bottom: 5px; margin-left: 20px; margin-bottom: 15px; border-bottom: 1px solid #ffffff;');
+        commitElement.setAttribute("style", 'padding-bottom: 5px; margin-left: 20px; margin-bottom: 15px; border-bottom: 1px solid var(--main);');
         commitsContainer.appendChild(commitElement);
     });
 

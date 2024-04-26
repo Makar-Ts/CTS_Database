@@ -2,15 +2,55 @@ const filePath = "./../database.json";
 const fileImgPath = "./../imgPaths.json";
 var database;
 var item_html;
+detectColorScheme();
 
-var ammo_stats_titles = {
-    "fuse_sensitive": ["Fuse Sensitive", "mm"],
-    "fuse_delay": ["Fuse Delay", "m"],
-    "explosive_mass": ["Explosive Mass", ""],
-    "fuse_radius": ["Fuse Radius", "m"],
-    "arming_distance": ["Arming Distance", "m"],
-    "range": ["Range", "km"]
-};
+filter_templates = {
+    "hulls": [
+        ["tier", "Tier", "number"],
+        ["stats.weight", "Weight", "number"],
+        ["stats.speed.acceleration",    "Acceleration", "number"],
+        ["stats.speed.forward",         "Forward Speed", "number"],
+        ["stats.speed.backward",        "Backward Speed", "number"],
+        ["stats.speed.torque",          "Torque", "number"],
+        ["stats.speed.rate",            "Traverse Rate", "number"],
+        ["stats.weaponry.ammo_storage", "Ammo Storage", "number"],
+        ["stats.weaponry.aps",          "APS", "checkbox"],
+        ["stats.weaponry.have_gun",     "Turretless", "checkbox"],
+    ],
+    "turrets": [
+        ["tier", "Tier", "number"],
+        ["stats.weight", "Weight", "number"],
+        ["stats.weaponry.aps",          "APS", "checkbox"],
+        ["stats.weaponry.fcs",          "FCS", "number"],
+        ["stats.weaponry.ammo_storage", "Ammo Storage", "number"],
+        ["stats.weaponry.gun.reload_multiplier", "Reload Mult.", "number"],
+        ["stats.weaponry.gun.limits.up",        "Up Limit", "number"],
+        ["stats.weaponry.gun.limits.down",      "Down Limit", "number"],
+        ["stats.weaponry.gun.speed.vertical",   "Vertical Speed", "number"],
+        ["stats.weaponry.gun.speed.horizontal", "Horizontal Speed", "number"],
+    ],
+    "guns": [
+        ["tier", "Tier", "number"],
+        ["stats.weight", "Weight", "number"],
+        ["stats.weaponry.reload",      "Reload", "number"],
+        ["stats.weaponry.accuracy",    "Accuracy", "number"],
+        ["stats.weaponry.ammo_volume", "Ammo Volume", "number"],
+        ["stats.weaponry.caliber:",     "Caliber", "number"],
+    ]
+}
+
+filter_item_template = `<div class="filter_item" id="{id}">
+<select id="option" class="type_search_select filter_item_option">
+    {options}
+</select><select id="calc" class="type_search_select filter_calc_option">
+    <option value="==">==</option>
+    <option value="!=">!=</option>
+    <option value=">=">>=</option>
+    <option value="<="><=</option>
+    <option value=">"> ></option>
+    <option value="<"> <</option>
+</select><input value="0" type="{type}" step="0.01" id="value" class="type_search_select filter_item_option" style="width: 35%;">
+</div>`
 
 function fetchJSONFile(path, callback) { // thx ChatGPT
     fetch(path)
@@ -60,24 +100,108 @@ $(document).ready(function() {
         }
     });
 
+    $("#type").on( "change", function() {
+        $("#filter_container").empty();
+    });
+
+    $("#filter_container").on('change', 'select.filter_item_option', function() {
+        temp = filter_templates[$("#type").val()].find(x => x[0] == $(this).val())
+
+        $(this).parent().find("#value").attr("type", temp[2]);
+
+        if (temp[2] != "number") {
+            $(this).parent().find("#calc").val("==");
+            $(this).parent().find("#calc").attr("disabled", "disabled");
+        } else {
+            $(this).parent().find("#calc").removeAttr("disabled");
+        }
+    });
+
+    $('#button_add').click(function(e) {
+        options = "";
+
+        for (let index = 0; index < filter_templates[$("#type").val()].length; index++) {
+            const element = filter_templates[$("#type").val()][index];
+            
+            options += `<option value="${element[0]}">${element[1]}</option>`;
+        }
+
+        $("#filter_container").append(
+            filter_item_template
+               .replace("{id}", `filter_item_${$("#filter_container").children().length+1}`)
+               .replace("{options}", options)
+               .replace("{type}", filter_templates[$("#type").val()][0][2])
+        );
+    });
+
+    $('#button_rem').click(function(e) {
+        $("#filter_container").children().last().remove();
+    });
+
+
     $('#search').click(function (e) {
         str = "";
         ids = [];
         counter = 0;
 
         type = $("#type").val();
-        tier = $("#tier").val();
+        
+        filters = []
+        for (let index = 0; index < $("#filter_container").children().length; index++) {
+            const filter = $(`#filter_container #filter_item_${index+1}`);
+
+            if( filter.find('#value').attr( 'type' ) === 'checkbox' ) {
+                value = +filter.find('#value').is( ':checked' );
+            } else {
+                value = filter.find('#value').val();
+            }
+            
+            filters.push([filter.find('#option').val(), filter.find('#calc').val(), value])
+            console.log(filters[filters.length-1]);
+        }
 
         for (var key of Object.keys(database[type])) {
-            if (database[type][key].tier == tier) {
+            fit_in_filter = true;
+            filters.forEach(element => {
+                switch (element[1]) {
+                    case "==":
+                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) == element[2];
+                        break;
+                    case "!=":
+                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0])!= element[2];
+                        break;
+                    case ">=":
+                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) >= element[2];
+                        break;
+                    case "<=":
+                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) <= element[2];
+                        break;
+                    case ">":
+                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) > element[2];
+                        break;
+                    case "<":
+                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) < element[2];
+                        break;
+                    default:
+                        console.log(element[1]);
+                        break;
+                }
+            });
+
+            if (fit_in_filter) {
                 ids.push(key);
 
                 str += item_html.replace("item_container_z", `item_container_${counter}`)
 
                 counter++;
+
+                if (counter >= 30) {
+                    break;
+                }
             }
         }
 
+        console.log(ids);
         $(".item_container").html(str);
 
         for (var i = 0; i < ids.length; i++) {

@@ -1,8 +1,7 @@
 const filePath = "./../database.json";
 const fileImgPath = "./../imgPaths.json";
-const ammoTypeGridStyle = `width: 100%;
-
-`
+const ammoTypeGridStyle = `width: 100%;`;
+detectColorScheme();
 
 var database;
 var item_html;
@@ -380,11 +379,11 @@ function createCompareList() {
 
 function redOrGreen(num1, num2) {
     if (num1 > num2) {
-        return "red";
+        return "#ff0101";
     } else if (num1 < num2) {
-        return "lime";
+        return "#02ff02";
     } else {
-        return "white";
+        return "var(--main)";
     }
 }
 

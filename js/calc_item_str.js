@@ -99,6 +99,65 @@ function extractWeaponNames(inputString) {
     return inputString.split(regex).map(item => item.trim()).filter(Boolean);
 }
 
+function getDataByString(o, s) {
+    s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+    s = s.replace(/^\./, '');           // strip a leading dot
+    var a = s.split('.');
+    for (var i = 0, n = a.length; i < n; ++i) {
+        var k = a[i];
+        if (k in o) {
+            o = o[k];
+        } else {
+            return;
+        }
+    }
+    return o;
+}
+
+function detectColorScheme(){
+    var theme="light";    //default to light
+    //local storage is used to override OS theme settings
+    if(localStorage.getItem("theme")){
+        if(localStorage.getItem("theme") == "dark"){
+            var theme = "dark";
+        }
+    } else if(!window.matchMedia) {
+        //matchMedia method not supported
+        return false;
+    } else if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        //OS theme setting detected as dark
+        var theme = "dark";
+    }
+    //dark theme preferred, set document with a `data-theme` attribute
+    if (theme=="dark") {
+         document.documentElement.setAttribute("data-theme", "dark");
+    }
+}
+
+function switchTheme(e) {
+    currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme == "light") {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark'); //add this
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light'); //add this
+    }    
+}
+$("#change_theme").click(switchTheme);
+
+currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+    }
+}
+
 function calculateStringForItem(data, type, aps_img) {
     stats_str = ""
     switch (type) {

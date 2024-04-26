@@ -1,3 +1,5 @@
+detectColorScheme();
+
 $(document).ready(function() {
     $(".show_button").click(function () {
         var elem = $($(this).attr("data"));
