@@ -173,7 +173,12 @@ function setSearchOutput(hull, type, data) {
     $("#tier").text(data.tier);
     $("#rarity").text(data.rarity);
     $("#obtain").text(data.obtain);
-
+    if (data.requires.type === "None") {
+        $("#requires").closest('tr').hide();
+    } else {
+        $("#requires").html(`<a href="${window.location.origin+window.location.pathname}?type=${data.requires.type}&name=${data.requires.name}">${data.requires.name}</a>`)
+    }
+    
     if (data.resources.length == 0) {
         $("#resources").closest('tr').hide();
     } else {
