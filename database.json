@@ -3692,7 +3692,7 @@
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Driver2", "Loader1", "Loader2", "Commander", "Gunner"]
+        "crew": ["Driver"]
     },
     "based_on": "LAV-25 [USA] LAV-AD [USA]",
     "paired": {
