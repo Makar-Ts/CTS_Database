@@ -20,8 +20,12 @@ filter_templates = {
     "turrets": [
         ["tier", "Tier", "number"],
         ["stats.weight", "Weight", "number"],
+        ["stats.weaponry.stabilizer",   "Stabilizer", "checkbox"],
         ["stats.weaponry.aps",          "APS", "checkbox"],
         ["stats.weaponry.fcs",          "FCS", "number"],
+        ["stats.weaponry.sight.thermal",   "Thermal", "number"],
+        ["stats.weaponry.sight.zoom_lower","Zoom Min", "number"],
+        ["stats.weaponry.sight.zoom_upper","Zoom Max", "number"],
         ["stats.weaponry.ammo_storage", "Ammo Storage", "number"],
         ["stats.weaponry.gun.reload_multiplier", "Reload Mult.", "number"],
         ["stats.weaponry.gun.limits.up",        "Up Limit", "number"],

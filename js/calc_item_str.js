@@ -301,6 +301,8 @@ function calculateStringForItem(data, type, aps_img) {
             <tr><th>APS</th><td>${aps}</td></tr>
             ${data.stats.weaponry.aps ? `<tr><th>Protection</th><td><img src="${aps_img}"></td></tr>` : ""}
             <tr><th>FCS</th><td>${fcs}</td></tr>
+            <tr><th>Zoom</th><td>${data.stats.weaponry.sight.zoom_lower == -1 ? "no data" : `${data.stats.weaponry.sight.zoom_lower}x-${data.stats.weaponry.sight.zoom_upper}x`}</td></tr>
+            <tr><th>Thermal</th><td>${data.stats.weaponry.sight.thermal == 0 ? "No" : `Gen ${data.stats.weaponry.sight.thermal}`}</td></tr>
             <tr><th>Blowout</th><td>${blowout}</td></tr>
             <tr><th>Crew</th><td>${crew_str}</td></tr>
             </table>`

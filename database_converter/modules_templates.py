@@ -17,6 +17,10 @@ HULL = """"{name}": {{
     "rarity": {rarity},
     "obtain": {obtain},
     "resources": {resources},
+    "requires": {{
+        "type": {requires_type},
+        "name": {requires_name}
+    }},
     "stats": {{
         "weight": {weight},
         "armor": {{
@@ -65,6 +69,10 @@ TURRET = """"{name}": {{
     "rarity": {rarity},
     "obtain": {obtain},
     "resources": {resources},
+    "requires": {{
+        "type": {requires_type},
+        "name": {requires_name}
+    }},
     "stats": {{
         "weight": {weight},
         "armor": {{
@@ -78,6 +86,11 @@ TURRET = """"{name}": {{
             "aps": {weapon_aps},
             "fcs": {weapon_fcs},
             "stabilizer": {weapon_stabilizer},
+            "sight": {{
+                "thermal": {weapon_sight_thermal},
+                "zoom_lower": {weapon_zoom_lower},
+                "zoom_upper": {weapon_zoom_upper}
+            }},
             "gun": {{
                 "reload_multiplier": {weapon_gun_reload_multi},
                 "reload_multiplier_caliber": {weapon_gun_reload_multi_caliber},
@@ -107,6 +120,10 @@ GUNS = """"{name}": {{
     "rarity": {rarity},
     "obtain": {obtain},
     "resources": {resources},
+    "requires": {{
+        "type": {requires_type},
+        "name": {requires_name}
+    }},
     "stats": {{
         "weight": {weight},
         "weaponry": {{

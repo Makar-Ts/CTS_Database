@@ -622,6 +622,10 @@ function calculateStringFor2Items(data1, data2, type) {
                 ${data2.stats.weaponry.aps ? "<td><img src=\"\" id=\"aps_img2\"></td>" : "<td></td>"}</tr>` : ""}
             <tr><th>FCS</th><td>${fcs}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.fcs, data2.stats.weaponry.fcs)};">${fcs2}</td></tr>
+            <tr><th>Zoom</th><td>${data1.stats.weaponry.sight.zoom_lower == -1 ? "no data" : `${data1.stats.weaponry.sight.zoom_lower}x-${data1.stats.weaponry.sight.zoom_upper}x`}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.sight.zoom_upper-data1.stats.weaponry.sight.zoom_lower, data2.stats.weaponry.sight.zoom_upper-data2.stats.weaponry.sight.zoom_lower)};">${data2.stats.weaponry.sight.zoom_lower == -1 ? "no data" : `${data2.stats.weaponry.sight.zoom_lower}x-${data2.stats.weaponry.sight.zoom_upper}x`}</td></tr>
+            <tr><th>Thermal</th><td>${data1.stats.weaponry.sight.thermal == 0 ? "No" : `Gen ${data1.stats.weaponry.sight.thermal}x`}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.sight.thermal, data2.stats.weaponry.sight.thermal)};">${data2.stats.weaponry.sight.thermal == 0 ? "No" : `Gen ${data2.stats.weaponry.sight.thermal}x`}</td></tr>
             <tr><th>Blowout</th><td>${blowout}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.blowout, data2.stats.weaponry.blowout)};">${blowout2}</td></tr>
             <tr><th>Crew</th><td>${data1.stats.crew.join(", ")}</td><td>${data2.stats.crew.join(", ")}</td></tr>

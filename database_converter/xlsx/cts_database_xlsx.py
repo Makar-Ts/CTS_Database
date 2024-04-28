@@ -2,6 +2,9 @@ from openpyxl import load_workbook
 import csv, sys, os.path
 import re
 import codecs
+import time
+
+start_time = time.time()
 
 parent_dir = os.path.dirname(os.path.realpath(__file__ + "/../"))
 sys.path.append(parent_dir)
@@ -9,7 +12,7 @@ import modules_templates as templates
 
 HULLS_OFFSET = 1    #Index offset
 TURRETS_OFFSET = 23
-GUNS_OFFSET = 42
+GUNS_OFFSET = 44
 
 DATABASE_NAME = input()
 DATABASE_PATH = os.path.join(sys.path[0], DATABASE_NAME)
@@ -24,8 +27,48 @@ hulls_string = ""
 turrets_string = ""
 guns_string = ""
 
+def obtain_parcing(obtain):
+    add_obtain = ""
+    obtain_str_prev = obtain
+    
+    arr = obtain_str_prev.split("\n")[1:]
+    for j in arr:
+        if j == "":
+            arr.remove(j)
+    
+    requires_module_type = "None"
+    requires_module_name = ""
+    
+    if "Requires" in obtain_str_prev[0]:
+        dnb = obtain_str_prev[0].replace("Requires ", "").split("[")
+        requires_module_type = dnb[1].replace("]", "").lower()+"s"
+        requires_module_name = dnb[2]
+        
+        obtain_str_prev = obtain_str_prev[1:]
+
+    requires = [requires_module_type, requires_module_name]
+
+    if "Offsale" in obtain:
+        add_obtain = ", Offsale"
+        obtain_str_prev = obtain_str_prev.replace("Offsale\n", "")
+    
+    if "Blueprints" in obtain_str_prev:
+        obtain_str = "Blueprints"+add_obtain
+        resources = '{"' + ', "'.join(map(lambda x: x.replace(":", '":'), arr)) +'}'
+    else: # Joe Shack or Monthly reward
+        obtain_str = obtain_str_prev+add_obtain
+        resources = "{}"
+    
+    return obtain_str, resources, requires
+
+hulls_converting_time = 0
+turrets_converting_time = 0
+guns_converting_time = 0
 
 #  HULLS PARCING
+preapre_time = time.time()-start_time
+after_time = time.time()
+print("Prepare time: " + str(preapre_time))
 
 i = 2
 while ws.cell(HULLS_OFFSET+0, i).value is not None:
@@ -33,23 +76,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         hulls_string += ","
     print(ws.cell(HULLS_OFFSET+0, i).value)
     
-    add_obtain = ""
-    obtain_str_prev = ws.cell(HULLS_OFFSET+17, i).value
-    if "Offsale" in ws.cell(HULLS_OFFSET+17, i).value:
-        add_obtain = ", Offsale"
-        obtain_str_prev = obtain_str_prev.replace("Offsale\n", "")
-    
-    if "Blueprints" in obtain_str_prev:
-        arr = obtain_str_prev.split("\n")[1:]
-        for j in arr:
-            if j == "":
-                arr.remove(j)
-        
-        obtain_str = "Blueprints"+add_obtain
-        resources = '{"' + ', "'.join(map(lambda x: x.replace(":", '":'), arr)) +'}'
-    else: # Joe Shack or Monthly reward
-        obtain_str = obtain_str_prev+add_obtain
-        resources = "{}"
+    obtain_str, resources, requires = obtain_parcing(ws.cell(HULLS_OFFSET+17, i).value)
     
     armor = list(map(lambda x: x.split("(")[0].replace("~", ""), ws.cell(HULLS_OFFSET+5, i).value.split("/")))
     if len(armor) != 3:
@@ -123,6 +150,8 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
         weight= ws.cell(HULLS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(HULLS_OFFSET+8, i).value) is not None else -1,
+        requires_type = as_string(requires[0]),
+        requires_name = as_string(requires[1]),
         armor_front=armor[0],
         armor_back=armor[2],
         armor_side=armor[1],
@@ -138,16 +167,18 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         weapon_have_gun=have_gun,
         weapon_gun=hull_gun,
         crew='["'+ws.cell(HULLS_OFFSET+16, i).value.replace("\n", '", "')+'"]',
-        based_on=as_string(" ".join(ws.cell(HULLS_OFFSET+18, i).value.split())),
-        paired_gun=as_string(" ".join(ws.cell(HULLS_OFFSET+20, i).value.split()[:-1])),
-        paired_turret=as_string(" ".join(ws.cell(HULLS_OFFSET+19, i).value.split()[:-1]))
+        based_on=as_string(" ".join(ws.cell(HULLS_OFFSET+18, i).value.split()) if ws.cell(HULLS_OFFSET+18, i).value is not None else "None"),
+        paired_gun=as_string(" ".join(ws.cell(HULLS_OFFSET+20, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+20, i).value is not None else "None"),
+        paired_turret=as_string(" ".join(ws.cell(HULLS_OFFSET+19, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+19, i).value is not None else "None")
     )
     
     hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "").replace(" (!)", "")
 
     i += 1
-    
-    
+
+
+hulls_converting_time = round(time.time()-start_time-preapre_time, 2)
+print("Hulls converting time: " + str(hulls_converting_time))    
 # TURRETS PARCING
 
 i = 2
@@ -156,18 +187,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         turrets_string += ","
     print(ws.cell(TURRETS_OFFSET+0, i).value)
     
-    add_obtain = ""
-    obtain_str_prev = ws.cell(TURRETS_OFFSET+14, i).value
-    if "Offsale" in ws.cell(TURRETS_OFFSET+14, i).value:
-        add_obtain = ", Offsale"
-        obtain_str_prev = obtain_str_prev.replace("Offsale\n", "")
-    
-    if "Blueprints" in obtain_str_prev:
-        obtain_str = "Blueprints"+add_obtain
-        resources = '{"' + ', "'.join(map(lambda x: x.replace(":", '":'), obtain_str_prev.split("\n")[1:])) +'}'
-    else:
-        obtain_str = obtain_str_prev+add_obtain
-        resources = "{}"
+    obtain_str, resources, requires = obtain_parcing(ws.cell(TURRETS_OFFSET+16, i).value)
     
     ammo = ws.cell(TURRETS_OFFSET+9, i).value.replace("(", "").replace(")", "").replace("?", "").replace(",", ".")
     blowout = -1
@@ -188,11 +208,23 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         print("armor:",armor, ws.cell(TURRETS_OFFSET, i).value.replace("\n", "\\n").replace('"', '\\"'))
         armor = [0, 0, 0, 0]
     
-    aps = ws.cell(TURRETS_OFFSET+12, i).value.replace("N/A", "No")
+    aps = ws.cell(TURRETS_OFFSET+14, i).value.replace("N/A", "No")
     if "Yes" in aps:
         aps = "true"
     else:
         aps = "false"
+    
+    thermal = ws.cell(TURRETS_OFFSET+12, i).value.replace("N/A", "No").replace("?", "No")
+    if "No" in thermal:
+        thermal = "0"
+    else:
+        thermal = thermal.replace("Gen ", "")
+        
+    zoom_str = ws.cell(TURRETS_OFFSET+13, i).value.replace("N/A", "?")
+    if "?" in zoom_str:
+        zoom = [-1, -1]
+    else:
+        zoom = zoom_str.replace("x", "").split("-")
         
     stab = ws.cell(TURRETS_OFFSET+5, i).value.replace("N/A", "No")
     if "Yes" in stab:
@@ -218,6 +250,8 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
         weight= ws.cell(TURRETS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(TURRETS_OFFSET+8, i).value) is not None else -1,
+        requires_type = as_string(requires[0]),
+        requires_name = as_string(requires[1]),
         armor_front=armor[0],
         armor_back=armor[2],
         armor_side=armor[1],
@@ -226,16 +260,19 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         weapon_aps=aps,
         weapon_fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
         weapon_stabilizer=stab,
+        weapon_sight_thermal = thermal,
+        weapon_zoom_lower = zoom[0],
+        weapon_zoom_upper = zoom[1],
         weapon_gun_reload_multi=reload_multi[0],
         weapon_gun_reload_multi_caliber=reload_multi[1].replace("(", "").replace(")", "").replace("mm", ""),
         weapon_gun_limits_up=limits_ver[1],
         weapon_gun_limits_down=limits_ver[0].replace("-", ""),
         weapon_gun_speed_vertical=speed[1][1:],
         weapon_gun_speed_horizontal=speed[0][1:],
-        crew='["'+ws.cell(TURRETS_OFFSET+13, i).value.replace("\n", '", "')+'"]',
-        based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+15, i).value.split())),
-        paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+17, i).value.split()[:-1])),
-        paired_hull=as_string(" ".join(ws.cell(TURRETS_OFFSET+16, i).value.split()[:-1]))
+        crew='["'+ws.cell(TURRETS_OFFSET+15, i).value.replace("\n", '", "')+'"]',
+        based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+17, i).value.split()) if ws.cell(TURRETS_OFFSET+17, i).value is not None else "None"),
+        paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+19, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+19, i).value is not None else "None"),
+        paired_hull=as_string(" ".join(ws.cell(TURRETS_OFFSET+18, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+18, i).value is not None else "None")
     )
     
     turrets_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
@@ -243,6 +280,8 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     i += 1
     
 
+turrets_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time, 2)
+print("Turrets converting time: " + str(turrets_converting_time))    
 # GUNS PARCING
 
 i = 2
@@ -251,18 +290,7 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         guns_string += ","
     print(ws.cell(GUNS_OFFSET+0, i).value)
     
-    add_obtain = ""
-    obtain_str_prev = ws.cell(GUNS_OFFSET+13, i).value
-    if "Offsale" in ws.cell(GUNS_OFFSET+13, i).value:
-        add_obtain = ", Offsale"
-        obtain_str_prev = obtain_str_prev.replace("Offsale\n", "")
-    
-    if "Blueprints" in obtain_str_prev:
-        obtain_str = "Blueprints"+add_obtain
-        resources = '{"' + ', "'.join(map(lambda x: x.replace(":", '":'), obtain_str_prev.split("\n")[1:])) +'}'
-    else:
-        obtain_str = obtain_str_prev+add_obtain
-        resources = "{}"
+    obtain_str, resources, requires = obtain_parcing(ws.cell(GUNS_OFFSET+13, i).value)
     
     ammunition = ""
     for j in range(4):
@@ -324,20 +352,24 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
         weight= ws.cell(GUNS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+8, i).value) is not None else -1,
+        requires_type = as_string(requires[0]),
+        requires_name = as_string(requires[1]),
         weapon_reload=ws.cell(GUNS_OFFSET+7, i).value.replace("s", "") if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+7, i).value.replace("s", "")) else -1,
         weapon_accuracy=ws.cell(GUNS_OFFSET+4, i).value if ws.cell(GUNS_OFFSET+4, i).value.isdigit() else -1,
         weapon_ammo_volume=ws.cell(GUNS_OFFSET+5, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+5, i).value) else -1,
         weapon_caliber=ws.cell(GUNS_OFFSET+6, i).value.replace("mm", ""),
         weapon_ammunition=ammunition,
-        based_on=as_string(" ".join(ws.cell(GUNS_OFFSET+14, i).value.split())),
-        paired_turret=as_string(" ".join(ws.cell(GUNS_OFFSET+15, i).value.split()[:-1])),
-        paired_hull=as_string(" ".join(ws.cell(GUNS_OFFSET+16, i).value.split()[:-1]))
+        based_on=as_string(" ".join(ws.cell(GUNS_OFFSET+14, i).value.split()) if ws.cell(GUNS_OFFSET+14, i).value is not None else "None"),
+        paired_turret=as_string(" ".join(ws.cell(GUNS_OFFSET+15, i).value.split()[:-1]) if ws.cell(GUNS_OFFSET+15, i).value is not None else "None"),
+        paired_hull=as_string(" ".join(ws.cell(GUNS_OFFSET+16, i).value.split()[:-1]) if ws.cell(GUNS_OFFSET+16, i).value is not None else "None")
     )
     
     guns_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
     
     i += 1
 
+guns_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time-turrets_converting_time, 2)
+print("Guns converting time: " + str(guns_converting_time))
 
 output_string = templates.DATABASE.format(
     hulls=hulls_string,
@@ -346,3 +378,8 @@ output_string = templates.DATABASE.format(
 )
 with codecs.open(JSON_PATH,mode='w',encoding='utf-8') as f:
     f.write(output_string)
+
+print("\n\nConverting time: " + str(time.time()-start_time))
+print("Hulls: " + str(hulls_converting_time))
+print("Turrets: " + str(turrets_converting_time))
+print("Guns: " + str(guns_converting_time))
