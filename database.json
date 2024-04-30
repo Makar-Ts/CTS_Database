@@ -22231,6 +22231,17 @@
             "ammo_volume": 1.25,
             "caliber:": 125,
             "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  530,
+        "30":  459,
+        "60":  265
+    },
+    "velocity":  1720,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
     "type": "ATGM ",
     "penetration": {
         "0":  650,
@@ -22279,7 +22290,7 @@
     "based_on": "125mm 2A46M-1 [Russia]",
     "paired": {
         "hull": "None",
-        "turret": "T-80BV [10] T-72B3 [11] T-90A [11] T-90M"
+        "turret": "T-80BV"
     }
 }
 ,"120mm IMI": {
