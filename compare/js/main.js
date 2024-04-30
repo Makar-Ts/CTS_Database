@@ -315,6 +315,23 @@ function createCompareList() {
         $("#resources2").html(str);
     }
 
+    let req_show = true;
+    if (item1_data.requires.type === "None") {
+        $("#requires1").html('');
+        $("#requires1").closest('tr').hide();
+    } else {
+        req_show = false;
+        $("#requires1").html(`<a href="${window.location.origin+window.location.pathname+"../"}?type=${item1_data.requires.type}&name=${item1_data.requires.name}">${item1_data.requires.name}</a>`)
+    }
+
+    if (item2_data.requires.type === "None") {
+        $("#requires2").html('');
+        if (req_show) $("#requires2").closest('tr').hide();
+    } else {
+        $("#requires2").closest('tr').show();
+        $("#requires2").html(`<a href="${window.location.origin+window.location.pathname+"../"}?type=${item2_data.requires.type}&name=${item2_data.requires.name}">${item2_data.requires.name}</a>`)
+    }
+
 
 
     $("#weight1").text(item1_data.stats.weight+"t");
