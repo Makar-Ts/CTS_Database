@@ -239,7 +239,7 @@
             "acceleration": 10,
             "forward": 70,
             "backward": -8,
-            "torque": 12,
+            "torque": 5,
             "rate": 24
         },
         "weaponry": {
@@ -823,6 +823,46 @@
         "turret": "T-60"
     }
 }
+,"Type 63": {
+    "description": "Phong Kong",
+    "tier": 2.0,
+    "rarity": "Common",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 64,
+            "back": 14,
+            "side": 14
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 56,
+            "backward": -7,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 15.5,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "Type 63 [China]",
+    "paired": {
+        "gun": "",
+        "turret": ""
+    }
+}
 ,"BT-7": {
     "description": "speedy",
     "tier": 2.0,
@@ -881,7 +921,7 @@
             "side": 15
         },
         "speed": {
-            "acceleration": 15,
+            "acceleration": 7,
             "forward": 55,
             "backward": -42,
             "torque": 10,
@@ -981,6 +1021,55 @@
     "paired": {
         "gun": "45mm EGG",
         "turret": "EGG Mk 5"
+    }
+}
+,"Fung": {
+    "description": "",
+    "tier": 2.0,
+    "rarity": "Common",
+    "obtain": "Unobtainable",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 64,
+            "back": 14,
+            "side": 14
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 56,
+            "backward": -31,
+            "torque": 12,
+            "rate": 80
+        },
+        "weaponry": {
+            "ammo_storage": 198.7,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 5.0,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 86,
+                    "down": 69,
+                    "left": 180,
+                    "right": 180
+                }
+            }
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Fung [Fake]",
+    "paired": {
+        "gun": "",
+        "turret": ""
     }
 }
 ,"Sherman": {
@@ -1374,8 +1463,8 @@
             "aps": false,
             "have_gun": true,
             "gun": {
-                "reload_multiplier": 0.8,
-                "reload_multiplier_caliber": 57,
+                "reload_multiplier": 1.0,
+                "reload_multiplier_caliber": 75,
                 "limits": {
                     "up": 30,
                     "down": 12,
@@ -1392,7 +1481,7 @@
         "turret": ""
     }
 }
-,"Quack": {
+,"Quack ": {
     "description": "Quack",
     "tier": 3.0,
     "rarity": "Legendary",
@@ -1432,7 +1521,7 @@
         "turret": "Quack"
     }
 }
-,"Car": {
+,"Car ": {
     "description": "robloxias finest",
     "tier": 3.0,
     "rarity": "Uncommon",
@@ -1464,7 +1553,7 @@
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Driver2"]
+        "crew": ["Driver", "Driver2", "Gunner", "Loader"]
     },
     "based_on": "Car [Roblox]",
     "paired": {
@@ -1570,7 +1659,7 @@
             "side": 70
         },
         "speed": {
-            "acceleration": 8,
+            "acceleration": 9,
             "forward": 34,
             "backward": -17,
             "torque": 17,
@@ -1852,18 +1941,18 @@
         "name": ""
     },
     "stats": {
-        "weight": 5.23,
+        "weight": 7.23,
         "armor": {
             "front": 26,
             "back": 16,
             "side": 16
         },
         "speed": {
-            "acceleration": 9,
+            "acceleration": 12,
             "forward": 85,
             "backward": -85,
             "torque": 6.7,
-            "rate": 34
+            "rate": 50
         },
         "weaponry": {
             "ammo_storage": 15.1,
@@ -1919,46 +2008,6 @@
     "paired": {
         "gun": "122mm 2A18",
         "turret": "2S1"
-    }
-}
-,"Type 63": {
-    "description": "Phong Kong",
-    "tier": 4.0,
-    "rarity": "Uncommon",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 15.00,
-        "armor": {
-            "front": 64,
-            "back": 14,
-            "side": 14
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 56,
-            "backward": -7,
-            "torque": 12,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 15.5,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "Type 63 [China]",
-    "paired": {
-        "gun": "",
-        "turret": ""
     }
 }
 ,"XM800T": {
@@ -2021,7 +2070,7 @@
         "speed": {
             "acceleration": 7,
             "forward": 28,
-            "backward": -4,
+            "backward": -4.7,
             "torque": 12,
             "rate": 16
         },
@@ -2172,7 +2221,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 6.40,
+        "weight": 8.00,
         "armor": {
             "front": 30,
             "back": 8,
@@ -2221,11 +2270,11 @@
         "name": ""
     },
     "stats": {
-        "weight": 8.28,
+        "weight": 11.58,
         "armor": {
-            "front": 50,
-            "back": 30,
-            "side": 30
+            "front": 30,
+            "back": 10,
+            "side": 8
         },
         "speed": {
             "acceleration": 7,
@@ -2272,9 +2321,9 @@
     "stats": {
         "weight": 18.00,
         "armor": {
-            "front": 30,
-            "back": 8,
-            "side": 14
+            "front": 80,
+            "back": 30,
+            "side": 30
         },
         "speed": {
             "acceleration": 9,
@@ -2357,7 +2406,7 @@
         "turret": ""
     }
 }
-,"Ka-Chi": {
+,"Ka-Chi ": {
     "description": "Pride of the japanese navy",
     "tier": 4.0,
     "rarity": "Uncommon",
@@ -2397,7 +2446,7 @@
         "turret": "Ka-Chi"
     }
 }
-,"M4 HCR2": {
+,"M4 HCR2 ": {
     "description": "",
     "tier": 4.0,
     "rarity": "Uncommon",
@@ -2437,7 +2486,7 @@
         "turret": "M4 HCR2"
     }
 }
-,"Battlepacks III Concrete": {
+,"Battlepacks III Concrete ": {
     "description": "The armour isn't quite solid you say?",
     "tier": 4.0,
     "rarity": "Uncommon",
@@ -2448,7 +2497,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 13.00,
+        "weight": 18.00,
         "armor": {
             "front": 30,
             "back": 8,
@@ -2473,8 +2522,8 @@
                 "limits": {
                     "up": 20,
                     "down": 6,
-                    "left": 10,
-                    "right": 10
+                    "left": 7.5,
+                    "right": 7.5
                 }
             }
         },
@@ -2553,16 +2602,16 @@
             "side": 35
         },
         "speed": {
-            "acceleration": 12,
+            "acceleration": 15,
             "forward": 85,
             "backward": -57,
             "torque": 16,
-            "rate": 35
+            "rate": 50
         },
         "weaponry": {
             "ammo_storage": 11.8,
             "blowout": -1,
-            "hull_aim": 0,
+            "hull_aim": 1,
             "aps": false,
             "have_gun": false,
             "gun": {}
@@ -2600,7 +2649,7 @@
             "rate": 28
         },
         "weaponry": {
-            "ammo_storage": 11.8,
+            "ammo_storage": 22.5,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -2689,7 +2738,7 @@
             "rate": 1.96
         },
         "weaponry": {
-            "ammo_storage": 41,
+            "ammo_storage": 10.6,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -2713,50 +2762,10 @@
         "turret": ""
     }
 }
-,"Battlepass V G": {
-    "description": "",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 24.00,
-        "armor": {
-            "front": 80,
-            "back": 50,
-            "side": 50
-        },
-        "speed": {
-            "acceleration": 10,
-            "forward": 46,
-            "backward": -15,
-            "torque": 12,
-            "rate": 27
-        },
-        "weaponry": {
-            "ammo_storage": 17.4,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "Panther G [Germany]",
-    "paired": {
-        "gun": "75mm Ikonisch II",
-        "turret": "Battlepass V G [5] Battlepass V (II)"
-    }
-}
 ,"Lorraine": {
     "description": "lorrrr",
     "tier": 5.0,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -2796,7 +2805,7 @@
 ,"BMP": {
     "description": "bump",
     "tier": 5.0,
-    "rarity": "Rare",
+    "rarity": "Uncommon",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -2944,8 +2953,8 @@
             "aps": false,
             "have_gun": true,
             "gun": {
-                "reload_multiplier": 1.34,
-                "reload_multiplier_caliber": 120,
+                "reload_multiplier": 1.5,
+                "reload_multiplier_caliber": 145,
                 "limits": {
                     "up": 15,
                     "down": 8,
@@ -3051,50 +3060,10 @@
         "turret": "M551"
     }
 }
-,"M26": {
-    "description": "American latewar medium tank.",
-    "tier": 5.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 110, "Steel": 70, "Aluminum": 54},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 33.00,
-        "armor": {
-            "front": 101,
-            "back": 51,
-            "side": 76
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 49,
-            "backward": -15,
-            "torque": 12,
-            "rate": 28
-        },
-        "weaponry": {
-            "ammo_storage": 32.3,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "M26 Pershing [USA]",
-    "paired": {
-        "gun": "90mm Freedom II",
-        "turret": "M26"
-    }
-}
 ,"Yoyota HMMWV": {
     "description": "jeek 2",
     "tier": 5.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Epic Crate Drop",
     "resources": {},
     "requires": {
@@ -3134,7 +3103,7 @@
 ,"Ferret": {
     "description": "yahhh",
     "tier": 5.0,
-    "rarity": "Rare",
+    "rarity": "Epic",
     "obtain": "Monthly Reward, September 2022",
     "resources": {},
     "requires": {
@@ -3180,10 +3149,10 @@
         "turret": ""
     }
 }
-,"Panzerro": {
+,"Panzerro ": {
     "description": "",
     "tier": 5.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, January 2023",
     "resources": {},
     "requires": {
@@ -3671,7 +3640,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 9.00,
+        "weight": 12.00,
         "armor": {
             "front": 15,
             "back": 8,
@@ -3737,7 +3706,47 @@
     "based_on": "AMX-13 [France]",
     "paired": {
         "gun": "75mm SA50 [5] 90mm CN90 F3",
-        "turret": "FL-10 [5] FL-10 HOT"
+        "turret": "FL-10 [6] FL-10 HOT"
+    }
+}
+,"Battlepass V G": {
+    "description": "",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 80,
+            "back": 50,
+            "side": 50
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 46,
+            "backward": -15,
+            "torque": 12,
+            "rate": 27
+        },
+        "weaponry": {
+            "ammo_storage": 17.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "Panther G [Germany]",
+    "paired": {
+        "gun": "75mm Ikonisch II",
+        "turret": "Battlepass V G [5] Battlepass V (II)"
     }
 }
 ,"Battlepass VI (B)": {
@@ -3793,19 +3802,19 @@
     "stats": {
         "weight": 35.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 101,
+            "back": 50,
+            "side": 75
         },
         "speed": {
-            "acceleration": 4,
+            "acceleration": 5,
             "forward": 36,
             "backward": -14,
             "torque": 9,
             "rate": 18
         },
         "weaponry": {
-            "ammo_storage": 26.7,
+            "ammo_storage": 45.0,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -3831,11 +3840,11 @@
         "name": ""
     },
     "stats": {
-        "weight": 50.00,
+        "weight": 35.00,
         "armor": {
-            "front": 300,
-            "back": 100,
-            "side": 200
+            "front": 120,
+            "back": 30,
+            "side": 100
         },
         "speed": {
             "acceleration": 8,
@@ -3858,6 +3867,46 @@
     "paired": {
         "gun": "85mm ZIS-S [5] 107mm ZiS-6",
         "turret": "KV-220"
+    }
+}
+,"Bank Prince": {
+    "description": "who let british cook",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 37.00,
+        "armor": {
+            "front": 152,
+            "back": 50,
+            "side": 95
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 17,
+            "backward": -12,
+            "torque": 15,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 51.6,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Black Prince [UK]",
+    "paired": {
+        "gun": "",
+        "turret": "Bank Prince"
     }
 }
 ,"O-I": {
@@ -3898,6 +3947,46 @@
     "paired": {
         "gun": "150mm Type 96 Howitzer [4] 105mmm Type 92",
         "turret": "O-I"
+    }
+}
+,"M26": {
+    "description": "American latewar medium tank.",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 110, "Steel": 70, "Aluminum": 54},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 33.00,
+        "armor": {
+            "front": 101,
+            "back": 51,
+            "side": 76
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 49,
+            "backward": -15,
+            "torque": 12,
+            "rate": 28
+        },
+        "weaponry": {
+            "ammo_storage": 32.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "M26 Pershing [USA]",
+    "paired": {
+        "gun": "90mm Freedom II",
+        "turret": "M26"
     }
 }
 ,"Centurion Mk5": {
@@ -3943,7 +4032,7 @@
 ,"Battlepacks VI (B)": {
     "description": "rev of the porsche wheyyyyy",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Blueprints",
     "resources": {"Iron": 150, "Steel": 77, "Titanium": 19},
     "requires": {
@@ -3992,7 +4081,7 @@
 ,"Dragoon 300 \"Free Wifi\"": {
     "description": "Here be dragons.",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Rare Crate Drop",
     "resources": {},
     "requires": {
@@ -4032,7 +4121,7 @@
 ,"TOG II*": {
     "description": "TOOOOOOOOOOOOOOOOOG",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Rare Crate Drop",
     "resources": {},
     "requires": {
@@ -4072,7 +4161,7 @@
 ,"KV-225": {
     "description": "Poor radio guy",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Rare Crate Drop",
     "resources": {},
     "requires": {
@@ -4118,50 +4207,10 @@
         "turret": ""
     }
 }
-,"Bank Prince": {
-    "description": "who let british cook",
-    "tier": 6.0,
-    "rarity": "Legendary",
-    "obtain": "Rare Crate Drop",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 42.00,
-        "armor": {
-            "front": 450,
-            "back": 32,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 17,
-            "backward": -12,
-            "torque": 15,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 51.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "Black Prince [UK]",
-    "paired": {
-        "gun": "",
-        "turret": "Bank Prince"
-    }
-}
 ,"Centurion AVRE": {
     "description": "See that wall over there? Ram it.",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Epic Crate Drop",
     "resources": {},
     "requires": {
@@ -4201,7 +4250,7 @@
 ,"Jeek": {
     "description": "",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Epic Crate Drop",
     "resources": {},
     "requires": {
@@ -4247,10 +4296,10 @@
         "turret": ""
     }
 }
-,"Ghana IFV": {
+,"Ghana IFV ": {
     "description": "Every 60 seconds, a minute passes.",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, February 2023",
     "resources": {},
     "requires": {
@@ -4287,10 +4336,10 @@
         "turret": "Ghana IFV"
     }
 }
-,"Meerkat DSV": {
+,"Meerkat DSV ": {
     "description": "meee",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Monthly Reward, March 2023",
     "resources": {},
     "requires": {
@@ -4327,10 +4376,10 @@
         "turret": ""
     }
 }
-,"BT-7BM": {
+,"BT-7BM ": {
     "description": "An unstoppable force!",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, April 2023",
     "resources": {},
     "requires": {
@@ -4367,10 +4416,50 @@
         "turret": "BT-7BM"
     }
 }
-,"Trolley": {
+,"XM800TX": {
+    "description": "The XM800TX is a high-speed hull that features additional applique armor for enhanced protection.",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, May 2023",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 10.00,
+        "armor": {
+            "front": 30,
+            "back": 20,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 89,
+            "backward": -42,
+            "torque": 7,
+            "rate": 30
+        },
+        "weaponry": {
+            "ammo_storage": 4.1,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "XM800T [Fake]",
+    "paired": {
+        "gun": "75mm AT-43 [3] 20mm M139 (?) [4] 99.7mm Fusiler LARP",
+        "turret": "XM800TX"
+    }
+}
+,"Trolley ": {
     "description": "Mall Cop",
     "tier": 6.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, June 2023",
     "resources": {},
     "requires": {
@@ -4416,10 +4505,10 @@
         "turret": ""
     }
 }
-,"M48A3 Camo": {
+,"M48A3 Camo ": {
     "description": "Average American Hull",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, August 2023",
     "resources": {},
     "requires": {
@@ -4456,7 +4545,7 @@
         "turret": "M48A3 Camo"
     }
 }
-,"Fake M1": {
+,"Fake M1 ": {
     "description": "The real one",
     "tier": 6.0,
     "rarity": "Legendary",
@@ -4467,7 +4556,7 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 19.00,
         "armor": {
             "front": 13,
             "back": 8,
@@ -4475,8 +4564,8 @@
         },
         "speed": {
             "acceleration": 9,
-            "forward": 120,
-            "backward": -52,
+            "forward": 68,
+            "backward": -13,
             "torque": 7,
             "rate": 40
         },
@@ -4505,6 +4594,55 @@
         "turret": ""
     }
 }
+,"Taifun II": {
+    "description": "EurofighterTycoon",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, April 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 20.00,
+        "armor": {
+            "front": 30,
+            "back": 15,
+            "side": 15
+        },
+        "speed": {
+            "acceleration": 12,
+            "forward": 71,
+            "backward": -71,
+            "torque": 20,
+            "rate": 32
+        },
+        "weaponry": {
+            "ammo_storage": 33.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.12,
+                "reload_multiplier_caliber": 90,
+                "limits": {
+                    "up": 18,
+                    "down": 12,
+                    "left": 15,
+                    "right": 15
+                }
+            }
+        },
+        "crew": ["Driver", "Loader", "Commander", "Gunner"]
+    },
+    "based_on": "Taifun II [Switzerland]",
+    "paired": {
+        "gun": "105mm Royal",
+        "turret": ""
+    }
+}
 ,"XT1A IXWA": {
     "description": "Hey! I remember you!!!!!",
     "tier": 7.0,
@@ -4516,7 +4654,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 30.00,
+        "weight": 25.00,
         "armor": {
             "front": 105,
             "back": 60,
@@ -4527,7 +4665,7 @@
             "forward": 81,
             "backward": -81,
             "torque": 23,
-            "rate": 37
+            "rate": 45
         },
         "weaponry": {
             "ammo_storage": 21.0,
@@ -4556,7 +4694,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 26.00,
+        "weight": 28.00,
         "armor": {
             "front": 86,
             "back": 33,
@@ -4814,7 +4952,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 30.00,
+        "weight": 29.00,
         "armor": {
             "front": 100,
             "back": 30,
@@ -4950,7 +5088,7 @@
         "weaponry": {
             "ammo_storage": 19.0,
             "blowout": -1,
-            "hull_aim": 2,
+            "hull_aim": 1,
             "aps": false,
             "have_gun": false,
             "gun": {}
@@ -5023,9 +5161,9 @@
         "speed": {
             "acceleration": 21,
             "forward": 56,
-            "backward": -7,
-            "torque": 12,
-            "rate": 40
+            "backward": -56,
+            "torque": 24,
+            "rate": 45
         },
         "weaponry": {
             "ammo_storage": 9.5,
@@ -5134,16 +5272,16 @@
         "name": ""
     },
     "stats": {
-        "weight": 15.00,
+        "weight": 23.10,
         "armor": {
             "front": 520,
             "back": 45,
             "side": 55
         },
         "speed": {
-            "acceleration": 9,
+            "acceleration": 12,
             "forward": 60,
-            "backward": -15,
+            "backward": -6,
             "torque": 12,
             "rate": 40
         },
@@ -5272,7 +5410,7 @@
         "speed": {
             "acceleration": 9,
             "forward": 56,
-            "backward": -7,
+            "backward": -15,
             "torque": 12,
             "rate": 40
         },
@@ -5354,9 +5492,9 @@
     "stats": {
         "weight": 35.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 230,
+            "back": 50,
+            "side": 100
         },
         "speed": {
             "acceleration": 9,
@@ -5394,15 +5532,15 @@
     "stats": {
         "weight": 14.00,
         "armor": {
-            "front": 64,
-            "back": 14,
-            "side": 14
+            "front": 75,
+            "back": 20,
+            "side": 55
         },
         "speed": {
-            "acceleration": 15,
+            "acceleration": 5,
             "forward": 109,
             "backward": -30,
-            "torque": 14,
+            "torque": 12,
             "rate": 2.8
         },
         "weaponry": {
@@ -5648,7 +5786,7 @@
             "side": 35
         },
         "speed": {
-            "acceleration": 8,
+            "acceleration": 11,
             "forward": 73,
             "backward": -73,
             "torque": 15,
@@ -5701,8 +5839,8 @@
             "aps": false,
             "have_gun": true,
             "gun": {
-                "reload_multiplier": 1.54,
-                "reload_multiplier_caliber": 152,
+                "reload_multiplier": 1.14,
+                "reload_multiplier_caliber": 92,
                 "limits": {
                     "up": 17,
                     "down": 6,
@@ -5770,14 +5908,14 @@
         "name": ""
     },
     "stats": {
-        "weight": 24.20,
+        "weight": 29.00,
         "armor": {
-            "front": 64,
-            "back": 14,
-            "side": 14
+            "front": 25,
+            "back": 15,
+            "side": 15
         },
         "speed": {
-            "acceleration": 14,
+            "acceleration": 4,
             "forward": 109,
             "backward": -30,
             "torque": 12,
@@ -5790,10 +5928,10 @@
             "aps": false,
             "have_gun": true,
             "gun": {
-                "reload_multiplier": 1.9,
-                "reload_multiplier_caliber": 220,
+                "reload_multiplier": 1.8,
+                "reload_multiplier_caliber": 200,
                 "limits": {
-                    "up": 7,
+                    "up": 70,
                     "down": 4,
                     "left": 140,
                     "right": 140
@@ -5888,7 +6026,7 @@
         "turret": "B1 Centauro"
     }
 }
-,"The Santapass": {
+,"The Santapass ": {
     "description": "sant",
     "tier": 8.0,
     "rarity": "Legendary",
@@ -5968,7 +6106,7 @@
         "turret": "Battlepass III"
     }
 }
-,"Motorcycle": {
+,"Motorcycle ": {
     "description": "the whip",
     "tier": 8.0,
     "rarity": "Mythical",
@@ -6017,7 +6155,7 @@
         "turret": ""
     }
 }
-,"Chieftain SID": {
+,"Chieftain SID ": {
     "description": "the ch but silent",
     "tier": 8.0,
     "rarity": "Legendary",
@@ -6075,14 +6213,14 @@
             "side": 200
         },
         "speed": {
-            "acceleration": 7,
+            "acceleration": 6,
             "forward": 15,
             "backward": -15,
-            "torque": 17,
-            "rate": 35
+            "torque": 13,
+            "rate": 10
         },
         "weaponry": {
-            "ammo_storage": 47.8,
+            "ammo_storage": 81.1,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -6271,7 +6409,7 @@
         "weaponry": {
             "ammo_storage": 7.3,
             "blowout": -1,
-            "hull_aim": 2,
+            "hull_aim": 1,
             "aps": false,
             "have_gun": false,
             "gun": {}
@@ -6305,11 +6443,11 @@
             "acceleration": 10,
             "forward": 60,
             "backward": -4,
-            "torque": 12,
-            "rate": 40
+            "torque": 32,
+            "rate": 35
         },
         "weaponry": {
-            "ammo_storage": 26.1,
+            "ammo_storage": 34.5,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -6385,7 +6523,7 @@
             "acceleration": 8,
             "forward": 65,
             "backward": -47,
-            "torque": 250,
+            "torque": 25,
             "rate": 40
         },
         "weaponry": {
@@ -6400,7 +6538,7 @@
     },
     "based_on": "C1 Ariete [Italy]",
     "paired": {
-        "gun": "",
+        "gun": "120mm OTO",
         "turret": "Ariete"
     }
 }
@@ -6417,9 +6555,9 @@
     "stats": {
         "weight": 34.00,
         "armor": {
-            "front": 64,
+            "front": 90,
             "back": 30,
-            "side": 44
+            "side": 50
         },
         "speed": {
             "acceleration": 4,
@@ -6542,11 +6680,11 @@
             "side": 110
         },
         "speed": {
-            "acceleration": 14,
-            "forward": 65,
+            "acceleration": 18,
+            "forward": 70,
             "backward": -65,
-            "torque": 95,
-            "rate": 40
+            "torque": 75,
+            "rate": 65
         },
         "weaponry": {
             "ammo_storage": 4.7,
@@ -6584,9 +6722,9 @@
         "speed": {
             "acceleration": 12,
             "forward": 89,
-            "backward": -47,
+            "backward": -102,
             "torque": 26,
-            "rate": 50
+            "rate": 58
         },
         "weaponry": {
             "ammo_storage": 9.4,
@@ -6604,7 +6742,7 @@
         "turret": "XT3R Faux LEP"
     }
 }
-,"NANO": {
+,"NANO ": {
     "description": "Second to none!",
     "tier": 9.0,
     "rarity": "Legendary",
@@ -6629,7 +6767,7 @@
             "rate": 40
         },
         "weaponry": {
-            "ammo_storage": 4.7,
+            "ammo_storage": 7.1,
             "blowout": 0,
             "hull_aim": 0,
             "aps": false,
@@ -6706,11 +6844,11 @@
     "description": "STAR LORD",
     "tier": 10.0,
     "rarity": "Legendary",
-    "obtain": "Joe's Shack",
+    "obtain": "Joe's ShackRequires Challenger 1 [Hull]",
     "resources": {},
     "requires": {
-        "type": "hulls",
-        "name": "Challenger 1"
+        "type": "None",
+        "name": ""
     },
     "stats": {
         "weight": 35.00,
@@ -6720,11 +6858,11 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 10,
-            "forward": 72,
+            "acceleration": 8,
+            "forward": 56,
             "backward": -32,
-            "torque": 40,
-            "rate": 34
+            "torque": 20,
+            "rate": 31
         },
         "weaponry": {
             "ammo_storage": 24.0,
@@ -6763,11 +6901,11 @@
             "acceleration": 13,
             "forward": 73,
             "backward": -34,
-            "torque": 16,
+            "torque": 20,
             "rate": 34
         },
         "weaponry": {
-            "ammo_storage": 15.9,
+            "ammo_storage": 24.3,
             "blowout": -1,
             "hull_aim": 1,
             "aps": false,
@@ -6800,11 +6938,11 @@
             "side": 70
         },
         "speed": {
-            "acceleration": 8,
+            "acceleration": 10,
             "forward": 80,
             "backward": -38,
             "torque": 34,
-            "rate": 34
+            "rate": 40
         },
         "weaponry": {
             "ammo_storage": 10.2,
@@ -6875,7 +7013,7 @@
     "stats": {
         "weight": 34.00,
         "armor": {
-            "front": 400,
+            "front": 350,
             "back": 20,
             "side": 25
         },
@@ -6915,12 +7053,12 @@
     "stats": {
         "weight": 30.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 100,
+            "back": 63,
+            "side": 90
         },
         "speed": {
-            "acceleration": 10,
+            "acceleration": 11,
             "forward": 80,
             "backward": -11,
             "torque": 14,
@@ -6962,7 +7100,7 @@
         "speed": {
             "acceleration": 30,
             "forward": 120,
-            "backward": -120,
+            "backward": -9,
             "torque": 12,
             "rate": 60
         },
@@ -6991,6 +7129,46 @@
         "turret": ""
     }
 }
+,"T-72B3": {
+    "description": "ORAAH! Fitted with ERA capable of defeating AP.",
+    "tier": 10.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 300, "Steel": 110, "Ceramic": 10, "Composite": 30, "Cyberware": 3},
+    "requires": {
+        "type": "hulls",
+        "name": "T-72A"
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 955,
+            "back": 50,
+            "side": 135
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 60,
+            "backward": -4,
+            "torque": 34,
+            "rate": 35
+        },
+        "weaponry": {
+            "ammo_storage": 34.5,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-72B3 [Russia]",
+    "paired": {
+        "gun": "125mm 2A46M-1 [12] 30mm Terminator",
+        "turret": "T-72B3 [11] T-90A [11] Terminator 2"
+    }
+}
 ,"Black Night": {
     "description": "Upgraded Hull. Now features an uprated engine. What it should have been from the start!",
     "tier": 10.0,
@@ -7009,11 +7187,11 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 11.5,
-            "forward": 72,
+            "acceleration": 9.7,
+            "forward": 56,
             "backward": -32,
-            "torque": 40,
-            "rate": 34
+            "torque": 350,
+            "rate": 31
         },
         "weaponry": {
             "ammo_storage": 24.0,
@@ -7034,7 +7212,7 @@
 ,"TKX-90": {
     "description": "ProtoType 90",
     "tier": 10.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Legendary Crate Drop",
     "resources": {},
     "requires": {
@@ -7056,7 +7234,7 @@
             "rate": 34
         },
         "weaponry": {
-            "ammo_storage": 38.4,
+            "ammo_storage": 28.7,
             "blowout": -1,
             "hull_aim": 1,
             "aps": false,
@@ -7212,7 +7390,7 @@
             "acceleration": 6,
             "forward": 75,
             "backward": -40,
-            "torque": 12,
+            "torque": 24,
             "rate": 40
         },
         "weaponry": {
@@ -7249,14 +7427,14 @@
             "side": 70
         },
         "speed": {
-            "acceleration": 13,
-            "forward": 85,
+            "acceleration": 8,
+            "forward": 76,
             "backward": -34,
-            "torque": 16,
+            "torque": 14,
             "rate": 34
         },
         "weaponry": {
-            "ammo_storage": 8.0,
+            "ammo_storage": 16.0,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -7269,46 +7447,6 @@
     "paired": {
         "gun": "None",
         "turret": "K14UW"
-    }
-}
-,"T-72B3": {
-    "description": "ORAAH! Fitted with ERA capable of defeating AP.",
-    "tier": 11.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 300, "Steel": 110, "Ceramic": 10, "Composite": 30, "Cyberware": 3},
-    "requires": {
-        "type": "hulls",
-        "name": "T-72A"
-    },
-    "stats": {
-        "weight": 27.00,
-        "armor": {
-            "front": 955,
-            "back": 50,
-            "side": 135
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 60,
-            "backward": -4,
-            "torque": 14,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 26.1,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "T-72B3 [Russia]",
-    "paired": {
-        "gun": "125mm 2A46M-1 [12] 30mm Terminator",
-        "turret": "T-72B3 [11] T-90A [11] Terminator 2"
     }
 }
 ,"Type 10": {
@@ -7329,10 +7467,10 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 13,
+            "acceleration": 14.2,
             "forward": 73,
             "backward": -73,
-            "torque": 16,
+            "torque": 21,
             "rate": 34
         },
         "weaponry": {
@@ -7364,9 +7502,9 @@
     "stats": {
         "weight": 30.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 100,
+            "back": 40,
+            "side": 90
         },
         "speed": {
             "acceleration": 9,
@@ -7409,7 +7547,7 @@
             "side": 180
         },
         "speed": {
-            "acceleration": 12,
+            "acceleration": 10,
             "forward": 60,
             "backward": -15,
             "torque": 34,
@@ -7435,11 +7573,11 @@
     "description": "Germany's Finest! (More details will be added soon)",
     "tier": 12.0,
     "rarity": "Mythical",
-    "obtain": "Joe's Shack",
+    "obtain": "Joe's ShackRequires Leopard 2 [Hull]",
     "resources": {},
     "requires": {
-        "type": "hulls",
-        "name": "Leopard 2"
+        "type": "None",
+        "name": ""
     },
     "stats": {
         "weight": 34.00,
@@ -7478,8 +7616,8 @@
     "obtain": "Blueprints",
     "resources": {"Iron": 468, "Steel": 230, "Aluminum": 120, "Titanium": 25, "Circuitry": 80, "Carbon Fibre": 100, "Composite": 60},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "hulls",
+        "name": "Leopard 2"
     },
     "stats": {
         "weight": 34.00,
@@ -7507,8 +7645,8 @@
     },
     "based_on": "Leopard 2A7+ [Germany]",
     "paired": {
-        "gun": "",
-        "turret": ""
+        "gun": "120mm L/55A1",
+        "turret": "Leopard 2A7+"
     }
 }
 ,"T-14 Armata": {
@@ -7529,7 +7667,7 @@
             "side": 240
         },
         "speed": {
-            "acceleration": 8,
+            "acceleration": 7,
             "forward": 80,
             "backward": -42,
             "torque": 9,
@@ -7542,8 +7680,8 @@
             "aps": true,
             "have_gun": true,
             "gun": {
-                "reload_multiplier": 1.25,
-                "reload_multiplier_caliber": 107,
+                "reload_multiplier": 1.0,
+                "reload_multiplier_caliber": 75,
                 "limits": {
                     "up": 14,
                     "down": 7,
@@ -7578,11 +7716,11 @@
             "side": 38
         },
         "speed": {
-            "acceleration": 8,
+            "acceleration": 10,
             "forward": 56,
             "backward": -32,
-            "torque": 8,
-            "rate": 37
+            "torque": 80,
+            "rate": 42
         },
         "weaponry": {
             "ammo_storage": 24.0,
@@ -7621,7 +7759,7 @@
             "acceleration": 6,
             "forward": 35,
             "backward": -35,
-            "torque": 100,
+            "torque": 50,
             "rate": 15
         },
         "weaponry": {
@@ -7660,7 +7798,7 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 51.00,
         "armor": {
             "front": 1080,
             "back": 95,
@@ -7801,7 +7939,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 5.00,
+        "weight": 3.60,
         "armor": {
             "front": 17,
             "back": 29,
@@ -8550,8 +8688,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 2.0,
+                "zoom_upper": 4.0
             },
             "gun": {
                 "reload_multiplier": 0.6,
@@ -8930,9 +9068,9 @@
     "stats": {
         "weight": 5.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 50,
+            "back": 25,
+            "side": 25
         },
         "weaponry": {
             "ammo_storage": 12.5,
@@ -9236,8 +9374,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 3.0,
+                "zoom_upper": 3.0
             },
             "gun": {
                 "reload_multiplier": 0.98,
@@ -9285,8 +9423,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 2.0,
+                "zoom_upper": 6.5
             },
             "gun": {
                 "reload_multiplier": 0.98,
@@ -9334,8 +9472,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 1.0,
+                "zoom_upper": 3.0
             },
             "gun": {
                 "reload_multiplier": 1.2,
@@ -9345,7 +9483,7 @@
                     "down": 12
                 },
                 "speed": {
-                    "vertical": 57.3,
+                    "vertical": 17.3,
                     "horizontal": 27
                 }
             }
@@ -9383,8 +9521,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 3.0,
+                "zoom_upper": 6.0
             },
             "gun": {
                 "reload_multiplier": 0.65,
@@ -9722,7 +9860,7 @@
             "ammo_storage": 65.5,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 5,
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
@@ -9922,8 +10060,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 1.0,
+                "zoom_upper": 4.0
             },
             "gun": {
                 "reload_multiplier": 1.00,
@@ -10142,55 +10280,6 @@
         "gun": "100mm Brochette"
     }
 }
-,"FL-10": {
-    "description": "le amx",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 6.00,
-        "armor": {
-            "front": 40,
-            "back": 20,
-            "side": 20
-        },
-        "weaponry": {
-            "ammo_storage": 6.2,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 7.5,
-                "zoom_upper": 7.5
-            },
-            "gun": {
-                "reload_multiplier": 1.4,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 13,
-                    "down": 6
-                },
-                "speed": {
-                    "vertical": 11.5,
-                    "horizontal": 40
-                }
-            }
-        },
-        "crew": ["Commander", "Gunner"]
-    },
-    "based_on": "AMX-13 [France]",
-    "paired": {
-        "hull": "AMX-13",
-        "gun": "75mm SA50 [5] 90mm CN90 F3"
-    }
-}
 ,"Dragoon 300": {
     "description": "Here be dragons.",
     "tier": 5.0,
@@ -10261,7 +10350,7 @@
             "ammo_storage": 11.9,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 1,
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
@@ -10398,7 +10487,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 20.00,
+        "weight": 15.00,
         "armor": {
             "front": 110,
             "back": 45,
@@ -10416,7 +10505,7 @@
                 "zoom_upper": 5.0
             },
             "gun": {
-                "reload_multiplier": 1.0,
+                "reload_multiplier": 1.1,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 20,
@@ -10424,7 +10513,7 @@
                 },
                 "speed": {
                     "vertical": 5.7,
-                    "horizontal": 8.6
+                    "horizontal": 18.0
                 }
             }
         },
@@ -10517,8 +10606,8 @@
                 "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
-                    "down": 7
+                    "up": 25,
+                    "down": 9
                 },
                 "speed": {
                     "vertical": 8.7,
@@ -10559,7 +10648,7 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": 1.0,
+                "zoom_lower": 1.9,
                 "zoom_upper": 3.0
             },
             "gun": {
@@ -10586,7 +10675,7 @@
 ,"La Pizza": {
     "description": "",
     "tier": 5.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, January 2023",
     "resources": {},
     "requires": {
@@ -10608,8 +10697,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": 1.0,
-                "zoom_upper": 1.0
+                "zoom_lower": 3.0,
+                "zoom_upper": 6.0
             },
             "gun": {
                 "reload_multiplier": 1.3,
@@ -10632,59 +10721,10 @@
         "gun": "Rigatoni 2"
     }
 }
-,"XM800TX": {
-    "description": "Lightweight airborne tank with radar and fire control system for recon missions.",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Monthly Reward, May 2023",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 6.00,
-        "armor": {
-            "front": 25,
-            "back": 20,
-            "side": 20
-        },
-        "weaponry": {
-            "ammo_storage": 8.8,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 1.0,
-                "zoom_upper": 1.0
-            },
-            "gun": {
-                "reload_multiplier": 1.0,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 12
-                },
-                "speed": {
-                    "vertical": 57.3,
-                    "horizontal": 41.8
-                }
-            }
-        },
-        "crew": ["Commander", "Gunner"]
-    },
-    "based_on": "XM800T [Fake]",
-    "paired": {
-        "hull": "XM800TX",
-        "gun": "75mm AT-43 [3] 20mm M139 (?) [4] 99.7mm Fusiler LARP"
-    }
-}
 ,"M48A3 Camo": {
     "description": "Goodmorning USA!!!!!",
     "tier": 5.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, August 2023",
     "resources": {},
     "requires": {
@@ -10706,8 +10746,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 1.0,
+                "zoom_upper": 6.0
             },
             "gun": {
                 "reload_multiplier": 1.11,
@@ -10733,7 +10773,7 @@
 ,"Calliope": {
     "description": "Smooth",
     "tier": 5.0,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, September 2023",
     "resources": {},
     "requires": {
@@ -10755,8 +10795,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 4.0,
+                "zoom_upper": 4.0
             },
             "gun": {
                 "reload_multiplier": 1.0,
@@ -10777,6 +10817,55 @@
     "paired": {
         "hull": "Sherman",
         "gun": "75mm Freedom"
+    }
+}
+,"Comet": {
+    "description": "God Save The King.",
+    "tier": 5.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints, Unobtainable (October 2022 Incident)",
+    "resources": {"Iron": 35, "Steel": 15},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 9.00,
+        "armor": {
+            "front": 102,
+            "back": 32,
+            "side": 50
+        },
+        "weaponry": {
+            "ammo_storage": 0,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": -1,
+                "zoom_upper": -1
+            },
+            "gun": {
+                "reload_multiplier": 0.98,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 7,
+                    "horizontal": 24
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Comet [UK]",
+    "paired": {
+        "hull": "",
+        "gun": "77mm HV"
     }
 }
 ,"ZU Platform": {
@@ -10948,7 +11037,7 @@
             "blowout": -1,
             "aps": false,
             "fcs": -1,
-            "stabilizer": false,
+            "stabilizer": true,
             "sight": {
                 "thermal": 0,
                 "zoom_lower": 6.0,
@@ -10962,7 +11051,7 @@
                     "down": 8
                 },
                 "speed": {
-                    "vertical": 57.3,
+                    "vertical": 10.3,
                     "horizontal": 28.6
                 }
             }
@@ -11073,6 +11162,55 @@
         "gun": "84mm 20pdr Type B [7] 105mm Royal"
     }
 }
+,"FL-10": {
+    "description": "le amx",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 6.00,
+        "armor": {
+            "front": 40,
+            "back": 20,
+            "side": 20
+        },
+        "weaponry": {
+            "ammo_storage": 6.2,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 7.5,
+                "zoom_upper": 7.5
+            },
+            "gun": {
+                "reload_multiplier": 1.4,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 13,
+                    "down": 6
+                },
+                "speed": {
+                    "vertical": 11.5,
+                    "horizontal": 40
+                }
+            }
+        },
+        "crew": ["Commander", "Gunner"]
+    },
+    "based_on": "AMX-13 [France]",
+    "paired": {
+        "hull": "AMX-13",
+        "gun": "75mm SA50 [5] 90mm CN90 F3"
+    }
+}
 ,"Battlepass VI (B)": {
     "description": "Greatest German Engineering!",
     "tier": 6.0,
@@ -11171,6 +11309,55 @@
         "gun": "122mm D-25T"
     }
 }
+,"Bank Prince": {
+    "description": "Is that Comet",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 152,
+            "back": 101,
+            "side": 95
+        },
+        "weaponry": {
+            "ammo_storage": 5.9,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 1.7,
+                "zoom_upper": 6.0
+            },
+            "gun": {
+                "reload_multiplier": 1.15,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 4.6,
+                    "horizontal": 27
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Black Prince [UK]",
+    "paired": {
+        "hull": "Bank Prince",
+        "gun": ""
+    }
+}
 ,"T29": {
     "description": "just imagine this is a T34",
     "tier": 6.0,
@@ -11184,12 +11371,12 @@
     "stats": {
         "weight": 29.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 230,
+            "back": 100,
+            "side": 150
         },
         "weaponry": {
-            "ammo_storage": 7.7,
+            "ammo_storage": 16.9,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
@@ -11200,7 +11387,7 @@
                 "zoom_upper": 8.0
             },
             "gun": {
-                "reload_multiplier": 1.3,
+                "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 15,
@@ -11256,7 +11443,7 @@
                     "down": 10
                 },
                 "speed": {
-                    "vertical": 4,
+                    "vertical": 7,
                     "horizontal": 22
                 }
             }
@@ -11272,7 +11459,7 @@
 ,"O-I": {
     "description": "Hexagonal Demon",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Blueprints",
     "resources": {"Iron": 120, "Steel": 70},
     "requires": {
@@ -11329,11 +11516,11 @@
         "name": ""
     },
     "stats": {
-        "weight": 12.00,
+        "weight": 19.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 100,
+            "back": 100,
+            "side": 100
         },
         "weaponry": {
             "ammo_storage": 14.6,
@@ -11347,14 +11534,14 @@
                 "zoom_upper": 4.5
             },
             "gun": {
-                "reload_multiplier": 1.0,
+                "reload_multiplier": 1.1,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 20,
                     "down": 7
                 },
                 "speed": {
-                    "vertical": 22.9,
+                    "vertical": 4.6,
                     "horizontal": 11.5
                 }
             }
@@ -11378,7 +11565,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 30.00,
+        "weight": 20.00,
         "armor": {
             "front": 114,
             "back": 50,
@@ -11414,55 +11601,6 @@
     "paired": {
         "hull": "TOG II*",
         "gun": "94mm 28 Pdr"
-    }
-}
-,"Bank Prince": {
-    "description": "Is that Comet",
-    "tier": 6.0,
-    "rarity": "Rare",
-    "obtain": "Rare Crate Drop",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 10.00,
-        "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
-        },
-        "weaponry": {
-            "ammo_storage": 5.9,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 1.7,
-                "zoom_upper": 6.0
-            },
-            "gun": {
-                "reload_multiplier": 1.15,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 12
-                },
-                "speed": {
-                    "vertical": 57.3,
-                    "horizontal": 27
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "Black Prince [UK]",
-    "paired": {
-        "hull": "Bank Prince",
-        "gun": ""
     }
 }
 ,"Centurion AVRE": {
@@ -11517,7 +11655,7 @@
 ,"Ghana IFV": {
     "description": "Ghana IFV",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Common",
     "obtain": "Monthly Reward, February 2023",
     "resources": {},
     "requires": {
@@ -11539,8 +11677,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 1.0,
+                "zoom_upper": 48.0
             },
             "gun": {
                 "reload_multiplier": 0.98,
@@ -11610,6 +11748,55 @@
     "paired": {
         "hull": "BT-7BM",
         "gun": "45mm 20-K"
+    }
+}
+,"XM800TX": {
+    "description": "Lightweight airborne tank with radar and fire control system for recon missions.",
+    "tier": 6.0,
+    "rarity": "Common",
+    "obtain": "Monthly Reward, May 2023",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 6.00,
+        "armor": {
+            "front": 25,
+            "back": 20,
+            "side": 20
+        },
+        "weaponry": {
+            "ammo_storage": 8.8,
+            "blowout": -1,
+            "aps": false,
+            "fcs": 1.2,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 2.0,
+                "zoom_upper": 14.0
+            },
+            "gun": {
+                "reload_multiplier": 1.0,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 57.3,
+                    "horizontal": 41.8
+                }
+            }
+        },
+        "crew": ["Commander", "Gunner"]
+    },
+    "based_on": "XM800T [Fake]",
+    "paired": {
+        "hull": "XM800TX",
+        "gun": "75mm AT-43 [3] 20mm M139 (?) [4] 99.7mm Fusiler LARP"
     }
 }
 ,"Type 74": {
@@ -11723,9 +11910,9 @@
     "stats": {
         "weight": 10.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 40,
+            "back": 40,
+            "side": 40
         },
         "weaponry": {
             "ammo_storage": 31.1,
@@ -11821,9 +12008,9 @@
     "stats": {
         "weight": 24.00,
         "armor": {
-            "front": 80,
-            "back": 30,
-            "side": 40
+            "front": 100,
+            "back": 40,
+            "side": 80
         },
         "weaponry": {
             "ammo_storage": 32.6,
@@ -11976,12 +12163,12 @@
             "ammo_storage": 23,
             "blowout": -1,
             "aps": true,
-            "fcs": 1,
+            "fcs": 1.5,
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 5.0,
+                "zoom_upper": 5.0
             },
             "gun": {
                 "reload_multiplier": 1.2,
@@ -12029,8 +12216,8 @@
             "stabilizer": true,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": 3.5,
-                "zoom_upper": 7.0
+                "zoom_lower": 6.0,
+                "zoom_upper": 6.0
             },
             "gun": {
                 "reload_multiplier": 1.19,
@@ -12358,7 +12545,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 10.00,
+        "weight": 27.00,
         "armor": {
             "front": 200,
             "back": 100,
@@ -12507,12 +12694,12 @@
     "stats": {
         "weight": 17.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 200,
+            "back": 85,
+            "side": 140
         },
         "weaponry": {
-            "ammo_storage": 42.9,
+            "ammo_storage": 24.3,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
@@ -12530,7 +12717,7 @@
                     "down": 5
                 },
                 "speed": {
-                    "vertical": 28.6,
+                    "vertical": 11.5,
                     "horizontal": 17.2
                 }
             }
@@ -12567,7 +12754,7 @@
             "fcs": 4.0,
             "stabilizer": true,
             "sight": {
-                "thermal": 3,
+                "thermal": 2,
                 "zoom_lower": 4.0,
                 "zoom_upper": 12.0
             },
@@ -12750,7 +12937,7 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 7.00,
         "armor": {
             "front": 10,
             "back": 10,
@@ -12760,7 +12947,7 @@
             "ammo_storage": 38.2,
             "blowout": -1,
             "aps": false,
-            "fcs": 4,
+            "fcs": -1,
             "stabilizer": true,
             "sight": {
                 "thermal": 0,
@@ -12959,9 +13146,9 @@
             "fcs": -1,
             "stabilizer": false,
             "sight": {
-                "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "thermal": 2,
+                "zoom_lower": 4.0,
+                "zoom_upper": 24.0
             },
             "gun": {
                 "reload_multiplier": 1.69,
@@ -13057,9 +13244,9 @@
             "fcs": -1,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "thermal": 2,
+                "zoom_lower": 6.0,
+                "zoom_upper": 8.0
             },
             "gun": {
                 "reload_multiplier": 1.34,
@@ -13144,12 +13331,12 @@
     "stats": {
         "weight": 28.00,
         "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
+            "front": 150,
+            "back": 45,
+            "side": 240
         },
         "weaponry": {
-            "ammo_storage": 0,
+            "ammo_storage": 2.9,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
@@ -13338,7 +13525,7 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 8.00,
         "armor": {
             "front": 41,
             "back": 8,
@@ -13348,7 +13535,7 @@
             "ammo_storage": 6.1,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 2,
             "stabilizer": true,
             "sight": {
                 "thermal": 1,
@@ -13462,7 +13649,7 @@
                 },
                 "speed": {
                     "vertical": 14.3,
-                    "horizontal": 28.6
+                    "horizontal": 29.8
                 }
             }
         },
@@ -13492,7 +13679,7 @@
             "side": 280
         },
         "weaponry": {
-            "ammo_storage": 37.8,
+            "ammo_storage": 42.0,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
@@ -13534,17 +13721,17 @@
         "name": ""
     },
     "stats": {
-        "weight": 8.00,
+        "weight": 11.00,
         "armor": {
             "front": 277,
             "back": 32,
             "side": 66
         },
         "weaponry": {
-            "ammo_storage": 10.9,
+            "ammo_storage": 15.2,
             "blowout": 1,
             "aps": true,
-            "fcs": 2,
+            "fcs": 2.5,
             "stabilizer": true,
             "sight": {
                 "thermal": 2,
@@ -13560,7 +13747,7 @@
                 },
                 "speed": {
                     "vertical": 12,
-                    "horizontal": 45
+                    "horizontal": 50
                 }
             }
         },
@@ -13583,7 +13770,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 5.00,
+        "weight": 10.50,
         "armor": {
             "front": 50,
             "back": 20,
@@ -13597,8 +13784,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 6.0,
+                "zoom_upper": 6.0
             },
             "gun": {
                 "reload_multiplier": 1.0,
@@ -13647,7 +13834,7 @@
             "sight": {
                 "thermal": 2,
                 "zoom_lower": 2.0,
-                "zoom_upper": 30.0
+                "zoom_upper": 25.0
             },
             "gun": {
                 "reload_multiplier": 1.5,
@@ -13730,20 +13917,20 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 5.00,
         "armor": {
-            "front": 10,
-            "back": 10,
-            "side": 10
+            "front": 25,
+            "back": 15,
+            "side": 15
         },
         "weaponry": {
             "ammo_storage": 8.6,
             "blowout": 1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 3,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
+                "thermal": 1,
                 "zoom_lower": 3.0,
                 "zoom_upper": 10.0
             },
@@ -13751,7 +13938,7 @@
                 "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 65,
+                    "up": 45,
                     "down": 12
                 },
                 "speed": {
@@ -13786,7 +13973,7 @@
             "side": 165
         },
         "weaponry": {
-            "ammo_storage": 37.8,
+            "ammo_storage": 24.9,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
@@ -13841,7 +14028,7 @@
             "fcs": 4,
             "stabilizer": true,
             "sight": {
-                "thermal": 2,
+                "thermal": 3,
                 "zoom_lower": 2.0,
                 "zoom_upper": 20.0
             },
@@ -13933,8 +14120,8 @@
             "side": 75
         },
         "weaponry": {
-            "ammo_storage": 25,
-            "blowout": 0,
+            "ammo_storage": 21.4,
+            "blowout": 1,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14059,7 +14246,7 @@
     "based_on": "C1 Ariete [Italy]",
     "paired": {
         "hull": "Ariete",
-        "gun": ""
+        "gun": "120mm OTO"
     }
 }
 ,"Type-96A": {
@@ -14132,7 +14319,7 @@
             "ammo_storage": 17.8,
             "blowout": 1,
             "aps": false,
-            "fcs": 4,
+            "fcs": 2,
             "stabilizer": true,
             "sight": {
                 "thermal": 1,
@@ -14148,7 +14335,7 @@
                 },
                 "speed": {
                     "vertical": 35.5,
-                    "horizontal": 41.3
+                    "horizontal": 44.7
                 }
             }
         },
@@ -14165,7 +14352,7 @@
     "tier": 10.0,
     "rarity": "Legendary",
     "obtain": "Blueprints",
-    "resources": {"Iron": 200, "Steel": 100},
+    "resources": {"Iron": 200, "Steel": 100, "Aluminum": 40, "Stabiliser": 1, "Circuitry": 30, "Composite": 25, "IR Camera Module": 1, "Computer Systems": 1},
     "requires": {
         "type": "None",
         "name": ""
@@ -14227,7 +14414,7 @@
             "side": 170
         },
         "weaponry": {
-            "ammo_storage": 34.3,
+            "ammo_storage": 29.2,
             "blowout": 1,
             "aps": false,
             "fcs": 4,
@@ -14458,11 +14645,11 @@
     "description": " £ 3Million Tea making facility.",
     "tier": 11.0,
     "rarity": "Mythical",
-    "obtain": "Joe's Shack",
+    "obtain": "Joe's ShackRequires Challenger 1 [Turret]",
     "resources": {},
     "requires": {
-        "type": "turret",
-        "name": "Challenger 1"
+        "type": "None",
+        "name": ""
     },
     "stats": {
         "weight": 25.00,
@@ -14668,13 +14855,13 @@
             "side": 110
         },
         "weaponry": {
-            "ammo_storage": 14.3,
+            "ammo_storage": 16.4,
             "blowout": 1,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
             "sight": {
-                "thermal": 3,
+                "thermal": 2,
                 "zoom_lower": 3.0,
                 "zoom_upper": 13.3
             },
@@ -14766,7 +14953,7 @@
             "side": 230
         },
         "weaponry": {
-            "ammo_storage": 37.8,
+            "ammo_storage": 24.9,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
@@ -14784,8 +14971,8 @@
                     "down": 6
                 },
                 "speed": {
-                    "vertical": 10,
-                    "horizontal": 40
+                    "vertical": 5.7,
+                    "horizontal": 28.6
                 }
             }
         },
@@ -14808,7 +14995,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 13.20,
+        "weight": 14.20,
         "armor": {
             "front": 440,
             "back": 75,
@@ -14833,8 +15020,8 @@
                     "down": 6
                 },
                 "speed": {
-                    "vertical": 10,
-                    "horizontal": 40
+                    "vertical": 5.7,
+                    "horizontal": 28.6
                 }
             }
         },
@@ -14921,7 +15108,7 @@
             "sight": {
                 "thermal": 1,
                 "zoom_lower": 2.0,
-                "zoom_upper": 15.0
+                "zoom_upper": 20.0
             },
             "gun": {
                 "reload_multiplier": 1.8,
@@ -14985,7 +15172,7 @@
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Commander", "Gunner"]
     },
     "based_on": "None",
     "paired": {
@@ -15068,10 +15255,10 @@
             "sight": {
                 "thermal": 2,
                 "zoom_lower": 2.0,
-                "zoom_upper": 30.0
+                "zoom_upper": 25.0
             },
             "gun": {
-                "reload_multiplier": 1.7,
+                "reload_multiplier": 1.5,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 20,
@@ -15183,10 +15370,10 @@
         },
         "crew": ["Commander", "Gunner"]
     },
-    "based_on": "T-84-120 'Yatagan' [Ukraine]",
+    "based_on": "Leopard 2A7+ [Germany]",
     "paired": {
-        "hull": "T-84U",
-        "gun": "120mm KBM-2"
+        "hull": "Leopard 2A7+",
+        "gun": "120mm L/55A1"
     }
 }
 ,"T-84-120": {
@@ -15200,25 +15387,25 @@
         "name": ""
     },
     "stats": {
-        "weight": 21.00,
+        "weight": 20.00,
         "armor": {
-            "front": 10,
-            "back": 10,
-            "side": 10
+            "front": 500,
+            "back": 40,
+            "side": 60
         },
         "weaponry": {
             "ammo_storage": 24,
             "blowout": 1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 3,
             "stabilizer": true,
             "sight": {
                 "thermal": 1,
-                "zoom_lower": 4.0,
+                "zoom_lower": 2.7,
                 "zoom_upper": 12.0
             },
             "gun": {
-                "reload_multiplier": 1.7,
+                "reload_multiplier": 1.65,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 25,
@@ -15298,14 +15485,14 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 30.00,
         "armor": {
-            "front": 10,
-            "back": 10,
-            "side": 10
+            "front": 700,
+            "back": 25,
+            "side": 350
         },
         "weaponry": {
-            "ammo_storage": 69.6,
+            "ammo_storage": 39.2,
             "blowout": 1,
             "aps": false,
             "fcs": 3,
@@ -17029,8 +17216,8 @@
             "ammunition": [{
     "type": "HEAT ",
     "penetration": {
-        "0": 115,
-        "30": 100,
+        "0":  115,
+        "30":  100,
         "60": 58
     },
     "velocity": 495,
@@ -19239,22 +19426,26 @@
             "ammo_volume": 0.97,
             "caliber:": 112,
             "ammunition": [{
-    "type": "APFSDS ",
+    "type": "APHE ",
     "penetration": {
-        "0":  240,
-        "30":  214,
-        "60":  132
+        "0":  192,
+        "30":  163,
+        "60":  77
     },
-    "velocity":  1450,
-    "ricochet_angle":  80,
-    "stats": {}
+    "velocity":  895,
+    "ricochet_angle":  71,
+    "stats": {
+        "fuse_sensitive":  19,
+        "fuse_delay":  1.2,
+        "explosive_mass": " 146g"
+    }
 },
 {
     "type": "HEAT ",
     "penetration": {
-        "0":  300,
-        "30":  260,
-        "60":  150
+        "0":  240,
+        "30":  208,
+        "60":  120
     },
     "velocity":  1000,
     "ricochet_angle":  71,
@@ -20889,7 +21080,7 @@
     },
     "based_on": "Royal Ordnance L7A1 [UK]",
     "paired": {
-        "hull": "Taifun II [5] Battlepacks Leopard",
+        "hull": "Taifun II [6] Battlepacks Leopard",
         "turret": "Centurion Mk3 [6] Type 74 [7] M48 Super"
     }
 }
@@ -21146,6 +21337,42 @@
         "turret": ""
     }
 }
+,"120mm OTO": {
+    "description": "Hasta la pizza",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 95, "Chromium": 40},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "reload": 10.0,
+            "accuracy": 260,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  410,
+        "30":  365,
+        "60":  225
+    },
+    "velocity":  1705,
+    "ricochet_angle":  80,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "120mm OTO Breda [Italy]",
+    "paired": {
+        "hull": "",
+        "turret": "Ariete"
+    }
+}
 ,"40mm Bofors L/70": {
     "description": "APFSDS on an autocannon",
     "tier": 10.0,
@@ -21200,7 +21427,7 @@
 ,"120mm Eagle": {
     "description": "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defense, promote the general Welfare, and",
     "tier": 10.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Legendary Crate Drop(4th of July, 2023)",
     "resources": {},
     "requires": {
@@ -21275,7 +21502,7 @@
 ,"Pan": {
     "description": "description",
     "tier": 10.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Unobtainable",
     "resources": {},
     "requires": {
@@ -22299,7 +22526,7 @@
     "tier": 12.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 95, "Chromium": 40},
+    "resources": {"Iron": 192, "Steel": 96, "Aluminum": 192, "Chromium": 84},
     "requires": {
         "type": "None",
         "name": ""
@@ -22307,16 +22534,16 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
-            "reload": 8.6,
+            "reload": 8.8,
             "accuracy": 260,
             "ammo_volume": 1.14,
             "caliber:": 120,
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  556,
-        "30":  499,
-        "60":  315
+        "0":  598,
+        "30":  516,
+        "60":  295
     },
     "velocity":  1660,
     "ricochet_angle":  80,
@@ -22342,6 +22569,71 @@
     "paired": {
         "hull": "None",
         "turret": "Leopard 2A7+"
+    }
+}
+,"125mm 2A821M": {
+    "description": "Hi!",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 150, "Steel": 100, "Aluminum": 302, "Chromium": 60},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.86,
+        "weaponry": {
+            "reload": 7.8,
+            "accuracy": 210,
+            "ammo_volume": 1.25,
+            "caliber:": 125,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  560,
+        "30":  485,
+        "60":  280
+    },
+    "velocity":  1700,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
+    "type": "HEAT (Tandem)",
+    "penetration": {
+        "0":  700,
+        "30":  606,
+        "60":  350
+    },
+    "velocity":  1021,
+    "ricochet_angle":  80,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  42,
+        "30":  42,
+        "60":  42
+    },
+    "velocity":  730,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 4.24kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "2A82-1M [Russia]",
+    "paired": {
+        "hull": "None",
+        "turret": ""
     }
 }
 ,"H-2 Ares Jupiter": {
@@ -22530,71 +22822,6 @@
     "paired": {
         "hull": "None",
         "turret": "2K22M1"
-    }
-}
-,"125mm 2A821M": {
-    "description": "Hi!",
-    "tier": 12.0,
-    "rarity": "Mythical",
-    "obtain": "Unobtainable",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.86,
-        "weaponry": {
-            "reload": 7.8,
-            "accuracy": 210,
-            "ammo_volume": 1.25,
-            "caliber:": 125,
-            "ammunition": [{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  560,
-        "30":  526,
-        "60":  410
-    },
-    "velocity":  1700,
-    "ricochet_angle":  80,
-    "stats": {}
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  700,
-        "30":  606,
-        "60":  350
-    },
-    "velocity":  970,
-    "ricochet_angle":  80,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HE ",
-    "penetration": {
-        "0":  42,
-        "30":  42,
-        "60":  42
-    },
-    "velocity":  730,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 4.24kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-}]
-        }
-    },
-    "based_on": "2A82-1M [Russia]",
-    "paired": {
-        "hull": "None",
-        "turret": ""
     }
 }
 

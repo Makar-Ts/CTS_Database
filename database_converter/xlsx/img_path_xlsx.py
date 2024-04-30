@@ -66,14 +66,12 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         guns_string += ", \n"
     print(ws.cell(GUNS_OFFSET+0, i).value)
     
-    name = ws.cell(GUNS_OFFSET+0, i).value.replace('"', '')\
-                                    .replace("/", "")\
+    name = ws.cell(GUNS_OFFSET+0, i).value\
                                     .replace("\\", "")\
                                     .replace("?", "")\
-                                    .replace("*", "")\
                                     .replace(" (!)", "")
     
-    guns_string += '"'+name.replace("\n", "\\n").replace('"', '\\"')+'"'+": "+'"'+PATH_IMG+f"guns/Tier {round(ws.cell(GUNS_OFFSET+2, i).value)}/"+name.replace("\n", "\\n").replace('"', '\\"')+".png"+'"'
+    guns_string += '"'+name.replace("\n", "\\n").replace('"', '\\"')+'"'+": "+'"'+PATH_IMG+f"guns/Tier {round(ws.cell(GUNS_OFFSET+2, i).value)}/"+name.replace("\n", "\\n").replace('"', '\\"').replace("/", "").replace('"', '').replace("*", "")+".png"+'"'
     i += 1
 
 output_string = templates.DATABASE.format(

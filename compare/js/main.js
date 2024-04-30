@@ -286,8 +286,10 @@ function createCompareList() {
     $("#rarity1").text(item1_data.rarity);            $("#rarity2").text(item2_data.rarity);
     $("#obtain1").text(item1_data.obtain);            $("#obtain2").text(item2_data.obtain);
 
+    let hide_res = false;
     if (item1_data.resources.length == 0) {
         $("#resources1").closest('tr').hide();
+        hide_res = true;
     } else {
         $("#resources1").closest('tr').show();
 
@@ -300,6 +302,9 @@ function createCompareList() {
 
     if (item2_data.resources.length == 0) {
         $("#resources2").closest('tr').hide();
+        if (hide_res) {
+            $("#resources1").closest('tr').hide();
+        }
     } else {
         $("#resources2").closest('tr').show();
 
@@ -309,6 +314,8 @@ function createCompareList() {
         }
         $("#resources2").html(str);
     }
+
+
 
     $("#weight1").text(item1_data.stats.weight+"t");
     $("#based_on1").text(item1_data.based_on);
