@@ -86,7 +86,7 @@
             <tr><th>Tier</th><td id="tier">Test123</td></tr>
             <tr><th>Rarity</th><td id="rarity">Test123</td></tr>
             <tr><th>Obtain</th><td id="obtain">Test123</td></tr>
-            <tr><th>Resources</th><td id="resources">Test123</td></tr>
+            <tr><th>Resources</th><td class="resources_container"><button type="button" id="show_calculated_resources" class="show_calculated_res"><span>=</span></button><p id="resources">Test123</p><p id="resources_calculated" style="display: none;">Test123</p></td></tr>
             <tr><th colspan="2" class="stat_header">Stats</th></tr>
             <tr><th>Weight</th><td id="weight"></td></tr>
             <tr><td colspan="2" id="stats" class="stats"></td></tr>
@@ -104,8 +104,8 @@
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>  
-    <script src="./../database.json"></script>
     <script src="./../js/calc_item_str.js"></script>
+    <script src="./../js/resources_calc.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

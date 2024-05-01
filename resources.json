@@ -1,0 +1,228 @@
+{
+    "iron_ore": {
+        "names": [
+            "Iron Ore",
+            "FeO"
+        ],
+        "primary": true
+    },
+    "coal": {
+        "names": [
+            "Coal"
+        ],
+        "primary": true
+    },
+    "bauxite": {
+        "names": [
+            "Bauxite",
+            "Baux"
+        ],
+        "primary": true
+    },
+    "copper_ore": {
+        "names": [
+            "Copper Ore",
+            "CuO"
+        ],
+        "primary": true
+    },
+    "titanium_ore": {
+        "names": [
+            "Titanium Ore",
+            "TiO"
+        ],
+        "primary": true
+    },
+    "silicon": {
+        "names": [
+            "Silicon",
+            "Si"
+        ],
+        "primary": true
+    },
+    "chromite": {
+        "names": [
+            "Chromite",
+            "Ch"
+        ],
+        "primary": true
+    },
+    "resin": {
+        "names": [
+            "Resin"
+        ],
+        "primary": true
+    },
+    "gyroscope": {
+        "names": [
+            "Gyroscope",
+            "Gyro"
+        ],
+        "primary": true
+    },
+    "ceramic": {
+        "names": [
+            "Ceramic",
+            "Cer"
+        ],
+        "primary": true
+    },
+    "camera_module": {
+        "names": [
+            "Camera Module",
+            "CM"
+        ],
+        "primary": true
+    },
+    "laser_module": {
+        "names": [
+            "Laser Module",
+            "LM"
+        ],
+        "primary": true
+    },
+    "radar_module": {
+        "names": [
+            "Radar Module",
+            "RM"
+        ],
+        "primary": true
+    },
+    "ir_camera_module": {
+        "names": [
+            "IR Camera Module",
+            "IRCM"
+        ],
+        "primary": true
+    },
+    "cyberware": {
+        "names": [
+            "Cyberware",
+            "Cyber"
+        ],
+        "primary": true
+    },
+    "iron": {
+        "names": [
+            "Iron",
+            "Fe"
+        ],
+        "primary": false,
+        "craft": {
+            "coal": 2,
+            "iron_ore": 1
+        }
+    },
+    "steel": {
+        "names": [
+            "Steel",
+            "St"
+        ],
+        "primary": false,
+        "craft": {
+            "coal": 2,
+            "iron": 1
+        }
+    },
+    "aluminum": {
+        "names": [
+            "Aluminum",
+            "Al"
+        ],
+        "primary": false,
+        "craft": {
+            "bauxite": 2
+        }
+    },
+    "copper": {
+        "names": [
+            "Copper",
+            "Cu"
+        ],
+        "primary": false,
+        "craft": {
+            "coal": 2,
+            "copper_ore": 1
+        }
+    },
+    "titanium": {
+        "names": [
+            "Titanium",
+            "Ti"
+        ],
+        "primary": false,
+        "craft": {
+            "aluminum": 6,
+            "titanium_ore": 1
+        }
+    },
+    "chromium": {
+        "names": [
+            "Chromium",
+            "Cr"
+        ],
+        "primary": false,
+        "craft": {
+            "aluminum": 4,
+            "chromite": 1
+        }
+    },
+    "circuitry": {
+        "names": [
+            "Circuitry",
+            "Circ"
+        ],
+        "primary": false,
+        "craft": {
+            "copper": 4,
+            "silicon": 18
+        }
+    },
+    "stabiliser": {
+        "names": [
+            "Stabiliser",
+            "Stab"
+        ],
+        "primary": false,
+        "craft": {
+            "circuitry": 8,
+            "copper": 16,
+            "gyroscope": 2
+        }
+    },
+    "carbon_fibre": {
+        "names": [
+            "Carbon Fibre",
+            "CF"
+        ],
+        "primary": false,
+        "craft": {
+            "coal": 12,
+            "resin": 1
+        }
+    },
+    "composite": {
+        "names": [
+            "Composite",
+            "Comp"
+        ],
+        "primary": false,
+        "craft": {
+            "steel": 9,
+            "ceramic": 3,
+            "silicon": 5
+        }
+    },
+    "computer_systems": {
+        "names": [
+            "Computer Systems",
+            "CS"
+        ],
+        "primary": false,
+        "craft": {
+            "steel": 48,
+            "copper": 20,
+            "circuitry": 10
+        }
+    }
+}

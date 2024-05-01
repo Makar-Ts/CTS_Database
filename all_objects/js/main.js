@@ -1,5 +1,6 @@
 const filePath = "./../database.json";
 const fileImgPath = "./../imgPaths.json";
+const fileResourcesPath = "./../resources.json";
 var database;
 var item_html;
 detectColorScheme();
@@ -72,11 +73,17 @@ function fetchJSONFile(path, callback) { // thx ChatGPT
         });
 }
 
+$(document).on('click', '.show_calculated_res', function() {
+    $(this).parent().find("#resources_calculated").toggle();
+    $(this).parent().find("#resources").toggle();
+});
 
 $(document).ready(function() {
     item_html = $(".item_container").html();
     $("#item_container_z").hide();
     console.log(item_html);
+
+    loadResourcesData(fileResourcesPath);
 
     fetchJSONFile(filePath, (error, data) => {
         if (error) {
@@ -228,7 +235,7 @@ $(document).ready(function() {
             $(`#item_container_${i} `+"#rarity").text(data.rarity);
             $(`#item_container_${i} `+"#obtain").text(data.obtain);
 
-            if (data.resources.length == 0) {
+            if (Object.keys(data.resources).length == 0) {
                 $(`#item_container_${i} `+"#resources").closest('tr').hide();
             } else {
                 $(`#item_container_${i} `+"#resources").closest('tr').show();
@@ -238,6 +245,17 @@ $(document).ready(function() {
                     str += `${key}: ${data.resources[key]}<br>`;
                 }
                 $(`#item_container_${i} `+"#resources").html(str);
+
+                resources_ids = convertNamesToIds(data.resources);
+                console.log(resources_ids);   
+
+                calc_res = calculateCost(resources_ids);
+
+                calc_str = "";
+                for (let [key, value] of calc_res) {
+                    calc_str += `${convertIdToName(key)}: ${value}<br>`;
+                }
+                $(`#item_container_${i} `+"#resources_calculated").html(calc_str);
             }
 
             $(`#item_container_${i} `+"#weight").text(data.stats.weight+"t");

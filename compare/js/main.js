@@ -1,10 +1,10 @@
 const filePath = "./../database.json";
 const fileImgPath = "./../imgPaths.json";
+const fileResourcesPath = "./../resources.json";
 const ammoTypeGridStyle = `width: 100%;`;
 detectColorScheme();
 
 var database;
-var item_html;
 var item1_type = "", item1_name, item1_data;
 var item2_type = "", item2_name, item2_data;
 var database_loaded = false, img_database_loaded = false;
@@ -28,11 +28,20 @@ function fetchJSONFile(path, callback) { // thx ChatGPT
         });
 }
 
+$("#show_calculated_resources1").click(function() {
+    $("#resources_calculated1").toggle();
+    $("#resources1").toggle();
+});
+
+$("#show_calculated_resources2").click(function() {
+    $("#resources_calculated2").toggle();
+    $("#resources2").toggle();
+});
 
 $(document).ready(function() {
-    item_html = $(".item_container").html();
     $("#item_container").hide();
-    console.log(item_html);
+
+    loadResourcesData(fileResourcesPath);
 
     fetchJSONFile(filePath, (error, data) => {
         if (error) {
@@ -298,6 +307,17 @@ function createCompareList() {
             str += `${key}: ${item1_data.resources[key]}<br>`;
         }
         $("#resources1").html(str);
+
+        res_ids = convertNamesToIds(item1_data.resources);
+        console.log(res_ids);   
+
+        calc_res = calculateCost(res_ids);
+
+        calc_str = "";
+        for (let [key, value] of calc_res) {
+            calc_str += `${convertIdToName(key)}: ${value}<br>`;
+        }
+        $("#resources_calculated1").html(calc_str);
     }
 
     if (item2_data.resources.length == 0) {
@@ -313,6 +333,17 @@ function createCompareList() {
             str += `${key}: ${item2_data.resources[key]}<br>`;
         }
         $("#resources2").html(str);
+
+        res_ids = convertNamesToIds(item2_data.resources);
+        console.log(res_ids);   
+
+        calc_res = calculateCost(res_ids);
+
+        calc_str = "";
+        for (let [key, value] of calc_res) {
+            calc_str += `${convertIdToName(key)}: ${value}<br>`;
+        }
+        $("#resources_calculated2").html(calc_str);
     }
 
     let req_show = true;

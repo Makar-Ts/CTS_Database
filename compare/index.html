@@ -6,6 +6,10 @@
     <title>CTS Database - Compare</title>
     <link rel="stylesheet" href="./../main.css">
     <style>
+        .resources_container {
+            height: 100%;
+        }
+
         .item_container td {
             vertical-align: text-top;
             width: 30%;
@@ -70,7 +74,8 @@
             <tr><th>Tier</th><td id="tier1">Test123</td><td id="tier2">Test123</td></tr>
             <tr><th>Rarity</th><td id="rarity1">Test123</td><td id="rarity2">Test123</td></tr>
             <tr><th>Obtain</th><td id="obtain1">Test123</td><td id="obtain2">Test123</td></tr>
-            <tr><th>Resources</th><td id="resources1">Test123</td><td id="resources2">Test123</td></tr>
+            <tr><th>Resources</th><td class="im_too_lazy"><div class="resources_container"><button type="button" id="show_calculated_resources1" class="show_calculated_res"><span>=</span></button><p id="resources1">Test123</p><p id="resources_calculated1" style="display: none;">Test123</p></td></div>
+                                  <td class="im_too_lazy"><div class="resources_container"><button type="button" id="show_calculated_resources2" class="show_calculated_res"><span>=</span></button><p id="resources2">Test123</p><p id="resources_calculated2" style="display: none;">Test123</p></td></div>
             <tr><th>Requires</th><td id="requires1">Test123</td><td id="requires2">Test123</td></tr>
             <tr><th colspan="3" class="stat_header">Stats</th></tr>
             <tr><th>Weight</th><td id="weight1"></td><td id="weight2"></td></tr>
@@ -91,6 +96,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>  
     <script src="./../database.json"></script>
     <script src="./../js/calc_item_str.js"></script>
+    <script src="./../js/resources_calc.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

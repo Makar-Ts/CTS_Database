@@ -1,5 +1,6 @@
 const filePath = "./database.json";
 const fileImgPath = "./imgPaths.json";
+const fileResourcesPath = "./resources.json";
 var database, img_database;
 var database_loaded = false, img_database_loaded = false;
 detectColorScheme();
@@ -33,6 +34,9 @@ function fetchJSONFile(path, callback) { // thx ChatGPT
 }
 
 $(document).ready(function() {
+    
+    loadResourcesData(fileResourcesPath)
+
     fetchJSONFile(filePath, (error, data) => {
         if (error) {
             console.error('Error reading JSON file:', error);
@@ -66,7 +70,6 @@ $(document).ready(function() {
             if (database_loaded & img_database_loaded) whenDatabasesLoaded();
         }
     });
-
 
     $('#search_input').bind('input', function (e) {
         $("#search_results").show();
@@ -132,7 +135,10 @@ $(document).ready(function() {
     }).attr('src', imgUrl);
 })
 
-
+$("#show_calculated_resources").click(function() {
+    $("#resources_calculated").toggle();
+    $("#resources").toggle();
+});
 
 function whenDatabasesLoaded() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -179,7 +185,7 @@ function setSearchOutput(hull, type, data) {
         $("#requires").html(`<a href="${window.location.origin+window.location.pathname}?type=${data.requires.type}&name=${data.requires.name}">${data.requires.name}</a>`)
     }
     
-    if (data.resources.length == 0) {
+    if (Object.keys(data.resources).length == 0) {
         $("#resources").closest('tr').hide();
     } else {
         $("#resources").closest('tr').show();
@@ -189,6 +195,20 @@ function setSearchOutput(hull, type, data) {
             str += `${key}: ${data.resources[key]}<br>`;
         }
         $("#resources").html(str);
+
+        ids = convertNamesToIds(data.resources);
+        console.log(ids);   
+
+        calc_res = calculateCost(ids);
+
+        calc_str = "";
+        for (let [key, value] of calc_res) {
+            calc_str += `${convertIdToName(key)}: ${value}<br>`;
+        }
+        $("#resources_calculated").html(calc_str);
+
+        $("#resources_calculated").hide();
+        $("#resources").show();
     }
 
     $("#weight").text(data.stats.weight+"t");
