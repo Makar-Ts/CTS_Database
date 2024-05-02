@@ -193,6 +193,14 @@ a {
     column-gap: 3px;
 }
 
+.resource_item:hover {
+    background-color: var(--elem);
+}
+
+.resource_item:active {
+    background-color: var(--void);
+}
+
 .show_calculated_res {
     font-family:Consolas, monospace;
     background-color: var(--elem);

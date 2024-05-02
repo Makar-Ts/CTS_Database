@@ -38,6 +38,35 @@ $("#show_calculated_resources2").click(function() {
     $("#resources2").toggle();
 });
 
+$(document).on('click', '.resource_item', function() {
+    if ($(this).css('text-decoration').includes('line-through')) {
+        $(this).css('text-decoration', 'none');
+        $(this).css('color', 'var(--main)');
+    } else {
+        $(this).css('text-decoration', 'line-through');
+        $(this).css('color', 'var(--disb)');
+    }
+
+
+    resources = {};
+    $(this).parent().children().each(function(idx, val){
+        if (!$(this).css('text-decoration').includes('line-through')) {
+            resources[$(this).data("name")] = $(this).data("val");
+        }
+    })
+
+    ids = convertNamesToIds(resources);
+    console.log(ids);   
+
+    calc_res = calculateCost(ids);
+
+    calc_str = "";
+    for (let [key, value] of calc_res) {
+        calc_str += `${convertIdToName(key)}: ${value}<br>`;
+    }
+    $(this).parent().parent().find(`#resources_calculated${$(this).data("id")}`).html(calc_str);
+}); 
+
 $(document).ready(function() {
     $("#item_container").hide();
 
@@ -304,7 +333,11 @@ function createCompareList() {
 
         str = ""
         for (let key of Object.keys(item1_data.resources)) {
-            str += `${key}: ${item1_data.resources[key]}<br>`;
+            str += `<div    data-name="${key}" 
+                            data-id  ="1"
+                            data-val="${item1_data.resources[key]}" 
+                            class="resource_item"
+                            title="Click to disable">${key}: ${item1_data.resources[key]}</div>`;
         }
         $("#resources1").html(str);
 
@@ -330,7 +363,11 @@ function createCompareList() {
 
         str = ""
         for (let key of Object.keys(item2_data.resources)) {
-            str += `${key}: ${item2_data.resources[key]}<br>`;
+            str += `<div    data-name="${key}" 
+                            data-id  ="2"       
+                            data-val="${item2_data.resources[key]}" 
+                            class="resource_item"
+                            title="Click to disable">${key}: ${item2_data.resources[key]}</div>`;
         }
         $("#resources2").html(str);
 

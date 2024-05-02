@@ -78,6 +78,36 @@ $(document).on('click', '.show_calculated_res', function() {
     $(this).parent().find("#resources").toggle();
 });
 
+
+$(document).on('click', '.resource_item', function() {
+    if ($(this).css('text-decoration').includes('line-through')) {
+        $(this).css('text-decoration', 'none');
+        $(this).css('color', 'var(--main)');
+    } else {
+        $(this).css('text-decoration', 'line-through');
+        $(this).css('color', 'var(--disb)');
+    }
+
+
+    resources = {};
+    $(this).parent().children().each(function(idx, val){
+        if (!$(this).css('text-decoration').includes('line-through')) {
+            resources[$(this).data("name")] = $(this).data("val");
+        }
+    })
+
+    ids = convertNamesToIds(resources);
+    console.log(ids);   
+
+    calc_res = calculateCost(ids);
+
+    calc_str = "";
+    for (let [key, value] of calc_res) {
+        calc_str += `${convertIdToName(key)}: ${value}<br>`;
+    }
+    $(this).parent().parent().find("#resources_calculated").html(calc_str);
+}); 
+
 $(document).ready(function() {
     item_html = $(".item_container").html();
     $("#item_container_z").hide();
@@ -242,7 +272,10 @@ $(document).ready(function() {
 
                 str = ""
                 for (let key of Object.keys(data.resources)) {
-                    str += `${key}: ${data.resources[key]}<br>`;
+                    str += `<div data-name="${key}" 
+                                 data-val="${data.resources[key]}" 
+                                 class="resource_item"
+                                 title="Click to disable">${key}: ${data.resources[key]}</div>`;
                 }
                 $(`#item_container_${i} `+"#resources").html(str);
 
