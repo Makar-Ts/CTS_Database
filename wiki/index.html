@@ -374,7 +374,7 @@
                 </p>
             </div>
         </div>
-        <h2>FCS, Radar and compute: 
+        <h2>Radar and Compute: 
             <button type="button" class="show_button" data="#radar"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
         </h2>
         <div id="radar" class="grid_container" style="display: none;">
@@ -382,8 +382,20 @@
             <div>Radar <strong>detects tanks in line-of-sight</strong> from the search radar itself, not the centre of your tank. Circles indicate friendlies, squares indicate foes.</div>
             <img src="./../img/wiki/image1.png">
             <div>Compute requires you to <strong>tag a target</strong> by clicking T on them, but <strong>only if the centre of their tank is in line-of-sight</strong> of the tracking radar. The guidance <strong>takes into account your speed, and their speed</strong> as well. This is especially useful with artillery guns.</div>
-            <img src="./../img/wiki/image2.png">
-            <div>FCS is displayed as a <strong>white cross</strong> on your screen, which indicates <strong>where your shot will land</strong>. This <strong>takes into account only your speed</strong>, and works up to a stated (often sufficient) distance.</div>
+        </div>
+        <h2>FCS and Thermal: 
+            <button type="button" class="show_button" data="#fcs"><img style="transform: rotate(90deg);" src="./../img/search.ico"></button>
+        </h2>
+        <div id="fcs" class="grid_container" style="display: none;">
+            <img src="./../img/wiki/fcs.png" style="grid-column-start: 1; grid-column-end: 3;">
+            <div style="grid-column-start: 1; grid-column-end: 3;"> FCS is a <strong>fire control system</strong>. The FCS <strong>automatically determines pre-aim</strong> (both vertically and horizontally) based on <strong>range, speed</strong> (yours and the target's) and <strong>projectile velocity</strong>.<br><br>
+                                                                    The aiming status indicator will be <strong>red if the gun is aiming</strong> or cannot aim at a given point, <strong>green if the gun is aimed</strong>. The <strong>indicator on the left</strong> shows whether the <strong>shell is loaded or not</strong>.</div>
+            <img src="./../img/wiki/thermals/white.png">
+            <img src="./../img/wiki/thermals/red.png">
+            <img src="./../img/wiki/thermals/green.png">
+            <div style="grid-row-start: 3; grid-row-end: 6; grid-column: 2;"> Thermal imaging cameras <strong>show the heat signatures</strong> of objects, including tanks. The <strong>brighter the color</strong>, the <strong>warmer the object</strong>. In this case you <strong>won't miss a tank</strong> - it will <strong>glow very strongly</strong>, which makes it <strong>easy to find your opponents</strong>.<br><br>
+                                                                              In our game there are several <strong>generations</strong> of thermal, <strong>from 1 to 3</strong>. The higher the number, the <strong>higher the resolution</strong> and <strong>less noise</strong>.<br><br>
+                                                                              Also they can be <strong>different colors</strong>.</div>
         </div>
     </div>
 
