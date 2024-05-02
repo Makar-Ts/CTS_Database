@@ -448,7 +448,7 @@
 ,"Forklift": {
     "description": "forklift certified (has stability issues)",
     "tier": 1.0,
-    "rarity": "Rare",
+    "rarity": "Mythical",
     "obtain": "Monthly Reward, April 2023",
     "resources": {},
     "requires": {
@@ -906,7 +906,7 @@
 ,"LTE-3": {
     "description": "💢💢💢",
     "tier": 2.0,
-    "rarity": "Epic",
+    "rarity": "Common",
     "obtain": "Blueprints",
     "resources": {"Iron": 15, "Steel": 10},
     "requires": {
@@ -946,7 +946,7 @@
 ,"BTrackless-7": {
     "description": "",
     "tier": 2.0,
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "obtain": "Alpha Test Exclusive",
     "resources": {},
     "requires": {
@@ -986,7 +986,7 @@
 ,"EGG Mk 5": {
     "description": "Thank you for supporting the game!",
     "tier": 2.0,
-    "rarity": "Common",
+    "rarity": "Legendary",
     "obtain": "Super Premium Exclusive(Have Booster Gamepass and Roblox Premium active at the same time)",
     "resources": {},
     "requires": {
@@ -1435,7 +1435,7 @@
 ,"Char 2C": {
     "description": "bigger than tog 2",
     "tier": 3.0,
-    "rarity": "Mythical",
+    "rarity": "Uncommon",
     "obtain": "Uncommon Crate Drop",
     "resources": {},
     "requires": {
@@ -1446,8 +1446,8 @@
         "weight": -1,
         "armor": {
             "front": 80,
-            "back": 20,
-            "side": 40
+            "back": 25,
+            "side": 50
         },
         "speed": {
             "acceleration": 5,
@@ -2400,7 +2400,7 @@
         },
         "crew": ["Driver", "Commander", "Loader", "Loader2", "Gunner"]
     },
-    "based_on": "SU-152 [USSR]",
+    "based_on": "SU-152M [USSR]",
     "paired": {
         "gun": "152mm ML-20S",
         "turret": ""
@@ -2805,7 +2805,7 @@
 ,"BMP": {
     "description": "bump",
     "tier": 5.0,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -2922,6 +2922,46 @@
         "turret": "TM41"
     }
 }
+,"M551": {
+    "description": "Oh Sheridan!",
+    "tier": 5.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 140, "Steel": 70, "Aluminum": 70},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 10.00,
+        "armor": {
+            "front": 70,
+            "back": 14,
+            "side": 15
+        },
+        "speed": {
+            "acceleration": 12,
+            "forward": 70,
+            "backward": -15,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 17.0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "M551 Sheridan [USA]",
+    "paired": {
+        "gun": "152mm M81 Gun Launcher",
+        "turret": "M551"
+    }
+}
 ,"Battlepacks 4-5": {
     "description": "modern casemate",
     "tier": 5.0,
@@ -3020,46 +3060,6 @@
         "turret": ""
     }
 }
-,"M551": {
-    "description": "Oh Sheridan!",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 140, "Steel": 70, "Aluminum": 70},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 10.00,
-        "armor": {
-            "front": 70,
-            "back": 14,
-            "side": 15
-        },
-        "speed": {
-            "acceleration": 12,
-            "forward": 70,
-            "backward": -15,
-            "torque": 12,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 17.0,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "M551 Sheridan [USA]",
-    "paired": {
-        "gun": "152mm M81 Gun Launcher",
-        "turret": "M551"
-    }
-}
 ,"Yoyota HMMWV": {
     "description": "jeek 2",
     "tier": 5.0,
@@ -3131,8 +3131,8 @@
             "aps": false,
             "have_gun": true,
             "gun": {
-                "reload_multiplier": 1.11,
-                "reload_multiplier_caliber": 89,
+                "reload_multiplier": 1.3,
+                "reload_multiplier_caliber": 115,
                 "limits": {
                     "up": 20,
                     "down": 16,
@@ -3746,7 +3746,7 @@
     "based_on": "Panther G [Germany]",
     "paired": {
         "gun": "75mm Ikonisch II",
-        "turret": "Battlepass V G [5] Battlepass V (II)"
+        "turret": "Battlepass V (II) [4] Battlepass V G"
     }
 }
 ,"Battlepass VI (B)": {
@@ -3829,46 +3829,6 @@
         "turret": "T29"
     }
 }
-,"KV-220": {
-    "description": "KV-1 but XXL",
-    "tier": 6.0,
-    "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 35.00,
-        "armor": {
-            "front": 120,
-            "back": 30,
-            "side": 100
-        },
-        "speed": {
-            "acceleration": 8,
-            "forward": 34,
-            "backward": -7,
-            "torque": 17,
-            "rate": 27
-        },
-        "weaponry": {
-            "ammo_storage": 47.1,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "KV-220 [USSR]",
-    "paired": {
-        "gun": "85mm ZIS-S [5] 107mm ZiS-6",
-        "turret": "KV-220"
-    }
-}
 ,"Bank Prince": {
     "description": "who let british cook",
     "tier": 6.0,
@@ -3888,8 +3848,8 @@
         },
         "speed": {
             "acceleration": 9,
-            "forward": 17,
-            "backward": -12,
+            "forward": 25,
+            "backward": -16,
             "torque": 15,
             "rate": 40
         },
@@ -3949,46 +3909,6 @@
         "turret": "O-I"
     }
 }
-,"M26": {
-    "description": "American latewar medium tank.",
-    "tier": 6.0,
-    "rarity": "Rare",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 110, "Steel": 70, "Aluminum": 54},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 33.00,
-        "armor": {
-            "front": 101,
-            "back": 51,
-            "side": 76
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 49,
-            "backward": -15,
-            "torque": 12,
-            "rate": 28
-        },
-        "weaponry": {
-            "ammo_storage": 32.3,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "M26 Pershing [USA]",
-    "paired": {
-        "gun": "90mm Freedom II",
-        "turret": "M26"
-    }
-}
 ,"Centurion Mk5": {
     "description": "Centurion Saturday",
     "tier": 6.0,
@@ -4032,7 +3952,7 @@
 ,"Battlepacks VI (B)": {
     "description": "rev of the porsche wheyyyyy",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Blueprints",
     "resources": {"Iron": 150, "Steel": 77, "Titanium": 19},
     "requires": {
@@ -4076,6 +3996,86 @@
     "paired": {
         "gun": "128mm German Punch",
         "turret": ""
+    }
+}
+,"M26": {
+    "description": "American latewar medium tank.",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 110, "Steel": 70, "Aluminum": 54},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 33.00,
+        "armor": {
+            "front": 101,
+            "back": 51,
+            "side": 76
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 49,
+            "backward": -15,
+            "torque": 12,
+            "rate": 28
+        },
+        "weaponry": {
+            "ammo_storage": 32.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "M26 Pershing [USA]",
+    "paired": {
+        "gun": "90mm Freedom II",
+        "turret": "M26"
+    }
+}
+,"KV-220": {
+    "description": "KV-1 but XXL",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 172, "Steel": 83},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 35.00,
+        "armor": {
+            "front": 120,
+            "back": 30,
+            "side": 100
+        },
+        "speed": {
+            "acceleration": 8,
+            "forward": 34,
+            "backward": -7,
+            "torque": 17,
+            "rate": 27
+        },
+        "weaponry": {
+            "ammo_storage": 47.1,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "KV-220 [USSR]",
+    "paired": {
+        "gun": "85mm ZIS-S [5] 107mm ZiS-6",
+        "turret": "KV-220"
     }
 }
 ,"Dragoon 300 \"Free Wifi\"": {
@@ -4161,7 +4161,7 @@
 ,"KV-225": {
     "description": "Poor radio guy",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Rare Crate Drop",
     "resources": {},
     "requires": {
@@ -4419,7 +4419,7 @@
 ,"XM800TX": {
     "description": "The XM800TX is a high-speed hull that features additional applique armor for enhanced protection.",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, May 2023",
     "resources": {},
     "requires": {
@@ -4508,7 +4508,7 @@
 ,"M48A3 Camo ": {
     "description": "Average American Hull",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, August 2023",
     "resources": {},
     "requires": {
@@ -4597,7 +4597,7 @@
 ,"Taifun II": {
     "description": "EurofighterTycoon",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, April 2024",
     "resources": {},
     "requires": {
@@ -5181,6 +5181,55 @@
         "turret": "XTPR Expeditionary [7] Expeditionary"
     }
 }
+,"Battlepacks Leopard": {
+    "description": "panzerkampf 103",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Monthly Reward, April 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 80,
+            "back": 30,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 60,
+            "backward": -35,
+            "torque": 12,
+            "rate": 80
+        },
+        "weaponry": {
+            "ammo_storage": 44.4,
+            "blowout": -1,
+            "hull_aim": 2,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.5,
+                "reload_multiplier_caliber": 145,
+                "limits": {
+                    "up": 15,
+                    "down": 7,
+                    "left": 3,
+                    "right": 3
+                }
+            }
+        },
+        "crew": ["Driver", "Gunner", "Commander", "Loader"]
+    },
+    "based_on": "Jagd Leopard 1 [Fake]",
+    "paired": {
+        "gun": "105mm Royal",
+        "turret": ""
+    }
+}
 ,"Rooikat": {
     "description": "nerd mobile",
     "tier": 8.0,
@@ -5559,10 +5608,99 @@
         "turret": "BTR-4E"
     }
 }
+,"XT3R Faux": {
+    "description": "An evolution of the Export. However, it is lighter and less protected. Still an escort vehicle!",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 177, "Steel": 87, "Aluminum": 160, "Titanium": 32},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.81,
+        "armor": {
+            "front": 50,
+            "back": 20,
+            "side": 50
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 72,
+            "backward": -22,
+            "torque": 23,
+            "rate": 34
+        },
+        "weaponry": {
+            "ammo_storage": 16.0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "None",
+    "paired": {
+        "gun": "145mm XL1K",
+        "turret": "XT3R Faux"
+    }
+}
+,"BTR-4M-SPH": {
+    "description": "Who let him cook",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 250, "Steel": 155, "Aluminum": 30},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 29.00,
+        "armor": {
+            "front": 25,
+            "back": 15,
+            "side": 15
+        },
+        "speed": {
+            "acceleration": 4,
+            "forward": 109,
+            "backward": -30,
+            "torque": 12,
+            "rate": 2.8
+        },
+        "weaponry": {
+            "ammo_storage": 62.5,
+            "blowout": 0,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.8,
+                "reload_multiplier_caliber": 200,
+                "limits": {
+                    "up": 70,
+                    "down": 4,
+                    "left": 140,
+                    "right": 140
+                }
+            }
+        },
+        "crew": ["Driver", "Driver1", "Commander", "Loader", "Loader1", "Gunner"]
+    },
+    "based_on": "BTR-4E [Fake]",
+    "paired": {
+        "gun": "None",
+        "turret": ""
+    }
+}
 ,"T-64A": {
     "description": "expensive t72",
     "tier": 8.0,
-    "rarity": "Rare",
+    "rarity": "Epic",
     "obtain": "Blueprints",
     "resources": {"Iron": 200, "Steel": 100, "Composite": 24},
     "requires": {
@@ -5597,86 +5735,6 @@
     "paired": {
         "gun": "125mm 2A26",
         "turret": "T-64A"
-    }
-}
-,"XT3R  Faux": {
-    "description": "An evolution of the Export. However, it is lighter and less protected. Still an escort vehicle!",
-    "tier": 8.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 177, "Steel": 87, "Aluminum": 160, "Titanium": 32},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 15.81,
-        "armor": {
-            "front": 50,
-            "back": 20,
-            "side": 50
-        },
-        "speed": {
-            "acceleration": 10,
-            "forward": 72,
-            "backward": -22,
-            "torque": 23,
-            "rate": 34
-        },
-        "weaponry": {
-            "ammo_storage": 16.0,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "None",
-    "paired": {
-        "gun": "XL1K",
-        "turret": "XT3R Faux"
-    }
-}
-,"The Battlepass": {
-    "description": "maus",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 212, "Steel": 100, "Aluminum": 100},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 100.00,
-        "armor": {
-            "front": 200,
-            "back": 150,
-            "side": 180
-        },
-        "speed": {
-            "acceleration": 5,
-            "forward": 22,
-            "backward": -22,
-            "torque": 60,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 102.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "Maus [Germamy]",
-    "paired": {
-        "gun": "128mm German Punch",
-        "turret": "The Battlepass"
     }
 }
 ,"Strv 103C": {
@@ -5726,6 +5784,46 @@
     "paired": {
         "gun": "105mm L74",
         "turret": ""
+    }
+}
+,"Challenger 1": {
+    "description": "The best looking tank in the world.",
+    "tier": 8.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 236, "Steel": 105, "Aluminum": 302, "Composite": 30},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 35.00,
+        "armor": {
+            "front": 380,
+            "back": 30,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 56,
+            "backward": -32,
+            "torque": 20,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 24.0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Challenger 1 [UK]",
+    "paired": {
+        "gun": "120mm L15",
+        "turret": "Challenger 1"
     }
 }
 ,"Battlepass 50M": {
@@ -5808,6 +5906,46 @@
         "turret": "Leopard 2K"
     }
 }
+,"T-55AM1": {
+    "description": "T-55 super",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 150, "Steel": 80, "Aluminum": 30, "Composite": 10},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 26.00,
+        "armor": {
+            "front": 100,
+            "back": 30,
+            "side": 80
+        },
+        "speed": {
+            "acceleration": 13,
+            "forward": 56,
+            "backward": -7,
+            "torque": 13,
+            "rate": 34
+        },
+        "weaponry": {
+            "ammo_storage": 33.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-55AM1 [USSR]",
+    "paired": {
+        "gun": "100mm Molotok",
+        "turret": "T-55AM1"
+    }
+}
 ,"L'bunkre": {
     "description": "obj 268",
     "tier": 8.0,
@@ -5857,139 +5995,50 @@
         "turret": ""
     }
 }
-,"T-55AM1": {
-    "description": "T-55 super",
+,"The Battlepass": {
+    "description": "maus",
     "tier": 8.0,
     "rarity": "Epic",
     "obtain": "Blueprints",
-    "resources": {"Iron": 150, "Steel": 80, "Aluminum": 30, "Composite": 10},
+    "resources": {"Iron": 212, "Steel": 100, "Aluminum": 100},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 26.00,
+        "weight": 100.00,
         "armor": {
-            "front": 100,
-            "back": 30,
-            "side": 80
+            "front": 200,
+            "back": 150,
+            "side": 180
         },
         "speed": {
-            "acceleration": 13,
-            "forward": 56,
-            "backward": -7,
-            "torque": 13,
-            "rate": 34
+            "acceleration": 5,
+            "forward": 22,
+            "backward": -22,
+            "torque": 60,
+            "rate": 30
         },
         "weaponry": {
-            "ammo_storage": 33.3,
+            "ammo_storage": 102.6,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver"]
+        "crew": ["Driver", "Driver2"]
     },
-    "based_on": "T-55AM1 [USSR]",
+    "based_on": "Maus [Germamy]",
     "paired": {
-        "gun": "100mm Molotok",
-        "turret": "T-55AM1"
-    }
-}
-,"BTR-4M-SPH": {
-    "description": "Who let him cook",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 100, "Steel": 155},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 29.00,
-        "armor": {
-            "front": 25,
-            "back": 15,
-            "side": 15
-        },
-        "speed": {
-            "acceleration": 4,
-            "forward": 109,
-            "backward": -30,
-            "torque": 12,
-            "rate": 2.8
-        },
-        "weaponry": {
-            "ammo_storage": 62.5,
-            "blowout": 0,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "reload_multiplier": 1.8,
-                "reload_multiplier_caliber": 200,
-                "limits": {
-                    "up": 70,
-                    "down": 4,
-                    "left": 140,
-                    "right": 140
-                }
-            }
-        },
-        "crew": ["Driver", "Driver1", "Commander", "Loader", "Loader1", "Gunner"]
-    },
-    "based_on": "BTR-4E [Fake]",
-    "paired": {
-        "gun": "None",
-        "turret": ""
-    }
-}
-,"Challenger 1": {
-    "description": "The best looking tank in the world.",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 236, "Steel": 105, "Aluminum": 302, "Composite": 30},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 35.00,
-        "armor": {
-            "front": 380,
-            "back": 30,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 10,
-            "forward": 56,
-            "backward": -32,
-            "torque": 20,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 24.0,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "Challenger 1 [UK]",
-    "paired": {
-        "gun": "120mm L15",
-        "turret": "Challenger 1"
+        "gun": "128mm German Punch",
+        "turret": "The Battlepass"
     }
 }
 ,"Trackedauro": {
     "description": "What... why?",
     "tier": 8.0,
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "obtain": "Epic Crate Drop",
     "resources": {},
     "requires": {
@@ -6029,7 +6078,7 @@
 ,"The Santapass ": {
     "description": "sant",
     "tier": 8.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Epic Crate Drop(Christmas 2022/2023)",
     "resources": {},
     "requires": {
@@ -6109,7 +6158,7 @@
 ,"Motorcycle ": {
     "description": "the whip",
     "tier": 8.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, October 2023",
     "resources": {},
     "requires": {
@@ -6158,7 +6207,7 @@
 ,"Chieftain SID ": {
     "description": "the ch but silent",
     "tier": 8.0,
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "obtain": "Monthly Reward, February 2024",
     "resources": {},
     "requires": {
@@ -6198,7 +6247,7 @@
 ,"AFG MK 1": {
     "description": "ARGGGGG ",
     "tier": 8.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Joe's Shack, April 1st 2024",
     "resources": {},
     "requires": {
@@ -6247,7 +6296,7 @@
 ,"Battlepass-100": {
     "description": "",
     "tier": 8.0,
-    "rarity": "Epic",
+    "rarity": "Mythical",
     "obtain": "Unobtainable",
     "resources": {},
     "requires": {
@@ -6385,7 +6434,7 @@
 ,"K15A Mirage": {
     "description": "future",
     "tier": 9.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -6560,11 +6609,11 @@
             "side": 50
         },
         "speed": {
-            "acceleration": 4,
+            "acceleration": 8,
             "forward": 60,
             "backward": -26,
-            "torque": 18,
-            "rate": 32
+            "torque": 22,
+            "rate": 41
         },
         "weaponry": {
             "ammo_storage": 45.3,
@@ -6580,46 +6629,6 @@
     "paired": {
         "gun": "120mm IMI",
         "turret": "Merkava Mk 3"
-    }
-}
-,"Export": {
-    "description": "Escort Vehicle.",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 210, "Steel": 100, "Aluminum": 200, "Titanium": 30, "Composite": 20},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 23.00,
-        "armor": {
-            "front": 360,
-            "back": 30,
-            "side": 25
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 92,
-            "backward": -75,
-            "torque": 13,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 16.2,
-            "blowout": 1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "None",
-    "paired": {
-        "gun": "58mm Fusiler I [8] 62.7mm Fusiler II",
-        "turret": "Export"
     }
 }
 ,"B1 Centauro MK II": {
@@ -6702,6 +6711,46 @@
         "turret": "Yoyota MK1X"
     }
 }
+,"Export": {
+    "description": "Escort Vehicle.",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 210, "Steel": 100, "Aluminum": 200, "Titanium": 30, "Composite": 20},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 23.00,
+        "armor": {
+            "front": 360,
+            "back": 30,
+            "side": 25
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 92,
+            "backward": -75,
+            "torque": 13,
+            "rate": 30
+        },
+        "weaponry": {
+            "ammo_storage": 16.2,
+            "blowout": 1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "None",
+    "paired": {
+        "gun": "58mm Fusiler I [8] 62.7mm Fusiler II",
+        "turret": "Export"
+    }
+}
 ,"XT3R Faux LEP": {
     "description": "No Description",
     "tier": 9.0,
@@ -6745,7 +6794,7 @@
 ,"NANO ": {
     "description": "Second to none!",
     "tier": 9.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Monthly Reward, December 2023",
     "resources": {},
     "requires": {
@@ -6791,55 +6840,6 @@
         "turret": ""
     }
 }
-,"Battlepacks Leopard": {
-    "description": "panzerkampf 103",
-    "tier": 9.0,
-    "rarity": "Mythical",
-    "obtain": "Monthly Reward, April 2024",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 30.00,
-        "armor": {
-            "front": 80,
-            "back": 30,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 11,
-            "forward": 60,
-            "backward": -35,
-            "torque": 12,
-            "rate": 80
-        },
-        "weaponry": {
-            "ammo_storage": 44.4,
-            "blowout": -1,
-            "hull_aim": 2,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "reload_multiplier": 1.5,
-                "reload_multiplier_caliber": 145,
-                "limits": {
-                    "up": 15,
-                    "down": 7,
-                    "left": 3,
-                    "right": 3
-                }
-            }
-        },
-        "crew": ["Driver", "Gunner", "Commander", "Loader"]
-    },
-    "based_on": "Jagd Leopard 1 [Fake]",
-    "paired": {
-        "gun": "105mm Royal",
-        "turret": ""
-    }
-}
 ,"Challenger 2": {
     "description": "STAR LORD",
     "tier": 10.0,
@@ -6859,7 +6859,7 @@
         },
         "speed": {
             "acceleration": 8,
-            "forward": 56,
+            "forward": 72,
             "backward": -32,
             "torque": 20,
             "rate": 31
@@ -7000,6 +7000,95 @@
         "turret": "Contender 1E"
     }
 }
+,"Cyber_Panzer": {
+    "description": "CYBAAA",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 340, "Steel": 131, "Aluminum": 391, "Titanium": 44, "IR Camera Module": 1, "Computer Systems": 2, "Cyberware": 12},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 2.40,
+        "armor": {
+            "front": 50,
+            "back": 0,
+            "side": 20
+        },
+        "speed": {
+            "acceleration": 30,
+            "forward": 120,
+            "backward": -30,
+            "torque": 12,
+            "rate": 60
+        },
+        "weaponry": {
+            "ammo_storage": 30.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "reload_multiplier": 1.5,
+                "reload_multiplier_caliber": 145,
+                "limits": {
+                    "up": 45,
+                    "down": 4,
+                    "left": 20,
+                    "right": 20
+                }
+            }
+        },
+        "crew": ["Driver", "Gunner"]
+    },
+    "based_on": "None",
+    "paired": {
+        "gun": "105mm Royal",
+        "turret": ""
+    }
+}
+,"T-72B3": {
+    "description": "ORAAH! Fitted with ERA capable of defeating AP.",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 300, "Steel": 110, "Ceramic": 10, "Composite": 30, "Cyberware": 3},
+    "requires": {
+        "type": "hulls",
+        "name": "T-72A"
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 955,
+            "back": 50,
+            "side": 135
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 60,
+            "backward": -4,
+            "torque": 34,
+            "rate": 35
+        },
+        "weaponry": {
+            "ammo_storage": 34.5,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-72B3 [Russia]",
+    "paired": {
+        "gun": "30mm Terminator",
+        "turret": "T-72B3 [11] T-90A [11] Terminator 2"
+    }
+}
 ,"Leopard 2": {
     "description": "Germany's Finest! (More details will be added soon)",
     "tier": 10.0,
@@ -7007,8 +7096,8 @@
     "obtain": "Blueprints",
     "resources": {"Iron": 130, "Steel": 84, "Carbon Fibre": 49, "Composite": 20},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "hulls",
+        "name": "Leopard 2K"
     },
     "stats": {
         "weight": 34.00,
@@ -7078,95 +7167,6 @@
     "paired": {
         "gun": "125mm 2A46M-1",
         "turret": "T-80BV"
-    }
-}
-,"Cyber_Panzer": {
-    "description": "CYBAAA",
-    "tier": 10.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 340, "Steel": 131, "Aluminum": 391, "Titanium": 44, "IR Camera Module": 1, "Computer Systems": 2, "Cyberware": 12},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 2.40,
-        "armor": {
-            "front": 50,
-            "back": 0,
-            "side": 20
-        },
-        "speed": {
-            "acceleration": 30,
-            "forward": 120,
-            "backward": -9,
-            "torque": 12,
-            "rate": 60
-        },
-        "weaponry": {
-            "ammo_storage": 30.4,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "reload_multiplier": 1.5,
-                "reload_multiplier_caliber": 145,
-                "limits": {
-                    "up": 45,
-                    "down": 4,
-                    "left": 20,
-                    "right": 20
-                }
-            }
-        },
-        "crew": ["Driver", "Gunner"]
-    },
-    "based_on": "None",
-    "paired": {
-        "gun": "None",
-        "turret": ""
-    }
-}
-,"T-72B3": {
-    "description": "ORAAH! Fitted with ERA capable of defeating AP.",
-    "tier": 10.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 300, "Steel": 110, "Ceramic": 10, "Composite": 30, "Cyberware": 3},
-    "requires": {
-        "type": "hulls",
-        "name": "T-72A"
-    },
-    "stats": {
-        "weight": 30.00,
-        "armor": {
-            "front": 955,
-            "back": 50,
-            "side": 135
-        },
-        "speed": {
-            "acceleration": 10,
-            "forward": 60,
-            "backward": -4,
-            "torque": 34,
-            "rate": 35
-        },
-        "weaponry": {
-            "ammo_storage": 34.5,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "T-72B3 [Russia]",
-    "paired": {
-        "gun": "125mm 2A46M-1 [12] 30mm Terminator",
-        "turret": "T-72B3 [11] T-90A [11] Terminator 2"
     }
 }
 ,"Black Night": {
@@ -7449,6 +7449,46 @@
         "turret": "K14UW"
     }
 }
+,"T-84U": {
+    "description": "SLAVA",
+    "tier": 11.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 230, "Steel": 170, "Aluminium": 15, "Titanium": 10, "Carbon Fibre": 25, "Circuitry": 15, "Composite": 10},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 100,
+            "back": 40,
+            "side": 90
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 69,
+            "backward": -40,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 8.7,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-84U [Ukraine]",
+    "paired": {
+        "gun": "125mm 2A46M",
+        "turret": "T-84-120"
+    }
+}
 ,"Type 10": {
     "description": "Japan I think",
     "tier": 11.0,
@@ -7489,46 +7529,6 @@
         "turret": "Type 10"
     }
 }
-,"T-84U": {
-    "description": "SLAVA",
-    "tier": 11.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 230, "Steel": 170, "Aluminium": 15, "Titanium": 10, "Carbon Fibre": 25, "Circuitry": 15, "Composite": 10},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 30.00,
-        "armor": {
-            "front": 100,
-            "back": 40,
-            "side": 90
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 69,
-            "backward": -40,
-            "torque": 12,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 8.7,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "T-84U [Ukraine]",
-    "paired": {
-        "gun": "125mm 2A46M",
-        "turret": "T-84-120"
-    }
-}
 ,"T-90M": {
     "description": "It's all the same but worse.",
     "tier": 12.0,
@@ -7565,7 +7565,7 @@
     },
     "based_on": "T-90M [Russia]",
     "paired": {
-        "gun": "125mm 2A46M",
+        "gun": "",
         "turret": "T-90M"
     }
 }
@@ -7607,46 +7607,6 @@
     "paired": {
         "gun": "120mm L44",
         "turret": "Leopard 2A4"
-    }
-}
-,"Leopard 2A7+": {
-    "description": "Fattest German Main",
-    "tier": 12.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 468, "Steel": 230, "Aluminum": 120, "Titanium": 25, "Circuitry": 80, "Carbon Fibre": 100, "Composite": 60},
-    "requires": {
-        "type": "hulls",
-        "name": "Leopard 2"
-    },
-    "stats": {
-        "weight": 34.00,
-        "armor": {
-            "front": 520,
-            "back": 20,
-            "side": 25
-        },
-        "speed": {
-            "acceleration": 12.5,
-            "forward": 62,
-            "backward": -35,
-            "torque": 22,
-            "rate": 34
-        },
-        "weaponry": {
-            "ammo_storage": 19.2,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "Leopard 2A7+ [Germany]",
-    "paired": {
-        "gun": "120mm L/55A1",
-        "turret": "Leopard 2A7+"
     }
 }
 ,"T-14 Armata": {
@@ -7703,7 +7663,7 @@
     "tier": 12.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 280, "Steel": 120, "Aluminum": 302, "Titanium": 40, "Ceramic": 10, "Composite": 36, "IR Camera Module": 1, "Cyberware": 3},
+    "resources": {"Iron": 280, "Steel": 120, "Aluminum": 302, "Titanium": 40, "Ceramic": 10, "Composite": 36, "Laser Module": 1, "IR Camera Module": 1, "Cyberware": 3},
     "requires": {
         "type": "hulls",
         "name": "Challenger 2"
@@ -7717,7 +7677,7 @@
         },
         "speed": {
             "acceleration": 10,
-            "forward": 56,
+            "forward": 72,
             "backward": -32,
             "torque": 80,
             "rate": 42
@@ -7785,6 +7745,46 @@
     "paired": {
         "gun": "166mm Peacemaker",
         "turret": ""
+    }
+}
+,"Leopard 2A7+": {
+    "description": "Fattest German Main",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 468, "Steel": 230, "Aluminum": 120, "Titanium": 25, "Circuitry": 80, "Carbon Fibre": 100, "Composite": 60},
+    "requires": {
+        "type": "hulls",
+        "name": "Leopard 2"
+    },
+    "stats": {
+        "weight": 34.00,
+        "armor": {
+            "front": 520,
+            "back": 20,
+            "side": 25
+        },
+        "speed": {
+            "acceleration": 12.5,
+            "forward": 62,
+            "backward": -35,
+            "torque": 22,
+            "rate": 34
+        },
+        "weaponry": {
+            "ammo_storage": 19.2,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Leopard 2A7+ [Germany]",
+    "paired": {
+        "gun": "120mm L/55A1",
+        "turret": "Leopard 2A7+"
     }
 }
 ,"Object 148 Prototype": {
@@ -8323,7 +8323,7 @@
 ,"FT": {
     "description": " ",
     "tier": 1.0,
-    "rarity": "Common",
+    "rarity": "Legendary",
     "obtain": "Common Crate Drop",
     "resources": {},
     "requires": {
@@ -8715,7 +8715,7 @@
 ,"EGG Mk 5": {
     "description": "",
     "tier": 2.0,
-    "rarity": "Legendary",
+    "rarity": "Common",
     "obtain": "Super Premium Exclusive(Have Booster Gamepass and Roblox Premium active at the same time)",
     "resources": {},
     "requires": {
@@ -9202,55 +9202,6 @@
         "gun": "40mm Pom Pom"
     }
 }
-,"Basspanzer": {
-    "description": "Yes. It plays music in battle.",
-    "tier": 3.0,
-    "rarity": "Uncommon",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 29, "Steel": 19},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 2.54,
-        "armor": {
-            "front": 82,
-            "back": 33,
-            "side": 16
-        },
-        "weaponry": {
-            "ammo_storage": 0,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 3.0,
-                "zoom_upper": 6.0
-            },
-            "gun": {
-                "reload_multiplier": 0.98,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 12
-                },
-                "speed": {
-                    "vertical": 30,
-                    "horizontal": 30
-                }
-            }
-        },
-        "crew": ["Loader", "Gunner"]
-    },
-    "based_on": "Cavalry 2021 [Fake]",
-    "paired": {
-        "hull": "Basspanzer",
-        "gun": "Basskanone"
-    }
-}
 ,"Centaur": {
     "description": "I Love the Queen!",
     "tier": 3.0,
@@ -9298,6 +9249,55 @@
     "paired": {
         "hull": "Centaur",
         "gun": "75mm Empire"
+    }
+}
+,"Basspanzer": {
+    "description": "Yes. It plays music in battle.",
+    "tier": 3.0,
+    "rarity": "Uncommon",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 29, "Steel": 19},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 2.54,
+        "armor": {
+            "front": 82,
+            "back": 33,
+            "side": 16
+        },
+        "weaponry": {
+            "ammo_storage": 0,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 3.0,
+                "zoom_upper": 6.0
+            },
+            "gun": {
+                "reload_multiplier": 0.98,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 30,
+                    "horizontal": 30
+                }
+            }
+        },
+        "crew": ["Loader", "Gunner"]
+    },
+    "based_on": "Cavalry 2021 [Fake]",
+    "paired": {
+        "hull": "Basspanzer",
+        "gun": "Basskanone"
     }
 }
 ,"Battlepass IV H": {
@@ -9450,7 +9450,7 @@
 ,"Shield": {
     "description": "invincible turret",
     "tier": 3.0,
-    "rarity": "Mythical",
+    "rarity": "Uncommon",
     "obtain": "Monthly Reward, November 2023",
     "resources": {},
     "requires": {
@@ -9499,7 +9499,7 @@
 ,"Cavalry 2020": {
     "description": "Received by playing the first open test.",
     "tier": 3.0,
-    "rarity": "Mythical",
+    "rarity": "Uncommon",
     "obtain": "First Pre-Alpha Test Exclusive",
     "resources": {},
     "requires": {
@@ -10476,22 +10476,22 @@
         "gun": "73mm 2A28"
     }
 }
-,"Battlepass V G": {
+,"Pumi 407": {
     "description": "",
     "tier": 5.0,
     "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
+    "obtain": "Blueprints",
+    "resources": {"Iron": 35, "Steel": 15},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 15.00,
+        "weight": 3.00,
         "armor": {
-            "front": 110,
-            "back": 45,
-            "side": 45
+            "front": 30,
+            "back": 10,
+            "side": 10
         },
         "weaponry": {
             "ammo_storage": 0,
@@ -10501,28 +10501,28 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": 2.5,
-                "zoom_upper": 5.0
+                "zoom_lower": 2.0,
+                "zoom_upper": 4.0
             },
             "gun": {
-                "reload_multiplier": 1.1,
+                "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
-                    "down": 8
+                    "up": 25,
+                    "down": 9
                 },
                 "speed": {
-                    "vertical": 5.7,
-                    "horizontal": 18.0
+                    "vertical": 8.7,
+                    "horizontal": 18.3
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Commander", "Gunner"]
     },
-    "based_on": "Panther G [Germany]",
+    "based_on": "Sd.Kfz. 234 \"Neu\" [Fake]",
     "paired": {
-        "hull": "Battlepass V G",
-        "gun": "75mm Ikonisch II"
+        "hull": "Pumi",
+        "gun": "50mm KwK 39 II"
     }
 }
 ,"VADS": {
@@ -10572,55 +10572,6 @@
     "paired": {
         "hull": "M113",
         "gun": "20mm Vulcan"
-    }
-}
-,"Pumi 407": {
-    "description": "",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 35, "Steel": 15},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 3.00,
-        "armor": {
-            "front": 30,
-            "back": 10,
-            "side": 10
-        },
-        "weaponry": {
-            "ammo_storage": 0,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 2.0,
-                "zoom_upper": 4.0
-            },
-            "gun": {
-                "reload_multiplier": 1.23,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 25,
-                    "down": 9
-                },
-                "speed": {
-                    "vertical": 8.7,
-                    "horizontal": 18.3
-                }
-            }
-        },
-        "crew": ["Commander", "Gunner"]
-    },
-    "based_on": "Sd.Kfz. 234 \"Neu\" [Fake]",
-    "paired": {
-        "hull": "Pumi",
-        "gun": "50mm KwK 39 II"
     }
 }
 ,"KV-1E": {
@@ -10675,7 +10626,7 @@
 ,"La Pizza": {
     "description": "",
     "tier": 5.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, January 2023",
     "resources": {},
     "requires": {
@@ -10724,7 +10675,7 @@
 ,"M48A3 Camo": {
     "description": "Goodmorning USA!!!!!",
     "tier": 5.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, August 2023",
     "resources": {},
     "requires": {
@@ -10822,7 +10773,7 @@
 ,"Comet": {
     "description": "God Save The King.",
     "tier": 5.0,
-    "rarity": "Rare",
+    "rarity": "Uncommon",
     "obtain": "Blueprints, Unobtainable (October 2022 Incident)",
     "resources": {"Iron": 35, "Steel": 15},
     "requires": {
@@ -10844,8 +10795,8 @@
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": -1,
-                "zoom_upper": -1
+                "zoom_lower": 3.0,
+                "zoom_upper": 6.0
             },
             "gun": {
                 "reload_multiplier": 0.98,
@@ -11358,53 +11309,102 @@
         "gun": ""
     }
 }
-,"T29": {
-    "description": "just imagine this is a T34",
+,"Battlepass V G": {
+    "description": "",
     "tier": 6.0,
     "rarity": "Rare",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 130, "Steel": 80, "Titanium": 13},
+    "obtain": "Joe's Shack",
+    "resources": {},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 29.00,
+        "weight": 15.00,
         "armor": {
-            "front": 230,
-            "back": 100,
-            "side": 150
+            "front": 110,
+            "back": 45,
+            "side": 45
         },
         "weaponry": {
-            "ammo_storage": 16.9,
+            "ammo_storage": 0,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": 4.0,
-                "zoom_upper": 8.0
+                "zoom_lower": 2.5,
+                "zoom_upper": 5.0
             },
             "gun": {
-                "reload_multiplier": 1.4,
+                "reload_multiplier": 1.1,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 15,
-                    "down": 10
+                    "up": 20,
+                    "down": 8
                 },
                 "speed": {
-                    "vertical": 9.2,
+                    "vertical": 5.7,
+                    "horizontal": 18.0
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Panther G [Germany]",
+    "paired": {
+        "hull": "Battlepass V G",
+        "gun": "75mm Ikonisch II"
+    }
+}
+,"KV-220": {
+    "description": "Giga chad kv-2",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 135, "Steel": 76},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 19.00,
+        "armor": {
+            "front": 100,
+            "back": 100,
+            "side": 100
+        },
+        "weaponry": {
+            "ammo_storage": 14.6,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 1.5,
+                "zoom_upper": 4.5
+            },
+            "gun": {
+                "reload_multiplier": 1.1,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 7
+                },
+                "speed": {
+                    "vertical": 4.6,
                     "horizontal": 11.5
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Loader2", "Gunner"]
+        "crew": ["Commander", "Loader", "Gunner"]
     },
-    "based_on": "Heavy Tank T29 [USA]",
+    "based_on": "KV-220 [USSR]",
     "paired": {
-        "hull": "T29",
-        "gun": "105mm Freedom IV"
+        "hull": "KV-220",
+        "gun": "85mm ZIS-S [5] 107mm ZiS-6"
     }
 }
 ,"M26": {
@@ -11459,7 +11459,7 @@
 ,"O-I": {
     "description": "Hexagonal Demon",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Blueprints",
     "resources": {"Iron": 120, "Steel": 70},
     "requires": {
@@ -11505,53 +11505,53 @@
         "gun": "150mm Type 96 Howitzer [4] 105mmm Type 92"
     }
 }
-,"KV-220": {
-    "description": "Giga chad kv-2",
+,"T29": {
+    "description": "just imagine this is a T34",
     "tier": 6.0,
     "rarity": "Rare",
     "obtain": "Blueprints",
-    "resources": {"Iron": 135, "Steel": 76},
+    "resources": {"Iron": 130, "Steel": 80, "Titanium": 13},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 19.00,
+        "weight": 29.00,
         "armor": {
-            "front": 100,
+            "front": 230,
             "back": 100,
-            "side": 100
+            "side": 150
         },
         "weaponry": {
-            "ammo_storage": 14.6,
+            "ammo_storage": 16.9,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
             "sight": {
                 "thermal": 0,
-                "zoom_lower": 1.5,
-                "zoom_upper": 4.5
+                "zoom_lower": 4.0,
+                "zoom_upper": 8.0
             },
             "gun": {
-                "reload_multiplier": 1.1,
+                "reload_multiplier": 1.4,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
-                    "down": 7
+                    "up": 15,
+                    "down": 10
                 },
                 "speed": {
-                    "vertical": 4.6,
+                    "vertical": 9.2,
                     "horizontal": 11.5
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Commander", "Loader", "Loader2", "Gunner"]
     },
-    "based_on": "KV-220 [USSR]",
+    "based_on": "Heavy Tank T29 [USA]",
     "paired": {
-        "hull": "KV-220",
-        "gun": "85mm ZIS-S [5] 107mm ZiS-6"
+        "hull": "T29",
+        "gun": "105mm Freedom IV"
     }
 }
 ,"TOG II*": {
@@ -11606,7 +11606,7 @@
 ,"Centurion AVRE": {
     "description": "Nothing will get through our armour!",
     "tier": 6.0,
-    "rarity": "Legendary",
+    "rarity": "Rare",
     "obtain": "Epic Crate Drop",
     "resources": {},
     "requires": {
@@ -11655,7 +11655,7 @@
 ,"Ghana IFV": {
     "description": "Ghana IFV",
     "tier": 6.0,
-    "rarity": "Common",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, February 2023",
     "resources": {},
     "requires": {
@@ -11725,7 +11725,7 @@
             "fcs": -1,
             "stabilizer": true,
             "sight": {
-                "thermal": 3,
+                "thermal": 1,
                 "zoom_lower": 2.5,
                 "zoom_upper": 13.0
             },
@@ -11753,7 +11753,7 @@
 ,"XM800TX": {
     "description": "Lightweight airborne tank with radar and fire control system for recon missions.",
     "tier": 6.0,
-    "rarity": "Common",
+    "rarity": "Rare",
     "obtain": "Monthly Reward, May 2023",
     "resources": {},
     "requires": {
@@ -11869,7 +11869,7 @@
             "ammo_storage": 15.0,
             "blowout": -1,
             "aps": false,
-            "fcs": 4,
+            "fcs": 1,
             "stabilizer": true,
             "sight": {
                 "thermal": 1,
@@ -11995,55 +11995,6 @@
         "gun": "84mm 20pdr Type B"
     }
 }
-,"Battlepass Zweimal": {
-    "description": "Don't do it Bomber Harris!",
-    "tier": 7.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 150, "Steel": 70},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 24.00,
-        "armor": {
-            "front": 100,
-            "back": 40,
-            "side": 80
-        },
-        "weaponry": {
-            "ammo_storage": 32.6,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 3.0,
-                "zoom_upper": 12.0
-            },
-            "gun": {
-                "reload_multiplier": 1.9,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 70,
-                    "down": 3
-                },
-                "speed": {
-                    "vertical": 17.2,
-                    "horizontal": 27
-                }
-            }
-        },
-        "crew": ["Commander", "Loader1", "Loader2", "Gunner"]
-    },
-    "based_on": "Flakpanzer VIII Maus [Fake]",
-    "paired": {
-        "hull": "The Battlepass [8] Battlepass-100",
-        "gun": "8.8cm Ikonisch Zweimal"
-    }
-}
 ,"AMX-30B2": {
     "description": "It has thermals but no stabilizer??",
     "tier": 7.0,
@@ -12091,6 +12042,55 @@
     "paired": {
         "hull": "AMX-30",
         "gun": "105mm CN 105 F1"
+    }
+}
+,"Battlepass Zweimal": {
+    "description": "Don't do it Bomber Harris!",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 150, "Steel": 70},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 24.00,
+        "armor": {
+            "front": 100,
+            "back": 40,
+            "side": 80
+        },
+        "weaponry": {
+            "ammo_storage": 32.6,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 3.0,
+                "zoom_upper": 12.0
+            },
+            "gun": {
+                "reload_multiplier": 1.9,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 70,
+                    "down": 3
+                },
+                "speed": {
+                    "vertical": 17.2,
+                    "horizontal": 27
+                }
+            }
+        },
+        "crew": ["Commander", "Loader1", "Loader2", "Gunner"]
+    },
+    "based_on": "Flakpanzer VIII Maus [Fake]",
+    "paired": {
+        "hull": "The Battlepass [8] Battlepass-100",
+        "gun": "8.8cm Ikonisch Zweimal"
     }
 }
 ,"M48 Super": {
@@ -12166,7 +12166,7 @@
             "fcs": 1.5,
             "stabilizer": false,
             "sight": {
-                "thermal": 0,
+                "thermal": 1,
                 "zoom_lower": 5.0,
                 "zoom_upper": 5.0
             },
@@ -12730,53 +12730,53 @@
         "gun": ""
     }
 }
-,"MMWT": {
-    "description": "I love Indonesia!",
+,"T-55AM1": {
+    "description": "",
     "tier": 8.0,
     "rarity": "Epic",
     "obtain": "Blueprints",
-    "resources": {"Iron": 95, "Steel": 46, "Stabiliser": 1},
+    "resources": {"Iron": 150, "Steel": 50, "Aluminum": 25, "Stabiliser": 1, "Composite": 10},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 9.30,
+        "weight": 15.00,
         "armor": {
-            "front": 64,
-            "back": 30,
-            "side": 44
+            "front": 290,
+            "back": 100,
+            "side": 100
         },
         "weaponry": {
-            "ammo_storage": 12.6,
-            "blowout": 1,
+            "ammo_storage": 23.6,
+            "blowout": -1,
             "aps": false,
-            "fcs": 4.0,
+            "fcs": -1,
             "stabilizer": true,
             "sight": {
-                "thermal": 2,
-                "zoom_lower": 4.0,
-                "zoom_upper": 12.0
+                "thermal": 0,
+                "zoom_lower": 3.5,
+                "zoom_upper": 8.0
             },
             "gun": {
-                "reload_multiplier": 1.24,
+                "reload_multiplier": 1.19,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 42,
-                    "down": 10
+                    "up": 18,
+                    "down": 5
                 },
                 "speed": {
-                    "vertical": 19,
-                    "horizontal": 45
+                    "vertical": 17.2,
+                    "horizontal": 20
                 }
             }
         },
         "crew": ["Commander", "Loader", "Gunner"]
     },
-    "based_on": "Cockerill 3105 [Belgium]",
+    "based_on": "T-55AM1 [USSR]",
     "paired": {
-        "hull": "MMWT",
-        "gun": "105mm High Pressure CV"
+        "hull": "T-55AM1",
+        "gun": "100mm Molotok"
     }
 }
 ,"The Battlepass": {
@@ -12828,6 +12828,104 @@
         "gun": "128mm German Punch"
     }
 }
+,"XT3R Faux": {
+    "description": "I love the Queen!",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 105, "Steel": 40, "Aluminum": 94},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 8.90,
+        "armor": {
+            "front": 50,
+            "back": 8,
+            "side": 14
+        },
+        "weaponry": {
+            "ammo_storage": 10.9,
+            "blowout": 1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 3.0,
+                "zoom_upper": 8.0
+            },
+            "gun": {
+                "reload_multiplier": 1.2,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 24,
+                    "down": 15
+                },
+                "speed": {
+                    "vertical": 57.3,
+                    "horizontal": 36
+                }
+            }
+        },
+        "crew": ["Commander", "Gunner"]
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "XT3R Faux",
+        "gun": "145mm XL1K"
+    }
+}
+,"MMWT": {
+    "description": "I love Indonesia!",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 95, "Steel": 46, "Stabiliser": 1},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 9.30,
+        "armor": {
+            "front": 64,
+            "back": 30,
+            "side": 44
+        },
+        "weaponry": {
+            "ammo_storage": 12.6,
+            "blowout": 1,
+            "aps": false,
+            "fcs": 4.0,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 2,
+                "zoom_lower": 4.0,
+                "zoom_upper": 12.0
+            },
+            "gun": {
+                "reload_multiplier": 1.24,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 42,
+                    "down": 10
+                },
+                "speed": {
+                    "vertical": 19,
+                    "horizontal": 45
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Cockerill 3105 [Belgium]",
+    "paired": {
+        "hull": "MMWT",
+        "gun": "105mm High Pressure CV"
+    }
+}
 ,"Universal Turret": {
     "description": "its in the name",
     "tier": 8.0,
@@ -12875,55 +12973,6 @@
     "paired": {
         "hull": "XT1A IXWA",
         "gun": "58mm Fusiler I"
-    }
-}
-,"Bagelpanzer": {
-    "description": "🥯",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 94, "Steel": 44, "Aluminum": 79, "Carbon Fibre": 42},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 5.00,
-        "armor": {
-            "front": 0,
-            "back": 0,
-            "side": 0
-        },
-        "weaponry": {
-            "ammo_storage": 19.9,
-            "blowout": -1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 1,
-                "zoom_lower": 4.0,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 0.8,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 45,
-                    "down": 8
-                },
-                "speed": {
-                    "vertical": 11.5,
-                    "horizontal": 45.8
-                }
-            }
-        },
-        "crew": ["Commander", "Gunner"]
-    },
-    "based_on": "Begleitpanzer 57 [Germany]",
-    "paired": {
-        "hull": "Bagelpanzer",
-        "gun": "57mm Pom Pom Mk. X"
     }
 }
 ,"ZA-35": {
@@ -12975,108 +13024,59 @@
         "gun": "35mm GA-35"
     }
 }
-,"XT3R  Faux": {
-    "description": "I love the Queen!",
+,"Bagelpanzer": {
+    "description": "🥯",
     "tier": 8.0,
     "rarity": "Epic",
     "obtain": "Blueprints",
-    "resources": {"Iron": 105, "Steel": 40, "Aluminum": 94},
+    "resources": {"Iron": 94, "Steel": 44, "Aluminum": 79, "Carbon Fibre": 42},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 8.90,
+        "weight": 5.00,
         "armor": {
-            "front": 50,
-            "back": 8,
-            "side": 14
+            "front": 0,
+            "back": 0,
+            "side": 0
         },
         "weaponry": {
-            "ammo_storage": 10.9,
-            "blowout": 1,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 3.0,
-                "zoom_upper": 8.0
-            },
-            "gun": {
-                "reload_multiplier": 1.2,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 24,
-                    "down": 15
-                },
-                "speed": {
-                    "vertical": 57.3,
-                    "horizontal": 36
-                }
-            }
-        },
-        "crew": ["Commander", "Gunner"]
-    },
-    "based_on": "None",
-    "paired": {
-        "hull": "XT3R Faux",
-        "gun": "XL1K"
-    }
-}
-,"T-55AM1": {
-    "description": "",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 150, "Steel": 50, "Aluminum": 25, "Stabiliser": 1, "Composite": 10, "Laser Module": 1},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 15.00,
-        "armor": {
-            "front": 290,
-            "back": 100,
-            "side": 100
-        },
-        "weaponry": {
-            "ammo_storage": 23.6,
+            "ammo_storage": 19.9,
             "blowout": -1,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
-                "zoom_lower": 3.5,
-                "zoom_upper": 8.0
+                "thermal": 1,
+                "zoom_lower": 4.0,
+                "zoom_upper": 10.0
             },
             "gun": {
-                "reload_multiplier": 1.19,
+                "reload_multiplier": 0.8,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 18,
-                    "down": 5
+                    "up": 45,
+                    "down": 8
                 },
                 "speed": {
-                    "vertical": 17.2,
-                    "horizontal": 20
+                    "vertical": 11.5,
+                    "horizontal": 45.8
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Commander", "Gunner"]
     },
-    "based_on": "T-55AM1 [USSR]",
+    "based_on": "Begleitpanzer 57 [Germany]",
     "paired": {
-        "hull": "T-55AM1",
-        "gun": "100mm Molotok"
+        "hull": "Bagelpanzer",
+        "gun": "57mm Pom Pom Mk. X"
     }
 }
 ,"Expeditionary": {
     "description": "its in the name",
     "tier": 8.0,
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "obtain": "Blueprints",
     "resources": {"Iron": 132, "Steel": 50, "Aluminum": 110, "Titanium": 15, "Composite": 15, "Camera Module": 1, "Laser Module": 1, "Computer Systems": 1, "IR Camera Module": 1},
     "requires": {
@@ -13097,7 +13097,7 @@
             "fcs": 2,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
+                "thermal": 2,
                 "zoom_lower": 5.0,
                 "zoom_upper": 8.0
             },
@@ -13367,102 +13367,53 @@
         "gun": "120mm IMI"
     }
 }
-,"Leopard 2K": {
-    "description": "HIM",
+,"B1 Centauro MK II": {
+    "description": "Composite spaghetti",
     "tier": 9.0,
     "rarity": "Legendary",
     "obtain": "Blueprints",
-    "resources": {"Iron": 230, "Steel": 100, "Carbon Fibre": 65, "Circuitry": 5, "Cyberware": 3},
+    "resources": {"Iron": 115, "Steel": 55, "Aluminum": 95, "Carbon Fibre": 25, "Stabiliser": 1, "Composite": 15, "Camera Module": 2},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "turrets",
+        "name": "B1 Centauro"
     },
     "stats": {
-        "weight": 15.00,
+        "weight": 9.00,
         "armor": {
-            "front": 375,
-            "back": 10,
-            "side": 80
+            "front": 140,
+            "back": 15,
+            "side": 60
         },
         "weaponry": {
-            "ammo_storage": 11.6,
+            "ammo_storage": 9.9,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 4,
             "stabilizer": true,
             "sight": {
-                "thermal": 1,
-                "zoom_lower": 8.0,
-                "zoom_upper": 16.0
+                "thermal": 2,
+                "zoom_lower": 2.5,
+                "zoom_upper": 10.0
             },
             "gun": {
-                "reload_multiplier": 1.25,
+                "reload_multiplier": 1.3,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
-                    "down": 9
+                    "up": 15,
+                    "down": 7
                 },
                 "speed": {
-                    "vertical": 9.5,
-                    "horizontal": 39
+                    "vertical": 14.3,
+                    "horizontal": 29.8
                 }
             }
         },
         "crew": ["Commander", "Loader", "Gunner"]
     },
-    "based_on": "Leopard 2 Keiler [Germany]",
+    "based_on": "B1 Centauro [Italy]",
     "paired": {
-        "hull": "Leopard 2K",
-        "gun": "120mm L44"
-    }
-}
-,"HSTV-L": {
-    "description": "Spookston",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Steel": 120, "Aluminum": 133, "Stabiliser": 1, "Circuitry": 5, "Composite": 13, "Laser Module": 1, "IR Camera Module": 2, "Computer Systems": 2, "Cyberware": 2},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 6.90,
-        "armor": {
-            "front": 160,
-            "back": 30,
-            "side": 40
-        },
-        "weaponry": {
-            "ammo_storage": 18.1,
-            "blowout": -1,
-            "aps": false,
-            "fcs": 0.75,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 1,
-                "zoom_lower": 3.0,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 1.2,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 45,
-                    "down": 17
-                },
-                "speed": {
-                    "vertical": 48.5,
-                    "horizontal": 48.5
-                }
-            }
-        },
-        "crew": ["Gunner"]
-    },
-    "based_on": "HSTV-L [USA]",
-    "paired": {
-        "hull": "HSTV-L",
-        "gun": "75mm XM274"
+        "hull": "B1 Centauro MK II",
+        "gun": "105mm OTO"
     }
 }
 ,"Export": {
@@ -13512,6 +13463,104 @@
     "paired": {
         "hull": "Export",
         "gun": "58mm Fusiler I [8] 62.7mm Fusiler II"
+    }
+}
+,"Leopard 2K": {
+    "description": "HIM",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 230, "Steel": 100, "Carbon Fibre": 65, "Circuitry": 5, "Cyberware": 3},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 375,
+            "back": 10,
+            "side": 80
+        },
+        "weaponry": {
+            "ammo_storage": 11.6,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 8.0,
+                "zoom_upper": 16.0
+            },
+            "gun": {
+                "reload_multiplier": 1.25,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 9
+                },
+                "speed": {
+                    "vertical": 9.5,
+                    "horizontal": 39
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Leopard 2 Keiler [Germany]",
+    "paired": {
+        "hull": "Leopard 2K",
+        "gun": "120mm L44"
+    }
+}
+,"T-64A": {
+    "description": "CCCP First to have composite armour YPPA!",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 106, "Steel": 48},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 10.00,
+        "armor": {
+            "front": 375,
+            "back": 100,
+            "side": 280
+        },
+        "weaponry": {
+            "ammo_storage": 42.0,
+            "blowout": -1,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 0,
+                "zoom_lower": 8.0,
+                "zoom_upper": 8.0
+            },
+            "gun": {
+                "reload_multiplier": 1.37,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 14,
+                    "down": 6
+                },
+                "speed": {
+                    "vertical": 10.7,
+                    "horizontal": 16
+                }
+            }
+        },
+        "crew": ["Commander", "Gunner"]
+    },
+    "based_on": "T-64A [USSR]",
+    "paired": {
+        "hull": "T-64A",
+        "gun": "125mm 2A26"
     }
 }
 ,"Dardi": {
@@ -13612,105 +13661,56 @@
         "gun": "76mm OTO"
     }
 }
-,"B1 Centauro MK II": {
-    "description": "Composite spaghetti",
+,"HSTV-L": {
+    "description": "Spookston",
     "tier": 9.0,
     "rarity": "Legendary",
     "obtain": "Blueprints",
-    "resources": {"Iron": 115, "Steel": 55, "Aluminum": 95, "Carbon Fibre": 25, "Stabiliser": 1, "Composite": 15, "Camera Module": 2},
-    "requires": {
-        "type": "turrets",
-        "name": "B1 Centauro"
-    },
-    "stats": {
-        "weight": 9.00,
-        "armor": {
-            "front": 140,
-            "back": 15,
-            "side": 60
-        },
-        "weaponry": {
-            "ammo_storage": 9.9,
-            "blowout": -1,
-            "aps": false,
-            "fcs": 4,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 2,
-                "zoom_lower": 2.5,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 1.3,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 15,
-                    "down": 7
-                },
-                "speed": {
-                    "vertical": 14.3,
-                    "horizontal": 29.8
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "B1 Centauro [Italy]",
-    "paired": {
-        "hull": "B1 Centauro MK II",
-        "gun": "105mm OTO"
-    }
-}
-,"T-64A": {
-    "description": "CCCP First to have composite armour YPPA!",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 136, "Steel": 61},
+    "resources": {"Steel": 120, "Aluminum": 133, "Stabiliser": 1, "Circuitry": 5, "Composite": 13, "Laser Module": 1, "IR Camera Module": 2, "Computer Systems": 2, "Cyberware": 2},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 10.00,
+        "weight": 6.90,
         "armor": {
-            "front": 375,
-            "back": 100,
-            "side": 280
+            "front": 160,
+            "back": 30,
+            "side": 40
         },
         "weaponry": {
-            "ammo_storage": 42.0,
+            "ammo_storage": 18.1,
             "blowout": -1,
             "aps": false,
-            "fcs": -1,
+            "fcs": 0.75,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
-                "zoom_lower": 8.0,
-                "zoom_upper": 8.0
+                "thermal": 1,
+                "zoom_lower": 3.0,
+                "zoom_upper": 10.0
             },
             "gun": {
-                "reload_multiplier": 1.37,
+                "reload_multiplier": 1.2,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 14,
-                    "down": 6
+                    "up": 45,
+                    "down": 17
                 },
                 "speed": {
-                    "vertical": 10.7,
-                    "horizontal": 16
+                    "vertical": 48.5,
+                    "horizontal": 48.5
                 }
             }
         },
-        "crew": ["Commander", "Gunner"]
+        "crew": ["Gunner"]
     },
-    "based_on": "T-64A [USSR]",
+    "based_on": "HSTV-L [USA]",
     "paired": {
-        "hull": "T-64A",
-        "gun": "125mm 2A26"
+        "hull": "HSTV-L",
+        "gun": "75mm XM274"
     }
 }
-,"XT3R  Faux LEP": {
+,"XT3R Faux LEP": {
     "description": "Why so ears? It appears that Yoyo has stolen our stabiliser...",
     "tier": 9.0,
     "rarity": "Legendary",
@@ -13762,7 +13762,7 @@
 ,"TOS-1": {
     "description": "let them burn",
     "tier": 9.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Monthly Reward, March 2024",
     "resources": {},
     "requires": {
@@ -13909,7 +13909,7 @@
 ,"BTR-4E": {
     "description": "BETR CHOTYRI E",
     "tier": 10.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -14151,55 +14151,6 @@
         "gun": "120mm L44"
     }
 }
-,"Challenger 1": {
-    "description": "Pride of the British Army",
-    "tier": 10.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 119, "Steel": 56, "Aluminum": 111, "Composite": 15, "Camera Module": 1, "Laser Module": 1},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 21.00,
-        "armor": {
-            "front": 510,
-            "back": 45,
-            "side": 210
-        },
-        "weaponry": {
-            "ammo_storage": 22.2,
-            "blowout": -1,
-            "aps": false,
-            "fcs": 1,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 1,
-                "zoom_lower": 2.0,
-                "zoom_upper": 8.0
-            },
-            "gun": {
-                "reload_multiplier": 1.34,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 10
-                },
-                "speed": {
-                    "vertical": 9,
-                    "horizontal": 26
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "Challenger 1 [UK]",
-    "paired": {
-        "hull": "Challenger 1",
-        "gun": "120mm L15"
-    }
-}
 ,"Ariete": {
     "description": "Oh macaroni",
     "tier": 10.0,
@@ -14247,6 +14198,104 @@
     "paired": {
         "hull": "Ariete",
         "gun": "120mm OTO"
+    }
+}
+,"T-80BV": {
+    "description": "unfinished",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 200, "Steel": 100, "Aluminum": 40, "Stabiliser": 1, "Circuitry": 30, "Composite": 25, "IR Camera Module": 1, "Computer Systems": 1},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 10.00,
+        "armor": {
+            "front": 375,
+            "back": 100,
+            "side": 280
+        },
+        "weaponry": {
+            "ammo_storage": 40.8,
+            "blowout": -1,
+            "aps": false,
+            "fcs": 4,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 2.0,
+                "zoom_upper": 7.6
+            },
+            "gun": {
+                "reload_multiplier": 1.6,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 14,
+                    "down": 6
+                },
+                "speed": {
+                    "vertical": 5,
+                    "horizontal": 22.9
+                }
+            }
+        },
+        "crew": ["Gunner", "Commander"]
+    },
+    "based_on": "T-80BV [Russia]",
+    "paired": {
+        "hull": "T-80BV",
+        "gun": "125mm 2A46M-1"
+    }
+}
+,"Challenger 1": {
+    "description": "Pride of the British Army",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 119, "Steel": 56, "Aluminum": 111, "Composite": 15, "Camera Module": 1, "Laser Module": 1},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 21.00,
+        "armor": {
+            "front": 510,
+            "back": 45,
+            "side": 210
+        },
+        "weaponry": {
+            "ammo_storage": 22.2,
+            "blowout": -1,
+            "aps": false,
+            "fcs": 1,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 2.0,
+                "zoom_upper": 8.0
+            },
+            "gun": {
+                "reload_multiplier": 1.34,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 10
+                },
+                "speed": {
+                    "vertical": 9,
+                    "horizontal": 26
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Challenger 1 [UK]",
+    "paired": {
+        "hull": "Challenger 1",
+        "gun": "120mm L15"
     }
 }
 ,"Type-96A": {
@@ -14345,55 +14394,6 @@
     "paired": {
         "hull": "Yoyota MK1X",
         "gun": "95mm MG95"
-    }
-}
-,"T-80BV": {
-    "description": "unfinished",
-    "tier": 10.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 200, "Steel": 100, "Aluminum": 40, "Stabiliser": 1, "Circuitry": 30, "Composite": 25, "IR Camera Module": 1, "Computer Systems": 1},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 10.00,
-        "armor": {
-            "front": 375,
-            "back": 100,
-            "side": 280
-        },
-        "weaponry": {
-            "ammo_storage": 40.8,
-            "blowout": -1,
-            "aps": false,
-            "fcs": 4,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 1,
-                "zoom_lower": 2.0,
-                "zoom_upper": 7.6
-            },
-            "gun": {
-                "reload_multiplier": 1.6,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 14,
-                    "down": 6
-                },
-                "speed": {
-                    "vertical": 5,
-                    "horizontal": 22.9
-                }
-            }
-        },
-        "crew": ["Gunner", "Commander"]
-    },
-    "based_on": "T-80BV [Russia]",
-    "paired": {
-        "hull": "T-80BV",
-        "gun": "125mm 2A46M-1"
     }
 }
 ,"TKX-90": {
@@ -14788,53 +14788,53 @@
         "gun": "117mm Betwixt"
     }
 }
-,"Vickers 7/1": {
-    "description": "We'll blame the Germans for not letting us have this one!",
+,"Challenger 2 ATDU": {
+    "description": "How on earth do I combat this thing?",
     "tier": 11.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 144, "Steel": 60, "Carbon Fibre": 70, "Composite": 16, "Computer Systems": 1, "IR Camera Module": 1},
+    "resources": {"Iron": 150, "Steel": 52, "Aluminum": 150, "Composite": 20, "Camera Module": 2, "Laser Module": 1, "Computer Systems": 1, "Cyberware": 2},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "turrets",
+        "name": "Challenger 2"
     },
     "stats": {
-        "weight": 21.00,
+        "weight": 32.00,
         "armor": {
-            "front": 510,
-            "back": 15,
-            "side": 160
+            "front": 700,
+            "back": 45,
+            "side": 45
         },
         "weaponry": {
-            "ammo_storage": 17.3,
+            "ammo_storage": 22.2,
             "blowout": -1,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
             "sight": {
-                "thermal": 1,
-                "zoom_lower": 3.0,
+                "thermal": 2,
+                "zoom_lower": 4.0,
                 "zoom_upper": 10.0
             },
             "gun": {
-                "reload_multiplier": 1.35,
+                "reload_multiplier": 1.34,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 20,
-                    "down": 9
+                    "down": 12
                 },
                 "speed": {
                     "vertical": 9,
-                    "horizontal": 45
+                    "horizontal": 41
                 }
             }
         },
         "crew": ["Commander", "Loader", "Gunner"]
     },
-    "based_on": "Vickers Mk. 7/2 [UK]",
+    "based_on": "Challenger 2 TES \"Megatron\" [UK]",
     "paired": {
-        "hull": "Leopard 2",
-        "gun": "120mm L15"
+        "hull": "Challenger 2 ATDU",
+        "gun": ""
     }
 }
 ,"Type 10": {
@@ -14886,61 +14886,12 @@
         "gun": "120mm TKG"
     }
 }
-,"Challenger 2 ATDU": {
-    "description": "How on earth do I combat this thing?",
-    "tier": 11.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 150, "Steel": 52, "Aluminum": 150, "Composite": 20, "Camera Module": 2, "Laser Module": 1, "Computer Systems": 1, "Cyberware": 2},
-    "requires": {
-        "type": "turrets",
-        "name": "Challenger 2"
-    },
-    "stats": {
-        "weight": 32.00,
-        "armor": {
-            "front": 700,
-            "back": 45,
-            "side": 45
-        },
-        "weaponry": {
-            "ammo_storage": 22.2,
-            "blowout": -1,
-            "aps": false,
-            "fcs": 4,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 2,
-                "zoom_lower": 4.0,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 1.34,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 12
-                },
-                "speed": {
-                    "vertical": 9,
-                    "horizontal": 41
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "Challenger 2 TES \"Megatron\" [UK]",
-    "paired": {
-        "hull": "Challenger 2 ATDU",
-        "gun": ""
-    }
-}
 ,"T-72B3": {
     "description": "RUSSIA BEST POWER POWER POWER!!!!",
     "tier": 11.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 143, "Steel": 55, "Aluminum": 132, "Composite": 26, "Camera Module": 2, "Laser Module": 1, "Computer Systems": 1, "Cyberware": 1},
+    "resources": {"Iron": 143, "Steel": 58, "Aluminum": 132, "Composite": 26, "Camera Module": 2, "Laser Module": 1, "Computer Systems": 1, "Cyberware": 1},
     "requires": {
         "type": "turrets",
         "name": "T-72A"
@@ -14981,7 +14932,56 @@
     "based_on": "T-72B3 [Russia]",
     "paired": {
         "hull": "T-72B3",
-        "gun": "125mm 2A46M-1"
+        "gun": ""
+    }
+}
+,"Vickers 7/1": {
+    "description": "We'll blame the Germans for not letting us have this one!",
+    "tier": 11.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 144, "Steel": 60, "Carbon Fibre": 70, "Composite": 16, "Computer Systems": 1, "IR Camera Module": 1},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 21.00,
+        "armor": {
+            "front": 510,
+            "back": 15,
+            "side": 160
+        },
+        "weaponry": {
+            "ammo_storage": 17.3,
+            "blowout": -1,
+            "aps": false,
+            "fcs": 4,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 3.0,
+                "zoom_upper": 10.0
+            },
+            "gun": {
+                "reload_multiplier": 1.35,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 9
+                },
+                "speed": {
+                    "vertical": 9,
+                    "horizontal": 45
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Vickers Mk. 7/2 [UK]",
+    "paired": {
+        "hull": "Leopard 2",
+        "gun": "120mm L15"
     }
 }
 ,"T-90A": {
@@ -14989,7 +14989,7 @@
     "tier": 11.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 143, "Steel": 55, "Aluminum": 132, "Composite": 26, "Camera Module": 2, "Laser Module": 1, "Computer Systems": 1, "Cyberware": 1},
+    "resources": {"Iron": 150, "Steel": 70, "Aluminum": 132, "Titanium": 5, "Stabiliser": 1, "Circuitry": 20, "Composite": 30, "Laser Module": 2, "Camera Module": 2, "Computer Systems": 1, "IR Camera Module": 1, "Cyberware": 1},
     "requires": {
         "type": "None",
         "name": ""
@@ -15030,7 +15030,7 @@
     "based_on": "T-90A [Russia]",
     "paired": {
         "hull": "T-72B3",
-        "gun": "125mm 2A46M-1"
+        "gun": ""
     }
 }
 ,"Black Night": {
@@ -15184,7 +15184,7 @@
     "description": "It's all the same but worse",
     "tier": 12.0,
     "rarity": "Mythical",
-    "obtain": "Joe's Shack",
+    "obtain": "Joe's ShackRequires T-90A [Turret]",
     "resources": {},
     "requires": {
         "type": "None",
@@ -15226,7 +15226,7 @@
     "based_on": "T-90M [Russia]",
     "paired": {
         "hull": "T-90M",
-        "gun": "125mm 2A46M-1"
+        "gun": ""
     }
 }
 ,"K14UW": {
@@ -15283,7 +15283,7 @@
     "tier": 12.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 157, "Steel": 63, "Titanium": 20, "Stabiliser": 1, "Carbon Fibre": 55, "Circuitry": 50, "Composite": 20, "Camera Module": 2, "Cyberware": 2},
+    "resources": {"Iron": 157, "Steel": 63, "Aluminum": 171, "Titanium": 20, "Chromium": 26, "Stabiliser": 1, "Carbon Fibre": 55, "Circuitry": 50, "Composite": 20, "Camera Module": 2, "IR Camera Module": 1, "Cyberware": 8},
     "requires": {
         "type": "None",
         "name": ""
@@ -15400,7 +15400,7 @@
             "fcs": 3,
             "stabilizer": true,
             "sight": {
-                "thermal": 1,
+                "thermal": 2,
                 "zoom_lower": 2.7,
                 "zoom_upper": 12.0
             },
@@ -15413,7 +15413,7 @@
                 },
                 "speed": {
                     "vertical": 22.9,
-                    "horizontal": 27
+                    "horizontal": 45
                 }
             }
         },
@@ -15626,7 +15626,7 @@
     "stats": {
         "weight": 0.20,
         "weaponry": {
-            "reload": 7.6,
+            "reload": 4.6,
             "accuracy": 83,
             "ammo_volume": 0.12,
             "caliber:": 45,
@@ -15666,7 +15666,7 @@
     "stats": {
         "weight": 0.08,
         "weaponry": {
-            "reload": 0.1,
+            "reload": 0.2,
             "accuracy": 20,
             "ammo_volume": 0.04,
             "caliber:": 28,
@@ -15677,7 +15677,7 @@
         "30":  31,
         "60":  13
     },
-    "velocity":  870,
+    "velocity":  820,
     "ricochet_angle":  67,
     "stats": {}
 }]
@@ -15742,7 +15742,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
-            "reload": 0.13,
+            "reload": 0.11,
             "accuracy": 60,
             "ammo_volume": 0.01,
             "caliber:": 12.7,
@@ -15751,7 +15751,7 @@
     "penetration": {
         "0":  26,
         "30":  22,
-        "60":  8
+        "60":  10
     },
     "velocity":  929,
     "ricochet_angle":  65,
@@ -15905,7 +15905,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
-            "reload": 0.10,
+            "reload": 0.20,
             "accuracy": 60,
             "ammo_volume": 0.01,
             "caliber:": 12,
@@ -16082,7 +16082,7 @@
     "stats": {
         "weight": 0.40,
         "weaponry": {
-            "reload": 0.69,
+            "reload": 0.34,
             "accuracy": 52,
             "ammo_volume": 0.09,
             "caliber:": 40,
@@ -16123,20 +16123,6 @@
             "ammo_volume": 0.39,
             "caliber:": 75,
             "ammunition": [{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  110,
-        "30":  95,
-        "60":  55
-    },
-    "velocity":  450,
-    "ricochet_angle":  80,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  62,
@@ -16149,6 +16135,20 @@
         "fuse_sensitive":  14,
         "fuse_delay":  1.2,
         "explosive_mass": " 53g"
+    }
+},
+{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  110,
+        "30":  95,
+        "60":  55
+    },
+    "velocity":  450,
+    "ricochet_angle":  80,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -16272,21 +16272,6 @@
             "ammo_volume": 0.39,
             "caliber:": 75,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  12,
-        "30":  12,
-        "60":  12
-    },
-    "velocity":  522,
-    "ricochet_angle":  81,
-    "stats": {
-        "explosive_mass": " 714g",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  76,
@@ -16299,6 +16284,21 @@
         "fuse_sensitive":  15,
         "fuse_delay":  1.3,
         "explosive_mass": " 40g"
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  12,
+        "30":  12,
+        "60":  12
+    },
+    "velocity":  522,
+    "ricochet_angle":  81,
+    "stats": {
+        "explosive_mass": " 714g",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -16367,6 +16367,20 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  150,
+        "30":  130,
+        "60":  75
+    },
+    "velocity":  400,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  27,
@@ -16377,20 +16391,6 @@
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 2.18kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  150,
-        "30":  130,
-        "60":  75
-    },
-    "velocity":  400,
-    "ricochet_angle":  72,
-    "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -16512,7 +16512,7 @@
     "penetration": {
         "0":  87,
         "30":  74,
-        "60":  33
+        "60":  39
     },
     "velocity":  1201,
     "ricochet_angle":  75,
@@ -16554,7 +16554,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
-            "reload": 5.5,
+            "reload": 6.0,
             "accuracy": 161,
             "ammo_volume": 0.39,
             "caliber:": 75,
@@ -16574,21 +16574,6 @@
     }
 },
 {
-    "type": "HE ",
-    "penetration": {
-        "0":  10,
-        "30":  10,
-        "60":  10
-    },
-    "velocity":  463,
-    "ricochet_angle":  81,
-    "stats": {
-        "explosive_mass": " 301g",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "AP ",
     "penetration": {
         "0":  92,
@@ -16598,6 +16583,21 @@
     "velocity":  620,
     "ricochet_angle":  68,
     "stats": {}
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  10,
+        "30":  10,
+        "60":  10
+    },
+    "velocity":  260,
+    "ricochet_angle":  81,
+    "stats": {
+        "explosive_mass": " 301g",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
@@ -16621,7 +16621,7 @@
         "weight": 0.20,
         "weaponry": {
             "reload": 0.17,
-            "accuracy": 30,
+            "accuracy": 13,
             "ammo_volume": 0.02,
             "caliber:": 20,
             "ammunition": [{
@@ -16661,21 +16661,6 @@
             "ammo_volume": 0.39,
             "caliber:": 75,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  20,
-        "30":  20,
-        "60":  20
-    },
-    "velocity":  390,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 666g",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  91,
@@ -16688,6 +16673,21 @@
         "fuse_sensitive":  12,
         "fuse_delay":  0.7,
         "explosive_mass": " 105g"
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  20,
+        "30":  20,
+        "60":  20
+    },
+    "velocity":  390,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 666g",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -16738,7 +16738,7 @@
         "60":  24
     },
     "velocity":  250,
-    "ricochet_angle":  880,
+    "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 666g",
         "fuse_radius": -1,
@@ -16847,18 +16847,18 @@
             "ammo_volume": 0.39,
             "caliber:": 75,
             "ammunition": [{
-    "type": "HE ",
+    "type": "APHE ",
     "penetration": {
-        "0":  10,
-        "30":  10,
-        "60":  10
+        "0":  137,
+        "30":  116,
+        "60":  55
     },
-    "velocity":  550,
-    "ricochet_angle":  81,
+    "velocity":  740,
+    "ricochet_angle":  71,
     "stats": {
-        "explosive_mass": " 714g",
-        "fuse_radius": -1,
-        "arming_distance": -1
+        "fuse_sensitive":  14,
+        "fuse_delay":  1.2,
+        "explosive_mass": " 35g"
     }
 },
 {
@@ -16876,18 +16876,18 @@
     }
 },
 {
-    "type": "APHE ",
+    "type": "HE ",
     "penetration": {
-        "0":  137,
-        "30":  116,
-        "60":  55
+        "0":  10,
+        "30":  10,
+        "60":  10
     },
-    "velocity":  740,
-    "ricochet_angle":  71,
+    "velocity":  550,
+    "ricochet_angle":  81,
     "stats": {
-        "fuse_sensitive":  14,
-        "fuse_delay":  1.2,
-        "explosive_mass": " 35g"
+        "explosive_mass": " 714g",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -17036,21 +17036,6 @@
             "ammo_volume": 1.96,
             "caliber:": 152,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  41,
-        "30":  41,
-        "60":  41
-    },
-    "velocity":  530,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 5.83kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  95,
@@ -17063,6 +17048,21 @@
         "fuse_sensitive":  19,
         "fuse_delay":  1.2,
         "explosive_mass": " 4.85kg"
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  41,
+        "30":  41,
+        "60":  41
+    },
+    "velocity":  530,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 5.83kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -17127,6 +17127,17 @@
             "ammo_volume": 1.9,
             "caliber:": 150,
             "ammunition": [{
+    "type": "AP ",
+    "penetration": {
+        "0":  90,
+        "30":  76,
+        "60":  32
+    },
+    "velocity":  1000,
+    "ricochet_angle":  68,
+    "stats": {}
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  30,
@@ -17140,17 +17151,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "AP ",
-    "penetration": {
-        "0":  90,
-        "30":  76,
-        "60":  32
-    },
-    "velocity":  1000,
-    "ricochet_angle":  68,
-    "stats": {}
 }]
         }
     },
@@ -17214,10 +17214,25 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "APHE ",
+    "penetration": {
+        "0":  98,
+        "30":  87,
+        "60":  29
+    },
+    "velocity":  475,
+    "ricochet_angle":  65,
+    "stats": {
+        "fuse_sensitive":  19,
+        "fuse_delay":  1.2,
+        "explosive_mass": " 338g"
+    }
+},
+{
     "type": "HEAT ",
     "penetration": {
-        "0":  115,
-        "30":  100,
+        "0": 115,
+        "30": 100,
         "60": 58
     },
     "velocity": 495,
@@ -17240,21 +17255,6 @@
         "explosive_mass": " 1.77kg",
         "fuse_radius": -1,
         "arming_distance": -1
-    }
-},
-{
-    "type": "APHE ",
-    "penetration": {
-        "0":  98,
-        "30":  87,
-        "60":  29
-    },
-    "velocity":  475,
-    "ricochet_angle":  65,
-    "stats": {
-        "fuse_sensitive":  19,
-        "fuse_delay":  1.2,
-        "explosive_mass": " 338g"
     }
 }]
         }
@@ -17369,7 +17369,7 @@
     "stats": {
         "weight": 0.80,
         "weaponry": {
-            "reload": 12.2,
+            "reload": 11.0,
             "accuracy": 260,
             "ammo_volume": 0.56,
             "caliber:": 88,
@@ -17468,6 +17468,17 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "AP ",
+    "penetration": {
+        "0":  155,
+        "30":  129,
+        "60":  46
+    },
+    "velocity":  772,
+    "ricochet_angle":  65,
+    "stats": {}
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  27,
@@ -17481,17 +17492,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "AP ",
-    "penetration": {
-        "0":  155,
-        "30":  129,
-        "60":  46
-    },
-    "velocity":  772,
-    "ricochet_angle":  65,
-    "stats": {}
 }]
         }
     },
@@ -17559,6 +17559,20 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  230,
+        "30":  199,
+        "60":  115
+    },
+    "velocity":  540,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HESH ",
     "penetration": {
         "0":  76,
@@ -17569,20 +17583,6 @@
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 4.31kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  230,
-        "30":  199,
-        "60":  115
-    },
-    "velocity":  540,
-    "ricochet_angle":  72,
-    "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -17730,6 +17730,20 @@
     }
 },
 {
+    "type": "HEAT ",
+    "penetration": {
+        "0":  300,
+        "30":  260,
+        "60":  150
+    },
+    "velocity":  230,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  54,
@@ -17740,20 +17754,6 @@
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 9.44kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  300,
-        "30":  260,
-        "60":  150
-    },
-    "velocity":  230,
-    "ricochet_angle":  72,
-    "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -17779,11 +17779,22 @@
     "stats": {
         "weight": 0.113,
         "weaponry": {
-            "reload": 0.65,
+            "reload": 0.2,
             "accuracy": 80,
             "ammo_volume": 0.05,
             "caliber:": 30,
             "ammunition": [{
+    "type": "APDS ",
+    "penetration": {
+        "0":  110,
+        "30":  94,
+        "60":  49
+    },
+    "velocity":  1050,
+    "ricochet_angle":  71,
+    "stats": {}
+},
+{
     "type": "APHE ",
     "penetration": {
         "0":  57,
@@ -17797,17 +17808,6 @@
         "fuse_delay":  0.23,
         "explosive_mass": " 3g"
     }
-},
-{
-    "type": "APDS ",
-    "penetration": {
-        "0":  110,
-        "30":  93,
-        "60":  44
-    },
-    "velocity":  1050,
-    "ricochet_angle":  71,
-    "stats": {}
 }]
         }
     },
@@ -17835,6 +17835,20 @@
             "ammo_volume": 0.5,
             "caliber:": 84,
             "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  430,
+        "30":  372,
+        "60":  215
+    },
+    "velocity":  290,
+    "ricochet_angle":  80,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HESH ",
     "penetration": {
         "0":  95,
@@ -17845,20 +17859,6 @@
     "ricochet_angle":  77,
     "stats": {
         "explosive_mass": " 2.21g",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  430,
-        "30":  372,
-        "60":  215
-    },
-    "velocity":  290,
-    "ricochet_angle":  80,
-    "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -18019,21 +18019,6 @@
             "ammo_volume": 1.18,
             "caliber:": 122,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  37,
-        "30":  37,
-        "60":  37
-    },
-    "velocity":  700,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 3.78kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  205,
@@ -18046,6 +18031,21 @@
         "fuse_sensitive":  19,
         "fuse_delay":  1.2,
         "explosive_mass": " 246g"
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  37,
+        "30":  37,
+        "60":  37
+    },
+    "velocity":  700,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 3.78kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -18109,7 +18109,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
-            "reload": 0.30,
+            "reload": 0.20,
             "accuracy": 161,
             "ammo_volume": 0.03,
             "caliber:": 25,
@@ -18251,21 +18251,6 @@
             "ammo_volume": 1.37,
             "caliber:": 130,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  36,
-        "30":  36,
-        "60":  36
-    },
-    "velocity":  700,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 3.58kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  202,
@@ -18279,6 +18264,21 @@
         "fuse_delay":  1.2,
         "explosive_mass": " 1.47kg"
     }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  36,
+        "30":  36,
+        "60":  36
+    },
+    "velocity":  700,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 3.58kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
@@ -18289,7 +18289,7 @@
     }
 }
 ,"75mm Ikonisch II": {
-    "description": "Joe's Shack",
+    "description": ".5cm Kampfwagenkanone 42 L/70",
     "tier": 6.0,
     "rarity": "Rare",
     "obtain": "Joe's Shack",
@@ -18299,9 +18299,9 @@
         "name": ""
     },
     "stats": {
-        "weight": 0.80,
+        "weight": 1.20,
         "weaponry": {
-            "reload": 8.2,
+            "reload": 10.2,
             "accuracy": 260,
             "ammo_volume": 0.39,
             "caliber:": 75,
@@ -18341,7 +18341,7 @@
     "stats": {
         "weight": 0.70,
         "weaponry": {
-            "reload": 10.0,
+            "reload": 12.0,
             "accuracy": 161,
             "ammo_volume": 0.87,
             "caliber:": 107,
@@ -18386,7 +18386,7 @@
 ,"60mm SPAGAT": {
     "description": "op gun",
     "tier": 6.0,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "obtain": "Blueprints",
     "resources": {"Iron": 50, "Steel": 26, "Aluminum": 44},
     "requires": {
@@ -18426,7 +18426,7 @@
 ,"152mm M81 Gun Launcher": {
     "description": "Oh Sheridan!",
     "tier": 6.0,
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "obtain": "Blueprints",
     "resources": {"Iron": 50, "Steel": 27},
     "requires": {
@@ -18441,6 +18441,20 @@
             "ammo_volume": 1.96,
             "caliber:": 152,
             "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  380,
+        "30":  329,
+        "60":  190
+    },
+    "velocity":  682,
+    "ricochet_angle":  73,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  41,
@@ -18451,20 +18465,6 @@
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 5.83kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  380,
-        "30":  329,
-        "60":  190
-    },
-    "velocity":  682,
-    "ricochet_angle":  73,
-    "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -18490,60 +18490,6 @@
     "paired": {
         "hull": "",
         "turret": "M551"
-    }
-}
-,"122mm 2A18": {
-    "description": "Average artillery",
-    "tier": 6.0,
-    "rarity": "Rare",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 50, "Steel": 47, "Chromium": 45},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.30,
-        "weaponry": {
-            "reload": 10.0,
-            "accuracy": 260,
-            "ammo_volume": 1.18,
-            "caliber:": 122,
-            "ammunition": [{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  320,
-        "30":  277,
-        "60":  160
-    },
-    "velocity":  682,
-    "ricochet_angle":  87,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HE ",
-    "penetration": {
-        "0":  37,
-        "30":  37,
-        "60":  37
-    },
-    "velocity":  799,
-    "ricochet_angle":  81,
-    "stats": {
-        "explosive_mass": " 3.55kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-}]
-        }
-    },
-    "based_on": "2A18 / D32 (?) [USSR]",
-    "paired": {
-        "hull": "",
-        "turret": "2S1"
     }
 }
 ,"90mm Freedom II": {
@@ -18597,6 +18543,60 @@
         "turret": "M26"
     }
 }
+,"122mm 2A18": {
+    "description": "Average artillery",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 50, "Steel": 47, "Chromium": 45},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.30,
+        "weaponry": {
+            "reload": 10.0,
+            "accuracy": 260,
+            "ammo_volume": 1.18,
+            "caliber:": 122,
+            "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  320,
+        "30":  277,
+        "60":  160
+    },
+    "velocity":  682,
+    "ricochet_angle":  87,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  37,
+        "30":  37,
+        "60":  37
+    },
+    "velocity":  795,
+    "ricochet_angle":  81,
+    "stats": {
+        "explosive_mass": " 3.55kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "2A18 / D32 (?) [USSR]",
+    "paired": {
+        "hull": "",
+        "turret": "2S1"
+    }
+}
 ,"190mm Bruh": {
     "description": "Bruh",
     "tier": 6.0,
@@ -18611,7 +18611,7 @@
         "weight": 1.20,
         "weaponry": {
             "reload": 20.0,
-            "accuracy": 138,
+            "accuracy": 10000,
             "ammo_volume": 3.28,
             "caliber:": 190,
             "ammunition": [{
@@ -18654,7 +18654,7 @@
 ,"165mm Demolition Charge Projector": {
     "description": "We are the Royal Engineers!",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Epic Crate Drop",
     "resources": {},
     "requires": {
@@ -18694,7 +18694,7 @@
 ,"90mm Needle": {
     "description": "yarr",
     "tier": 6.0,
-    "rarity": "Rare",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward, September 2022",
     "resources": {},
     "requires": {
@@ -18720,6 +18720,20 @@
     "stats": {}
 },
 {
+    "type": "HEAT ",
+    "penetration": {
+        "0":  260,
+        "30":  225,
+        "60":  130
+    },
+    "velocity":  865,
+    "ricochet_angle":  71,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HESH ",
     "penetration": {
         "0":  90,
@@ -18730,21 +18744,6 @@
     "ricochet_angle":  71,
     "stats": {
         "explosive_mass": " 1.72kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "ATGM ",
-    "penetration": {
-        "0":  260,
-        "30":  225,
-        "60":  130
-    },
-    "velocity":  220,
-    "ricochet_angle":  90,
-    "stats": {
-        "range":  1.8,
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -18894,11 +18893,11 @@
     "type": "APDS ",
     "penetration": {
         "0":  269,
-        "30":  228,
-        "60":  108
+        "30":  231,
+        "60":  123
     },
     "velocity":  1400,
-    "ricochet_angle":  71,
+    "ricochet_angle":  77,
     "stats": {}
 },
 {
@@ -19081,7 +19080,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
-            "reload": 6.0,
+            "reload": 6.5,
             "accuracy": 161,
             "ammo_volume": 0.36,
             "caliber:": 73,
@@ -19223,7 +19222,7 @@
         "weight": 0.33,
         "weaponry": {
             "reload": 0.13,
-            "accuracy": 88,
+            "accuracy": 23,
             "ammo_volume": 0.03,
             "caliber:": 23,
             "ammunition": [{
@@ -19248,7 +19247,7 @@
 ,"106mm Recoilless": {
     "description": "Wait.... This thing has no recoil???",
     "tier": 7.0,
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "obtain": "Blueprints",
     "resources": {"Iron": 62, "Steel": 29, "Aluminum": 53, "Chromium": 24},
     "requires": {
@@ -19258,7 +19257,7 @@
     "stats": {
         "weight": 0.21,
         "weaponry": {
-            "reload": 6.3,
+            "reload": 12.0,
             "accuracy": 260,
             "ammo_volume": 0.84,
             "caliber:": 105,
@@ -19269,8 +19268,8 @@
         "30":  242,
         "60":  140
     },
-    "velocity":  650,
-    "ricochet_angle":  80,
+    "velocity":  730,
+    "ricochet_angle":  77,
     "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
@@ -19358,7 +19357,7 @@
     "tier": 7.0,
     "rarity": "Epic",
     "obtain": "Blueprints",
-    "resources": {"Iron": 200, "Steel": 66},
+    "resources": {"Iron": 200, "Steel": 66, "Chromium": 15},
     "requires": {
         "type": "None",
         "name": ""
@@ -19366,7 +19365,7 @@
     "stats": {
         "weight": 1.30,
         "weaponry": {
-            "reload": 20.50,
+            "reload": 20.5,
             "accuracy": 200,
             "ammo_volume": 1.96,
             "caliber:": 152,
@@ -19475,11 +19474,22 @@
     "stats": {
         "weight": 1.80,
         "weaponry": {
-            "reload": 5.5,
+            "reload": 5.0,
             "accuracy": 102,
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "APDS ",
+    "penetration": {
+        "0":  280,
+        "30":  239,
+        "60":  122
+    },
+    "velocity":  1478,
+    "ricochet_angle":  74,
+    "stats": {}
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  27,
@@ -19493,17 +19503,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "APDS ",
-    "penetration": {
-        "0":  280,
-        "30":  239,
-        "60":  122
-    },
-    "velocity":  1478,
-    "ricochet_angle":  74,
-    "stats": {}
 }]
         }
     },
@@ -19531,6 +19530,17 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  277,
+        "30":  251,
+        "60":  163
+    },
+    "velocity":  1525,
+    "ricochet_angle":  82,
+    "stats": {}
+},
+{
     "type": "HEAT ",
     "penetration": {
         "0":  410,
@@ -19543,17 +19553,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  277,
-        "30":  251,
-        "60":  163
-    },
-    "velocity":  1525,
-    "ricochet_angle":  82,
-    "stats": {}
 }]
         }
     },
@@ -19621,6 +19620,17 @@
             "ammo_volume": 0.75,
             "caliber:": 100,
             "ammunition": [{
+    "type": "APDS ",
+    "penetration": {
+        "0":  270,
+        "30":  232,
+        "60":  126
+    },
+    "velocity":  1415,
+    "ricochet_angle":  78,
+    "stats": {}
+},
+{
     "type": "APHE ",
     "penetration": {
         "0":  195,
@@ -19648,17 +19658,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "APDS ",
-    "penetration": {
-        "0":  270,
-        "30":  232,
-        "60":  126
-    },
-    "velocity":  1415,
-    "ricochet_angle":  78,
-    "stats": {}
 }]
         }
     },
@@ -19753,24 +19752,20 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
-            "reload": 6.7,
+            "reload": 6.8,
             "accuracy": 200,
             "ammo_volume": 0.59,
             "caliber:": 90,
             "ammunition": [{
-    "type": "HE ",
+    "type": "APFSDS ",
     "penetration": {
-        "0":  13,
-        "30":  13,
-        "60":  13
+        "0":  280,
+        "30":  245,
+        "60":  144
     },
-    "velocity":  750,
+    "velocity":  1200,
     "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 1.58kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
+    "stats": {}
 },
 {
     "type": "HEATFS (Tandem)",
@@ -19787,15 +19782,19 @@
     }
 },
 {
-    "type": "APFSDS ",
+    "type": "HE ",
     "penetration": {
-        "0":  280,
-        "30":  249,
-        "60":  150
+        "0":  13,
+        "30":  13,
+        "60":  13
     },
-    "velocity":  1200,
+    "velocity":  750,
     "ricochet_angle":  80,
-    "stats": {}
+    "stats": {
+        "explosive_mass": " 1.58kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
@@ -19899,21 +19898,6 @@
             "ammo_volume": 1.37,
             "caliber:": 130,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  57,
-        "30":  57,
-        "60":  57
-    },
-    "velocity":  700,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 4.78kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  257,
@@ -19926,6 +19910,21 @@
         "fuse_sensitive":  27,
         "fuse_delay":  1.2,
         "explosive_mass": " 389g"
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  57,
+        "30":  57,
+        "60":  57
+    },
+    "velocity":  700,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 4.78kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
@@ -20010,10 +20009,61 @@
 }]
         }
     },
-    "based_on": "BGM-71 TOW [USA]",
+    "based_on": "BGM-71H TOW-2 [USA]",
     "paired": {
         "hull": "Yoyota HMMWV (TOW) [8] Puma TOW",
         "turret": "TOW"
+    }
+}
+,"120mm L11A1": {
+    "description": "Something to use with your chieftan larp!",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 71, "Steel": 32, "Aluminum": 63, "Chromium": 29},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "reload": 7.3,
+            "accuracy": 260,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APDS ",
+    "penetration": {
+        "0":  279,
+        "30":  239,
+        "60":  128
+    },
+    "velocity":  1445,
+    "ricochet_angle":  77,
+    "stats": {}
+},
+{
+    "type": "HESH ",
+    "penetration": {
+        "0":  152,
+        "30":  152,
+        "60":  152
+    },
+    "velocity":  623,
+    "ricochet_angle":  77,
+    "stats": {
+        "explosive_mass": " 6.56kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "Royal Ordnance L11A1 [UK]",
+    "paired": {
+        "hull": "",
+        "turret": "Chieftain [8] Chieftain SID"
     }
 }
 ,"8.8 cm Kw.K. L/100": {
@@ -20114,21 +20164,6 @@
             "ammo_volume": 2.21,
             "caliber:": 160,
             "ammunition": [{
-    "type": "HE ",
-    "penetration": {
-        "0":  54,
-        "30":  54,
-        "60":  54
-    },
-    "velocity":  772,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 9.44kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "HESH ",
     "penetration": {
         "0":  260,
@@ -20139,6 +20174,21 @@
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 14.00kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  54,
+        "30":  54,
+        "60":  54
+    },
+    "velocity":  772,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 9.44kg",
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -20164,11 +20214,22 @@
     "stats": {
         "weight": 0.52,
         "weaponry": {
-            "reload": 6.9,
+            "reload": 4.0,
             "accuracy": 161,
             "ammo_volume": 0.74,
             "caliber:": 99.7,
             "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  150,
+        "30":  145,
+        "60":  142
+    },
+    "velocity":  1200,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
     "type": "HEAT ",
     "penetration": {
         "0":  300,
@@ -20176,7 +20237,7 @@
         "60":  150
     },
     "velocity":  865,
-    "ricochet_angle":  71,
+    "ricochet_angle":  80,
     "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
@@ -20190,7 +20251,7 @@
         "60":  76
     },
     "velocity":  800,
-    "ricochet_angle":  71,
+    "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 2.48kg",
         "fuse_radius": -1,
@@ -20263,6 +20324,17 @@
             "ammo_volume": 0.08,
             "caliber:": 38,
             "ammunition": [{
+    "type": "AP ",
+    "penetration": {
+        "0":  85,
+        "30":  72,
+        "60":  34
+    },
+    "velocity":  1000,
+    "ricochet_angle":  71,
+    "stats": {}
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  15,
@@ -20276,17 +20348,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "AP ",
-    "penetration": {
-        "0":  85,
-        "30":  72,
-        "60":  34
-    },
-    "velocity":  1000,
-    "ricochet_angle":  71,
-    "stats": {}
 }]
         }
     },
@@ -20309,8 +20370,8 @@
     "stats": {
         "weight": 0.23,
         "weaponry": {
-            "reload": 0.2,
-            "accuracy": 19,
+            "reload": 0.04,
+            "accuracy": 10,
             "ammo_volume": 0.07,
             "caliber:": 35,
             "ammunition": [{
@@ -20352,9 +20413,9 @@
             "ammunition": [{
     "type": "AP ",
     "penetration": {
-        "0":  65,
-        "30":  55,
-        "60":  23
+        "0":  70,
+        "30":  59,
+        "60":  25
     },
     "velocity":  1125,
     "ricochet_angle":  68,
@@ -20421,57 +20482,6 @@
     "paired": {
         "hull": "AFG MK 1",
         "turret": ""
-    }
-}
-,"120mm L11A1": {
-    "description": "Something to use with your chieftan larp!",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints, Unobtainable",
-    "resources": {"Iron": 71, "Steel": 32, "Aluminum": 63, "Chromium": 29},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.20,
-        "weaponry": {
-            "reload": 7.3,
-            "accuracy": 260,
-            "ammo_volume": 1.14,
-            "caliber:": 120,
-            "ammunition": [{
-    "type": "HESH ",
-    "penetration": {
-        "0":  152,
-        "30":  152,
-        "60":  152
-    },
-    "velocity":  623,
-    "ricochet_angle":  77,
-    "stats": {
-        "explosive_mass": " 6.56kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "APDS ",
-    "penetration": {
-        "0":  279,
-        "30":  237,
-        "60":  112
-    },
-    "velocity":  1445,
-    "ricochet_angle":  71,
-    "stats": {}
-}]
-        }
-    },
-    "based_on": "Royal Ordnance L11A1 [UK]",
-    "paired": {
-        "hull": "",
-        "turret": "Chieftain [8] Chieftain SID"
     }
 }
 ,"105mm F2 48 Calibre": {
@@ -20609,7 +20619,7 @@
 }]
         }
     },
-    "based_on": "BGM-71C ITOW [USA]",
+    "based_on": "BGM-71E TOW-2A [USA]",
     "paired": {
         "hull": "Yoyota HMMWV (TOW) [8] Puma TOW",
         "turret": "TOW"
@@ -20633,6 +20643,17 @@
             "ammo_volume": 1.25,
             "caliber:": 125,
             "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  321,
+        "30":  288,
+        "60":  182
+    },
+    "velocity":  1800,
+    "ricochet_angle":  76,
+    "stats": {}
+},
+{
     "type": "HEAT ",
     "penetration": {
         "0":  440,
@@ -20660,17 +20681,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  321,
-        "30":  288,
-        "60":  182
-    },
-    "velocity":  1800,
-    "ricochet_angle":  76,
-    "stats": {}
 }]
         }
     },
@@ -20693,16 +20703,16 @@
     "stats": {
         "weight": 1.87,
         "weaponry": {
-            "reload": 0.3,
+            "reload": 0.4,
             "accuracy": 100,
             "ammo_volume": 0.26,
             "caliber:": 62.7,
             "ammunition": [{
     "type": "APHE ",
     "penetration": {
-        "0":  107,
-        "30":  92,
-        "60":  51
+        "0":  127,
+        "30":  109,
+        "60":  60
     },
     "velocity":  1231,
     "ricochet_angle":  80,
@@ -20722,7 +20732,7 @@
     "velocity":  920,
     "ricochet_angle":  80,
     "stats": {
-        "explosive_mass": " 1.5kg",
+        "explosive_mass": " 767g",
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -20753,21 +20763,6 @@
             "ammo_volume": 0.21,
             "caliber:": 57,
             "ammunition": [{
-    "type": "HE (PF)",
-    "penetration": {
-        "0":  11,
-        "30":  11,
-        "60":  11
-    },
-    "velocity":  1020,
-    "ricochet_angle":  81,
-    "stats": {
-        "explosive_mass": " 765g",
-        "fuse_radius":  6,
-        "arming_distance":  500
-    }
-},
-{
     "type": "APHE ",
     "penetration": {
         "0":  47,
@@ -20792,6 +20787,21 @@
     "velocity":  950,
     "ricochet_angle":  71,
     "stats": {}
+},
+{
+    "type": "HE (PF)",
+    "penetration": {
+        "0":  11,
+        "30":  11,
+        "60":  11
+    },
+    "velocity":  1020,
+    "ricochet_angle":  81,
+    "stats": {
+        "explosive_mass": " 765g",
+        "fuse_radius":  6,
+        "arming_distance":  500
+    }
 }]
         }
     },
@@ -20799,71 +20809,6 @@
     "paired": {
         "hull": "",
         "turret": "Bagelpanzer"
-    }
-}
-,"95mm MG95": {
-    "description": "Not exactly a machine gun.",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 70, "Steel": 35, "Chromium": 12},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.00,
-        "weaponry": {
-            "reload": 6.3,
-            "accuracy": 161,
-            "ammo_volume": 0.67,
-            "caliber:": 95,
-            "ammunition": [{
-    "type": "APDS ",
-    "penetration": {
-        "0":  250,
-        "30":  215,
-        "60":  115
-    },
-    "velocity":  1550,
-    "ricochet_angle":  77,
-    "stats": {}
-},
-{
-    "type": "HEAT (Tandem)",
-    "penetration": {
-        "0":  460,
-        "30":  398,
-        "60":  230
-    },
-    "velocity":  1880,
-    "ricochet_angle":  78,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HESH ",
-    "penetration": {
-        "0":  85,
-        "30":  85,
-        "60":  85
-    },
-    "velocity":  550,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 2.79kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-}]
-        }
-    },
-    "based_on": "None",
-    "paired": {
-        "hull": "None",
-        "turret": "Yoyota MK1X"
     }
 }
 ,"8.8cm Ikonisch Zweimal": {
@@ -20919,6 +20864,71 @@
     "paired": {
         "hull": "",
         "turret": "Battlepass Zweimal"
+    }
+}
+,"95mm MG95": {
+    "description": "Not exactly a machine gun.",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 70, "Steel": 35, "Chromium": 12},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.00,
+        "weaponry": {
+            "reload": 6.0,
+            "accuracy": 161,
+            "ammo_volume": 0.67,
+            "caliber:": 95,
+            "ammunition": [{
+    "type": "APDS ",
+    "penetration": {
+        "0":  250,
+        "30":  215,
+        "60":  115
+    },
+    "velocity":  1550,
+    "ricochet_angle":  77,
+    "stats": {}
+},
+{
+    "type": "HEAT (Tandem)",
+    "penetration": {
+        "0":  460,
+        "30":  398,
+        "60":  230
+    },
+    "velocity":  1880,
+    "ricochet_angle":  78,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HESH ",
+    "penetration": {
+        "0":  105,
+        "30":  105,
+        "60":  105
+    },
+    "velocity":  550,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 2.79kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "",
+        "turret": "Yoyota MK1X"
     }
 }
 ,"MistleTOW": {
@@ -21000,7 +21010,7 @@
 ,"TOS M2 Browning": {
     "description": "Built-into TOS-1 [8]",
     "tier": 9.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Monthly Reward, March 2024Built-Into TOS-1",
     "resources": {},
     "requires": {
@@ -21046,12 +21056,12 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
-            "reload": 4.78,
+            "reload": 5.0,
             "accuracy": 260,
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
-    "type": "APFSDS ",
+    "type": "APFSDS (A-ERA)",
     "penetration": {
         "0":  330,
         "30":  295,
@@ -21080,7 +21090,7 @@
     },
     "based_on": "Royal Ordnance L7A1 [UK]",
     "paired": {
-        "hull": "Taifun II [6] Battlepacks Leopard",
+        "hull": "Taifun II [6] Battlepacks Leopard [7] Cyber_Panzer",
         "turret": "Centurion Mk3 [6] Type 74 [7] M48 Super"
     }
 }
@@ -21102,6 +21112,17 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  360,
+        "30":  325,
+        "60":  209
+    },
+    "velocity":  1509,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
     "type": "HEAT ",
     "penetration": {
         "0":  500,
@@ -21116,15 +21137,19 @@
     }
 },
 {
-    "type": "APFSDS ",
+    "type": "HE ",
     "penetration": {
-        "0":  360,
-        "30":  325,
-        "60":  209
+        "0":  42,
+        "30":  42,
+        "60":  42
     },
-    "velocity":  1509,
+    "velocity":  982,
     "ricochet_angle":  80,
-    "stats": {}
+    "stats": {
+        "explosive_mass": " 2.18kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
@@ -21152,6 +21177,17 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  400,
+        "30":  369,
+        "60":  259
+    },
+    "velocity":  1455,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
     "type": "HEAT ",
     "penetration": {
         "0":  500,
@@ -21164,17 +21200,6 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-},
-{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  400,
-        "30":  369,
-        "60":  259
-    },
-    "velocity":  1455,
-    "ricochet_angle":  80,
-    "stats": {}
 }]
         }
     },
@@ -21182,6 +21207,42 @@
     "paired": {
         "hull": "",
         "turret": "Rooikat"
+    }
+}
+,"120mm OTO": {
+    "description": "Hasta la pizza",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 95, "Chromium": 40},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "reload": 10.0,
+            "accuracy": 260,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  410,
+        "30":  365,
+        "60":  225
+    },
+    "velocity":  1705,
+    "ricochet_angle":  80,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "120mm OTO Breda [Italy]",
+    "paired": {
+        "hull": "",
+        "turret": "Ariete"
     }
 }
 ,"75mm XM274": {
@@ -21223,9 +21284,9 @@
 ,"125mm Spud-B": {
     "description": "OW!!",
     "tier": 10.0,
-    "rarity": "Mythical",
+    "rarity": "Legendary",
     "obtain": "Blueprints",
-    "resources": {"Iron": 96, "Steel": 43, "Aluminum": 99, "Chromium": 46},
+    "resources": {"Iron": 87, "Steel": 35, "Aluminum": 75, "Chromium": 35},
     "requires": {
         "type": "None",
         "name": ""
@@ -21335,42 +21396,6 @@
     "paired": {
         "hull": "",
         "turret": ""
-    }
-}
-,"120mm OTO": {
-    "description": "Hasta la pizza",
-    "tier": 10.0,
-    "rarity": "Legendary",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 95, "Chromium": 40},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.20,
-        "weaponry": {
-            "reload": 10.0,
-            "accuracy": 260,
-            "ammo_volume": 1.14,
-            "caliber:": 120,
-            "ammunition": [{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  410,
-        "30":  365,
-        "60":  225
-    },
-    "velocity":  1705,
-    "ricochet_angle":  80,
-    "stats": {}
-}]
-        }
-    },
-    "based_on": "120mm OTO Breda [Italy]",
-    "paired": {
-        "hull": "",
-        "turret": "Ariete"
     }
 }
 ,"40mm Bofors L/70": {
@@ -21557,6 +21582,20 @@
             "ammo_volume": 1.33,
             "caliber:": 117,
             "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  430,
+        "30":  372,
+        "60":  215
+    },
+    "velocity":  -1,
+    "ricochet_angle":  -1,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HE ",
     "penetration": {
         "0":  1,
@@ -21567,20 +21606,6 @@
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 2g",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  430,
-        "30":  372,
-        "60":  215
-    },
-    "velocity":  -1,
-    "ricochet_angle":  -1,
-    "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -21596,7 +21621,7 @@
 ,"Scud": {
     "description": "description",
     "tier": 10.0,
-    "rarity": "Legendary",
+    "rarity": "Mythical",
     "obtain": "Unobtainable",
     "resources": {},
     "requires": {
@@ -21651,19 +21676,15 @@
             "ammo_volume": 0.84,
             "caliber:": 105,
             "ammunition": [{
-    "type": "HESH ",
+    "type": "APFSDS ",
     "penetration": {
-        "0":  127,
-        "30":  127,
-        "60":  127
+        "0":  408,
+        "30":  369,
+        "60":  240
     },
-    "velocity":  732,
-    "ricochet_angle":  77,
-    "stats": {
-        "explosive_mass": " 4.31kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
+    "velocity":  1625,
+    "ricochet_angle":  80,
+    "stats": {}
 },
 {
     "type": "HEAT ",
@@ -21680,15 +21701,19 @@
     }
 },
 {
-    "type": "APFSDS ",
+    "type": "HESH ",
     "penetration": {
-        "0":  408,
-        "30":  369,
-        "60":  240
+        "0":  127,
+        "30":  127,
+        "60":  127
     },
-    "velocity":  1625,
-    "ricochet_angle":  80,
-    "stats": {}
+    "velocity":  732,
+    "ricochet_angle":  77,
+    "stats": {
+        "explosive_mass": " 4.31kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
@@ -21718,9 +21743,9 @@
             "ammunition": [{
     "type": "HE (PF)",
     "penetration": {
-        "0":  30,
-        "30":  30,
-        "60":  30
+        "0":  70,
+        "30":  70,
+        "60":  70
     },
     "velocity":  355,
     "ricochet_angle":  80,
@@ -21733,11 +21758,11 @@
 {
     "type": "ATGM (Tandem)",
     "penetration": {
-        "0":  700,
-        "30":  606,
-        "60":  350
+        "0":  1000,
+        "30":  866,
+        "60":  500
     },
-    "velocity":  270,
+    "velocity":  460,
     "ricochet_angle":  90,
     "stats": {
         "range":  8.0,
@@ -21753,12 +21778,12 @@
         "turret": "BMD-4"
     }
 }
-,"120mm L44": {
-    "description": "modern german engineering",
+,"125mm 2A46M": {
+    "description": "Hi!",
     "tier": 11.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 95, "Chromium": 40},
+    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 86, "Chromium": 40},
     "requires": {
         "type": "None",
         "name": ""
@@ -21766,41 +21791,71 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
-            "reload": 7.4,
+            "reload": 7.7,
             "accuracy": 260,
-            "ammo_volume": 1.14,
-            "caliber:": 120,
+            "ammo_volume": 1.25,
+            "caliber:": 125,
             "ammunition": [{
-    "type": "HEAT (PF)",
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  460,
+        "30":  405,
+        "60":  242
+    },
+    "velocity":  1800,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  550,
+        "30":  476,
+        "60":  275
+    },
+    "velocity":  905,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  42,
+        "30":  42,
+        "60":  42
+    },
+    "velocity":  730,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 4.24kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "ATGM ",
     "penetration": {
         "0":  650,
         "30":  563,
         "60":  325
     },
-    "velocity":  1030,
-    "ricochet_angle":  72,
+    "velocity":  270,
+    "ricochet_angle":  90,
     "stats": {
-        "fuse_radius":  10,
-        "arming_distance":  200
+        "range":  8.0,
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
-},
-{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  475,
-        "30":  411,
-        "60":  237
-    },
-    "velocity":  1509,
-    "ricochet_angle":  80,
-    "stats": {}
 }]
         }
     },
-    "based_on": "Rheinmetall RH-120 L/44 [Germany]",
+    "based_on": "125mm 2A46M [USSR]",
     "paired": {
         "hull": "",
-        "turret": "Leopard 2K [9] Type 90 [10] TKX-90 [10] Leopard 2A4"
+        "turret": "T-72A [10] Type-96A"
     }
 }
 ,"145mm XL1K": {
@@ -21821,21 +21876,6 @@
             "ammo_volume": 1.76,
             "caliber:": 145,
             "ammunition": [{
-    "type": "ATGM (Tndm/OTA)",
-    "penetration": {
-        "0":  1200,
-        "30":  1039,
-        "60":  600
-    },
-    "velocity":  560,
-    "ricochet_angle":  81,
-    "stats": {
-        "range":  2.2,
-        "fuse_radius":  3,
-        "arming_distance":  100
-    }
-},
-{
     "type": "HESH ",
     "penetration": {
         "0":  152,
@@ -21848,6 +21888,21 @@
         "explosive_mass": " 9.00kg",
         "fuse_radius": -1,
         "arming_distance": -1
+    }
+},
+{
+    "type": "ATGM (Tndm/OTA)",
+    "penetration": {
+        "0":  1200,
+        "30":  1039,
+        "60":  600
+    },
+    "velocity":  560,
+    "ricochet_angle":  81,
+    "stats": {
+        "range":  2.2,
+        "fuse_radius":  3,
+        "arming_distance":  100
     }
 }]
         }
@@ -21924,91 +21979,11 @@
         "turret": "Oto"
     }
 }
-,"125mm 2A46M": {
-    "description": "Hi!",
-    "tier": 11.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 86, "Chromium": 40},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.20,
-        "weaponry": {
-            "reload": 7.7,
-            "accuracy": 260,
-            "ammo_volume": 1.25,
-            "caliber:": 125,
-            "ammunition": [{
-    "type": "ATGM ",
-    "penetration": {
-        "0":  700,
-        "30":  606,
-        "60":  350
-    },
-    "velocity":  270,
-    "ricochet_angle":  90,
-    "stats": {
-        "range":  8.0,
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  550,
-        "30":  476,
-        "60":  275
-    },
-    "velocity":  905,
-    "ricochet_angle":  72,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HE ",
-    "penetration": {
-        "0":  42,
-        "30":  42,
-        "60":  42
-    },
-    "velocity":  730,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 4.24kg",
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  440,
-        "30":  375,
-        "60":  242
-    },
-    "velocity":  1800,
-    "ricochet_angle":  80,
-    "stats": {}
-}]
-        }
-    },
-    "based_on": "125mm 2A46M [USSR]",
-    "paired": {
-        "hull": "",
-        "turret": "T-72A [10] Type-96A"
-    }
-}
 ,"120mm L15": {
     "description": "BRITISH BIAS",
     "tier": 11.0,
     "rarity": "Mythical",
-    "obtain": "Blueprints, Unobtainable",
+    "obtain": "Blueprints",
     "resources": {"Iron": 87, "Steel": 40, "Aluminum": 86, "Chromium": 40},
     "requires": {
         "type": "None",
@@ -22024,8 +21999,8 @@
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  410,
-        "30":  364,
+        "0":  467,
+        "30":  399,
         "60":  225
     },
     "velocity":  1540,
@@ -22055,12 +22030,12 @@
         "turret": "Challenger 1 [10] Vickers 7/1"
     }
 }
-,"120mm TKG": {
-    "description": "Okabe n Shinano gaming. This is NOT a L/44.",
-    "tier": 12.0,
+,"120mm L44": {
+    "description": "modern german engineering",
+    "tier": 11.0,
     "rarity": "Mythical",
-    "obtain": "Joe's Shack",
-    "resources": {},
+    "obtain": "Blueprints",
+    "resources": {"Iron": 87, "Steel": 40, "Aluminum": 95, "Chromium": 40},
     "requires": {
         "type": "None",
         "name": ""
@@ -22068,23 +22043,23 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
-            "reload": 7.7,
+            "reload": 7.4,
             "accuracy": 260,
             "ammo_volume": 1.14,
             "caliber:": 120,
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  580,
-        "30":  485,
-        "60":  264
+        "0":  475,
+        "30":  411,
+        "60":  237
     },
-    "velocity":  1760,
-    "ricochet_angle":  81,
+    "velocity":  1509,
+    "ricochet_angle":  80,
     "stats": {}
 },
 {
-    "type": "HEAT ",
+    "type": "HEAT (PF)",
     "penetration": {
         "0":  650,
         "30":  563,
@@ -22093,16 +22068,16 @@
     "velocity":  1030,
     "ricochet_angle":  72,
     "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
+        "fuse_radius":  10,
+        "arming_distance":  200
     }
 }]
         }
     },
-    "based_on": "Japan Steel Works 120mm/44 [Japan]",
+    "based_on": "Rheinmetall RH-120 L/44 [Germany]",
     "paired": {
-        "hull": "None",
-        "turret": "Type 10"
+        "hull": "",
+        "turret": "Leopard 2K [9] Type 90 [10] TKX-90 [10] Leopard 2A4"
     }
 }
 ,"49.7mm DbGPAC": {
@@ -22119,10 +22094,24 @@
         "weight": 1.10,
         "weaponry": {
             "reload": 0.8,
-            "accuracy": 12,
+            "accuracy": 14,
             "ammo_volume": 0.15,
             "caliber:": 49.7,
             "ammunition": [{
+    "type": "HEATFS (Tandem)",
+    "penetration": {
+        "0":  175,
+        "30":  152,
+        "60":  88
+    },
+    "velocity":  750,
+    "ricochet_angle":  85,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HE (PF)",
     "penetration": {
         "0":  55,
@@ -22136,26 +22125,12 @@
         "fuse_radius":  4,
         "arming_distance":  175
     }
-},
-{
-    "type": "HEATFS (Tandem)",
-    "penetration": {
-        "0":  175,
-        "30":  152,
-        "60":  88
-    },
-    "velocity":  750,
-    "ricochet_angle":  85,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
 }]
         }
     },
     "based_on": "None",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "EXM-SFSTC"
     }
 }
@@ -22209,8 +22184,58 @@
     },
     "based_on": "None",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "EXM-2AG/117"
+    }
+}
+,"120mm TKG": {
+    "description": "Okabe n Shinano gaming. This is NOT a L/44.",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "reload": 7.8,
+            "accuracy": 260,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  530,
+        "30":  458,
+        "60":  264
+    },
+    "velocity":  1760,
+    "ricochet_angle":  81,
+    "stats": {}
+},
+{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  650,
+        "30":  563,
+        "60":  325
+    },
+    "velocity":  720,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "Japan Steel Works 120mm/44 [Japan]",
+    "paired": {
+        "hull": "",
+        "turret": "Type 10"
     }
 }
 ,"125mm 2A46M-1": {
@@ -22242,22 +22267,7 @@
     "stats": {}
 },
 {
-    "type": "ATGM ",
-    "penetration": {
-        "0":  650,
-        "30":  563,
-        "60":  325
-    },
-    "velocity":  270,
-    "ricochet_angle":  90,
-    "stats": {
-        "range":  8.0,
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HEAT ",
+    "type": "HEAT (Tandem)",
     "penetration": {
         "0":  550,
         "30":  476,
@@ -22284,78 +22294,28 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
-}]
-        }
-    },
-    "based_on": "125mm 2A46M-1 [Russia]",
-    "paired": {
-        "hull": "None",
-        "turret": "T-80BV"
-    }
-}
-,"120mm IMI": {
-    "description": "mimimimi",
-    "tier": 12.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 140, "Steel": 80, "Aluminum": 100, "Titanium": 3, "Chromium": 40},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.20,
-        "weaponry": {
-            "reload": 8.6,
-            "accuracy": 260,
-            "ammo_volume": 1.14,
-            "caliber:": 120,
-            "ammunition": [{
-    "type": "APFSDS (A-ERA)",
-    "penetration": {
-        "0":  550,
-        "30":  503,
-        "60":  340
-    },
-    "velocity":  1700,
-    "ricochet_angle":  80,
-    "stats": {}
 },
 {
-    "type": "HEAT (PF)",
+    "type": "ATGM (Tandem)",
     "penetration": {
-        "0":  480,
-        "30":  416,
-        "60":  240
+        "0":  800,
+        "30":  693,
+        "60":  400
     },
-    "velocity":  1078,
-    "ricochet_angle":  77,
+    "velocity":  270,
+    "ricochet_angle":  90,
     "stats": {
-        "fuse_radius":  -1,
-        "arming_distance":  -1
-    }
-},
-{
-    "type": "HE ",
-    "penetration": {
-        "0":  65,
-        "30":  65,
-        "60":  65
-    },
-    "velocity":  900,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 3.75kg",
+        "range":  8.0,
         "fuse_radius": -1,
         "arming_distance": -1
     }
 }]
         }
     },
-    "based_on": "IMI 120mm MG251 [Israel]",
+    "based_on": "125mm 2A46M-1 [Russia]",
     "paired": {
-        "hull": "None",
-        "turret": "Merkava Mk 3"
+        "hull": "",
+        "turret": "T-80BV"
     }
 }
 ,"60mm 2077": {
@@ -22371,7 +22331,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
-            "reload": 4.0,
+            "reload": 5.0,
             "accuracy": 142,
             "ammo_volume": 0.23,
             "caliber:": 60,
@@ -22379,8 +22339,8 @@
     "type": "APFSDS ",
     "penetration": {
         "0":  470,
-        "30":  423,
-        "60":  270
+        "30":  404,
+        "60":  230
     },
     "velocity":  2000,
     "ricochet_angle":  80,
@@ -22390,7 +22350,7 @@
     },
     "based_on": "None",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "Future"
     }
 }
@@ -22407,11 +22367,22 @@
     "stats": {
         "weight": 4.50,
         "weaponry": {
-            "reload": 32.8,
+            "reload": 25.0,
             "accuracy": 250,
             "ammo_volume": 3.08,
             "caliber:": 185,
             "ammunition": [{
+    "type": "APFSDS (A-ERA)",
+    "penetration": {
+        "0":  1364,
+        "30":  1181,
+        "60":  682
+    },
+    "velocity":  1542,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
     "type": "APHE ",
     "penetration": {
         "0":  420,
@@ -22425,23 +22396,12 @@
         "fuse_delay":  1.2,
         "explosive_mass": " 12.07kg"
     }
-},
-{
-    "type": "APFSDS (A-ERA)",
-    "penetration": {
-        "0":  1364,
-        "30":  1215,
-        "60":  751
-    },
-    "velocity":  1542,
-    "ricochet_angle":  80,
-    "stats": {}
 }]
         }
     },
     "based_on": "None",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": ""
     }
 }
@@ -22450,7 +22410,7 @@
     "tier": 12.0,
     "rarity": "Mythical",
     "obtain": "Blueprints",
-    "resources": {"Iron": 84, "Steel": 55, "Titanium": 11, "Chromium": 25, "Cyberware": 2},
+    "resources": {"Iron": 84, "Steel": 55, "Aluminum": 35, "Titanium": 11, "Chromium": 25, "Cyberware": 2},
     "requires": {
         "type": "None",
         "name": ""
@@ -22465,8 +22425,8 @@
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  155,
-        "30":  133,
+        "0":  99,
+        "30":  93,
         "60":  75
     },
     "velocity":  1260,
@@ -22477,109 +22437,8 @@
     },
     "based_on": "Shipunov 2A42 [USSR]",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "Terminator 2"
-    }
-}
-,"166mm Peacemaker": {
-    "description": "Smaller Uhistory",
-    "tier": 12.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 90, "Steel": 60, "Titanium": 25, "Chromium": 50, "Cyberware": 7},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 4.50,
-        "weaponry": {
-            "reload": 20.0,
-            "accuracy": 161,
-            "ammo_volume": 2.40,
-            "caliber:": 166,
-            "ammunition": [{
-    "type": "APFSDS (A-ERA)",
-    "penetration": {
-        "0":  650,
-        "30":  607,
-        "60":  452
-    },
-    "velocity":  1850,
-    "ricochet_angle":  80,
-    "stats": {}
-},
-{
-    "type": "HE (PF)",
-    "penetration": {
-        "0":  100,
-        "30":  100,
-        "60":  100
-    },
-    "velocity":  1345,
-    "ricochet_angle":  81,
-    "stats": {
-        "explosive_mass": " 15.49kg",
-        "fuse_radius":  5,
-        "arming_distance":  300
-    }
-}]
-        }
-    },
-    "based_on": "None",
-    "paired": {
-        "hull": "None",
-        "turret": ""
-    }
-}
-,"120mm L/55A1": {
-    "description": "Barrel Extension",
-    "tier": 12.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 192, "Steel": 96, "Aluminum": 192, "Chromium": 84},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.20,
-        "weaponry": {
-            "reload": 8.8,
-            "accuracy": 260,
-            "ammo_volume": 1.14,
-            "caliber:": 120,
-            "ammunition": [{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  598,
-        "30":  516,
-        "60":  295
-    },
-    "velocity":  1660,
-    "ricochet_angle":  80,
-    "stats": {}
-},
-{
-    "type": "HEAT (PF)",
-    "penetration": {
-        "0":  650,
-        "30":  563,
-        "60":  325
-    },
-    "velocity":  1030,
-    "ricochet_angle":  72,
-    "stats": {
-        "fuse_radius":  10,
-        "arming_distance":  200
-    }
-}]
-        }
-    },
-    "based_on": "Rheinmetall RH-120 L/55 [Germany]",
-    "paired": {
-        "hull": "None",
-        "turret": "Leopard 2A7+"
     }
 }
 ,"125mm 2A821M": {
@@ -22643,8 +22502,174 @@
     },
     "based_on": "2A82-1M [Russia]",
     "paired": {
-        "hull": "None",
+        "hull": "T-14 Armata [11] Object 148 Prototype",
         "turret": ""
+    }
+}
+,"120mm IMI": {
+    "description": "mimimimi",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 140, "Steel": 80, "Aluminum": 100, "Titanium": 3, "Chromium": 40},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "reload": 7.7,
+            "accuracy": 260,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APFSDS (A-ERA)",
+    "penetration": {
+        "0":  550,
+        "30":  476,
+        "60":  275
+    },
+    "velocity":  1700,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
+    "type": "HEAT (PF)",
+    "penetration": {
+        "0":  480,
+        "30":  416,
+        "60":  240
+    },
+    "velocity":  1078,
+    "ricochet_angle":  77,
+    "stats": {
+        "fuse_radius":  -1,
+        "arming_distance":  -1
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  65,
+        "30":  65,
+        "60":  65
+    },
+    "velocity":  900,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 3.75kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "IMI 120mm MG251 [Israel]",
+    "paired": {
+        "hull": "",
+        "turret": "Merkava Mk 3"
+    }
+}
+,"166mm Peacemaker": {
+    "description": "Smaller Uhistory",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 90, "Steel": 60, "Titanium": 25, "Chromium": 50, "Cyberware": 7},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 2.40,
+        "weaponry": {
+            "reload": 15.0,
+            "accuracy": 161,
+            "ammo_volume": 2.40,
+            "caliber:": 166,
+            "ammunition": [{
+    "type": "APFSDS (A-ERA)",
+    "penetration": {
+        "0":  650,
+        "30":  607,
+        "60":  452
+    },
+    "velocity":  1850,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
+    "type": "HE (PF)",
+    "penetration": {
+        "0":  100,
+        "30":  100,
+        "60":  100
+    },
+    "velocity":  1345,
+    "ricochet_angle":  81,
+    "stats": {
+        "explosive_mass": " 15.49kg",
+        "fuse_radius":  5,
+        "arming_distance":  300
+    }
+}]
+        }
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "Yoyota MK2E",
+        "turret": ""
+    }
+}
+,"120mm L/55A1": {
+    "description": "Barrel Extension",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 198, "Steel": 96, "Aluminum": 192, "Chromium": 84},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "reload": 8.8,
+            "accuracy": 260,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APFSDS (A-ERA)",
+    "penetration": {
+        "0":  598,
+        "30":  516,
+        "60":  295
+    },
+    "velocity":  1660,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
+    "type": "HEAT (PF)",
+    "penetration": {
+        "0":  650,
+        "30":  563,
+        "60":  325
+    },
+    "velocity":  1030,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius":  10,
+        "arming_distance":  200
+    }
+}]
+        }
+    },
+    "based_on": "Rheinmetall RH-120 L/55 [Germany]",
+    "paired": {
+        "hull": "",
+        "turret": "Leopard 2A7+"
     }
 }
 ,"H-2 Ares Jupiter": {
@@ -22660,15 +22685,15 @@
     "stats": {
         "weight": 2.50,
         "weaponry": {
-            "reload": 10.0,
+            "reload": 13.0,
             "accuracy": 1000,
             "ammo_volume": 1.14,
             "caliber:": 120,
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  512,
-        "30":  465,
+        "0":  750,
+        "30":  585,
         "60":  300
     },
     "velocity":  2700,
@@ -22712,21 +22737,6 @@
     "stats": {}
 },
 {
-    "type": "ATGM ",
-    "penetration": {
-        "0":  600,
-        "30":  520,
-        "60":  300
-    },
-    "velocity":  400,
-    "ricochet_angle":  90,
-    "stats": {
-        "range":  8.0,
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
     "type": "HE ",
     "penetration": {
         "0":  40,
@@ -22740,12 +22750,27 @@
         "fuse_radius": -1,
         "arming_distance": -1
     }
+},
+{
+    "type": "ATGM ",
+    "penetration": {
+        "0":  600,
+        "30":  520,
+        "60":  300
+    },
+    "velocity":  400,
+    "ricochet_angle":  90,
+    "stats": {
+        "range":  8.0,
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }]
         }
     },
     "based_on": "120mm KBM-2 [Ukraine]",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "T-84-120"
     }
 }
@@ -22762,7 +22787,7 @@
     "stats": {
         "weight": 4.00,
         "weaponry": {
-            "reload": 15.0,
+            "reload": 13.5,
             "accuracy": 260,
             "ammo_volume": 1.14,
             "caliber:": 120,
@@ -22770,8 +22795,8 @@
     "type": "APFSDS ",
     "penetration": {
         "0":  618,
-        "30":  535,
-        "60":  309
+        "30":  554,
+        "60":  320
     },
     "velocity":  1870,
     "ricochet_angle":  80,
@@ -22795,7 +22820,7 @@
     },
     "based_on": "XM291 (120mm) [USA]",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "CATTB"
     }
 }
@@ -22812,8 +22837,8 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
-            "reload": 0.12,
-            "accuracy": 19,
+            "reload": 0.05,
+            "accuracy": 10,
             "ammo_volume": 0.05,
             "caliber:": 30,
             "ammunition": [{
@@ -22831,7 +22856,7 @@
     },
     "based_on": "2A38M [USSR]",
     "paired": {
-        "hull": "None",
+        "hull": "",
         "turret": "2K22M1"
     }
 }
