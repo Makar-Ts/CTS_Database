@@ -7,40 +7,83 @@ detectColorScheme();
 
 filter_templates = {
     "hulls": [
-        ["tier", "Tier", "number"],
-        ["stats.weight", "Weight", "number"],
-        ["stats.speed.acceleration",    "Acceleration", "number"],
-        ["stats.speed.forward",         "Forward Speed", "number"],
-        ["stats.speed.backward",        "Backward Speed", "number"],
-        ["stats.speed.torque",          "Torque", "number"],
-        ["stats.speed.rate",            "Traverse Rate", "number"],
-        ["stats.weaponry.ammo_storage", "Ammo Storage", "number"],
-        ["stats.weaponry.aps",          "APS", "checkbox"],
-        ["stats.weaponry.have_gun",     "Turretless", "checkbox"],
+        {"path": "tier",                        "name": "Tier",             "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "rarity",                      "name": "Rarity",           "getval": (obj) => obj.val(), "type": "select", "options": {"Common": "Common", "Uncommon":"Uncommon", 
+                                                                                           "Rare": "Rare", "Epic": "Epic",
+                                                                                            "Legendary": "Legendary", "Mythical": "Mythical"},
+                                                                                                          "compare": (data, val) => data == val },
+        {"path": "obtain",                      "name": "Obtain",           "getval": (obj) => obj.val(), "type": "select", "options": {"Joe's Shack": "Joe's Shack", 
+                                                                                                                                        "Blueprints": "Blueprints", 
+                                                                                                                                        "Unobtainable": "Unobtainable"},
+                                                                                                          "compare": (data, val) => data.includes(val)},
+        {"path": "stats.weight",                "name": "Weight",           "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.speed.acceleration",    "name": "Acceleration",     "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.speed.forward",         "name": "Forward Speed",    "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.speed.backward",        "name": "Backward Speed",   "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.speed.torque",          "name": "Torque",           "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.speed.rate",            "name": "Traverse Rate",    "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.ammo_storage", "name": "Ammo Storage",     "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.blowout",      "name": "Blowout",          "getval": (obj) => obj.val(), "type": "select", "options": {"-1":"None", "0":"Partial", "1":"Yes"},
+                                                                                                          "compare": (data, val) => data == val },
+        {"path": "stats.weaponry.hull_aim",     "name": "Hull Aim",         "getval": (obj) => obj.val(), "type": "select", "options": {0:"No", 1:"Suspension only", 2:"Yes"},
+                                                                                                          "compare": (data, val) => data == val },
+        {"path": "stats.weaponry.aps",          "name": "APS",              "getval": (obj) => obj.is( ':checked' ), "type": "checkbox"},
+        {"path": "stats.weaponry.have_gun",     "name": "Turretless",       "getval": (obj) => obj.is( ':checked' ), "type": "checkbox"},
     ],
     "turrets": [
-        ["tier", "Tier", "number"],
-        ["stats.weight", "Weight", "number"],
-        ["stats.weaponry.stabilizer",   "Stabilizer", "checkbox"],
-        ["stats.weaponry.aps",          "APS", "checkbox"],
-        ["stats.weaponry.fcs",          "FCS", "number"],
-        ["stats.weaponry.sight.thermal",   "Thermal", "number"],
-        ["stats.weaponry.sight.zoom_lower","Zoom Min", "number"],
-        ["stats.weaponry.sight.zoom_upper","Zoom Max", "number"],
-        ["stats.weaponry.ammo_storage", "Ammo Storage", "number"],
-        ["stats.weaponry.gun.reload_multiplier", "Reload Mult.", "number"],
-        ["stats.weaponry.gun.limits.up",        "Up Limit", "number"],
-        ["stats.weaponry.gun.limits.down",      "Down Limit", "number"],
-        ["stats.weaponry.gun.speed.vertical",   "Vertical Speed", "number"],
-        ["stats.weaponry.gun.speed.horizontal", "Horizontal Speed", "number"],
+        {"path": "tier",                                    "name": "Tier",                 "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "rarity",                      "name": "Rarity",           "getval": (obj) => obj.val(), "type": "select", "options": {"Common": "Common", "Uncommon":"Uncommon", 
+                                                                                           "Rare": "Rare", "Epic": "Epic",
+                                                                                            "Legendary": "Legendary", "Mythical": "Mythical"},
+                                                                                                          "compare": (data, val) => data == val},
+        {"path": "obtain",                      "name": "Obtain",           "getval": (obj) => obj.val(), "type": "select", "options": {"Joe's Shack": "Joe's Shack", 
+                                                                                                                                        "Blueprints": "Blueprints", 
+                                                                                                                                        "Unobtainable": "Unobtainable"},
+                                                                                                          "compare": (data, val) => data.includes(val)},
+        {"path": "stats.weight",                            "name": "Weight",               "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.ammo_storage",             "name": "Ammo Storage",         "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.blowout",      "name": "Blowout",          "getval": (obj) => obj.val(), "type": "select", "options": {"-1":"None", "0":"Partial", "1":"Yes"},
+                                                                                                          "compare": (data, val) => data == val },
+        {"path": "stats.weaponry.stabilizer",               "name": "Stabilizer",           "getval": (obj) => obj.is( ':checked' ), "type": "checkbox"},
+        {"path": "stats.weaponry.aps",                      "name": "APS",                  "getval": (obj) => obj.is( ':checked' ), "type": "checkbox"},
+        {"path": "stats.weaponry.fcs",                      "name": "FCS",                  "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.sight.thermal",            "name": "Thermal",              "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.sight.zoom_lower",         "name": "Zoom Min",             "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.sight.zoom_upper",         "name": "Zoom Max",             "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.gun.reload_multiplier",    "name": "Reload Mult.",         "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.gun.limits.up",            "name": "Up Limit",             "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.gun.limits.down",          "name": "Down Limit",           "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.gun.speed.vertical",       "name": "Vertical Speed",       "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.gun.speed.horizontal",     "name": "Horizontal Speed",     "getval": (obj) => obj.val(), "type": "number"},
     ],
     "guns": [
-        ["tier", "Tier", "number"],
-        ["stats.weight", "Weight", "number"],
-        ["stats.weaponry.reload",      "Reload", "number"],
-        ["stats.weaponry.accuracy",    "Accuracy", "number"],
-        ["stats.weaponry.ammo_volume", "Ammo Volume", "number"],
-        ["stats.weaponry.caliber:",     "Caliber", "number"],
+        {"path": "tier",                        "name": "Tier",         "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "rarity",                      "name": "Rarity",           "getval": (obj) => obj.val(), "type": "select", "options": {"Common": "Common", "Uncommon":"Uncommon", 
+                                                                                           "Rare": "Rare", "Epic": "Epic",
+                                                                                            "Legendary": "Legendary", "Mythical": "Mythical"},
+                                                                                                          "compare": (data, val) => data == val},
+        {"path": "obtain",                      "name": "Obtain",           "getval": (obj) => obj.val(), "type": "select", "options": {"Joe's Shack": "Joe's Shack", 
+                                                                                                                                        "Blueprints": "Blueprints", 
+                                                                                                                                        "Unobtainable": "Unobtainable"},
+                                                                                                          "compare": (data, val) => data.includes(val)},
+        {"path": "stats.weight",                "name": "Weight",       "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.reload",       "name": "Reload",       "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.accuracy",     "name": "Accuracy",     "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.ammo_volume",  "name": "Ammo Volume",  "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.caliber:",     "name": "Caliber",      "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.ammunition",   "name": "Ammo Type",    "getval": (obj) => obj.val(), "type": "select", "options": {"AP": "AP", "APHE": "APHE", "APDS": "APDS", "APFSDS": "APFSDS",
+                                                                                                                                    "HEAT": "HEAT", "ATGM": "ATGM", "HE": "HE", "HESH": "HESH"}, 
+                                                                                                       "compare": function(data, val) {
+                                                                                                            val_form = val;
+
+                                                                                                            for (let index = 0; index < data.length; index++){
+                                                                                                                one = data[index].type.split(" ")[0].replace("HEATFS", "HEAT");
+
+                                                                                                                if (val_form == one) return true;
+                                                                                                            }
+
+                                                                                                            return false;
+                                                                                                        }}
     ]
 }
 
@@ -54,7 +97,16 @@ filter_item_template = `<div class="filter_item" id="{id}">
     <option value="<="><=</option>
     <option value=">"> ></option>
     <option value="<"> <</option>
-</select><input value="0" type="{type}" step="0.01" id="value" class="type_search_select filter_item_option" style="width: 35%;">
+</select><input value="0" 
+                type="{type}" 
+                step="0.01" 
+                id="value" 
+                class="type_search_select filter_item_option" 
+                style="width: 35%;"><select 
+                                        id="value" 
+                                        class="type_search_select filter_item_option"
+                                        style="width: 35%; display: none;">
+</select>
 </div>`
 
 function fetchJSONFile(path, callback) { // thx ChatGPT
@@ -145,12 +197,25 @@ $(document).ready(function() {
         $("#filter_container").empty();
     });
 
-    $("#filter_container").on('change', 'select.filter_item_option', function() {
-        temp = filter_templates[$("#type").val()].find(x => x[0] == $(this).val())
+    $("#filter_container").on('change', 'select.filter_item_option#option', function() {
+        temp = filter_templates[$("#type").val()].find(x => x["path"] == $(this).val())
 
-        $(this).parent().find("#value").attr("type", temp[2]);
+        if (temp["type"] == "number" | temp["type"] == "checkbox") {
+            $(this).parent().find("input#value").show();
+            $(this).parent().find("select#value").hide();
+            $(this).parent().find("#value:visible").attr("type", temp["type"]);
+        } else if (temp["type"] == "select") {
+            $(this).parent().find("input#value").hide();
+            $(this).parent().find("select#value").show();
 
-        if (temp[2] != "number") {
+            str = ""
+            for (let key of Object.keys(temp["options"])) {
+                str += `<option value="${key}">${temp["options"][key]}</option>`;
+            }
+            $(this).parent().find("select#value").html(str);
+        }
+
+        if (temp["type"] != "number") {
             $(this).parent().find("#calc").val("==");
             $(this).parent().find("#calc").attr("disabled", "disabled");
         } else {
@@ -164,14 +229,14 @@ $(document).ready(function() {
         for (let index = 0; index < filter_templates[$("#type").val()].length; index++) {
             const element = filter_templates[$("#type").val()][index];
             
-            options += `<option value="${element[0]}">${element[1]}</option>`;
+            options += `<option value="${element["path"]}">${element["name"]}</option>`;
         }
 
         $("#filter_container").append(
             filter_item_template
                .replace("{id}", `filter_item_${$("#filter_container").children().length+1}`)
                .replace("{options}", options)
-               .replace("{type}", filter_templates[$("#type").val()][0][2])
+               .replace("{type}", filter_templates[$("#type").val()][0]["type"])
         );
     });
 
@@ -191,19 +256,25 @@ $(document).ready(function() {
         for (let index = 0; index < $("#filter_container").children().length; index++) {
             const filter = $(`#filter_container #filter_item_${index+1}`);
 
-            if( filter.find('#value').attr( 'type' ) === 'checkbox' ) {
-                value = +filter.find('#value').is( ':checked' );
-            } else {
-                value = filter.find('#value').val();
-            }
+            temp = filter_templates[$("#type").val()].find(x => x["path"] == filter.find('#option').val())
             
-            filters.push([filter.find('#option').val(), filter.find('#calc').val(), value])
-            console.log(filters[filters.length-1]);
+            if (temp["type"] === "select") {
+                filters.push([filter.find('#option').val(), filter.find('#calc').val(), temp["getval"](filter.find('#value:visible')), temp["compare"]])
+            } else {
+                filters.push([filter.find('#option').val(), filter.find('#calc').val(), temp["getval"](filter.find('#value:visible'))])
+            }
+            console.log(filters[filters.length-1]); 
         }
 
         for (var key of Object.keys(database[type])) {
             fit_in_filter = true;
+
             filters.forEach(element => {
+                if (element[3] !== undefined) {
+                    fit_in_filter = fit_in_filter && element[3](getDataByString(database[type][key], element[0]), element[2]);
+                    return;
+                }
+
                 switch (element[1]) {
                     case "==":
                         fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) == element[2];
