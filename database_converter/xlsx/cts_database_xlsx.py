@@ -191,6 +191,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     
     ammo = ws.cell(TURRETS_OFFSET+9, i).value.replace("(", "").replace(")", "").replace("?", "").replace(",", ".")
     blowout = -1
+    clip = 0
     
     if "None" in ammo:
         ammo = 0
@@ -200,6 +201,9 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
                 blowout = 0
             else:
                 blowout = 1
+            
+        if "Ready Rack" in ammo:
+            clip = 1
         ammo = ammo.split()[0]
     
     
@@ -257,6 +261,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         armor_side=armor[1],
         weapon_ammo_storage=ammo,
         weapon_blowout=blowout,
+        weapon_clip=clip,
         weapon_aps=aps,
         weapon_fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
         weapon_stabilizer=stab,
@@ -290,11 +295,11 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         guns_string += ","
     print(ws.cell(GUNS_OFFSET+0, i).value)
     
-    obtain_str, resources, requires = obtain_parcing(ws.cell(GUNS_OFFSET+13, i).value)
+    obtain_str, resources, requires = obtain_parcing(ws.cell(GUNS_OFFSET+14, i).value)
     
     ammunition = ""
     for j in range(4):
-        dtd = ws.cell(GUNS_OFFSET+9+j, i).value #Ammo stats
+        dtd = ws.cell(GUNS_OFFSET+10+j, i).value #Ammo stats
         if dtd is None: break
         
         dtd = dtd.split("\n")
@@ -354,14 +359,15 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         weight= ws.cell(GUNS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+8, i).value) is not None else -1,
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
+        weapon_clip=ws.cell(GUNS_OFFSET+9, i).value if type(ws.cell(GUNS_OFFSET+9, i).value) == int else 0,
         weapon_reload=ws.cell(GUNS_OFFSET+7, i).value.replace("s", "") if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+7, i).value.replace("s", "")) else -1,
         weapon_accuracy=ws.cell(GUNS_OFFSET+4, i).value if ws.cell(GUNS_OFFSET+4, i).value.isdigit() else -1,
         weapon_ammo_volume=ws.cell(GUNS_OFFSET+5, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+5, i).value) else -1,
         weapon_caliber=ws.cell(GUNS_OFFSET+6, i).value.replace("mm", ""),
         weapon_ammunition=ammunition,
-        based_on=as_string(" ".join(ws.cell(GUNS_OFFSET+14, i).value.split()) if ws.cell(GUNS_OFFSET+14, i).value is not None else "None"),
-        paired_turret=as_string(" ".join(ws.cell(GUNS_OFFSET+15, i).value.split()[:-1]) if ws.cell(GUNS_OFFSET+15, i).value is not None else "None"),
-        paired_hull=as_string(" ".join(ws.cell(GUNS_OFFSET+16, i).value.split()[:-1]) if ws.cell(GUNS_OFFSET+16, i).value is not None else "None")
+        based_on=as_string(" ".join(ws.cell(GUNS_OFFSET+15, i).value.split()) if ws.cell(GUNS_OFFSET+14, i).value is not None else "None"),
+        paired_turret=as_string(" ".join(ws.cell(GUNS_OFFSET+16, i).value.split()[:-1]) if ws.cell(GUNS_OFFSET+15, i).value is not None else "None"),
+        paired_hull=as_string(" ".join(ws.cell(GUNS_OFFSET+17, i).value.split()[:-1]) if ws.cell(GUNS_OFFSET+16, i).value is not None else "None")
     )
     
     guns_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")

@@ -83,6 +83,7 @@ TURRET = """"{name}": {{
         "weaponry": {{
             "ammo_storage": {weapon_ammo_storage},
             "blowout": {weapon_blowout},
+            "clip": {weapon_clip},
             "aps": {weapon_aps},
             "fcs": {weapon_fcs},
             "stabilizer": {weapon_stabilizer},
@@ -127,6 +128,7 @@ GUNS = """"{name}": {{
     "stats": {{
         "weight": {weight},
         "weaponry": {{
+            "clip": {weapon_clip},
             "reload": {weapon_reload},
             "accuracy": {weapon_accuracy},
             "ammo_volume": {weapon_ammo_volume},

@@ -4169,15 +4169,15 @@
         "name": ""
     },
     "stats": {
-        "weight": 50.00,
+        "weight": 80.00,
         "armor": {
             "front": 120,
             "back": 40,
             "side": 50
         },
         "speed": {
-            "acceleration": 8,
-            "forward": 34,
+            "acceleration": 7,
+            "forward": 30,
             "backward": -7,
             "torque": 17,
             "rate": 27
@@ -5546,7 +5546,7 @@
             "side": 100
         },
         "speed": {
-            "acceleration": 9,
+            "acceleration": 10,
             "forward": 55,
             "backward": -17,
             "torque": 15,
@@ -7188,7 +7188,7 @@
         },
         "speed": {
             "acceleration": 9.7,
-            "forward": 56,
+            "forward": 81,
             "backward": -32,
             "torque": 350,
             "rate": 31
@@ -7899,6 +7899,7 @@
         "weaponry": {
             "ammo_storage": 2.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -7948,6 +7949,7 @@
         "weaponry": {
             "ammo_storage": 0.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -7997,6 +7999,7 @@
         "weaponry": {
             "ammo_storage": 1.4,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8046,6 +8049,7 @@
         "weaponry": {
             "ammo_storage": 0.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8095,6 +8099,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8144,6 +8149,7 @@
         "weaponry": {
             "ammo_storage": 4.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8193,6 +8199,7 @@
         "weaponry": {
             "ammo_storage": 0.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8242,6 +8249,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8291,6 +8299,7 @@
         "weaponry": {
             "ammo_storage": 6.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8340,6 +8349,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8389,6 +8399,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8438,6 +8449,7 @@
         "weaponry": {
             "ammo_storage": 4.4,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8470,7 +8482,7 @@
 ,"ELC": {
     "description": "smol",
     "tier": 2.0,
-    "rarity": "Common",
+    "rarity": "#ERROR!",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -8487,6 +8499,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8536,6 +8549,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8585,6 +8599,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8634,6 +8649,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8683,6 +8699,7 @@
         "weaponry": {
             "ammo_storage": 0.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8732,6 +8749,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8781,6 +8799,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8830,6 +8849,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8879,6 +8899,7 @@
         "weaponry": {
             "ammo_storage": 7.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8928,6 +8949,7 @@
         "weaponry": {
             "ammo_storage": 0.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -8977,6 +8999,7 @@
         "weaponry": {
             "ammo_storage": 13.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9026,6 +9049,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9075,6 +9099,7 @@
         "weaponry": {
             "ammo_storage": 12.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9124,6 +9149,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9173,6 +9199,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9222,6 +9249,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9271,6 +9299,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9320,6 +9349,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9369,6 +9399,7 @@
         "weaponry": {
             "ammo_storage": 0.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9418,6 +9449,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9467,6 +9499,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9516,6 +9549,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9565,6 +9599,7 @@
         "weaponry": {
             "ammo_storage": 8.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9614,6 +9649,7 @@
         "weaponry": {
             "ammo_storage": 6.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9663,6 +9699,7 @@
         "weaponry": {
             "ammo_storage": 2.3,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9712,6 +9749,7 @@
         "weaponry": {
             "ammo_storage": 25.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9761,6 +9799,7 @@
         "weaponry": {
             "ammo_storage": 19.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9810,6 +9849,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9859,6 +9899,7 @@
         "weaponry": {
             "ammo_storage": 65.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 5,
             "stabilizer": false,
@@ -9908,6 +9949,7 @@
         "weaponry": {
             "ammo_storage": 33.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -9957,6 +9999,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10006,6 +10049,7 @@
         "weaponry": {
             "ammo_storage": 10.0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10055,6 +10099,7 @@
         "weaponry": {
             "ammo_storage": 7.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10104,6 +10149,7 @@
         "weaponry": {
             "ammo_storage": 11.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10153,6 +10199,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10202,6 +10249,7 @@
         "weaponry": {
             "ammo_storage": 6.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10251,6 +10299,7 @@
         "weaponry": {
             "ammo_storage": 9.5,
             "blowout": -1,
+            "clip": 1,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10300,6 +10349,7 @@
         "weaponry": {
             "ammo_storage": 4.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10329,55 +10379,6 @@
         "gun": "90mm CSE"
     }
 }
-,"AMX-10RC": {
-    "description": "Armored Reconnaissance Vehicle / Wheeled Tank Destroyer",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 4.50,
-        "armor": {
-            "front": 42,
-            "back": 25,
-            "side": 42
-        },
-        "weaponry": {
-            "ammo_storage": 11.9,
-            "blowout": -1,
-            "aps": false,
-            "fcs": 1,
-            "stabilizer": false,
-            "sight": {
-                "thermal": 0,
-                "zoom_lower": 5.5,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 1.35,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 8
-                },
-                "speed": {
-                    "vertical": 10,
-                    "horizontal": 30
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "AMX-10RC [France]",
-    "paired": {
-        "hull": "AMX-10RC",
-        "gun": "105mm F2 48 Calibre"
-    }
-}
 ,"AMX CDC": {
     "description": "Vive La France",
     "tier": 5.0,
@@ -10398,6 +10399,7 @@
         "weaponry": {
             "ammo_storage": 22.1,
             "blowout": -1,
+            "clip": 1,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10447,6 +10449,7 @@
         "weaponry": {
             "ammo_storage": 13.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10496,6 +10499,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10545,6 +10549,7 @@
         "weaponry": {
             "ammo_storage": 17.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10594,6 +10599,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10643,6 +10649,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10692,6 +10699,7 @@
         "weaponry": {
             "ammo_storage": 11.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10741,6 +10749,7 @@
         "weaponry": {
             "ammo_storage": 7.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10790,6 +10799,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10839,6 +10849,7 @@
         "weaponry": {
             "ammo_storage": 5.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10888,6 +10899,7 @@
         "weaponry": {
             "ammo_storage": 1.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -10937,6 +10949,7 @@
         "weaponry": {
             "ammo_storage": 1.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -10986,6 +10999,7 @@
         "weaponry": {
             "ammo_storage": 13.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -11035,6 +11049,7 @@
         "weaponry": {
             "ammo_storage": 37.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11084,6 +11099,7 @@
         "weaponry": {
             "ammo_storage": 0.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -11113,6 +11129,56 @@
         "gun": "84mm 20pdr Type B [7] 105mm Royal"
     }
 }
+,"AMX-10RC": {
+    "description": "Armored Reconnaissance Vehicle / Wheeled Tank Destroyer",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 4.50,
+        "armor": {
+            "front": 42,
+            "back": 25,
+            "side": 42
+        },
+        "weaponry": {
+            "ammo_storage": 11.9,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": 1.5,
+            "stabilizer": false,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 5.5,
+                "zoom_upper": 10.0
+            },
+            "gun": {
+                "reload_multiplier": 1.35,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 8
+                },
+                "speed": {
+                    "vertical": 10,
+                    "horizontal": 30
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "AMX-10RC [France]",
+    "paired": {
+        "hull": "AMX-10RC",
+        "gun": "105mm F2 48 Calibre"
+    }
+}
 ,"FL-10": {
     "description": "le amx",
     "tier": 6.0,
@@ -11133,6 +11199,7 @@
         "weaponry": {
             "ammo_storage": 6.2,
             "blowout": -1,
+            "clip": 1,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11182,6 +11249,7 @@
         "weaponry": {
             "ammo_storage": 21.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11231,6 +11299,7 @@
         "weaponry": {
             "ammo_storage": 9.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11280,6 +11349,7 @@
         "weaponry": {
             "ammo_storage": 5.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11329,6 +11399,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11378,6 +11449,7 @@
         "weaponry": {
             "ammo_storage": 14.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11427,6 +11499,7 @@
         "weaponry": {
             "ammo_storage": 6.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11476,6 +11549,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11525,6 +11599,7 @@
         "weaponry": {
             "ammo_storage": 16.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11574,6 +11649,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11623,6 +11699,7 @@
         "weaponry": {
             "ammo_storage": 0.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11672,6 +11749,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11721,6 +11799,7 @@
         "weaponry": {
             "ammo_storage": 4.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -11770,6 +11849,7 @@
         "weaponry": {
             "ammo_storage": 8.8,
             "blowout": -1,
+            "clip": 1,
             "aps": false,
             "fcs": 1.2,
             "stabilizer": false,
@@ -11819,6 +11899,7 @@
         "weaponry": {
             "ammo_storage": 13.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -11835,8 +11916,8 @@
                     "down": 6
                 },
                 "speed": {
-                    "vertical": 23,
-                    "horizontal": 13.2
+                    "vertical": 13.2,
+                    "horizontal": 23
                 }
             }
         },
@@ -11868,6 +11949,7 @@
         "weaponry": {
             "ammo_storage": 15.0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 1,
             "stabilizer": true,
@@ -11917,6 +11999,7 @@
         "weaponry": {
             "ammo_storage": 31.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -11966,6 +12049,7 @@
         "weaponry": {
             "ammo_storage": 4.5,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12015,6 +12099,7 @@
         "weaponry": {
             "ammo_storage": 12.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 1,
             "stabilizer": false,
@@ -12064,6 +12149,7 @@
         "weaponry": {
             "ammo_storage": 32.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -12113,6 +12199,7 @@
         "weaponry": {
             "ammo_storage": 11.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12162,6 +12249,7 @@
         "weaponry": {
             "ammo_storage": 23,
             "blowout": -1,
+            "clip": 0,
             "aps": true,
             "fcs": 1.5,
             "stabilizer": false,
@@ -12211,6 +12299,7 @@
         "weaponry": {
             "ammo_storage": 23.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12260,6 +12349,7 @@
         "weaponry": {
             "ammo_storage": 62.5,
             "blowout": 0,
+            "clip": 0,
             "aps": false,
             "fcs": 3,
             "stabilizer": false,
@@ -12309,6 +12399,7 @@
         "weaponry": {
             "ammo_storage": 4.0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12358,6 +12449,7 @@
         "weaponry": {
             "ammo_storage": 6.2,
             "blowout": -1,
+            "clip": 1,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -12407,6 +12499,7 @@
         "weaponry": {
             "ammo_storage": 11.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12456,6 +12549,7 @@
         "weaponry": {
             "ammo_storage": 0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -12505,6 +12599,7 @@
         "weaponry": {
             "ammo_storage": 23.7,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12554,6 +12649,7 @@
         "weaponry": {
             "ammo_storage": 42.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -12603,6 +12699,7 @@
         "weaponry": {
             "ammo_storage": 24.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12652,6 +12749,7 @@
         "weaponry": {
             "ammo_storage": 9.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12701,6 +12799,7 @@
         "weaponry": {
             "ammo_storage": 24.3,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12717,8 +12816,8 @@
                     "down": 5
                 },
                 "speed": {
-                    "vertical": 11.5,
-                    "horizontal": 17.2
+                    "vertical": 17.2,
+                    "horizontal": 25.8
                 }
             }
         },
@@ -12750,6 +12849,7 @@
         "weaponry": {
             "ammo_storage": 23.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12799,6 +12899,7 @@
         "weaponry": {
             "ammo_storage": 42.4,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -12848,11 +12949,12 @@
         "weaponry": {
             "ammo_storage": 10.9,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
-            "fcs": -1,
+            "fcs": 2,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
+                "thermal": 1,
                 "zoom_lower": 3.0,
                 "zoom_upper": 8.0
             },
@@ -12897,6 +12999,7 @@
         "weaponry": {
             "ammo_storage": 12.6,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4.0,
             "stabilizer": true,
@@ -12946,6 +13049,7 @@
         "weaponry": {
             "ammo_storage": 7.0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -12995,6 +13099,7 @@
         "weaponry": {
             "ammo_storage": 38.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -13044,6 +13149,7 @@
         "weaponry": {
             "ammo_storage": 19.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -13093,6 +13199,7 @@
         "weaponry": {
             "ammo_storage": 30.3,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 2,
             "stabilizer": true,
@@ -13142,6 +13249,7 @@
         "weaponry": {
             "ammo_storage": 7.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -13191,6 +13299,7 @@
         "weaponry": {
             "ammo_storage": 42.4,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": false,
@@ -13240,6 +13349,7 @@
         "weaponry": {
             "ammo_storage": 12.3,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -13289,6 +13399,7 @@
         "weaponry": {
             "ammo_storage": 13.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -13338,6 +13449,7 @@
         "weaponry": {
             "ammo_storage": 2.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -13387,6 +13499,7 @@
         "weaponry": {
             "ammo_storage": 9.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -13436,11 +13549,12 @@
         "weaponry": {
             "ammo_storage": 25.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
-            "fcs": -1,
+            "fcs": 2,
             "stabilizer": true,
             "sight": {
-                "thermal": 1,
+                "thermal": 2,
                 "zoom_lower": 2.0,
                 "zoom_upper": 12.0
             },
@@ -13485,6 +13599,7 @@
         "weaponry": {
             "ammo_storage": 11.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -13534,6 +13649,7 @@
         "weaponry": {
             "ammo_storage": 42.0,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -13583,6 +13699,7 @@
         "weaponry": {
             "ammo_storage": 6.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 2,
             "stabilizer": true,
@@ -13632,6 +13749,7 @@
         "weaponry": {
             "ammo_storage": 37.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 1.5,
             "stabilizer": true,
@@ -13681,6 +13799,7 @@
         "weaponry": {
             "ammo_storage": 18.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 0.75,
             "stabilizer": true,
@@ -13730,6 +13849,7 @@
         "weaponry": {
             "ammo_storage": 15.2,
             "blowout": 1,
+            "clip": 0,
             "aps": true,
             "fcs": 2.5,
             "stabilizer": true,
@@ -13779,6 +13899,7 @@
         "weaponry": {
             "ammo_storage": 0.1,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 2,
             "stabilizer": false,
@@ -13828,6 +13949,7 @@
         "weaponry": {
             "ammo_storage": 20.6,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -13877,6 +13999,7 @@
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -13926,6 +14049,7 @@
         "weaponry": {
             "ammo_storage": 8.6,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 3,
             "stabilizer": true,
@@ -13975,6 +14099,7 @@
         "weaponry": {
             "ammo_storage": 24.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -14024,6 +14149,7 @@
         "weaponry": {
             "ammo_storage": 9.1,
             "blowout": 1,
+            "clip": 0,
             "aps": true,
             "fcs": 4,
             "stabilizer": true,
@@ -14073,6 +14199,7 @@
         "weaponry": {
             "ammo_storage": 25.3,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 7,
             "stabilizer": true,
@@ -14122,6 +14249,7 @@
         "weaponry": {
             "ammo_storage": 21.4,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14131,7 +14259,7 @@
                 "zoom_upper": 10.3
             },
             "gun": {
-                "reload_multiplier": 1.55,
+                "reload_multiplier": 1.62,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 10,
@@ -14171,6 +14299,7 @@
         "weaponry": {
             "ammo_storage": 17.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14220,6 +14349,7 @@
         "weaponry": {
             "ammo_storage": 40.8,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14269,6 +14399,7 @@
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 1,
             "stabilizer": true,
@@ -14318,6 +14449,7 @@
         "weaponry": {
             "ammo_storage": 27.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14367,6 +14499,7 @@
         "weaponry": {
             "ammo_storage": 17.8,
             "blowout": 1,
+            "clip": 1,
             "aps": false,
             "fcs": 2,
             "stabilizer": true,
@@ -14416,6 +14549,7 @@
         "weaponry": {
             "ammo_storage": 29.2,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14465,6 +14599,7 @@
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -14514,6 +14649,7 @@
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14563,6 +14699,7 @@
         "weaponry": {
             "ammo_storage": 71.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -14612,6 +14749,7 @@
         "weaponry": {
             "ammo_storage": 34.3,
             "blowout": 0,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14661,6 +14799,7 @@
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14710,6 +14849,7 @@
         "weaponry": {
             "ammo_storage": 18.4,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14759,6 +14899,7 @@
         "weaponry": {
             "ammo_storage": 22.7,
             "blowout": -1,
+            "clip": 1,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14808,6 +14949,7 @@
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14848,7 +14990,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 22.00,
+        "weight": 23.50,
         "armor": {
             "front": 690,
             "back": 25,
@@ -14857,6 +14999,7 @@
         "weaponry": {
             "ammo_storage": 16.4,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14866,15 +15009,15 @@
                 "zoom_upper": 13.3
             },
             "gun": {
-                "reload_multiplier": 1.62,
+                "reload_multiplier": 1.7,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 15,
                     "down": 10
                 },
                 "speed": {
-                    "vertical": 7,
-                    "horizontal": 30
+                    "vertical": 10,
+                    "horizontal": 40
                 }
             }
         },
@@ -14906,6 +15049,7 @@
         "weaponry": {
             "ammo_storage": 24.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -14955,6 +15099,7 @@
         "weaponry": {
             "ammo_storage": 17.3,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -15004,6 +15149,7 @@
         "weaponry": {
             "ammo_storage": 24.9,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -15053,6 +15199,7 @@
         "weaponry": {
             "ammo_storage": 22.2,
             "blowout": -1,
+            "clip": 0,
             "aps": true,
             "fcs": 4,
             "stabilizer": true,
@@ -15102,6 +15249,7 @@
         "weaponry": {
             "ammo_storage": 14.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 2,
             "stabilizer": true,
@@ -15151,6 +15299,7 @@
         "weaponry": {
             "ammo_storage": 33.6,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -15200,6 +15349,7 @@
         "weaponry": {
             "ammo_storage": 44.2,
             "blowout": 0,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -15249,6 +15399,7 @@
         "weaponry": {
             "ammo_storage": 20.6,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -15298,6 +15449,7 @@
         "weaponry": {
             "ammo_storage": 19.4,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -15347,6 +15499,7 @@
         "weaponry": {
             "ammo_storage": 20.8,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 4,
             "stabilizer": true,
@@ -15396,6 +15549,7 @@
         "weaponry": {
             "ammo_storage": 24,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 3,
             "stabilizer": true,
@@ -15445,6 +15599,7 @@
         "weaponry": {
             "ammo_storage": 11.4,
             "blowout": -1,
+            "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
@@ -15494,6 +15649,7 @@
         "weaponry": {
             "ammo_storage": 39.2,
             "blowout": 1,
+            "clip": 0,
             "aps": false,
             "fcs": 3,
             "stabilizer": true,
@@ -15539,6 +15695,7 @@
     "stats": {
         "weight": 0.057,
         "weaponry": {
+            "clip": 0,
             "reload": 0.13,
             "accuracy": 15,
             "ammo_volume": 0.01,
@@ -15575,6 +15732,7 @@
     "stats": {
         "weight": 0.28,
         "weaponry": {
+            "clip": 0,
             "reload": 4.22,
             "accuracy": 260,
             "ammo_volume": 0.09,
@@ -15626,6 +15784,7 @@
     "stats": {
         "weight": 0.20,
         "weaponry": {
+            "clip": 0,
             "reload": 4.6,
             "accuracy": 83,
             "ammo_volume": 0.12,
@@ -15666,6 +15825,7 @@
     "stats": {
         "weight": 0.08,
         "weaponry": {
+            "clip": 30,
             "reload": 0.2,
             "accuracy": 20,
             "ammo_volume": 0.04,
@@ -15702,6 +15862,7 @@
     "stats": {
         "weight": 0.24,
         "weaponry": {
+            "clip": 0,
             "reload": 0.22,
             "accuracy": 130,
             "ammo_volume": 0.02,
@@ -15742,6 +15903,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
+            "clip": 120,
             "reload": 0.11,
             "accuracy": 60,
             "ammo_volume": 0.01,
@@ -15778,6 +15940,7 @@
     "stats": {
         "weight": 0.27,
         "weaponry": {
+            "clip": 0,
             "reload": 3.96,
             "accuracy": 135,
             "ammo_volume": 0.08,
@@ -15814,6 +15977,7 @@
     "stats": {
         "weight": 0.23,
         "weaponry": {
+            "clip": 0,
             "reload": 3.96,
             "accuracy": 109,
             "ammo_volume": 0.12,
@@ -15854,6 +16018,7 @@
     "stats": {
         "weight": 0.23,
         "weaponry": {
+            "clip": 0,
             "reload": 3.96,
             "accuracy": 260,
             "ammo_volume": 0.12,
@@ -15905,6 +16070,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
+            "clip": 0,
             "reload": 0.20,
             "accuracy": 60,
             "ammo_volume": 0.01,
@@ -15941,6 +16107,7 @@
     "stats": {
         "weight": 0.20,
         "weaponry": {
+            "clip": 0,
             "reload": 0.03,
             "accuracy": 30,
             "ammo_volume": 0.02,
@@ -15977,6 +16144,7 @@
     "stats": {
         "weight": 1.60,
         "weaponry": {
+            "clip": 0,
             "reload": 7.4,
             "accuracy": 260,
             "ammo_volume": 1.37,
@@ -16027,6 +16195,7 @@
     "stats": {
         "weight": -1,
         "weaponry": {
+            "clip": 0,
             "reload": -1,
             "accuracy": -1,
             "ammo_volume": 16.13,
@@ -16034,8 +16203,8 @@
             "ammunition": [{
     "type": "APHE ",
     "penetration": {
-        "0":  -1,
-        "30":  -1,
+        "0":  630,
+        "30":  524,
         "60":  169
     },
     "velocity":  800,
@@ -16082,6 +16251,7 @@
     "stats": {
         "weight": 0.40,
         "weaponry": {
+            "clip": 12,
             "reload": 0.34,
             "accuracy": 52,
             "ammo_volume": 0.09,
@@ -16118,6 +16288,7 @@
     "stats": {
         "weight": 0.40,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 54,
             "ammo_volume": 0.39,
@@ -16172,6 +16343,7 @@
     "stats": {
         "weight": 0.24,
         "weaponry": {
+            "clip": 0,
             "reload": 5.5,
             "accuracy": 109,
             "ammo_volume": 0.39,
@@ -16227,6 +16399,7 @@
     "stats": {
         "weight": 0.50,
         "weaponry": {
+            "clip": 0,
             "reload": 5.5,
             "accuracy": 161,
             "ammo_volume": 0.13,
@@ -16267,6 +16440,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 161,
             "ammo_volume": 0.39,
@@ -16322,6 +16496,7 @@
     "stats": {
         "weight": 0.47,
         "weaponry": {
+            "clip": 0,
             "reload": 12.0,
             "accuracy": 52,
             "ammo_volume": 1.01,
@@ -16362,6 +16537,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 62,
             "ammo_volume": 0.84,
@@ -16416,6 +16592,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 5.5,
             "accuracy": 161,
             "ammo_volume": 0.39,
@@ -16463,6 +16640,7 @@
     "stats": {
         "weight": 0.28,
         "weaponry": {
+            "clip": 0,
             "reload": 6.4,
             "accuracy": 260,
             "ammo_volume": 0.15,
@@ -16503,6 +16681,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 4.2,
             "accuracy": 670,
             "ammo_volume": 0.21,
@@ -16554,6 +16733,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 161,
             "ammo_volume": 0.39,
@@ -16620,6 +16800,7 @@
     "stats": {
         "weight": 0.20,
         "weaponry": {
+            "clip": 0,
             "reload": 0.17,
             "accuracy": 13,
             "ammo_volume": 0.02,
@@ -16656,6 +16837,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 7.4,
             "accuracy": 161,
             "ammo_volume": 0.39,
@@ -16711,6 +16893,7 @@
     "stats": {
         "weight": 0.30,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 150,
             "ammo_volume": 0.39,
@@ -16766,6 +16949,7 @@
     "stats": {
         "weight": 0.28,
         "weaponry": {
+            "clip": 0,
             "reload": 5.0,
             "accuracy": 260,
             "ammo_volume": 0.15,
@@ -16806,6 +16990,7 @@
     "stats": {
         "weight": 0.28,
         "weaponry": {
+            "clip": 0,
             "reload": 5.5,
             "accuracy": 260,
             "ammo_volume": 0.21,
@@ -16842,6 +17027,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 161,
             "ammo_volume": 0.39,
@@ -16911,6 +17097,7 @@
     "stats": {
         "weight": 0.24,
         "weaponry": {
+            "clip": 0,
             "reload": 7.9,
             "accuracy": 260,
             "ammo_volume": 0.21,
@@ -16951,6 +17138,7 @@
     "stats": {
         "weight": 0.51,
         "weaponry": {
+            "clip": 0,
             "reload": 8.2,
             "accuracy": 161,
             "ammo_volume": 0.40,
@@ -16991,6 +17179,7 @@
     "stats": {
         "weight": 0.45,
         "weaponry": {
+            "clip": 0,
             "reload": 5.3,
             "accuracy": 260,
             "ammo_volume": 0.21,
@@ -17031,6 +17220,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 25.0,
             "accuracy": 200,
             "ammo_volume": 1.96,
@@ -17086,6 +17276,7 @@
     "stats": {
         "weight": 0.08,
         "weaponry": {
+            "clip": 30,
             "reload": 0.12,
             "accuracy": 50,
             "ammo_volume": 0.02,
@@ -17122,6 +17313,7 @@
     "stats": {
         "weight": 4.00,
         "weaponry": {
+            "clip": 0,
             "reload": 28.0,
             "accuracy": 200,
             "ammo_volume": 1.9,
@@ -17173,6 +17365,7 @@
     "stats": {
         "weight": 0.40,
         "weaponry": {
+            "clip": 0,
             "reload": 0.69,
             "accuracy": 52,
             "ammo_volume": 0.09,
@@ -17209,6 +17402,7 @@
     "stats": {
         "weight": 0.685,
         "weaponry": {
+            "clip": 0,
             "reload": 13.0,
             "accuracy": 68,
             "ammo_volume": 0.84,
@@ -17235,7 +17429,7 @@
         "30": 100,
         "60": 58
     },
-    "velocity": 495,
+    "velocity": 595,
     "ricochet_angle":  72,
     "stats": {
         "fuse_radius":  -1,
@@ -17278,6 +17472,7 @@
     "stats": {
         "weight": 1.30,
         "weaponry": {
+            "clip": 0,
             "reload": 20.0,
             "accuracy": 200,
             "ammo_volume": 1.96,
@@ -17333,6 +17528,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 9.2,
             "accuracy": 161,
             "ammo_volume": 0.39,
@@ -17369,6 +17565,7 @@
     "stats": {
         "weight": 0.80,
         "weaponry": {
+            "clip": 0,
             "reload": 11.0,
             "accuracy": 260,
             "ammo_volume": 0.56,
@@ -17409,6 +17606,7 @@
     "stats": {
         "weight": 0.41,
         "weaponry": {
+            "clip": 0,
             "reload": 8.3,
             "accuracy": 260,
             "ammo_volume": 0.59,
@@ -17463,6 +17661,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 100,
             "ammo_volume": 0.84,
@@ -17514,6 +17713,7 @@
     "stats": {
         "weight": 0.90,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 260,
             "ammo_volume": 0.52,
@@ -17554,6 +17754,7 @@
     "stats": {
         "weight": 0.352,
         "weaponry": {
+            "clip": 0,
             "reload": 10.0,
             "accuracy": 65,
             "ammo_volume": 0.84,
@@ -17623,6 +17824,7 @@
     "stats": {
         "weight": 0.657,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 195,
             "ammo_volume": 0.39,
@@ -17674,6 +17876,7 @@
     "stats": {
         "weight": 0.15,
         "weaponry": {
+            "clip": 0,
             "reload": 0.09,
             "accuracy": 260,
             "ammo_volume": 0.02,
@@ -17710,6 +17913,7 @@
     "stats": {
         "weight": 0.60,
         "weaponry": {
+            "clip": 0,
             "reload": 11.0,
             "accuracy": 138,
             "ammo_volume": 2.21,
@@ -17779,6 +17983,7 @@
     "stats": {
         "weight": 0.113,
         "weaponry": {
+            "clip": 6,
             "reload": 0.2,
             "accuracy": 80,
             "ammo_volume": 0.05,
@@ -17830,6 +18035,7 @@
     "stats": {
         "weight": 0.002,
         "weaponry": {
+            "clip": 0,
             "reload": 18.08,
             "accuracy": 260,
             "ammo_volume": 0.5,
@@ -17884,6 +18090,7 @@
     "stats": {
         "weight": 0.10,
         "weaponry": {
+            "clip": 0,
             "reload": 39.6,
             "accuracy": 260,
             "ammo_volume": 16.13,
@@ -17938,6 +18145,7 @@
     "stats": {
         "weight": 0.10,
         "weaponry": {
+            "clip": 0,
             "reload": 39.6,
             "accuracy": 260,
             "ammo_volume": 16.13,
@@ -17978,6 +18186,7 @@
     "stats": {
         "weight": 0.15,
         "weaponry": {
+            "clip": 0,
             "reload": 0.1,
             "accuracy": 260,
             "ammo_volume": 0.02,
@@ -18014,6 +18223,7 @@
     "stats": {
         "weight": 1.60,
         "weaponry": {
+            "clip": 0,
             "reload": 18.5,
             "accuracy": 112,
             "ammo_volume": 1.18,
@@ -18069,6 +18279,7 @@
     "stats": {
         "weight": 3.70,
         "weaponry": {
+            "clip": 0,
             "reload": 38.0,
             "accuracy": 260,
             "ammo_volume": 3.00,
@@ -18109,6 +18320,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 40,
             "reload": 0.20,
             "accuracy": 161,
             "ammo_volume": 0.03,
@@ -18145,6 +18357,7 @@
     "stats": {
         "weight": 0.70,
         "weaponry": {
+            "clip": 0,
             "reload": 7.1,
             "accuracy": 670,
             "ammo_volume": 0.40,
@@ -18192,6 +18405,7 @@
     "stats": {
         "weight": 0.035,
         "weaponry": {
+            "clip": 32,
             "reload": 0.3,
             "accuracy": 10,
             "ammo_volume": 0.09,
@@ -18246,6 +18460,7 @@
     "stats": {
         "weight": 2.20,
         "weaponry": {
+            "clip": 0,
             "reload": 19.2,
             "accuracy": 161,
             "ammo_volume": 1.37,
@@ -18301,6 +18516,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 10.2,
             "accuracy": 260,
             "ammo_volume": 0.39,
@@ -18341,6 +18557,7 @@
     "stats": {
         "weight": 0.70,
         "weaponry": {
+            "clip": 0,
             "reload": 12.0,
             "accuracy": 161,
             "ammo_volume": 0.87,
@@ -18396,6 +18613,7 @@
     "stats": {
         "weight": 0.70,
         "weaponry": {
+            "clip": 0,
             "reload": 4.8,
             "accuracy": 221,
             "ammo_volume": 0.23,
@@ -18436,6 +18654,7 @@
     "stats": {
         "weight": 0.50,
         "weaponry": {
+            "clip": 0,
             "reload": 19.0,
             "accuracy": 161,
             "ammo_volume": 1.96,
@@ -18505,6 +18724,7 @@
     "stats": {
         "weight": 0.90,
         "weaponry": {
+            "clip": 0,
             "reload": 8.5,
             "accuracy": 161,
             "ammo_volume": 0.59,
@@ -18556,6 +18776,7 @@
     "stats": {
         "weight": 1.30,
         "weaponry": {
+            "clip": 0,
             "reload": 10.0,
             "accuracy": 260,
             "ammo_volume": 1.18,
@@ -18610,6 +18831,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 20.0,
             "accuracy": 10000,
             "ammo_volume": 3.28,
@@ -18651,6 +18873,43 @@
         "turret": ""
     }
 }
+,"94mm 28 Pdr": {
+    "description": "What do you mean it isn't a 17pdr??!!!",
+    "tier": 6.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 47, "Steel": 26, "Aluminum": 47, "Chromium": 60},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.90,
+        "weaponry": {
+            "clip": 0,
+            "reload": 8.0,
+            "accuracy": 161,
+            "ammo_volume": 0.65,
+            "caliber:": 94,
+            "ammunition": [{
+    "type": "AP ",
+    "penetration": {
+        "0":  218,
+        "30":  285,
+        "60":  85
+    },
+    "velocity":  929,
+    "ricochet_angle":  70,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "Ordnance QF 28-Pounder [UK]",
+    "paired": {
+        "hull": "",
+        "turret": "TOG II*"
+    }
+}
 ,"165mm Demolition Charge Projector": {
     "description": "We are the Royal Engineers!",
     "tier": 6.0,
@@ -18664,6 +18923,7 @@
     "stats": {
         "weight": 1.34,
         "weaponry": {
+            "clip": 0,
             "reload": 20.0,
             "accuracy": 45,
             "ammo_volume": 2.37,
@@ -18704,6 +18964,7 @@
     "stats": {
         "weight": 0.30,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 260,
             "ammo_volume": 0.59,
@@ -18769,19 +19030,20 @@
     "stats": {
         "weight": 1.05,
         "weaponry": {
-            "reload": 11.8,
+            "clip": 0,
+            "reload": 10.5,
             "accuracy": 260,
             "ammo_volume": 0.75,
             "caliber:": 100,
             "ammunition": [{
     "type": "AP ",
     "penetration": {
-        "0":  258,
+        "0":  245,
         "30":  214,
-        "60":  61
+        "60":  88
     },
-    "velocity":  895,
-    "ricochet_angle":  63,
+    "velocity":  980,
+    "ricochet_angle":  68,
     "stats": {}
 },
 {
@@ -18791,7 +19053,7 @@
         "30":  27,
         "60":  27
     },
-    "velocity":  500,
+    "velocity":  650,
     "ricochet_angle":  80,
     "stats": {
         "explosive_mass": " 1.88kg",
@@ -18820,6 +19082,7 @@
     "stats": {
         "weight": 0.60,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 260,
             "ammo_volume": 0.59,
@@ -18885,6 +19148,7 @@
     "stats": {
         "weight": 1.28,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 260,
             "ammo_volume": 0.50,
@@ -18932,6 +19196,7 @@
     "stats": {
         "weight": 2.90,
         "weaponry": {
+            "clip": 0,
             "reload": 20.0,
             "accuracy": 90,
             "ammo_volume": 2.05,
@@ -18986,6 +19251,7 @@
     "stats": {
         "weight": 0.90,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 260,
             "ammo_volume": 0.56,
@@ -19026,6 +19292,7 @@
     "stats": {
         "weight": 0.65,
         "weaponry": {
+            "clip": 0,
             "reload": 7.5,
             "accuracy": 260,
             "ammo_volume": 0.59,
@@ -19080,6 +19347,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 0,
             "reload": 6.5,
             "accuracy": 161,
             "ammo_volume": 0.36,
@@ -19134,6 +19402,7 @@
     "stats": {
         "weight": 1.50,
         "weaponry": {
+            "clip": 0,
             "reload": 14.5,
             "accuracy": 161,
             "ammo_volume": 0.84,
@@ -19172,42 +19441,6 @@
         "turret": "T29"
     }
 }
-,"94mm 28 Pounder": {
-    "description": "What do you mean it isn't a 17pdr??!!!",
-    "tier": 7.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 47, "Steel": 26, "Aluminum": 47, "Chromium": 60},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 0.90,
-        "weaponry": {
-            "reload": 7.5,
-            "accuracy": 161,
-            "ammo_volume": 0.65,
-            "caliber:": 94,
-            "ammunition": [{
-    "type": "AP ",
-    "penetration": {
-        "0":  256,
-        "30":  214,
-        "60":  75
-    },
-    "velocity":  929,
-    "ricochet_angle":  65,
-    "stats": {}
-}]
-        }
-    },
-    "based_on": "Ordnance QF 28-Pounder [UK]",
-    "paired": {
-        "hull": "",
-        "turret": "TOG II*"
-    }
-}
 ,"ZU-23 (Twin)": {
     "description": "twin guns what!!!",
     "tier": 7.0,
@@ -19221,6 +19454,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 0.13,
             "accuracy": 23,
             "ammo_volume": 0.03,
@@ -19257,6 +19491,7 @@
     "stats": {
         "weight": 0.21,
         "weaponry": {
+            "clip": 0,
             "reload": 12.0,
             "accuracy": 260,
             "ammo_volume": 0.84,
@@ -19311,6 +19546,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 0,
             "reload": 7.0,
             "accuracy": 161,
             "ammo_volume": 0.59,
@@ -19365,6 +19601,7 @@
     "stats": {
         "weight": 1.30,
         "weaponry": {
+            "clip": 0,
             "reload": 20.5,
             "accuracy": 200,
             "ammo_volume": 1.96,
@@ -19420,6 +19657,7 @@
     "stats": {
         "weight": 0.64,
         "weaponry": {
+            "clip": 0,
             "reload": 7.0,
             "accuracy": 170,
             "ammo_volume": 0.97,
@@ -19427,9 +19665,9 @@
             "ammunition": [{
     "type": "APHE ",
     "penetration": {
-        "0":  192,
-        "30":  163,
-        "60":  77
+        "0":  227,
+        "30":  193,
+        "60":  91
     },
     "velocity":  895,
     "ricochet_angle":  71,
@@ -19474,6 +19712,7 @@
     "stats": {
         "weight": 1.80,
         "weaponry": {
+            "clip": 0,
             "reload": 5.0,
             "accuracy": 102,
             "ammo_volume": 0.84,
@@ -19525,6 +19764,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 7.0,
             "accuracy": 260,
             "ammo_volume": 0.84,
@@ -19575,6 +19815,7 @@
     "stats": {
         "weight": 5.70,
         "weaponry": {
+            "clip": 0,
             "reload": 15.0,
             "accuracy": 260,
             "ammo_volume": 1.32,
@@ -19591,7 +19832,7 @@
     "stats": {
         "fuse_sensitive":  19,
         "fuse_delay":  1.2,
-        "explosive_mass": " 109g"
+        "explosive_mass": " 150g"
     }
 }]
         }
@@ -19615,6 +19856,7 @@
     "stats": {
         "weight": 1.70,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 260,
             "ammo_volume": 0.75,
@@ -19680,6 +19922,7 @@
     "stats": {
         "weight": 2.10,
         "weaponry": {
+            "clip": 0,
             "reload": 12.0,
             "accuracy": 298,
             "ammo_volume": 1.14,
@@ -19716,6 +19959,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 0,
             "reload": 0.11,
             "accuracy": 40,
             "ammo_volume": 0.05,
@@ -19752,6 +19996,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 6.8,
             "accuracy": 200,
             "ammo_volume": 0.59,
@@ -19817,6 +20062,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 10,
             "reload": 0.35,
             "accuracy": 87,
             "ammo_volume": 0.21,
@@ -19853,6 +20099,7 @@
     "stats": {
         "weight": 0.90,
         "weaponry": {
+            "clip": 0,
             "reload": 11.0,
             "accuracy": 129,
             "ammo_volume": 0.39,
@@ -19893,6 +20140,7 @@
     "stats": {
         "weight": 2.20,
         "weaponry": {
+            "clip": 0,
             "reload": 16.0,
             "accuracy": 161,
             "ammo_volume": 1.37,
@@ -19948,6 +20196,7 @@
     "stats": {
         "weight": 0.80,
         "weaponry": {
+            "clip": 0,
             "reload": 10.0,
             "accuracy": 1000,
             "ammo_volume": 0.39,
@@ -19988,6 +20237,7 @@
     "stats": {
         "weight": 0.019,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 260,
             "ammo_volume": 1.96,
@@ -20028,6 +20278,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.3,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -20079,6 +20330,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 250,
             "ammo_volume": 0.56,
@@ -20119,6 +20371,7 @@
     "stats": {
         "weight": 5.70,
         "weaponry": {
+            "clip": 0,
             "reload": 15.0,
             "accuracy": 260,
             "ammo_volume": 1.32,
@@ -20135,7 +20388,7 @@
     "stats": {
         "fuse_sensitive":  19,
         "fuse_delay":  1.2,
-        "explosive_mass": " 109g"
+        "explosive_mass": " 150g"
     }
 }]
         }
@@ -20159,6 +20412,7 @@
     "stats": {
         "weight": 2.60,
         "weaponry": {
+            "clip": 0,
             "reload": 14.7,
             "accuracy": 260,
             "ammo_volume": 2.21,
@@ -20214,6 +20468,7 @@
     "stats": {
         "weight": 0.52,
         "weaponry": {
+            "clip": 4,
             "reload": 4.0,
             "accuracy": 161,
             "ammo_volume": 0.74,
@@ -20279,6 +20534,7 @@
     "stats": {
         "weight": 0.001,
         "weaponry": {
+            "clip": 0,
             "reload": 13.0,
             "accuracy": 260,
             "ammo_volume": 2.47,
@@ -20319,6 +20575,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 4,
             "ammo_volume": 0.08,
@@ -20370,6 +20627,7 @@
     "stats": {
         "weight": 0.23,
         "weaponry": {
+            "clip": 120,
             "reload": 0.04,
             "accuracy": 10,
             "ammo_volume": 0.07,
@@ -20406,6 +20664,7 @@
     "stats": {
         "weight": 0.10,
         "weaponry": {
+            "clip": 0,
             "reload": 0.1,
             "accuracy": 45,
             "ammo_volume": 0.02,
@@ -20442,6 +20701,7 @@
     "stats": {
         "weight": 0.70,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 161,
             "ammo_volume": 0.29,
@@ -20497,6 +20757,7 @@
     "stats": {
         "weight": 0.982,
         "weaponry": {
+            "clip": 0,
             "reload": 7.6,
             "accuracy": 232,
             "ammo_volume": 0.84,
@@ -20548,6 +20809,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 8.4,
             "accuracy": 260,
             "ammo_volume": 0.84,
@@ -20598,6 +20860,7 @@
     "stats": {
         "weight": 0.019,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 260,
             "ammo_volume": 1.96,
@@ -20638,6 +20901,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 7.8,
             "accuracy": 260,
             "ammo_volume": 1.25,
@@ -20703,6 +20967,7 @@
     "stats": {
         "weight": 1.87,
         "weaponry": {
+            "clip": 17,
             "reload": 0.4,
             "accuracy": 100,
             "ammo_volume": 0.26,
@@ -20758,6 +21023,7 @@
     "stats": {
         "weight": 1.60,
         "weaponry": {
+            "clip": 0,
             "reload": 0.34,
             "accuracy": 40,
             "ammo_volume": 0.21,
@@ -20824,6 +21090,7 @@
     "stats": {
         "weight": 2.50,
         "weaponry": {
+            "clip": 6,
             "reload": 5.5,
             "accuracy": 170,
             "ammo_volume": 0.56,
@@ -20879,6 +21146,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 161,
             "ammo_volume": 0.67,
@@ -20944,6 +21212,7 @@
     "stats": {
         "weight": 0.019,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 260,
             "ammo_volume": 1.96,
@@ -20984,12 +21253,13 @@
     "stats": {
         "weight": 0.50,
         "weaponry": {
+            "clip": 55,
             "reload": 0.14,
             "accuracy": 161,
             "ammo_volume": 0.03,
             "caliber:": 25,
             "ammunition": [{
-    "type": "APDS ",
+    "type": "APFSDS ",
     "penetration": {
         "0":  92,
         "30":  83,
@@ -21020,6 +21290,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
+            "clip": 0,
             "reload": 0.13,
             "accuracy": 60,
             "ammo_volume": 0.01,
@@ -21056,6 +21327,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 5.0,
             "accuracy": 260,
             "ammo_volume": 0.84,
@@ -21107,6 +21379,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 5.3,
             "accuracy": 260,
             "ammo_volume": 0.84,
@@ -21172,6 +21445,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 0,
             "reload": 6.4,
             "accuracy": 260,
             "ammo_volume": 0.84,
@@ -21222,6 +21496,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 10.0,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -21258,6 +21533,7 @@
     "stats": {
         "weight": 0.60,
         "weaponry": {
+            "clip": 0,
             "reload": 1.8,
             "accuracy": 200,
             "ammo_volume": 0.39,
@@ -21294,6 +21570,7 @@
     "stats": {
         "weight": 3.20,
         "weaponry": {
+            "clip": 0,
             "reload": 9.0,
             "accuracy": 260,
             "ammo_volume": 1.25,
@@ -21345,6 +21622,7 @@
     "stats": {
         "weight": 3.00,
         "weaponry": {
+            "clip": 0,
             "reload": 12.0,
             "accuracy": 1500,
             "ammo_volume": 1.96,
@@ -21411,6 +21689,7 @@
     "stats": {
         "weight": 0.60,
         "weaponry": {
+            "clip": 20,
             "reload": 0.2,
             "accuracy": 145,
             "ammo_volume": 0.09,
@@ -21462,6 +21741,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 6.7,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -21501,6 +21781,7 @@
     "stats": {
         "weight": 0.085,
         "weaponry": {
+            "clip": 0,
             "reload": 0.26,
             "accuracy": 20,
             "ammo_volume": 0.05,
@@ -21537,6 +21818,7 @@
     "stats": {
         "weight": 0.002,
         "weaponry": {
+            "clip": 0,
             "reload": 2.2,
             "accuracy": 161,
             "ammo_volume": 11.48,
@@ -21577,6 +21859,7 @@
     "stats": {
         "weight": 1.50,
         "weaponry": {
+            "clip": 0,
             "reload": 7.1,
             "accuracy": 265,
             "ammo_volume": 1.33,
@@ -21631,6 +21914,7 @@
     "stats": {
         "weight": 0.01,
         "weaponry": {
+            "clip": 0,
             "reload": 1.32,
             "accuracy": 260,
             "ammo_volume": 65.75,
@@ -21671,6 +21955,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 0,
             "reload": 6.5,
             "accuracy": 300,
             "ammo_volume": 0.84,
@@ -21736,6 +22021,7 @@
     "stats": {
         "weight": 0.60,
         "weaponry": {
+            "clip": 0,
             "reload": 6.0,
             "accuracy": 260,
             "ammo_volume": 0.75,
@@ -21791,6 +22077,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.7,
             "accuracy": 260,
             "ammo_volume": 1.25,
@@ -21871,6 +22158,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 10.0,
             "accuracy": 260,
             "ammo_volume": 1.76,
@@ -21926,6 +22214,7 @@
     "stats": {
         "weight": 2.00,
         "weaponry": {
+            "clip": 0,
             "reload": 2.0,
             "accuracy": 161,
             "ammo_volume": 0.40,
@@ -21992,6 +22281,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.8,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22043,6 +22333,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.4,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22080,6 +22371,43 @@
         "turret": "Leopard 2K [9] Type 90 [10] TKX-90 [10] Leopard 2A4"
     }
 }
+,"DRQ50": {
+    "description": "QLabs certified railgun!",
+    "tier": 11.0,
+    "rarity": "Mythical",
+    "obtain": "Monthly Reward, May 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.20,
+        "weaponry": {
+            "clip": 0,
+            "reload": 4.5,
+            "accuracy": 1000,
+            "ammo_volume": 0.15,
+            "caliber:": 50,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  374,
+        "30":  350,
+        "60":  263
+    },
+    "velocity":  3100,
+    "ricochet_angle":  80,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "None",
+        "turret": "None"
+    }
+}
 ,"49.7mm DbGPAC": {
     "description": "Supersize grenade launcher",
     "tier": 12.0,
@@ -22093,6 +22421,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 0.8,
             "accuracy": 14,
             "ammo_volume": 0.15,
@@ -22147,6 +22476,7 @@
     "stats": {
         "weight": 1.10,
         "weaponry": {
+            "clip": 0,
             "reload": 7.8,
             "accuracy": 265,
             "ammo_volume": 1.07,
@@ -22201,6 +22531,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.8,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22251,6 +22582,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.2,
             "accuracy": 260,
             "ammo_volume": 1.25,
@@ -22331,6 +22663,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 3,
             "reload": 5.0,
             "accuracy": 142,
             "ammo_volume": 0.23,
@@ -22367,6 +22700,7 @@
     "stats": {
         "weight": 4.50,
         "weaponry": {
+            "clip": 0,
             "reload": 25.0,
             "accuracy": 250,
             "ammo_volume": 3.08,
@@ -22418,6 +22752,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 70,
             "reload": 0.11,
             "accuracy": 100,
             "ammo_volume": 0.05,
@@ -22454,6 +22789,7 @@
     "stats": {
         "weight": 1.86,
         "weaponry": {
+            "clip": 0,
             "reload": 7.8,
             "accuracy": 210,
             "ammo_volume": 1.25,
@@ -22519,6 +22855,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 7.7,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22584,6 +22921,7 @@
     "stats": {
         "weight": 2.40,
         "weaponry": {
+            "clip": 0,
             "reload": 15.0,
             "accuracy": 161,
             "ammo_volume": 2.40,
@@ -22635,6 +22973,7 @@
     "stats": {
         "weight": 1.20,
         "weaponry": {
+            "clip": 0,
             "reload": 8.8,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22685,6 +23024,7 @@
     "stats": {
         "weight": 2.50,
         "weaponry": {
+            "clip": 0,
             "reload": 13.0,
             "accuracy": 1000,
             "ammo_volume": 1.14,
@@ -22721,6 +23061,7 @@
     "stats": {
         "weight": 1.00,
         "weaponry": {
+            "clip": 0,
             "reload": 8.0,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22787,6 +23128,7 @@
     "stats": {
         "weight": 4.00,
         "weaponry": {
+            "clip": 0,
             "reload": 13.5,
             "accuracy": 260,
             "ammo_volume": 1.14,
@@ -22794,7 +23136,7 @@
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  618,
+        "0":  640,
         "30":  554,
         "60":  320
     },
@@ -22837,6 +23179,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
+            "clip": 120,
             "reload": 0.05,
             "accuracy": 10,
             "ammo_volume": 0.05,
