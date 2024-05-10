@@ -297,6 +297,7 @@ function calculateStringForItem(data, type, aps_img) {
             <tr><th colspan="2" class="stat_header">Weaponry</th></tr>
             <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber}mm)</td></tr>
             <tr><th>Ammo Storage</th><td>${data.stats.weaponry.ammo_storage}</td></tr>
+            <tr><th>Clip</th><td>${data.stats.weaponry.clip == 1 ? "Yes" : "No"}</td></tr>
             <tr><th>Stabilizer</th><td>${data.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
             ${data.stats.weaponry.aps ? `<tr><th>Protection</th><td><img src="${aps_img}"></td></tr>` : ""}
@@ -330,6 +331,7 @@ function calculateStringForItem(data, type, aps_img) {
             <table>
             <tr><th colspan="2" class="stat_header">Weaponry</th></tr>
             <tr><th>Reload</th><td>${data.stats.weaponry.reload}s</td></tr>
+            <tr><th>Clip</th><td>${data.stats.weaponry.clip == 0 ? "No" : data.stats.weaponry.clip+" shots"}</td></tr>
             <tr><th>Accuracy</th><td>${data.stats.weaponry.accuracy}</td></tr>
             <tr><th>Ammo Volume</th><td>${data.stats.weaponry.ammo_volume}</td></tr>
             <tr><th>Caliber</th><td>${data.stats.weaponry["caliber:"]}mm</td></tr>

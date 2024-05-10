@@ -705,6 +705,8 @@ function calculateStringFor2Items(data1, data2, type) {
                 <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier, data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier} (${Math.round(calculateCaliberFromMultiplier(data2.stats.weaponry.gun.reload_multiplier))}mm)</td></tr>
             <tr><th>Ammo Storage</th><td>${data1.stats.weaponry.ammo_storage}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.ammo_storage, data2.stats.weaponry.ammo_storage)};">${data2.stats.weaponry.ammo_storage}</td></tr>
+            <tr><th>Clip</th><td>${data1.stats.weaponry.clip == 1 ? "Yes" : "No"}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.clip, data2.stats.weaponry.clip)};">${data2.stats.weaponry.clip == 1 ? "Yes" : "No"}</td></tr></tr>
             <tr><th>Stabilizer</th><td>${data1.stats.weaponry.stabilizer ? "Yes" : "No"}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.stabilizer, data2.stats.weaponry.stabilizer)};">${data2.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
             <tr><th>APS</th><td>${aps}</td>
@@ -852,6 +854,13 @@ function calculateStringFor2Items(data1, data2, type) {
                 <td>${data1.stats.weaponry.reload}s</td>
                 <td style="color: ${redOrGreen(data2.stats.weaponry.reload, data1.stats.weaponry.reload)};">
                     ${data2.stats.weaponry.reload}s
+                </td>
+            </tr>
+            <tr>
+                <th>Clip</th>
+                <td>${data1.stats.weaponry.clip == 0 ? "No" : data1.stats.weaponry.clip+" shots"}</td>
+                <td style="color: ${redOrGreen(data1.stats.weaponry.clip, data2.stats.weaponry.clip)};">
+                    ${data2.stats.weaponry.clip == 0 ? "No" : data2.stats.weaponry.clip+" shots"}
                 </td>
             </tr>
             <tr>
