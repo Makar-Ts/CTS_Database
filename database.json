@@ -1443,7 +1443,7 @@
         "name": ""
     },
     "stats": {
-        "weight": -1,
+        "weight": 70.0,
         "armor": {
             "front": 80,
             "back": 25,
@@ -5101,6 +5101,46 @@
         "turret": "MMWT"
     }
 }
+,"M3A3 BUSK III": {
+    "description": "B3A3 BUSK III BRAT",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 150, "Steel": 85, "Aluminum": 80, "Composite": 15},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 17.00,
+        "armor": {
+            "front": 25,
+            "back": 25,
+            "side": 25
+        },
+        "speed": {
+            "acceleration": 11,
+            "forward": 66,
+            "backward": -14,
+            "torque": 10,
+            "rate": 35
+        },
+        "weaponry": {
+            "ammo_storage": 10.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "M3A3 Bradley (BUSK III) [USA]",
+    "paired": {
+        "gun": "25mm Bushmaster",
+        "turret": "M3A3 BUSK III"
+    }
+}
 ,"XT2R Export Early": {
     "description": "Prototype Version! Armour package not yet applied.",
     "tier": 7.0,
@@ -5119,7 +5159,7 @@
             "side": 25
         },
         "speed": {
-            "acceleration": 11,
+            "acceleration": 21,
             "forward": 57,
             "backward": -25,
             "torque": 13,
@@ -5159,7 +5199,7 @@
             "side": 44
         },
         "speed": {
-            "acceleration": 21,
+            "acceleration": 10,
             "forward": 56,
             "backward": -56,
             "torque": 24,
@@ -5179,55 +5219,6 @@
     "paired": {
         "gun": "112mm HATG",
         "turret": "XTPR Expeditionary [7] Expeditionary"
-    }
-}
-,"Battlepacks Leopard": {
-    "description": "panzerkampf 103",
-    "tier": 7.0,
-    "rarity": "Epic",
-    "obtain": "Monthly Reward, April 2024",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 30.00,
-        "armor": {
-            "front": 80,
-            "back": 30,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 10,
-            "forward": 60,
-            "backward": -35,
-            "torque": 12,
-            "rate": 80
-        },
-        "weaponry": {
-            "ammo_storage": 44.4,
-            "blowout": -1,
-            "hull_aim": 2,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "reload_multiplier": 1.5,
-                "reload_multiplier_caliber": 145,
-                "limits": {
-                    "up": 15,
-                    "down": 7,
-                    "left": 3,
-                    "right": 3
-                }
-            }
-        },
-        "crew": ["Driver", "Gunner", "Commander", "Loader"]
-    },
-    "based_on": "Jagd Leopard 1 [Fake]",
-    "paired": {
-        "gun": "105mm Royal",
-        "turret": ""
     }
 }
 ,"Rooikat": {
@@ -6467,7 +6458,7 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "None",
+        "gun": "60mm 2077",
         "turret": "K15A Mirage"
     }
 }
@@ -6551,46 +6542,6 @@
         "turret": "HSTV-L"
     }
 }
-,"Ariete": {
-    "description": "The Roman empire? It's all in the pasta now.",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 35.00,
-        "armor": {
-            "front": 400,
-            "back": 25,
-            "side": 40
-        },
-        "speed": {
-            "acceleration": 8,
-            "forward": 65,
-            "backward": -47,
-            "torque": 25,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 32.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "C1 Ariete [Italy]",
-    "paired": {
-        "gun": "120mm OTO",
-        "turret": "Ariete"
-    }
-}
 ,"Merkava Mk 3": {
     "description": "No Description",
     "tier": 9.0,
@@ -6629,6 +6580,46 @@
     "paired": {
         "gun": "120mm IMI",
         "turret": "Merkava Mk 3"
+    }
+}
+,"MSC": {
+    "description": "Leclerc prototype hull, 3BR",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 300,
+            "back": 25,
+            "side": 90
+        },
+        "speed": {
+            "acceleration": 14,
+            "forward": 72,
+            "backward": -38,
+            "torque": 22,
+            "rate": 34
+        },
+        "weaponry": {
+            "ammo_storage": 6.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "MSC [France]",
+    "paired": {
+        "gun": "120mm GIAT F1",
+        "turret": "MSC"
     }
 }
 ,"B1 Centauro MK II": {
@@ -6678,8 +6669,8 @@
     "obtain": "Blueprints",
     "resources": {"Iron": 145, "Steel": 96, "Titanium": 45, "Carbon Fibre": 125, "Composite": 36, "Computer Systems": 1, "Cyberware": 4},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "hulls",
+        "name": "EXM-2AG/117"
     },
     "stats": {
         "weight": 15.00,
@@ -6691,7 +6682,7 @@
         "speed": {
             "acceleration": 18,
             "forward": 70,
-            "backward": -65,
+            "backward": -70,
             "torque": 75,
             "rate": 65
         },
@@ -6769,10 +6760,10 @@
             "side": 44
         },
         "speed": {
-            "acceleration": 12,
+            "acceleration": 15,
             "forward": 89,
             "backward": -102,
-            "torque": 26,
+            "torque": 37,
             "rate": 58
         },
         "weaponry": {
@@ -6787,7 +6778,7 @@
     },
     "based_on": "XT3R Faux [Fake]",
     "paired": {
-        "gun": "XL1K",
+        "gun": "105mm Royal [10] 105mm M68",
         "turret": "XT3R Faux LEP"
     }
 }
@@ -6802,7 +6793,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 3.00,
+        "weight": 13.00,
         "armor": {
             "front": 25,
             "back": 25,
@@ -6847,8 +6838,8 @@
     "obtain": "Joe's ShackRequires Challenger 1 [Hull]",
     "resources": {},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "hulls",
+        "name": "Challenger 1"
     },
     "stats": {
         "weight": 35.00,
@@ -7000,6 +6991,46 @@
         "turret": "Contender 1E"
     }
 }
+,"Ariete": {
+    "description": "The Roman empire? It's all in the pasta now.",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 35.00,
+        "armor": {
+            "front": 400,
+            "back": 25,
+            "side": 40
+        },
+        "speed": {
+            "acceleration": 8,
+            "forward": 65,
+            "backward": -47,
+            "torque": 25,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 32.6,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "C1 Ariete [Italy]",
+    "paired": {
+        "gun": "120mm OTO",
+        "turret": "Ariete"
+    }
+}
 ,"Cyber_Panzer": {
     "description": "CYBAAA",
     "tier": 10.0,
@@ -7011,7 +7042,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 2.40,
+        "weight": 12.40,
         "armor": {
             "front": 50,
             "back": 0,
@@ -7187,7 +7218,7 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 9.7,
+            "acceleration": 14,
             "forward": 81,
             "backward": -32,
             "torque": 350,
@@ -7260,14 +7291,14 @@
         "name": ""
     },
     "stats": {
-        "weight": 32.00,
+        "weight": 30.00,
         "armor": {
             "front": 315,
             "back": 40,
             "side": 70
         },
         "speed": {
-            "acceleration": 13,
+            "acceleration": 15,
             "forward": 80,
             "backward": -34,
             "torque": 16,
@@ -7420,14 +7451,14 @@
         "name": ""
     },
     "stats": {
-        "weight": 41.00,
+        "weight": 38.00,
         "armor": {
             "front": 315,
             "back": 40,
             "side": 70
         },
         "speed": {
-            "acceleration": 8,
+            "acceleration": 13,
             "forward": 76,
             "backward": -34,
             "torque": 14,
@@ -7441,7 +7472,7 @@
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Driver2"]
+        "crew": ["Driver"]
     },
     "based_on": "Contender 1E [Fake]",
     "paired": {
@@ -7576,8 +7607,8 @@
     "obtain": "Joe's ShackRequires Leopard 2 [Hull]",
     "resources": {},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "hulls",
+        "name": "Leopard 2"
     },
     "stats": {
         "weight": 34.00,
@@ -8223,7 +8254,7 @@
         },
         "crew": ["Commander", "Gunner"]
     },
-    "based_on": "M1 Combat Car [USA]",
+    "based_on": "T7 Combat Car [USA]",
     "paired": {
         "hull": "Speedster",
         "gun": "28mm Mosquito"
@@ -8482,7 +8513,7 @@
 ,"ELC": {
     "description": "smol",
     "tier": 2.0,
-    "rarity": "#ERROR!",
+    "rarity": "Common",
     "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
@@ -11040,7 +11071,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 10.00,
+        "weight": 5.00,
         "armor": {
             "front": 14,
             "back": 14,
@@ -12276,7 +12307,7 @@
     "based_on": "None",
     "paired": {
         "hull": "XTPR Expeditionary",
-        "gun": "None"
+        "gun": "112mm HATG"
     }
 }
 ,"T-55": {
@@ -12829,6 +12860,56 @@
         "gun": ""
     }
 }
+,"Leopard 2K": {
+    "description": "HIM",
+    "tier": 8.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 230, "Steel": 100, "Carbon Fibre": 65, "Circuitry": 5, "Cyberware": 3},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 375,
+            "back": 10,
+            "side": 80
+        },
+        "weaponry": {
+            "ammo_storage": 11.6,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 1,
+                "zoom_lower": 8.0,
+                "zoom_upper": 16.0
+            },
+            "gun": {
+                "reload_multiplier": 1.25,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 9
+                },
+                "speed": {
+                    "vertical": 9.5,
+                    "horizontal": 39
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Leopard 2 Keiler [Germany]",
+    "paired": {
+        "hull": "Leopard 2K",
+        "gun": "120mm L44"
+    }
+}
 ,"T-55AM1": {
     "description": "",
     "tier": 8.0,
@@ -13379,56 +13460,6 @@
         "gun": "120mm L11A1"
     }
 }
-,"M3 Bradley": {
-    "description": "Second to none!",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 9.00,
-        "armor": {
-            "front": 25,
-            "back": 25,
-            "side": 25
-        },
-        "weaponry": {
-            "ammo_storage": 13.8,
-            "blowout": -1,
-            "clip": 0,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 1,
-                "zoom_lower": 3.0,
-                "zoom_upper": 8.0
-            },
-            "gun": {
-                "reload_multiplier": 0.53,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 60,
-                    "down": 10
-                },
-                "speed": {
-                    "vertical": 28.6,
-                    "horizontal": 40.1
-                }
-            }
-        },
-        "crew": ["Commander", "Gunner"]
-    },
-    "based_on": "M3 Bradley [USA]",
-    "paired": {
-        "hull": "M3 Bradley",
-        "gun": "25mm Bushmaster"
-    }
-}
 ,"Merkava Mk 3": {
     "description": "",
     "tier": 9.0,
@@ -13579,25 +13610,75 @@
         "gun": "58mm Fusiler I [8] 62.7mm Fusiler II"
     }
 }
-,"Leopard 2K": {
-    "description": "HIM",
+,"M3A3 BUSK III": {
+    "description": "Fighting Vehicle, Cavalry, M3A3",
     "tier": 9.0,
     "rarity": "Legendary",
     "obtain": "Blueprints",
-    "resources": {"Iron": 230, "Steel": 100, "Carbon Fibre": 65, "Circuitry": 5, "Cyberware": 3},
+    "resources": {"Iron": 120, "Steel": 60, "Aluminum": 50, "Titanium": 15, "Stabiliser": 1, "Composite": 7, "IR Camera Module": 1, "Computer Systems": 1},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 15.00,
+        "weight": 11.00,
         "armor": {
-            "front": 375,
-            "back": 10,
-            "side": 80
+            "front": 25,
+            "back": 25,
+            "side": 25
         },
         "weaponry": {
-            "ammo_storage": 11.6,
+            "ammo_storage": 14.6,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": 3,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 2,
+                "zoom_lower": 3.0,
+                "zoom_upper": 8.0
+            },
+            "gun": {
+                "reload_multiplier": 0.53,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 60,
+                    "down": 10
+                },
+                "speed": {
+                    "vertical": 28.6,
+                    "horizontal": 40.1
+                }
+            }
+        },
+        "crew": ["Commander", "Gunner"]
+    },
+    "based_on": "M3 Bradley [USA]",
+    "paired": {
+        "hull": "M3A3 BUSK III",
+        "gun": "25mm Bushmaster"
+    }
+}
+,"M3 Bradley": {
+    "description": "Second to none!",
+    "tier": 9.0,
+    "rarity": "Epic",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 9.00,
+        "armor": {
+            "front": 25,
+            "back": 25,
+            "side": 25
+        },
+        "weaponry": {
+            "ammo_storage": 13.8,
             "blowout": -1,
             "clip": 0,
             "aps": false,
@@ -13605,28 +13686,28 @@
             "stabilizer": true,
             "sight": {
                 "thermal": 1,
-                "zoom_lower": 8.0,
-                "zoom_upper": 16.0
+                "zoom_lower": 3.0,
+                "zoom_upper": 8.0
             },
             "gun": {
-                "reload_multiplier": 1.25,
+                "reload_multiplier": 0.53,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
-                    "down": 9
+                    "up": 60,
+                    "down": 10
                 },
                 "speed": {
-                    "vertical": 9.5,
-                    "horizontal": 39
+                    "vertical": 28.6,
+                    "horizontal": 40.1
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Commander", "Gunner"]
     },
-    "based_on": "Leopard 2 Keiler [Germany]",
+    "based_on": "M3 Bradley [USA]",
     "paired": {
-        "hull": "Leopard 2K",
-        "gun": "120mm L44"
+        "hull": "M3 Bradley",
+        "gun": "25mm Bushmaster"
     }
 }
 ,"T-64A": {
@@ -13854,7 +13935,7 @@
             "fcs": 2.5,
             "stabilizer": true,
             "sight": {
-                "thermal": 2,
+                "thermal": 3,
                 "zoom_lower": 2.0,
                 "zoom_upper": 14.5
             },
@@ -13876,7 +13957,7 @@
     "based_on": "XT3R Faux [Fake]",
     "paired": {
         "hull": "XT3R Faux LEP",
-        "gun": "145mm XL1K"
+        "gun": "105mm Royal [10] 105mm M68"
     }
 }
 ,"TOS-1": {
@@ -14176,7 +14257,7 @@
     "based_on": "None",
     "paired": {
         "hull": "K15A Mirage",
-        "gun": "None"
+        "gun": "60mm 2077"
     }
 }
 ,"BMD-4": {
@@ -14329,6 +14410,56 @@
         "gun": "120mm OTO"
     }
 }
+,"Yoyota MK1X": {
+    "description": "Pancake",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Steel": 244, "Stabiliser": 1, "Circuitry": 5, "Composite": 15, "Laser Module": 2, "IR Camera Module": 2, "Computer Systems": 4, "Cyberware": 4},
+    "requires": {
+        "type": "turrets",
+        "name": "EXM-2AG/117"
+    },
+    "stats": {
+        "weight": 10.00,
+        "armor": {
+            "front": 160,
+            "back": 30,
+            "side": 40
+        },
+        "weaponry": {
+            "ammo_storage": 17.8,
+            "blowout": 1,
+            "clip": 1,
+            "aps": false,
+            "fcs": 2,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 2,
+                "zoom_lower": 3.0,
+                "zoom_upper": 48.0
+            },
+            "gun": {
+                "reload_multiplier": 1.15,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 45,
+                    "down": 5
+                },
+                "speed": {
+                    "vertical": 35.5,
+                    "horizontal": 44.7
+                }
+            }
+        },
+        "crew": ["Gunner"]
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "Yoyota MK1X",
+        "gun": "95mm MG95"
+    }
+}
 ,"T-80BV": {
     "description": "unfinished",
     "tier": 10.0,
@@ -14375,7 +14506,7 @@
     },
     "based_on": "T-80BV [Russia]",
     "paired": {
-        "hull": "T-80BV",
+        "hull": "T-80BV [10] Turtle Tank",
         "gun": "125mm 2A46M-1"
     }
 }
@@ -14429,6 +14560,56 @@
         "gun": "120mm L15"
     }
 }
+,"Black Night": {
+    "description": "A knight in shining armor! Wait..",
+    "tier": 10.0,
+    "rarity": "Mythical",
+    "obtain": "Legendary Crate Drop",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 25.00,
+        "armor": {
+            "front": 750,
+            "back": 26,
+            "side": 260
+        },
+        "weaponry": {
+            "ammo_storage": 22.2,
+            "blowout": -1,
+            "clip": 0,
+            "aps": true,
+            "fcs": 4,
+            "stabilizer": true,
+            "sight": {
+                "thermal": 2,
+                "zoom_lower": 4.0,
+                "zoom_upper": 10.0
+            },
+            "gun": {
+                "reload_multiplier": 1.34,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 9,
+                    "horizontal": 40
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Challenger 2 LEP [UK]",
+    "paired": {
+        "hull": "Black Night",
+        "gun": ""
+    }
+}
 ,"Type-96A": {
     "description": "B3",
     "tier": 10.0,
@@ -14479,54 +14660,54 @@
         "gun": "125mm 2A46M"
     }
 }
-,"Yoyota MK1X": {
-    "description": "Pancake",
+,"MSC": {
+    "description": "Leclerc prototype turret, Tourelle System Complet",
     "tier": 10.0,
     "rarity": "Legendary",
     "obtain": "Blueprints",
-    "resources": {"Steel": 244, "Stabiliser": 1, "Circuitry": 5, "Composite": 15, "Laser Module": 2, "IR Camera Module": 2, "Computer Systems": 4, "Cyberware": 4},
+    "resources": {"Iron": 200, "Steel": 80, "Aluminum": 20, "Composite": 25, "IR Camera Module": 1},
     "requires": {
-        "type": "turrets",
-        "name": "EXM-2AG/117"
+        "type": "None",
+        "name": ""
     },
     "stats": {
-        "weight": 10.00,
+        "weight": 20.00,
         "armor": {
-            "front": 160,
+            "front": 400,
             "back": 30,
-            "side": 40
+            "side": 45
         },
         "weaponry": {
-            "ammo_storage": 17.8,
+            "ammo_storage": 39.1,
             "blowout": 1,
-            "clip": 1,
+            "clip": 0,
             "aps": false,
-            "fcs": 2,
+            "fcs": 3.5,
             "stabilizer": true,
             "sight": {
                 "thermal": 1,
-                "zoom_lower": 3.0,
-                "zoom_upper": 48.0
+                "zoom_lower": 2.5,
+                "zoom_upper": 10.0
             },
             "gun": {
-                "reload_multiplier": 1.3,
+                "reload_multiplier": 1.67,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 45,
-                    "down": 5
+                    "up": 20,
+                    "down": 8
                 },
                 "speed": {
-                    "vertical": 35.5,
-                    "horizontal": 44.7
+                    "vertical": 11.5,
+                    "horizontal": 37.5
                 }
             }
         },
-        "crew": ["Gunner"]
+        "crew": ["Commander", "Gunner"]
     },
-    "based_on": "None",
+    "based_on": "MSC [France]",
     "paired": {
-        "hull": "Yoyota MK1X",
-        "gun": "95mm MG95"
+        "hull": "MSC",
+        "gun": "120mm GIAT F1"
     }
 }
 ,"TKX-90": {
@@ -14786,8 +14967,8 @@
     "obtain": "Joe's ShackRequires Challenger 1 [Turret]",
     "resources": {},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "turrets",
+        "name": "Challenger 1"
     },
     "stats": {
         "weight": 25.00,
@@ -14904,7 +15085,7 @@
             "fcs": 4,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
+                "thermal": 2,
                 "zoom_lower": 4.0,
                 "zoom_upper": 8.0
             },
@@ -15136,8 +15317,8 @@
     "obtain": "Blueprints",
     "resources": {"Iron": 150, "Steel": 70, "Aluminum": 132, "Titanium": 5, "Stabiliser": 1, "Circuitry": 20, "Composite": 30, "Laser Module": 2, "Camera Module": 2, "Computer Systems": 1, "IR Camera Module": 1, "Cyberware": 1},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "turrets",
+        "name": "T-72A"
     },
     "stats": {
         "weight": 14.20,
@@ -15176,56 +15357,6 @@
     "based_on": "T-90A [Russia]",
     "paired": {
         "hull": "T-72B3",
-        "gun": ""
-    }
-}
-,"Black Night": {
-    "description": "A knight in shining armor! Wait..",
-    "tier": 11.0,
-    "rarity": "Mythical",
-    "obtain": "Legendary Crate Drop",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 25.00,
-        "armor": {
-            "front": 750,
-            "back": 26,
-            "side": 260
-        },
-        "weaponry": {
-            "ammo_storage": 22.2,
-            "blowout": -1,
-            "clip": 0,
-            "aps": true,
-            "fcs": 4,
-            "stabilizer": true,
-            "sight": {
-                "thermal": 2,
-                "zoom_lower": 4.0,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 1.34,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 12
-                },
-                "speed": {
-                    "vertical": 9,
-                    "horizontal": 40
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "Challenger 2 LEP [UK]",
-    "paired": {
-        "hull": "Black Night",
         "gun": ""
     }
 }
@@ -15304,7 +15435,7 @@
             "fcs": 4,
             "stabilizer": true,
             "sight": {
-                "thermal": 0,
+                "thermal": 3,
                 "zoom_lower": 3.0,
                 "zoom_upper": 16.0
             },
@@ -15336,8 +15467,8 @@
     "obtain": "Joe's ShackRequires T-90A [Turret]",
     "resources": {},
     "requires": {
-        "type": "None",
-        "name": ""
+        "type": "turrets",
+        "name": "T-90A"
     },
     "stats": {
         "weight": 13.20,
@@ -17429,7 +17560,7 @@
         "30": 100,
         "60": 58
     },
-    "velocity": 595,
+    "velocity": 495,
     "ricochet_angle":  72,
     "stats": {
         "fuse_radius":  -1,
@@ -17901,7 +18032,7 @@
     }
 }
 ,"160mm Rigatoni": {
-    "description": "Comes with an early ATGM!",
+    "description": "Blonk!",
     "tier": 5.0,
     "rarity": "Rare",
     "obtain": "Blueprints",
@@ -18287,9 +18418,9 @@
             "ammunition": [{
     "type": "HESH ",
     "penetration": {
-        "0":  240,
-        "30":  240,
-        "60":  240
+        "0":  340,
+        "30":  340,
+        "60":  340
     },
     "velocity":  716,
     "ricochet_angle":  80,
@@ -18341,7 +18472,7 @@
     "based_on": "M242 Bushmaster [USA]",
     "paired": {
         "hull": "",
-        "turret": "LAV-25 [5] M3 Bradley"
+        "turret": "LAV-25 [5] M3 Bradley [8] M3A3 BUSK III"
     }
 }
 ,"77mm HV": {
@@ -18406,7 +18537,7 @@
         "weight": 0.035,
         "weaponry": {
             "clip": 32,
-            "reload": 0.3,
+            "reload": 0.8,
             "accuracy": 10,
             "ammo_volume": 0.09,
             "caliber:": 40,
@@ -19959,7 +20090,7 @@
     "stats": {
         "weight": 0.33,
         "weaponry": {
-            "clip": 0,
+            "clip": 30,
             "reload": 0.11,
             "accuracy": 40,
             "ammo_volume": 0.05,
@@ -20575,7 +20706,7 @@
     "stats": {
         "weight": 0.12,
         "weaponry": {
-            "clip": 0,
+            "clip": 10,
             "reload": 6.0,
             "accuracy": 4,
             "ammo_volume": 0.08,
@@ -21147,7 +21278,7 @@
         "weight": 1.00,
         "weaponry": {
             "clip": 0,
-            "reload": 6.0,
+            "reload": 6.4,
             "accuracy": 161,
             "ammo_volume": 0.67,
             "caliber:": 95,
@@ -21362,8 +21493,8 @@
     },
     "based_on": "Royal Ordnance L7A1 [UK]",
     "paired": {
-        "hull": "Taifun II [6] Battlepacks Leopard [7] Cyber_Panzer",
-        "turret": "Centurion Mk3 [6] Type 74 [7] M48 Super"
+        "hull": "Taifun II [6] Battlepacks Leopard[7] Cyber_Panzer",
+        "turret": "Centurion Mk3 [6] Type 74 [7] M48 Super [7] XT3R Faux LEP"
     }
 }
 ,"105mm M68": {
@@ -21429,7 +21560,7 @@
     "based_on": "M68A1 [USA]",
     "paired": {
         "hull": "",
-        "turret": "M1 [10] M1 Merry Chrysler [10] M1 Special"
+        "turret": "XT3R Faux LEP [9] M1 [10] M1 Merry Chrysler [10] M1 Special"
     }
 }
 ,"105mm GT-7": {
@@ -21497,7 +21628,7 @@
         "weight": 1.20,
         "weaponry": {
             "clip": 0,
-            "reload": 10.0,
+            "reload": 7.0,
             "accuracy": 260,
             "ammo_volume": 1.14,
             "caliber:": 120,
@@ -21534,7 +21665,7 @@
         "weight": 0.60,
         "weaponry": {
             "clip": 0,
-            "reload": 1.8,
+            "reload": 2.2,
             "accuracy": 200,
             "ammo_volume": 0.39,
             "caliber:": 75,
@@ -21726,6 +21857,43 @@
     "paired": {
         "hull": "",
         "turret": "Strf 90"
+    }
+}
+,"120mm GIAT F1": {
+    "description": "GYAT",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 140, "Steel": 80, "Aluminum": 100, "Titanium": 3, "Chromium": 40},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "clip": 0,
+            "reload": 7.50,
+            "accuracy": 230,
+            "ammo_volume": 1.14,
+            "caliber:": 120,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  390,
+        "30":  365,
+        "60":  275
+    },
+    "velocity":  1650,
+    "ricochet_angle":  80,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "GIAT CN120-26 [France]",
+    "paired": {
+        "hull": "",
+        "turret": "MSC"
     }
 }
 ,"120mm Eagle": {
@@ -22008,6 +22176,61 @@
         "turret": "MMWT"
     }
 }
+,"49.7mm DbGPAC": {
+    "description": "Supersize grenade launcher",
+    "tier": 11.0,
+    "rarity": "Mythical",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.10,
+        "weaponry": {
+            "clip": 0,
+            "reload": 0.8,
+            "accuracy": 14,
+            "ammo_volume": 0.15,
+            "caliber:": 49.7,
+            "ammunition": [{
+    "type": "HEATFS (Tandem)",
+    "penetration": {
+        "0":  175,
+        "30":  152,
+        "60":  88
+    },
+    "velocity":  750,
+    "ricochet_angle":  85,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE (PF)",
+    "penetration": {
+        "0":  55,
+        "30":  55,
+        "60":  55
+    },
+    "velocity":  460,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 320g",
+        "fuse_radius":  4,
+        "arming_distance":  500
+    }
+}]
+        }
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "",
+        "turret": "EXM-SFSTC"
+    }
+}
 ,"100mm 2A70": {
     "description": "Fires 3UOF19-1",
     "tier": 11.0,
@@ -22198,7 +22421,7 @@
     "based_on": "None",
     "paired": {
         "hull": "",
-        "turret": "XT3R Faux [8] XT3R Faux LEP"
+        "turret": "XT3R Faux"
     }
 }
 ,"76mm Oto": {
@@ -22368,7 +22591,7 @@
     "based_on": "Rheinmetall RH-120 L/44 [Germany]",
     "paired": {
         "hull": "",
-        "turret": "Leopard 2K [9] Type 90 [10] TKX-90 [10] Leopard 2A4"
+        "turret": "Leopard 2K [8] Type 90 [10] TKX-90 [10] Leopard 2A4"
     }
 }
 ,"DRQ50": {
@@ -22384,7 +22607,7 @@
     "stats": {
         "weight": 0.20,
         "weaponry": {
-            "clip": 0,
+            "clip": 2,
             "reload": 4.5,
             "accuracy": 1000,
             "ammo_volume": 0.15,
@@ -22408,61 +22631,6 @@
         "turret": "None"
     }
 }
-,"49.7mm DbGPAC": {
-    "description": "Supersize grenade launcher",
-    "tier": 12.0,
-    "rarity": "Mythical",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 1.10,
-        "weaponry": {
-            "clip": 0,
-            "reload": 0.8,
-            "accuracy": 14,
-            "ammo_volume": 0.15,
-            "caliber:": 49.7,
-            "ammunition": [{
-    "type": "HEATFS (Tandem)",
-    "penetration": {
-        "0":  175,
-        "30":  152,
-        "60":  88
-    },
-    "velocity":  750,
-    "ricochet_angle":  85,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-},
-{
-    "type": "HE (PF)",
-    "penetration": {
-        "0":  55,
-        "30":  55,
-        "60":  55
-    },
-    "velocity":  460,
-    "ricochet_angle":  80,
-    "stats": {
-        "explosive_mass": " 320g",
-        "fuse_radius":  4,
-        "arming_distance":  175
-    }
-}]
-        }
-    },
-    "based_on": "None",
-    "paired": {
-        "hull": "",
-        "turret": "EXM-SFSTC"
-    }
-}
 ,"117mm Betwixt": {
     "description": "Not for the HEAT of battle.",
     "tier": 12.0,
@@ -22477,16 +22645,16 @@
         "weight": 1.10,
         "weaponry": {
             "clip": 0,
-            "reload": 7.8,
+            "reload": 7.7,
             "accuracy": 265,
             "ammo_volume": 1.07,
             "caliber:": 117,
             "ammunition": [{
     "type": "HEATFS (Tndm/PF)",
     "penetration": {
-        "0":  750,
-        "30":  650,
-        "60":  375
+        "0":  850,
+        "30":  736,
+        "60":  425
     },
     "velocity":  1880,
     "ricochet_angle":  78,
@@ -22684,7 +22852,7 @@
     "based_on": "None",
     "paired": {
         "hull": "",
-        "turret": "Future"
+        "turret": "K15A Mirage [10] Future"
     }
 }
 ,"185mm Uhistory Mk. 1": {
@@ -22929,13 +23097,28 @@
             "ammunition": [{
     "type": "APFSDS (A-ERA)",
     "penetration": {
-        "0":  650,
-        "30":  607,
+        "0":  880,
+        "30":  792,
         "60":  452
     },
     "velocity":  1850,
     "ricochet_angle":  80,
     "stats": {}
+},
+{
+    "type": "HESH ",
+    "penetration": {
+        "0":  260,
+        "30":  260,
+        "60":  260
+    },
+    "velocity":  266,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 23.82kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 },
 {
     "type": "HE (PF)",

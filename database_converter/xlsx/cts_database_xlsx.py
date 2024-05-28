@@ -39,12 +39,12 @@ def obtain_parcing(obtain):
     requires_module_type = "None"
     requires_module_name = ""
     
-    if "Requires" in obtain_str_prev[0]:
-        dnb = obtain_str_prev[0].replace("Requires ", "").split("[")
+    if len(arr) > 0 and "Requires" in arr[0]:
+        dnb = arr[0].replace("Requires ", "").split(" [")
         requires_module_type = dnb[1].replace("]", "").lower()+"s"
-        requires_module_name = dnb[2]
+        requires_module_name = dnb[0]
         
-        obtain_str_prev = obtain_str_prev[1:]
+        arr = arr[1:]
 
     requires = [requires_module_type, requires_module_name]
 
@@ -58,6 +58,8 @@ def obtain_parcing(obtain):
     else: # Joe Shack or Monthly reward
         obtain_str = obtain_str_prev+add_obtain
         resources = "{}"
+        
+    print(obtain_str, resources, requires, "|", obtain_str_prev)
     
     return obtain_str, resources, requires
 
