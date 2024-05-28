@@ -211,6 +211,8 @@ function setSearchOutput(hull, type, data) {
     if (data.requires.type === "None") {
         $("#requires").closest('tr').hide();
     } else {
+        $("#requires").closest('tr').show();
+
         $("#requires").html(`<a href="${window.location.origin+window.location.pathname}?type=${data.requires.type}&name=${data.requires.name}">${data.requires.name}</a>`)
     }
     
