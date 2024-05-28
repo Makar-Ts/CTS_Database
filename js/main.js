@@ -84,7 +84,7 @@ $(document).ready(function() {
             var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
 
             if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
-                str += `<tr class="search_result_item" data-item="${key}" data-type="hulls"><td>Hull: &nbsp;&nbsp;${key}</td></tr>`
+                str += `<tr class="search_result_item" data-item="${key.replace(/\"/g, "&quot;")}" data-type="hulls"><td>Hull: &nbsp;&nbsp;${key}</td></tr>`
                 count--;
             }
 
@@ -97,7 +97,7 @@ $(document).ready(function() {
             var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
 
             if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
-                str += `<tr class="search_result_item" data-item="${key}" data-type="turrets"><td>Turret: ${key}</td></tr>`
+                str += `<tr class="search_result_item" data-item="${key.replace(/\"/g, "&quot;")}" data-type="turrets"><td>Turret: ${key}</td></tr>`
                 count--;
             }
 
@@ -110,7 +110,7 @@ $(document).ready(function() {
             var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
 
             if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
-                str += `<tr class="search_result_item" data-item="${key}" data-type="guns"><td>Gun: &nbsp;&nbsp;&nbsp;${key}</td></tr>`
+                str += `<tr class="search_result_item" data-item="${key.replace(/\"/g, "{quot")}" data-type="guns"><td>Gun: &nbsp;&nbsp;&nbsp;${key}</td></tr>`
                 count--;
             }
 
