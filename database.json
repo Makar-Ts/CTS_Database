@@ -7580,7 +7580,7 @@
         "speed": {
             "acceleration": 10,
             "forward": 60,
-            "backward": -15,
+            "backward": -4,
             "torque": 34,
             "rate": 35
         },
