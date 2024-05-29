@@ -118,7 +118,7 @@ const filter_templates = {
 
                 return false;
             }},
-        {"path": "stats.weaponry.ammunition#EM",   "name": "Ammo Explosive Mass", "getval": (obj) => obj.val(), "type": "number", 
+        {"path": "stats.weaponry.ammunition#EM",   "name": "Ammo Explosive Mass (kg)", "getval": (obj) => obj.val(), "type": "number", 
             "compare": function(data, val, sign) {
                 for (let index = 0; index < data.length; index++) {
                     if (!data[index].stats.explosive_mass) continue;
@@ -131,7 +131,7 @@ const filter_templates = {
 
                 return false;
             }},
-        {"path": "stats.weaponry.ammunition#FS",   "name": "Ammo Fuse Sensitive", "getval": (obj) => obj.val(), "type": "number", 
+        {"path": "stats.weaponry.ammunition#FS",   "name": "Ammo Fuse Sensitive (mm)", "getval": (obj) => obj.val(), "type": "number", 
             "compare": function(data, val, sign) {
                 for (let index = 0; index < data.length; index++) {
                     if (!data[index].stats.fuse_sensitive) continue;
@@ -143,7 +143,7 @@ const filter_templates = {
 
                 return false;
             }},
-        {"path": "stats.weaponry.ammunition#FD",   "name": "Ammo Fuse Delay", "getval": (obj) => obj.val(), "type": "number", 
+        {"path": "stats.weaponry.ammunition#FD",   "name": "Ammo Fuse Delay (m)", "getval": (obj) => obj.val(), "type": "number", 
             "compare": function(data, val, sign) {
                 for (let index = 0; index < data.length; index++) {
                     if (!data[index].stats.fuse_delay) continue;
@@ -155,7 +155,7 @@ const filter_templates = {
 
                 return false;
             }},
-        {"path": "stats.weaponry.ammunition#AD",   "name": "Ammo Arming Distance", "getval": (obj) => obj.val(), "type": "number", 
+        {"path": "stats.weaponry.ammunition#AD",   "name": "Ammo Arming Distance (m)", "getval": (obj) => obj.val(), "type": "number", 
             "compare": function(data, val, sign) {
                 for (let index = 0; index < data.length; index++) {
                     if (!data[index].stats.arming_distance || data[index].stats.arming_distance == -1) continue;
@@ -167,7 +167,7 @@ const filter_templates = {
 
                 return false;
             }},
-        {"path": "stats.weaponry.ammunition#FR",   "name": "Ammo Fuse Radius", "getval": (obj) => obj.val(), "type": "number", 
+        {"path": "stats.weaponry.ammunition#FR",   "name": "Ammo Fuse Radius (m)", "getval": (obj) => obj.val(), "type": "number", 
             "compare": function(data, val, sign) {
                 for (let index = 0; index < data.length; index++) {
                     if (!data[index].stats.fuse_radius || data[index].stats.fuse_radius == -1) continue;
@@ -179,7 +179,7 @@ const filter_templates = {
 
                 return false;
             }},
-        {"path": "stats.weaponry.ammunition#rng",  "name": "Ammo Range", "getval": (obj) => obj.val(), "type": "number", 
+        {"path": "stats.weaponry.ammunition#rng",  "name": "Ammo Range (km)", "getval": (obj) => obj.val(), "type": "number", 
             "compare": function(data, val, sign) {
                 for (let index = 0; index < data.length; index++) {
                     if (!data[index].stats.range) continue;
