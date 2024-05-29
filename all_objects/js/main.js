@@ -5,8 +5,28 @@ var database;
 var item_html;
 detectColorScheme();
 
-filter_templates = {
-    "hulls": [
+function compareByString(first, sign, second) {
+    switch (sign) {
+        case "==":
+            return first == second;
+        case "!=":
+            return first != second;
+        case ">=":
+            return first >= second;
+        case "<=":
+            return first <= second;
+        case ">":
+            return first > second;
+        case "<":
+            return first < second;
+        default:
+            console.log(sign);
+            return false;
+    }
+}
+
+const filter_templates = {
+    "general": [
         {"path": "tier",                        "name": "Tier",             "getval": (obj) => obj.val(), "type": "number"},
         {"path": "rarity",                      "name": "Rarity",           "getval": (obj) => obj.val(), "type": "select", "options": {"Common": "Common", "Uncommon":"Uncommon", 
                                                                                            "Rare": "Rare", "Epic": "Epic",
@@ -17,6 +37,8 @@ filter_templates = {
                                                                                                                                         "Unobtainable": "Unobtainable"},
                                                                                                           "compare": (data, val) => data.includes(val)},
         {"path": "stats.weight",                "name": "Weight",           "getval": (obj) => obj.val(), "type": "number"},
+    ],
+    "hulls": [
         {"path": "stats.speed.acceleration",    "name": "Acceleration",     "getval": (obj) => obj.val(), "type": "number"},
         {"path": "stats.speed.forward",         "name": "Forward Speed",    "getval": (obj) => obj.val(), "type": "number"},
         {"path": "stats.speed.backward",        "name": "Backward Speed",   "getval": (obj) => obj.val(), "type": "number"},
@@ -31,16 +53,6 @@ filter_templates = {
         {"path": "stats.weaponry.have_gun",     "name": "Turretless",       "getval": (obj) => obj.is( ':checked' ), "type": "checkbox"},
     ],
     "turrets": [
-        {"path": "tier",                                    "name": "Tier",                 "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "rarity",                      "name": "Rarity",           "getval": (obj) => obj.val(), "type": "select", "options": {"Common": "Common", "Uncommon":"Uncommon", 
-                                                                                           "Rare": "Rare", "Epic": "Epic",
-                                                                                            "Legendary": "Legendary", "Mythical": "Mythical"},
-                                                                                                          "compare": (data, val) => data == val},
-        {"path": "obtain",                      "name": "Obtain",           "getval": (obj) => obj.val(), "type": "select", "options": {"Joe's Shack": "Joe's Shack", 
-                                                                                                                                        "Blueprints": "Blueprints", 
-                                                                                                                                        "Unobtainable": "Unobtainable"},
-                                                                                                          "compare": (data, val) => data.includes(val)},
-        {"path": "stats.weight",                            "name": "Weight",               "getval": (obj) => obj.val(), "type": "number"},
         {"path": "stats.weaponry.ammo_storage",             "name": "Ammo Storage",         "getval": (obj) => obj.val(), "type": "number"},
         {"path": "stats.weaponry.clip",                     "name": "Clip",                 "getval": (obj) => obj.is( ':checked' ), "type": "checkbox"},
         {"path": "stats.weaponry.blowout",      "name": "Blowout",          "getval": (obj) => obj.val(), "type": "select", "options": {"-1":"None", "0":"Partial", "1":"Yes"},
@@ -58,24 +70,14 @@ filter_templates = {
         {"path": "stats.weaponry.gun.speed.horizontal",     "name": "Horizontal Speed",     "getval": (obj) => obj.val(), "type": "number"},
     ],
     "guns": [
-        {"path": "tier",                        "name": "Tier",         "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "rarity",                      "name": "Rarity",           "getval": (obj) => obj.val(), "type": "select", "options": {"Common": "Common", "Uncommon":"Uncommon", 
-                                                                                           "Rare": "Rare", "Epic": "Epic",
-                                                                                            "Legendary": "Legendary", "Mythical": "Mythical"},
-                                                                                                          "compare": (data, val) => data == val},
-        {"path": "obtain",                      "name": "Obtain",           "getval": (obj) => obj.val(), "type": "select", "options": {"Joe's Shack": "Joe's Shack", 
-                                                                                                                                        "Blueprints": "Blueprints", 
-                                                                                                                                        "Unobtainable": "Unobtainable"},
-                                                                                                          "compare": (data, val) => data.includes(val)},
-        {"path": "stats.weight",                "name": "Weight",       "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "stats.weaponry.reload",       "name": "Reload",       "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "stats.weaponry.clip",         "name": "Clip",         "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "stats.weaponry.accuracy",     "name": "Accuracy",     "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "stats.weaponry.ammo_volume",  "name": "Ammo Volume",  "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "stats.weaponry.caliber:",     "name": "Caliber",      "getval": (obj) => obj.val(), "type": "number"},
-        {"path": "stats.weaponry.ammunition",   "name": "Ammo Type",    "getval": (obj) => obj.val(), "type": "select", "options": {"AP": "AP", "APHE": "APHE", "APDS": "APDS", "APFSDS": "APFSDS",
+        {"path": "stats.weaponry.reload",           "name": "Reload",       "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.clip",             "name": "Clip",         "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.accuracy",         "name": "Accuracy",     "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.ammo_volume",      "name": "Ammo Volume",  "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.caliber:",         "name": "Caliber",      "getval": (obj) => obj.val(), "type": "number"},
+        {"path": "stats.weaponry.ammunition#type",  "name": "Ammo Type",    "getval": (obj) => obj.val(), "type": "select", "options": {"AP": "AP", "APHE": "APHE", "APDS": "APDS", "APFSDS": "APFSDS",
                                                                                                                                     "HEAT": "HEAT", "ATGM": "ATGM", "HE": "HE", "HESH": "HESH"}, 
-                                                                                                       "compare": function(data, val) {
+                                                                                                       "compare": function(data, val, sign) {
                                                                                                             val_form = val;
 
                                                                                                             for (let index = 0; index < data.length; index++){
@@ -85,9 +87,114 @@ filter_templates = {
                                                                                                             }
 
                                                                                                             return false;
-                                                                                                        }}
+                                                                                                        }},
+        {"path": "stats.weaponry.ammunition#pen",   "name": "Ammo Pen.",    "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++){
+                    one = data[index].penetration["0"];
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#vel",   "name": "Ammo Velocity","getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++){
+                    one = data[index].velocity;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#RA",   "name": "Ammo Ricochet Angle", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    one = data[index].ricochet_angle;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#EM",   "name": "Ammo Explosive Mass", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    if (!data[index].stats.explosive_mass) continue;
+
+                    one = +data[index].stats.explosive_mass.replace("kg", "").replace("g", "");
+                    if (!data[index].stats.explosive_mass.includes("kg")) one = one / 1000
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#FS",   "name": "Ammo Fuse Sensitive", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    if (!data[index].stats.fuse_sensitive) continue;
+
+                    one = data[index].stats.fuse_sensitive;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#FD",   "name": "Ammo Fuse Delay", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    if (!data[index].stats.fuse_delay) continue;
+
+                    one = data[index].stats.fuse_delay;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#AD",   "name": "Ammo Arming Distance", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    if (!data[index].stats.arming_distance || data[index].stats.arming_distance == -1) continue;
+
+                    one = data[index].stats.arming_distance;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#FR",   "name": "Ammo Fuse Radius", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    if (!data[index].stats.fuse_radius || data[index].stats.fuse_radius == -1) continue;
+
+                    one = data[index].stats.fuse_radius;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
+        {"path": "stats.weaponry.ammunition#rng",  "name": "Ammo Range", "getval": (obj) => obj.val(), "type": "number", 
+            "compare": function(data, val, sign) {
+                for (let index = 0; index < data.length; index++) {
+                    if (!data[index].stats.range) continue;
+
+                    one = data[index].stats.range;
+
+                    if (compareByString(one, sign, val)) return true;
+                }
+
+                return false;
+            }},
     ]
-}
+};
+
+added_filters = [];
 
 filter_item_template = `<div class="filter_item" id="{id}">
 <select id="option" class="type_search_select filter_item_option">
@@ -201,6 +308,9 @@ $(document).ready(function() {
 
     $("#filter_container").on('change', 'select.filter_item_option#option', function() {
         temp = filter_templates[$("#type").val()].find(x => x["path"] == $(this).val())
+        if (!temp) {
+            temp = filter_templates["general"].find(x => x["path"] == $(this).val())
+        }
 
         if (temp["type"] == "number" | temp["type"] == "checkbox") {
             $(this).parent().find("input#value").show();
@@ -227,6 +337,12 @@ $(document).ready(function() {
 
     $('#button_add').click(function(e) {
         options = "";
+
+        for (let index = 0; index < filter_templates["general"].length; index++) {
+            const element = filter_templates["general"][index];
+            
+            options += `<option value="${element["path"]}">${element["name"]}</option>`;
+        }
 
         for (let index = 0; index < filter_templates[$("#type").val()].length; index++) {
             const element = filter_templates[$("#type").val()][index];
@@ -259,12 +375,11 @@ $(document).ready(function() {
             const filter = $(`#filter_container #filter_item_${index+1}`);
 
             temp = filter_templates[$("#type").val()].find(x => x["path"] == filter.find('#option').val())
-            
-            if (temp["type"] === "select") {
-                filters.push([filter.find('#option').val(), filter.find('#calc').val(), temp["getval"](filter.find('#value:visible')), temp["compare"]])
-            } else {
-                filters.push([filter.find('#option').val(), filter.find('#calc').val(), temp["getval"](filter.find('#value:visible'))])
+            if (!temp) {
+                temp = filter_templates["general"].find(x => x["path"] == filter.find('#option').val())
             }
+
+            filters.push([filter.find('#option').val().split("#")[0], filter.find('#calc').val(), temp["getval"](filter.find('#value:visible')), temp["compare"]])
             console.log(filters[filters.length-1]); 
         }
 
@@ -273,33 +388,12 @@ $(document).ready(function() {
 
             filters.forEach(element => {
                 if (element[3] !== undefined) {
-                    fit_in_filter = fit_in_filter && element[3](getDataByString(database[type][key], element[0]), element[2]);
+                    fit_in_filter = fit_in_filter && element[3](getDataByString(database[type][key], element[0]), element[2], element[1]);
                     return;
                 }
 
-                switch (element[1]) {
-                    case "==":
-                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) == element[2];
-                        break;
-                    case "!=":
-                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0])!= element[2];
-                        break;
-                    case ">=":
-                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) >= element[2];
-                        break;
-                    case "<=":
-                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) <= element[2];
-                        break;
-                    case ">":
-                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) > element[2];
-                        break;
-                    case "<":
-                        fit_in_filter = fit_in_filter && getDataByString(database[type][key], element[0]) < element[2];
-                        break;
-                    default:
-                        console.log(element[1]);
-                        break;
-                }
+                fit_in_filter = fit_in_filter && compareByString(getDataByString(database[type][key], element[0]), element[1], element[2]);
+                
             });
 
             if (fit_in_filter) {
