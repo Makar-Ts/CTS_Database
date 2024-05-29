@@ -358,8 +358,6 @@ function sendToDiscordWebhook(data, webhookURL) {
     let decodedWebhookURL = atob(webhookURL);
     let xhr = new XMLHttpRequest();
 
-    console.log(decodedWebhookURL.toString())
-
     xhr.open("POST", decodedWebhookURL, true);
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function () {

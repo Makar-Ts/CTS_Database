@@ -5039,7 +5039,7 @@
             "side": 13
         },
         "speed": {
-            "acceleration": 12,
+            "acceleration": 7,
             "forward": 110,
             "backward": -52,
             "torque": 9,
