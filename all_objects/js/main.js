@@ -34,7 +34,9 @@ const filter_templates = {
                                                                                                           "compare": (data, val) => data == val },
         {"path": "obtain",                      "name": "Obtain",           "getval": (obj) => obj.val(), "type": "select", "options": {"Joe's Shack": "Joe's Shack", 
                                                                                                                                         "Blueprints": "Blueprints", 
-                                                                                                                                        "Unobtainable": "Unobtainable"},
+                                                                                                                                        "Unobtainable": "Unobtainable",
+                                                                                                                                        "Monthly Reward": "Reward",
+                                                                                                                                        "Incidents": "Incident"},
                                                                                                           "compare": (data, val) => data.includes(val)},
         {"path": "stats.weight",                "name": "Weight",           "getval": (obj) => obj.val(), "type": "number"},
     ],
@@ -403,7 +405,7 @@ $(document).ready(function() {
 
                 counter++;
 
-                if (counter >= 30) {
+                if (counter >= 45) {
                     break;
                 }
             }
