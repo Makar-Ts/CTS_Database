@@ -1,20 +1,25 @@
+import time
+
+DATABASE_NAME = input()
+start_time = time.time()
+
 from openpyxl import load_workbook
 import csv, sys, os.path
 import re
 import codecs
-import time
 
-start_time = time.time()
+
 
 parent_dir = os.path.dirname(os.path.realpath(__file__ + "/../"))
 sys.path.append(parent_dir)
 import modules_templates as templates
 
 HULLS_OFFSET = 1    #Index offset
-TURRETS_OFFSET = 23
-GUNS_OFFSET = 44
+TURRETS_OFFSET = 28
+GUNS_OFFSET = 50
+SEC_OFFSET = 69
 
-DATABASE_NAME = input()
+
 DATABASE_PATH = os.path.join(sys.path[0], DATABASE_NAME)
 JSON_PATH = os.path.join(sys.path[0], "database.json")
 
@@ -26,6 +31,7 @@ ws = wb['Raw Data']
 hulls_string = ""
 turrets_string = ""
 guns_string = ""
+sec_string = ""
 
 def obtain_parcing(obtain):
     add_obtain = ""
@@ -51,6 +57,9 @@ def obtain_parcing(obtain):
     if "Offsale" in obtain:
         add_obtain = ", Offsale"
         obtain_str_prev = obtain_str_prev.replace("Offsale\n", "")
+    if "⭐" in obtain: # In Daily Shop
+        add_obtain = " | "+obtain.split("\n")[-1]
+        obtain_str_prev = obtain_str_prev.replace("\n"+obtain.split("\n")[-1], "")
     
     if "Blueprints" in obtain_str_prev:
         obtain_str = "Blueprints"+add_obtain
@@ -59,30 +68,29 @@ def obtain_parcing(obtain):
         obtain_str = obtain_str_prev+add_obtain
         resources = "{}"
         
-    print(obtain_str, resources, requires, "|", obtain_str_prev)
-    
     return obtain_str, resources, requires
 
 hulls_converting_time = 0
 turrets_converting_time = 0
 guns_converting_time = 0
+sec_converting_time = 0
 
 #  HULLS PARCING
 preapre_time = time.time()-start_time
 after_time = time.time()
-print("Prepare time: " + str(preapre_time))
+print("!!! Prepare time: " + str(preapre_time))
 
 i = 2
 while ws.cell(HULLS_OFFSET+0, i).value is not None:
     if i != 2:
         hulls_string += ","
-    print(ws.cell(HULLS_OFFSET+0, i).value)
+    print("┌", ws.cell(HULLS_OFFSET+0, i).value)
     
-    obtain_str, resources, requires = obtain_parcing(ws.cell(HULLS_OFFSET+17, i).value)
+    obtain_str, resources, requires = obtain_parcing(ws.cell(HULLS_OFFSET+22, i).value)
     
     armor = list(map(lambda x: x.split("(")[0].replace("~", ""), ws.cell(HULLS_OFFSET+5, i).value.split("/")))
     if len(armor) != 3:
-        print("armor:", armor, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
+        print("├ armor:", armor, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
         armor = [0, 0, 0, 0]
     
     speed = ws.cell(HULLS_OFFSET+6, i).value.split("/")
@@ -106,7 +114,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
     elif "Suspension Only".lower() in ws.cell(HULLS_OFFSET+11, i).value.lower():
         aim = 1
     else:
-        print("aim:", ws.cell(HULLS_OFFSET+11, i).value, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
+        print("├ aim:", ws.cell(HULLS_OFFSET+11, i).value, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
         aim = -1
     
     
@@ -116,12 +124,46 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
     else:
         have_gun = "true"
         
+        rangefinder = ws.cell(HULLS_OFFSET+19, i).value
+        if "No" in rangefinder:
+            rangefinder = "-1"
+        elif "Eyeball Mk.1" in rangefinder:
+            rangefinder = "0"
+        elif "Stereoscopic" in rangefinder:
+            rangefinder = "1"
+        elif "Laser" in rangefinder:
+            rangefinder = "2"
+        else:
+            print("├ rangefinder:", rangefinder, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
+            rangefinder = "0"
+            
+        
+        thermal = ws.cell(HULLS_OFFSET+18, i).value.replace("N/A", "No").replace("?", "No")
+        if "No" in thermal:
+            thermal = "0"
+        else:
+            thermal = thermal.replace("Gen ", "")
+            
+        zoom_str = ws.cell(HULLS_OFFSET+15, i).value.replace("N/A", "?")
+        if "?" in zoom_str:
+            zoom = [-1, -1]
+        else:
+            zoom = zoom_str.replace("x", "").split("-")
+            
+        stab = ws.cell(HULLS_OFFSET+16, i).value.replace("N/A", "No")
+        if "Yes" in stab:
+            stab = "true"
+        else:
+            stab = "false"
+            
+        fcs = ws.cell(HULLS_OFFSET+17, i).value.replace("?", "No").replace("N/A", "No").replace("Up to ", "").replace("km", "")
+        
         
         reload_multi = ws.cell(HULLS_OFFSET+12, i).value
         if type(reload_multi) == str:
             reload_multi = reload_multi.replace(",", ".").split()
             if len(reload_multi) != 2:
-                print("reload:", reload_multi, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
+                print("├ reload:", reload_multi, ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'))
                 reload_multi = [reload_multi[0], "0"]
         else:
             reload_multi = [reload_multi, "0"]
@@ -135,10 +177,16 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
             limits_up=limits_ver[1],
             limits_down=limits_ver[0].replace("-", ""),
             limits_left=limits_hor[0].replace("-", ""),
-            limits_right=limits_hor[1]
+            limits_right=limits_hor[1],
+            sight_rangefinder=rangefinder,
+            sight_thermal=thermal,
+            sight_zoom_lower=zoom[0],
+            sight_zoom_upper=zoom[1],
+            stabilizer=stab,
+            fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
         )
     
-    aps = ws.cell(HULLS_OFFSET+15, i).value.replace("N/A", "No")
+    aps = ws.cell(HULLS_OFFSET+20, i).value.replace("N/A", "No")
     if "Yes" in aps:
         aps = "true"
     else:
@@ -151,7 +199,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         rarity=as_string(ws.cell(HULLS_OFFSET+3, i).value),
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
-        weight= ws.cell(HULLS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(HULLS_OFFSET+8, i).value) is not None else -1,
+        weight= ws.cell(HULLS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(HULLS_OFFSET+8, i).value) is not None else -1,
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
         armor_front=armor[0],
@@ -168,28 +216,29 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         weapon_aps=aps,
         weapon_have_gun=have_gun,
         weapon_gun=hull_gun,
-        crew='["'+ws.cell(HULLS_OFFSET+16, i).value.replace("\n", '", "')+'"]',
-        based_on=as_string(" ".join(ws.cell(HULLS_OFFSET+18, i).value.split()) if ws.cell(HULLS_OFFSET+18, i).value is not None else "None"),
-        paired_gun=as_string(" ".join(ws.cell(HULLS_OFFSET+20, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+20, i).value is not None else "None"),
-        paired_turret=as_string(" ".join(ws.cell(HULLS_OFFSET+19, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+19, i).value is not None else "None")
+        crew='["'+ws.cell(HULLS_OFFSET+21, i).value.replace("\n", '", "')+'"]',
+        based_on=as_string(" ".join(ws.cell(HULLS_OFFSET+23, i).value.split()) if ws.cell(HULLS_OFFSET+18, i).value is not None else "None"),
+        paired_gun=as_string(" ".join(ws.cell(HULLS_OFFSET+25, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+20, i).value is not None else "None"),
+        paired_turret=as_string(" ".join(ws.cell(HULLS_OFFSET+24, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+19, i).value is not None else "None")
     )
     
     hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "").replace(" (!)", "")
 
     i += 1
+    print("└ Complete")
 
 
 hulls_converting_time = round(time.time()-start_time-preapre_time, 2)
-print("Hulls converting time: " + str(hulls_converting_time))    
+print("!!! Hulls converting time: " + str(hulls_converting_time))    
 # TURRETS PARCING
 
 i = 2
 while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     if i != 2:
         turrets_string += ","
-    print(ws.cell(TURRETS_OFFSET+0, i).value)
+    print("┌", ws.cell(TURRETS_OFFSET+0, i).value)
     
-    obtain_str, resources, requires = obtain_parcing(ws.cell(TURRETS_OFFSET+16, i).value)
+    obtain_str, resources, requires = obtain_parcing(ws.cell(TURRETS_OFFSET+17, i).value)
     
     ammo = ws.cell(TURRETS_OFFSET+9, i).value.replace("(", "").replace(")", "").replace("?", "").replace(",", ".")
     blowout = -1
@@ -211,10 +260,10 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     
     armor = list(map(lambda x: x.split("(")[0].replace("~", ""), ws.cell(TURRETS_OFFSET+4, i).value.split("/")))
     if len(armor) != 3:
-        print("armor:",armor, ws.cell(TURRETS_OFFSET, i).value.replace("\n", "\\n").replace('"', '\\"'))
+        print("├ armor:",armor, ws.cell(TURRETS_OFFSET, i).value.replace("\n", "\\n").replace('"', '\\"'))
         armor = [0, 0, 0, 0]
     
-    aps = ws.cell(TURRETS_OFFSET+14, i).value.replace("N/A", "No")
+    aps = ws.cell(TURRETS_OFFSET+15, i).value.replace("N/A", "No")
     if "Yes" in aps:
         aps = "true"
     else:
@@ -237,6 +286,19 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         stab = "true"
     else:
         stab = "false"
+    
+    rangefinder = ws.cell(TURRETS_OFFSET+14, i).value
+    if "No" in rangefinder:
+        rangefinder = "-1"
+    elif "Eyeball Mk.1" in rangefinder:
+        rangefinder = "0"
+    elif "Stereoscopic" in rangefinder:
+        rangefinder = "1"
+    elif "Laser" in rangefinder:
+        rangefinder = "2"
+    else:
+        print("├ rangefinder:", rangefinder, ws.cell(TURRETS_OFFSET+14, i).value.replace("\n", "\\n").replace('"', '\\"'))
+        rangefinder = "0"
         
     fcs = ws.cell(TURRETS_OFFSET+11, i).value.replace("?", "No").replace("N/A", "No").replace("Up to ", "").replace("km", "")
     
@@ -255,7 +317,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         rarity=as_string(ws.cell(TURRETS_OFFSET+3, i).value),
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
-        weight= ws.cell(TURRETS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(TURRETS_OFFSET+8, i).value) is not None else -1,
+        weight= ws.cell(TURRETS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(TURRETS_OFFSET+8, i).value) is not None else -1,
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
         armor_front=armor[0],
@@ -268,6 +330,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         weapon_fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
         weapon_stabilizer=stab,
         weapon_sight_thermal = thermal,
+        weapon_sight_rangefinder=rangefinder,
         weapon_zoom_lower = zoom[0],
         weapon_zoom_upper = zoom[1],
         weapon_gun_reload_multi=reload_multi[0],
@@ -276,76 +339,77 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         weapon_gun_limits_down=limits_ver[0].replace("-", ""),
         weapon_gun_speed_vertical=speed[1][1:],
         weapon_gun_speed_horizontal=speed[0][1:],
-        crew='["'+ws.cell(TURRETS_OFFSET+15, i).value.replace("\n", '", "')+'"]',
-        based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+17, i).value.split()) if ws.cell(TURRETS_OFFSET+17, i).value is not None else "None"),
-        paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+19, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+19, i).value is not None else "None"),
-        paired_hull=as_string(" ".join(ws.cell(TURRETS_OFFSET+18, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+18, i).value is not None else "None")
+        crew='["'+ws.cell(TURRETS_OFFSET+16, i).value.replace("\n", '", "')+'"]',
+        based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+18, i).value.split()) if ws.cell(TURRETS_OFFSET+17, i).value is not None else "None"),
+        paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+20, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+19, i).value is not None else "None"),
+        paired_hull=as_string(" ".join(ws.cell(TURRETS_OFFSET+19, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+18, i).value is not None else "None")
     )
     
     turrets_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
     
     i += 1
+    print("└ Complete")
     
 
 turrets_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time, 2)
-print("Turrets converting time: " + str(turrets_converting_time))    
+print("!!! Turrets converting time: " + str(turrets_converting_time))    
 # GUNS PARCING
 
 i = 2
 while ws.cell(GUNS_OFFSET+0, i).value is not None:
     if i != 2:
         guns_string += ","
-    print(ws.cell(GUNS_OFFSET+0, i).value)
+    print("┌", ws.cell(GUNS_OFFSET+0, i).value)
     
     obtain_str, resources, requires = obtain_parcing(ws.cell(GUNS_OFFSET+14, i).value)
     
     ammunition = ""
     for j in range(4):
-        dtd = ws.cell(GUNS_OFFSET+10+j, i).value #Ammo stats
-        if dtd is None: break
+        splitted_ammo_data = ws.cell(GUNS_OFFSET+10+j, i).value #Ammo stats
+        if splitted_ammo_data is None: break
         
-        dtd = dtd.split("\n")
+        splitted_ammo_data = splitted_ammo_data.split("\n")
         
-        if dtd[0] == "": break
+        if splitted_ammo_data[0] == "": break
         
         if j != 0: ammunition += ",\n"
         
-        if "AP" in dtd[0] and not "APHE" in dtd[0]:
+        if "AP" in splitted_ammo_data[0] and not "APHE" in splitted_ammo_data[0]:
             stats="""{}"""
-        elif "APHE" in dtd[0]:
+        elif "APHE" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["APHE"].format(
-                fuse_sensitive=dtd[6].split(":")[1].replace("mm", ""),
-                fuse_delay=dtd[7].split(":")[1].replace("m", ""),
-                explosive_mass=as_string(dtd[8].split(":")[1])
+                fuse_sensitive=splitted_ammo_data[6].split(":")[1].replace("mm", ""),
+                fuse_delay=splitted_ammo_data[7].split(":")[1].replace("m", ""),
+                explosive_mass=as_string(splitted_ammo_data[8].split(":")[1])
             )
-        elif "HEAT" in dtd[0]:
+        elif "HEAT" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["HEAT"].format(
-                fuse_radius=dtd[6].split(":")[1].replace("m", "") if len(dtd) > 6 else -1,
-                arming_distance=dtd[7].split(":")[1].replace("m", "") if len(dtd) > 6 else -1
+                fuse_radius=splitted_ammo_data[6].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 6 else -1,
+                arming_distance=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 6 else -1
             )
-        elif "HE" in dtd[0] or "HESH" in dtd[0]:
+        elif "HE" in splitted_ammo_data[0] or "HESH" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["HE"].format(
-                explosive_mass=as_string(dtd[6].split(":")[1]),
-                fuse_radius=dtd[7].split(":")[1].replace("m", "") if len(dtd) > 7 else -1,
-                arming_distance=dtd[8].split(":")[1].replace("m", "") if len(dtd) > 7 else -1
+                explosive_mass=as_string(splitted_ammo_data[6].split(":")[1]),
+                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1,
+                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1
             )
-        elif "ATGM" in dtd[0]:
+        elif "ATGM" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["ATGM"].format(
-                range=dtd[6].split(":")[1].replace("km", ""),
-                fuse_radius=dtd[7].split(":")[1].replace("m", "") if len(dtd) > 7 else -1,
-                arming_distance=dtd[8].split(":")[1].replace("m", "") if len(dtd) > 7 else -1
+                range=splitted_ammo_data[6].split(":")[1].replace("km", ""),
+                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1,
+                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1
             )
         else:
             stats="""{}"""
         
         
         ammunition += templates.AMMUNITION.format(
-            type=as_string(dtd[0]),
-            penetration_0deg=dtd[1].split(":")[1].replace("mm", ""),
-            penetration_30deg=dtd[2].split(":")[1].replace("mm", ""),
-            penetration_60deg=dtd[3].split(":")[1].replace("mm", ""),
-            velocity=dtd[4].split(":")[1].replace("m/s", ""),
-            ricochet_angle=dtd[5].split(":")[1],
+            type=as_string(splitted_ammo_data[0]),
+            penetration_0deg=splitted_ammo_data[1].split(":")[1].replace("mm", ""),
+            penetration_30deg=splitted_ammo_data[2].split(":")[1].replace("mm", ""),
+            penetration_60deg=splitted_ammo_data[3].split(":")[1].replace("mm", ""),
+            velocity=splitted_ammo_data[4].split(":")[1].replace("m/s", ""),
+            ricochet_angle=splitted_ammo_data[5].split(":")[1],
             stats=stats
         )
             
@@ -358,13 +422,13 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         rarity=as_string(ws.cell(GUNS_OFFSET+3, i).value),
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
-        weight= ws.cell(GUNS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+8, i).value) is not None else -1,
+        weight= ws.cell(GUNS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(GUNS_OFFSET+8, i).value) is not None else -1,
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
         weapon_clip=ws.cell(GUNS_OFFSET+9, i).value if type(ws.cell(GUNS_OFFSET+9, i).value) == int else 0,
-        weapon_reload=ws.cell(GUNS_OFFSET+7, i).value.replace("s", "") if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+7, i).value.replace("s", "")) else -1,
+        weapon_reload=ws.cell(GUNS_OFFSET+7, i).value.replace("s", "") if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(GUNS_OFFSET+7, i).value.replace("s", "")) else -1,
         weapon_accuracy=ws.cell(GUNS_OFFSET+4, i).value if ws.cell(GUNS_OFFSET+4, i).value.isdigit() else -1,
-        weapon_ammo_volume=ws.cell(GUNS_OFFSET+5, i).value if re.match(r'^-?\d+(?:\.\d+)$', ws.cell(GUNS_OFFSET+5, i).value) else -1,
+        weapon_ammo_volume=ws.cell(GUNS_OFFSET+5, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(GUNS_OFFSET+5, i).value) else -1,
         weapon_caliber=ws.cell(GUNS_OFFSET+6, i).value.replace("mm", ""),
         weapon_ammunition=ammunition,
         based_on=as_string(" ".join(ws.cell(GUNS_OFFSET+15, i).value.split()) if ws.cell(GUNS_OFFSET+14, i).value is not None else "None"),
@@ -375,19 +439,133 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
     guns_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
     
     i += 1
+    print("└ Complete")
 
 guns_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time-turrets_converting_time, 2)
-print("Guns converting time: " + str(guns_converting_time))
+print("!!! Guns converting time: " + str(guns_converting_time))
+
+#SECONDARY PARCING
+
+i = 2
+while ws.cell(SEC_OFFSET+0, i).value is not None:
+    if i != 2:
+        sec_string += ","
+    print("┌", ws.cell(SEC_OFFSET+0, i).value)
+    
+    ammunition = ""
+    for j in range(7):
+        ammo_data = ws.cell(SEC_OFFSET+4+j, i).value #Ammo stats
+        if ammo_data is None: break
+        
+        splitted_ammo_data = ammo_data.split("\n")
+        
+        if splitted_ammo_data[0] == "": break
+        
+        if j != 0: ammunition += ",\n"
+        
+        if "AP" in splitted_ammo_data[0] and not "APHE" in splitted_ammo_data[0]:
+            stats="""{}"""
+        elif "APHE" in splitted_ammo_data[0]:
+            stats=templates.AMMO_TYPES["APHE"].format(
+                fuse_sensitive=splitted_ammo_data[6].split(":")[1].replace("mm", ""),
+                fuse_delay=splitted_ammo_data[7].split(":")[1].replace("m", ""),
+                explosive_mass=as_string(splitted_ammo_data[8].split(":")[1])
+            )
+        elif "HEAT" in splitted_ammo_data[0]:
+            stats=templates.AMMO_TYPES["HEAT"].format(
+                fuse_radius=splitted_ammo_data[6].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1,
+                arming_distance=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1
+            )
+        elif "HE" in splitted_ammo_data[0] or "HESH" in splitted_ammo_data[0]:
+            stats=templates.AMMO_TYPES["HE"].format(
+                explosive_mass=as_string(splitted_ammo_data[6].split(":")[1]),
+                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1,
+                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1
+            )
+        elif "ATGM" in splitted_ammo_data[0]:
+            stats=templates.AMMO_TYPES["ATGM"].format(
+                range=splitted_ammo_data[6].split(":")[1].replace("km", ""),
+                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1,
+                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1
+            )
+        else:
+            stats="""{}"""
+        
+        
+        types = splitted_ammo_data[0].split()
+        if types[0] in ("Coax", "Roof", "Hull"):
+            att_type  = types[0]
+            ammo_type = types[2]
+            caliber   = types[1].replace("mm", "")
+        elif "ATGM" in types[0]:
+            att_type  = "Coax"
+            ammo_type = splitted_ammo_data[0]
+            caliber   = -1
+        elif re.match(r'^-?\d+(?:\.\d+)*$', types[0].replace("mm", "")) is not None:
+            att_type  = "Coax"
+            ammo_type = types[1]
+            caliber   = types[0].replace("mm", "")
+        else:
+            print("├ Unknown secondary type: " + types[0])
+            continue
+        
+        
+        ammo_count_splitted = splitted_ammo_data[-1].split()
+        if "reloads" in ammo_count_splitted[-1]:
+            reload_count = ammo_count_splitted[-2].replace("(+", "")
+            reload_count = reload_count if re.match(r'^-?\d+(?:\.\d+)*$', reload_count) is not None else 0
+            
+            ammo_count = ammo_count_splitted[-3]
+        else:
+            reload_count = 0
+            ammo_count = ammo_count_splitted[-1]
+        
+        if re.match(r'^-?\d+(?:\.\d+)*$', ammo_count) is None:
+            print("├ Invalid ammo count: " + ammo_count)
+            ammo_count = 0
+    
+        
+        ammunition += templates.SECONDARIES.format(
+            type=as_string(att_type),
+            ammo_type=as_string(ammo_type),
+            caliber=caliber,
+            ammo_count=ammo_count,
+            reload_count=reload_count,
+            penetration_0deg=splitted_ammo_data[1].split(":")[1].replace("mm", ""),
+            penetration_30deg=splitted_ammo_data[2].split(":")[1].replace("mm", ""),
+            penetration_60deg=splitted_ammo_data[3].split(":")[1].replace("mm", ""),
+            velocity=splitted_ammo_data[4].split(":")[1].replace("m/s", ""),
+            ricochet_angle=splitted_ammo_data[5].split(":")[1],
+            stats=stats
+        )
+        
+    string = templates.SECONDARIES_ARRAY.format(
+        name=ws.cell(SEC_OFFSET+0, i).value,
+        module=ws.cell(SEC_OFFSET+3, i).value,
+        tier=ws.cell(SEC_OFFSET+2, i).value,
+        secondaries=ammunition
+    )
+    
+    sec_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
+    
+    i += 1
+    print("└ Complete")
+
+sec_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time-turrets_converting_time-guns_converting_time, 2)
+print("!!! Secondary converting time: " + str(sec_converting_time))
+
 
 output_string = templates.DATABASE.format(
     hulls=hulls_string,
     turrets=turrets_string,
-    guns=guns_string
+    guns=guns_string,
+    secondaries=sec_string
 )
 with codecs.open(JSON_PATH,mode='w',encoding='utf-8') as f:
     f.write(output_string)
 
-print("\n\nConverting time: " + str(time.time()-start_time))
+print("\n\nConverting time: " + str(round(time.time()-start_time, 2)))
 print("Hulls: " + str(hulls_converting_time))
 print("Turrets: " + str(turrets_converting_time))
 print("Guns: " + str(guns_converting_time))
+print("Secondary: " + str(sec_converting_time))

@@ -7,6 +7,9 @@ DATABASE = """{{
 }},
 "guns": {{
     {guns}
+}},
+"secondaries": {{
+    {secondaries}
 }}
 }}
 """
@@ -53,6 +56,8 @@ HULL = """"{name}": {{
 }}
 """
 HULL_GUN = """{{
+                "fcs": {fcs},
+                "stabilizer": {stabilizer},
                 "reload_multiplier": {reload_multi},
                 "reload_multiplier_caliber": {reload_multi_caliber},
                 "limits": {{
@@ -60,6 +65,12 @@ HULL_GUN = """{{
                     "down": {limits_down},
                     "left": {limits_left},
                     "right": {limits_right}
+                }},
+                "sight": {{
+                    "rangefinder": {sight_rangefinder},
+                    "thermal": {sight_thermal},
+                    "zoom_lower": {sight_zoom_lower},
+                    "zoom_upper": {sight_zoom_upper}
                 }}
             }}"""
 
@@ -88,6 +99,7 @@ TURRET = """"{name}": {{
             "fcs": {weapon_fcs},
             "stabilizer": {weapon_stabilizer},
             "sight": {{
+                "rangefinder": {weapon_sight_rangefinder},
                 "thermal": {weapon_sight_thermal},
                 "zoom_lower": {weapon_zoom_lower},
                 "zoom_upper": {weapon_zoom_upper}
@@ -183,3 +195,26 @@ AMMO_TYPES = {
         "explosive_mass": {explosive_mass}
     }}"""
 }
+
+SECONDARIES_ARRAY = """"{name}-{module}":{{
+    "tier": {tier},
+    "secondaries": [
+        {secondaries}
+    ]
+}}"""
+
+SECONDARIES = """{{
+    "type": {type},
+    "ammo_type": {ammo_type},
+    "caliber": {caliber},
+    "ammo_count": {ammo_count},
+    "reload_count": {reload_count},
+    "penetration": {{
+        "0": {penetration_0deg},
+        "30": {penetration_30deg},
+        "60": {penetration_60deg}
+    }},
+    "velocity": {velocity},
+    "ricochet_angle": {ricochet_angle},
+    "stats": {stats}
+}}"""

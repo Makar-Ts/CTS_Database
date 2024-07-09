@@ -50,9 +50,9 @@ sys.path.append(parent_dir)
 import modules_templates as templates
 
 HULLS_START =  2
-HULLS_OFFSET = 20
+HULLS_OFFSET = 25
 TURRETS_START =  2
-TURRETS_OFFSET = 19
+TURRETS_OFFSET = 20
 GUNS_START  = 2
 GUNS_OFFSET = [15, 15, 16, 16, 16, 17, 16, 16, 16, 16, 17, 17]
 

@@ -417,6 +417,7 @@ $(document).ready(function() {
         for (var i = 0; i < ids.length; i++) {
             var hull = ids[i];
             var data = database[type][hull]
+            var secondaries_data = database.secondaries[hull+"-"+capitalizeFirstLetter(type.substring(0, type.length - 1))]
             console.log(hull);
             $('#search_input').val(hull);
 
@@ -461,7 +462,7 @@ $(document).ready(function() {
             }
 
             $(`#item_container_${i} `+"#weight").text(data.stats.weight+"t");
-            $(`#item_container_${i} `+"#stats").html(calculateStringForItem(data, type, `./../img/aps/${hull}.png`));
+            $(`#item_container_${i} `+"#stats").html(calculateStringForItem(data, type, `./../img/aps/${hull}.png`, secondaries_data));
             $(`#item_container_${i} `+"#based_on").text(data.based_on);
 
             count = 1

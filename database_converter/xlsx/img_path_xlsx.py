@@ -11,8 +11,9 @@ sys.path.append(parent_dir)
 import modules_templates as templates
 
 HULLS_OFFSET = 1    #Index offset
-TURRETS_OFFSET = 23
-GUNS_OFFSET = 44
+TURRETS_OFFSET = 28
+GUNS_OFFSET = 50
+SEC_OFFSET = 69
 
 DATABASE_NAME = input()
 DATABASE_PATH = os.path.join(sys.path[0], DATABASE_NAME)
@@ -77,7 +78,8 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
 output_string = templates.DATABASE.format(
     hulls=hulls_string,
     turrets=turrets_string,
-    guns=guns_string
+    guns=guns_string,
+    secondaries=""
 )
 
 with open(JSON_PATH, 'w') as f:

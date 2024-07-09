@@ -564,12 +564,30 @@ function calculateStringFor2Items(data1, data2, type) {
                     reload_multiplier_caliber2 = Math.round(calculateCaliberFromMultiplier(data2.stats.weaponry.gun.reload_multiplier));
                 }
 
+                if (data1.stats.weaponry.gun.fcs != -1) {
+                    fcs = `Up to ${data1.stats.weaponry.gun.fcs}km`;
+                } else { fcs = "No"; }
+
+                if (data2.stats.weaponry.gun.fcs != -1) {
+                    fcs2 = `Up to ${data2.stats.weaponry.gun.fcs}km`;
+                } else { fcs2 = "No"; }
+
 
                 gun = `
                 <tr><th colspan="3" class="stat_header">Gun Mount</th></tr>
                 <tr><th>Reload Multiplier</th><td>${data1.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber1}mm)</td>
                     <td style="color: ${redOrGreen(data1.stats.weaponry.gun.reload_multiplier,data2.stats.weaponry.gun.reload_multiplier)};">${data2.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber2}mm)</td></tr>
-                <tr><th colspan="3" class="stat_header">Gun Limits</th></tr>
+                <tr><th>Stabilizer</th><td>${data1.stats.weaponry.gun.stabilizer ? "Yes" : "No"}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.stabilizer, data2.stats.weaponry.gun.stabilizer)};">${data2.stats.weaponry.gun.stabilizer ? "Yes" : "No"}</td></tr>
+                <tr><th>Rangefinder</th><td>${rangefinder_to_string[data1.stats.weaponry.gun.sight.rangefinder]}</td>    
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.sight.rangefinder, data2.stats.weaponry.gun.sight.rangefinder)};">${rangefinder_to_string[data2.stats.weaponry.gun.sight.rangefinder]}</td></tr>
+                <tr><th>FCS</th><td>${fcs}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.fcs, data2.stats.weaponry.gun.fcs)};">${fcs2}</td></tr>
+                <tr><th>Zoom</th><td>${data1.stats.weaponry.gun.sight.zoom_lower == -1 ? "no data" : `${data1.stats.weaponry.gun.sight.zoom_lower}x-${data1.stats.weaponry.gun.sight.zoom_upper}x`}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.sight.zoom_upper-data1.stats.weaponry.gun.sight.zoom_lower, data2.stats.weaponry.gun.sight.zoom_upper-data2.stats.weaponry.gun.sight.zoom_lower)};">${data2.stats.weaponry.gun.sight.zoom_lower == -1 ? "no data" : `${data2.stats.weaponry.gun.sight.zoom_lower}x-${data2.stats.weaponry.gun.sight.zoom_upper}x`}</td></tr>
+                <tr><th>Thermal</th><td>${data1.stats.weaponry.gun.sight.thermal == 0 ? "No" : `Gen ${data1.stats.weaponry.gun.sight.thermal}x`}</td>
+                    <td style="color: ${redOrGreen(data1.stats.weaponry.gun.sight.thermal, data2.stats.weaponry.gun.sight.thermal)};">${data2.stats.weaponry.gun.sight.thermal == 0 ? "No" : `Gen ${data2.stats.weaponry.gun.sight.thermal}x`}</td></tr>
+                    <tr><th colspan="3" class="stat_header">Gun Limits</th></tr>
                 <tr><th>Up</th><td>${data1.stats.weaponry.gun.limits.up}</td>
                     <td style="color: ${redOrGreen(data1.stats.weaponry.gun.limits.up,data2.stats.weaponry.gun.limits.up)};">${data2.stats.weaponry.gun.limits.up}</td></tr>
                 <tr><th>Down</th><td>-${data1.stats.weaponry.gun.limits.down}</td>
@@ -709,6 +727,8 @@ function calculateStringFor2Items(data1, data2, type) {
                 <td style="color: ${redOrGreen(data1.stats.weaponry.clip, data2.stats.weaponry.clip)};">${data2.stats.weaponry.clip == 1 ? "Yes" : "No"}</td></tr></tr>
             <tr><th>Stabilizer</th><td>${data1.stats.weaponry.stabilizer ? "Yes" : "No"}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.stabilizer, data2.stats.weaponry.stabilizer)};">${data2.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
+            <tr><th>Rangefinder</th><td>${rangefinder_to_string[data1.stats.weaponry.sight.rangefinder]}</td>    
+                <td style="color: ${redOrGreen(data1.stats.weaponry.sight.rangefinder, data2.stats.weaponry.sight.rangefinder)};">${rangefinder_to_string[data2.stats.weaponry.sight.rangefinder]}</td></tr>
             <tr><th>APS</th><td>${aps}</td>
                 <td style="color: ${redOrGreen(data1.stats.weaponry.aps, data2.stats.weaponry.aps)};">${aps2}</td></tr>
             ${data1.stats.weaponry.aps || data2.stats.weaponry.aps ? `<tr><th>Protection</th>

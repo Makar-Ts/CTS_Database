@@ -125,7 +125,7 @@ $(document).ready(function() {
         var type = $(this).data("type");
         var data = database[type][hull];
 
-        setSearchOutput(hull, type, data);
+        setSearchOutput(hull, type, data, database.secondaries[hull+"-"+capitalizeFirstLetter(type.substring(0, type.length - 1))]);
     }); 
 
     $('#item_img').on('load', function() {
@@ -145,7 +145,7 @@ function whenDatabasesLoaded() {
 
     console.log(urlParams.get("name") + " | " + urlParams.get("type"));
     if (urlParams.get("type") != undefined && urlParams.get("name") != undefined) {
-        setSearchOutput(urlParams.get("name"), urlParams.get("type"), database[urlParams.get("type")][urlParams.get("name")]);
+        setSearchOutput(urlParams.get("name"), urlParams.get("type"), database[urlParams.get("type")][urlParams.get("name")], database.secondaries[urlParams.get("name")+"-"+capitalizeFirstLetter(urlParams.get("type").substring(0, urlParams.get("type").length - 1))]);
     }
 }
 
@@ -178,7 +178,7 @@ $(document).on('click', '.resource_item', function() {
     $(this).parent().parent().find("#resources_calculated").html(calc_str);
 }); 
 
-function setSearchOutput(hull, type, data) {
+function setSearchOutput(hull, type, data, secondary_data) {
     if (!database_loaded) {
         alert('Database is not loaded, please wait...');
         return;
@@ -245,8 +245,9 @@ function setSearchOutput(hull, type, data) {
         $("#resources").show();
     }
 
+    console.log(secondary_data);
     $("#weight").text(data.stats.weight+"t");
-    $("#stats").html(calculateStringForItem(data, type, `./img/aps/${hull}.png`));
+    $("#stats").html(calculateStringForItem(data, type, `./img/aps/${hull}.png`, secondary_data));
     $("#based_on").text(data.based_on);
 
     count = 1

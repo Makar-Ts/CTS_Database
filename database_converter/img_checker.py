@@ -4,6 +4,8 @@ import os.path
 
 def check_image_existence(data, database):
     for category, items in database.items():
+        if category == "secondaries": break
+        
         print(f"======================== Checking images for {category}: ========================")
         for name, img_path in items.items():
             if not name in data[category]:

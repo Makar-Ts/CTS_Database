@@ -13,6 +13,17 @@ var ammo_stats_titles = {
     "range": ["Range", "km", 1]
 };
 
+const rangefinder_to_string = {
+    "-1": "No",
+    0: "Eyeball Mk.1",
+    1: "Stereoscopic",
+    2: "Laser"
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function replaceGreekNumerals(str) {
     const greekNumerals = {
         'I': '1',
@@ -163,7 +174,7 @@ if (currentTheme) {
     }
 }
 
-function calculateStringForItem(data, type, aps_img) {
+function calculateStringForItem(data, type, aps_img, secondary_data) {
     stats_str = ""
     switch (type) {
         case "hulls":
@@ -209,9 +220,18 @@ function calculateStringForItem(data, type, aps_img) {
                     reload_multiplier_caliber = Math.round(calculateCaliberFromMultiplier(data.stats.weaponry.gun.reload_multiplier));
                 }
 
+                if (data.stats.weaponry.gun.fcs != -1) {
+                    fcs = `Up to ${data.stats.weaponry.gun.fcs}km`;
+                } else { fcs = "No"; }
+
                 gun = `
                 <tr><th colspan="2" class="stat_header">Gun Mount</th></tr>
                 <tr><th>Reload Multiplier</th><td>${data.stats.weaponry.gun.reload_multiplier} (${reload_multiplier_caliber}mm)</td></tr>
+                <tr><th>Stabilizer</th><td>${data.stats.weaponry.gun.stabilizer ? "Yes" : "No"}</td></tr>
+                <tr><th>Rangefinder</th><td>${rangefinder_to_string[data.stats.weaponry.gun.sight.rangefinder]}</td></tr>
+                <tr><th>FCS</th><td>${fcs}</td></tr>
+                <tr><th>Zoom</th><td>${data.stats.weaponry.gun.sight.zoom_lower == -1 ? "no data" : `${data.stats.weaponry.gun.sight.zoom_lower}x-${data.stats.weaponry.gun.sight.zoom_upper}x`}</td></tr>
+                <tr><th>Thermal</th><td>${data.stats.weaponry.gun.sight.thermal == 0 ? "No" : `Gen ${data.stats.weaponry.gun.sight.thermal}`}</td></tr>
                 <tr><th colspan="2" class="stat_header">Gun Limits</th></tr>
                 <tr><th>Up</th><td>${data.stats.weaponry.gun.limits.up}</td></tr>
                 <tr><th>Down</th><td>-${data.stats.weaponry.gun.limits.down}</td></tr>
@@ -304,6 +324,7 @@ function calculateStringForItem(data, type, aps_img) {
             <tr><th>Ammo Storage</th><td>${data.stats.weaponry.ammo_storage}</td></tr>
             <tr><th>Clip</th><td>${data.stats.weaponry.clip == 1 ? "Yes" : "No"}</td></tr>
             <tr><th>Stabilizer</th><td>${data.stats.weaponry.stabilizer ? "Yes" : "No"}</td></tr>
+            <tr><th>Rangefinder</th><td>${rangefinder_to_string[data.stats.weaponry.sight.rangefinder]}</td></tr>
             <tr><th>APS</th><td>${aps}</td></tr>
             ${data.stats.weaponry.aps ? `<tr><th>Protection</th><td><img src="${aps_img}"></td></tr>` : ""}
             <tr><th>FCS</th><td>${fcs}</td></tr>
@@ -346,6 +367,35 @@ function calculateStringForItem(data, type, aps_img) {
             break;
         default:
             break;
+    }
+
+    console.log(secondary_data);
+    if (secondary_data) {
+        var ammos = "";
+        secondary_data.secondaries.forEach(element => {
+            ammo_stats = ""
+            for (var key of Object.keys(element.stats)) {
+                if (element.stats[key] == -1) continue;
+
+                ammo_stats += `<tr><th>${ammo_stats_titles[key][0]}</th><td>${element.stats[key]+ammo_stats_titles[key][1]}</td></tr>`;
+            }
+
+            ammos += `<tr><th colspan="2" class="stat_header">${element.type} ${element.ammo_type}</th></tr>
+            ${element.caliber != -1 ? `<tr><th>Caliber</th><td>${element.caliber}mm</td></tr>` : ""}
+            <tr><th>Ammo</th><td>${element.ammo_count} ${element.reload_count != 0 ? "(+"+element.reload_count+" reloads)" : ""}</td></tr>
+            <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
+            <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
+            <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
+            <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
+            <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
+            ${ammo_stats}`
+        });
+        
+        stats_str += `
+        <table>
+        <tr><th colspan="2" class="stat_header">Secondary</th></tr>
+        </table>
+        <div class="stats_ammunition"><table>${ammos}</table></div>`
     }
 
     return stats_str;
