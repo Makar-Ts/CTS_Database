@@ -816,28 +816,14 @@ function calculateStringFor2Items(data1, data2, type) {
                     grid-column: 2;
                     ${ammoTypeGridStyle}
                     font-size: clamp(0.2em, 100%, 1em);
-                    "><table><tr><th colspan="3" class="stat_header">$
-                      {foundElement.type}</th></tr> <tr><th>Penetration</th>
-                      <td style="color: ${redOrGreen(element.penetration
-                      ["0"], foundElement.penetration["0"])};">0deg: $
-                      {foundElement.penetration
-                      ["0"]}mm</td></tr> <tr><th></th><td style="color: $
-                      {redOrGreen(element.penetration
-                      ["30"], foundElement.penetration["30"])};">30deg: $
-                      {foundElement.penetration
-                      ["30"]}mm</td></tr> <tr><th></th><td style="color: $
-                      {redOrGreen(element.penetration
-                      ["60"], foundElement.penetration["60"])};">60deg: $
-                      {foundElement.penetration
-                      ["60"]}mm</td></tr> <tr><th>Velocity</th><td
-                      style="color: ${redOrGreen
-                      (element.velocity, foundElement.velocity)};">$
-                      {foundElement.velocity}m/s</td></tr> <tr><th>Ricochet
-                      Angle</th><td style="color: ${redOrGreen
-                      (element.ricochet_angle,
-                      foundElement.ricochet_angle)};">$
-                      {foundElement.ricochet_angle}deg</td></tr> $
-                      {ammo_stats2}</table></div>`; } });
+                    ""><table><tr><th colspan="3" class="stat_header">${foundElement.type}</th></tr>
+                    <tr><th>Penetration</th>
+                    <td style="color: ${redOrGreen(element.penetration["0"], foundElement.penetration["0"])};">0deg: ${foundElement.penetration["0"]}mm</td></tr>
+                    <tr><th></th><td style="color: ${redOrGreen(element.penetration["30"], foundElement.penetration["30"])};">30deg: ${foundElement.penetration["30"]}mm</td></tr>
+                    <tr><th></th><td style="color: ${redOrGreen(element.penetration["60"], foundElement.penetration["60"])};">60deg: ${foundElement.penetration["60"]}mm</td></tr>
+                    <tr><th>Velocity</th><td style="color: ${redOrGreen(element.velocity, foundElement.velocity)};">${foundElement.velocity}m/s</td></tr>
+                    <tr><th>Ricochet Angle</th><td style="color: ${redOrGreen(element.ricochet_angle, foundElement.ricochet_angle)};">${foundElement.ricochet_angle}deg</td></tr>
+                    ${ammo_stats2}</table></div>`; } });
 
             
             data2.stats.weaponry.ammunition.forEach(element => {
