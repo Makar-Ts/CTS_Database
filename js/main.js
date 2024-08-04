@@ -188,7 +188,7 @@ function setSearchOutput(hull, type, data, secondary_data) {
     }
 
     console.log(window.location);
-    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${type}&name=${hull}`)
+    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${type}&name=${hull.replace("+", "%2B")}`)
 
     $("#search_results").hide();
     console.log(hull);

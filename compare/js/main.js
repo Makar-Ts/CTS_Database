@@ -316,7 +316,7 @@ function createCompareList() {
     $("#item_img2").attr('src', "./."+img_database[item2_type][item2_name]);
     $('#item_img2').css('display', 'none');
 
-    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${item1_type}&name1=${item1_name}&name2=${item2_name}`);
+    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${item1_type}&name1=${item1_name.replace("+", "%2B")}&name2=${item2_name.replace("+", "%2B")}`);
     
     $("#name").text(item1_name + " vs " + item2_name);
     $("#description1").text(item1_data.description);  $("#description2").text(item2_data.description);
@@ -325,10 +325,14 @@ function createCompareList() {
     $("#obtain1").text(item1_data.obtain);            $("#obtain2").text(item2_data.obtain);
 
     let hide_res = false;
-    if (item1_data.resources.length == 0) {
-        $("#resources1").closest('tr').hide();
+
+    console.log()
+
+    if (Object.keys(item1_data.resources).length === 0) {
+        $("#resources1").closest('div').hide();
         hide_res = true;
     } else {
+        $("#resources1").closest('div').show();
         $("#resources1").closest('tr').show();
 
         str = ""
@@ -353,13 +357,14 @@ function createCompareList() {
         $("#resources_calculated1").html(calc_str);
     }
 
-    if (item2_data.resources.length == 0) {
-        $("#resources2").closest('tr').hide();
+    if (Object.keys(item2_data.resources).length === 0) {
+        $("#resources2").closest('div').hide();
         if (hide_res) {
             $("#resources1").closest('tr').hide();
         }
     } else {
-        $("#resources2").closest('tr').show();
+        $("#resources2").closest('div').show();
+        $("#resources1").closest('tr').show();
 
         str = ""
         for (let key of Object.keys(item2_data.resources)) {
@@ -811,16 +816,28 @@ function calculateStringFor2Items(data1, data2, type) {
                     grid-column: 2;
                     ${ammoTypeGridStyle}
                     font-size: clamp(0.2em, 100%, 1em);
-                    "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
-                    <tr><th>Penetration</th>
-                    <td style="color: ${redOrGreen(element.penetration["0"], foundElement.penetration["0"])};">0deg: ${foundElement.penetration["0"]}mm</td></tr>
-                    <tr><th></th><td style="color: ${redOrGreen(element.penetration["30"], foundElement.penetration["30"])};">30deg: ${foundElement.penetration["30"]}mm</td></tr>
-                    <tr><th></th><td style="color: ${redOrGreen(element.penetration["60"], foundElement.penetration["60"])};">60deg: ${foundElement.penetration["60"]}mm</td></tr>
-                    <tr><th>Velocity</th><td style="color: ${redOrGreen(element.velocity, foundElement.velocity)};">${foundElement.velocity}m/s</td></tr>
-                    <tr><th>Ricochet Angle</th><td style="color: ${redOrGreen(element.ricochet_angle, foundElement.ricochet_angle)};">${foundElement.ricochet_angle}deg</td></tr>
-                    ${ammo_stats2}</table></div>`;
-                }
-            });
+                    "><table><tr><th colspan="3" class="stat_header">$
+                      {foundElement.type}</th></tr> <tr><th>Penetration</th>
+                      <td style="color: ${redOrGreen(element.penetration
+                      ["0"], foundElement.penetration["0"])};">0deg: $
+                      {foundElement.penetration
+                      ["0"]}mm</td></tr> <tr><th></th><td style="color: $
+                      {redOrGreen(element.penetration
+                      ["30"], foundElement.penetration["30"])};">30deg: $
+                      {foundElement.penetration
+                      ["30"]}mm</td></tr> <tr><th></th><td style="color: $
+                      {redOrGreen(element.penetration
+                      ["60"], foundElement.penetration["60"])};">60deg: $
+                      {foundElement.penetration
+                      ["60"]}mm</td></tr> <tr><th>Velocity</th><td
+                      style="color: ${redOrGreen
+                      (element.velocity, foundElement.velocity)};">$
+                      {foundElement.velocity}m/s</td></tr> <tr><th>Ricochet
+                      Angle</th><td style="color: ${redOrGreen
+                      (element.ricochet_angle,
+                      foundElement.ricochet_angle)};">$
+                      {foundElement.ricochet_angle}deg</td></tr> $
+                      {ammo_stats2}</table></div>`; } });
 
             
             data2.stats.weaponry.ammunition.forEach(element => {
