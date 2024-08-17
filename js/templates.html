@@ -1,0 +1,89 @@
+<template class="resources">
+
+
+<div class="resources_container">
+    <button type="button" 
+            id="show_calculated_resources" 
+            class="show_calculated_res"
+        ><span>=</span
+    ></button
+    ><p id="resources">Test123</p
+    ><p id="resources_calculated" 
+        style="display: none;">Test123</p>
+</div>
+
+
+</template>
+
+
+
+<template id="module_base">
+
+<div class="item_container">
+    <table id="item_container">
+        <tr><th colspan="2" id="name" class="stat_header">Name</th></tr>
+        <tr><td colspan="2" class="stat_header"><div id="item_img_container"></div><img src="" id="item_img" loading="eager"></td></tr>
+        <tr><th>Description</th><td id="description">Test123</td></tr>
+        <tr><th>Tier</th><td id="tier">Test123</td></tr>
+        <tr><th>Rarity</th><td id="rarity">Test123</td></tr>
+        <tr><th>Obtain</th><td id="obtain">Test123</td></tr>
+        <tr><th>Resources</th><td id=""></td></tr>
+        <tr><th>Requires</th><td id="requires">Test123</td></tr>
+        <tr><th colspan="2" class="stat_header">Stats</th></tr>
+        <tr><th>Weight</th><td id="weight"></td></tr>
+        <tr><td colspan="2" id="stats" class="stats"></td></tr>
+        <tr><th>Based on</th><td id="based_on"></td></tr>
+        <tr><th colspan="2" class="stat_header">Paired</th></tr>
+        <tr><th id="paired_1_text">Turret</th><td id="paired_1"></td></tr>
+        <tr><th id="paired_2_text">Gun</th><td id="paired_2"></td></tr>
+    </table>
+</div>
+
+</template>
+
+
+
+<template id="module_hull">
+
+    <table>
+<tr><th colspan="2" class="stat_header">Armor</th></tr>
+<tr><th>Front</th>          <td id="data.stats.armor.front">mm</td></tr>
+<tr><th>Back</th>           <td id="data.stats.armor.back">mm</td></tr>
+<tr><th>Side</th>           <td id="data.stats.armor.side">mm</td></tr>
+<tr><th colspan="2" class="stat_header">Movement</th></tr>
+<tr><th>Acceleration</th>   <td id="data.stats.speed.acceleration"></td></tr>
+<tr><th>Max Forward</th>    <td id="data.stats.speed.forward">km/h</td></tr>
+<tr><th>Max Backward</th>   <td id="data.stats.speed.backward">km/h</td></tr>
+<tr><th>Torque</th>         <td id="data.stats.speed.torque">k</td></tr>
+<tr><th>Traverse Rate</th>  <td id="data.stats.speed.rate"></td></tr>
+<tr><th colspan="2" class="stat_header">Weaponry</th></tr>
+<tr><th>Ammo Storage</th>   <td id="data.stats.weaponry.ammo_storage"></td></tr>
+<tr><th>Blowout</th>        <td id="blowout"></td></tr>
+<tr><th>Hull Aim</th>       <td id="hull_aim"></td></tr>
+<tr><th>APS</th>            <td id="aps"></td></tr>
+<tr><th>Protection</th>     <td id="aps_img"><img src=""></td></tr>
+<tr><th>Crew</th>           <td id="crew_str"></td></tr>
+    </table>
+
+</template>
+
+
+
+<template id="module_hull_gun">
+
+
+<tr><th colspan="2" class="stat_header">Gun Mount</th></tr>
+<tr><th>Reload Multiplier</th>      <td id="stats.weaponry.gun.reload_multiplier"></td></tr>
+<tr><th>Stabilizer</th>             <td id="stats.weaponry.gun.stabilizer"></td></tr>
+<tr><th>Rangefinder</th>            <td id="stats.weaponry.gun.sight.rangefinder"></td></tr>
+<tr><th>FCS</th>                    <td id="stats.weaponry.gun.fcs"></td></tr>
+<tr><th>Zoom</th>                   <td id="stats.weaponry.gun.sight"></td></tr>
+<tr><th>Thermal</th>                <td id="stats.weaponry.gun.sight.thermal"></td></tr>
+<tr><th colspan="2" class="stat_header">Gun Limits</th></tr>
+<tr><th>Up</th>                     <td id="stats.weaponry.gun.limits.up"></td></tr>
+<tr><th>Down</th>                   <td id="stats.weaponry.gun.limits.down"></td></tr>
+<tr><th>Left</th>                   <td id="stats.weaponry.gun.limits.left"></td></tr>
+<tr><th>Right</th>                  <td id="stats.weaponry.gun.limits.right"></td></tr>
+
+
+</template>
