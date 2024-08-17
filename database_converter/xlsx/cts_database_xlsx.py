@@ -50,6 +50,10 @@ def obtain_parcing(obtain):
         requires_module_type = dnb[1].replace("]", "").lower()+"s"
         requires_module_name = dnb[0]
         
+        obtain_str_prev = obtain_str_prev.split("\nRequires")[0]
+        print("├ requires:", requires_module_type, requires_module_name)
+        print("├ obtain_str:", obtain_str_prev)
+        
         arr = arr[1:]
 
     requires = [requires_module_type, requires_module_name]
@@ -64,6 +68,10 @@ def obtain_parcing(obtain):
     if "Blueprints" in obtain_str_prev:
         obtain_str = "Blueprints"+add_obtain
         resources = '{"' + ', "'.join(map(lambda x: x.replace(":", '":'), arr)) +'}'
+    elif "Built-into" in obtain_str_prev:
+        obtain_str = obtain_str_prev.split("Built-into")[0]+add_obtain
+        resources = "{}"
+        print("├ builtinto_str:", obtain_str)
     else: # Joe Shack or Monthly reward
         obtain_str = obtain_str_prev+add_obtain
         resources = "{}"
@@ -85,6 +93,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
     if i != 2:
         hulls_string += ","
     print("┌", ws.cell(HULLS_OFFSET+0, i).value)
+    print("├ index:", i)
     
     obtain_str, resources, requires = obtain_parcing(ws.cell(HULLS_OFFSET+22, i).value)
     
@@ -229,6 +238,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
 
 
 hulls_converting_time = round(time.time()-start_time-preapre_time, 2)
+hulls_count = i
 print("!!! Hulls converting time: " + str(hulls_converting_time))    
 # TURRETS PARCING
 
@@ -237,6 +247,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     if i != 2:
         turrets_string += ","
     print("┌", ws.cell(TURRETS_OFFSET+0, i).value)
+    print("├ index:", i)
     
     obtain_str, resources, requires = obtain_parcing(ws.cell(TURRETS_OFFSET+17, i).value)
     
@@ -352,6 +363,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     
 
 turrets_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time, 2)
+turrets_count = i
 print("!!! Turrets converting time: " + str(turrets_converting_time))    
 # GUNS PARCING
 
@@ -360,6 +372,7 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
     if i != 2:
         guns_string += ","
     print("┌", ws.cell(GUNS_OFFSET+0, i).value)
+    print("├ index:", i)
     
     obtain_str, resources, requires = obtain_parcing(ws.cell(GUNS_OFFSET+14, i).value)
     
@@ -442,6 +455,7 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
     print("└ Complete")
 
 guns_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time-turrets_converting_time, 2)
+guns_count = i
 print("!!! Guns converting time: " + str(guns_converting_time))
 
 #SECONDARY PARCING
@@ -451,6 +465,7 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
     if i != 2:
         sec_string += ","
     print("┌", ws.cell(SEC_OFFSET+0, i).value)
+    print("├ index:", i)
     
     ammunition = ""
     for j in range(7):
@@ -462,6 +477,8 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
         if splitted_ammo_data[0] == "": break
         
         if j != 0: ammunition += ",\n"
+        
+        is_ATGM = False
         
         if "AP" in splitted_ammo_data[0] and not "APHE" in splitted_ammo_data[0]:
             stats="""{}"""
@@ -483,10 +500,34 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
                 arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1
             )
         elif "ATGM" in splitted_ammo_data[0]:
+            is_ATGM = True
+            
+            
+            if len(splitted_ammo_data) > 8:
+                if "Fuse Radius" in splitted_ammo_data[7].split(":")[0]:
+                    fuse_radius     = splitted_ammo_data[7].split(":")[1].replace("m", "")
+                    arming_distance = splitted_ammo_data[8].split(":")[1].replace("m", "")
+                else:
+                    fuse_radius     = -1
+                    arming_distance = -1
+            else:
+                fuse_radius     = -1
+                arming_distance = -1
+            
+            reload = splitted_ammo_data[-3].split(":")[1].replace("s", "")
+            
+            ammo_count_splitted = splitted_ammo_data[-2].split()
+            reload_count = ammo_count_splitted[-2].replace("(+", "")
+            reload_count = reload_count if re.match(r'^-?\d+(?:\.\d+)*$', reload_count) is not None else 0
+            
+            ammo_count = ammo_count_splitted[-3]
+            
+            max_launch_speed = splitted_ammo_data[-1].split(":")[1]
+            
             stats=templates.AMMO_TYPES["ATGM"].format(
                 range=splitted_ammo_data[6].split(":")[1].replace("km", ""),
-                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1,
-                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1
+                fuse_radius=fuse_radius,
+                arming_distance=arming_distance
             )
         else:
             stats="""{}"""
@@ -509,17 +550,17 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
             print("├ Unknown secondary type: " + types[0])
             continue
         
-        
-        ammo_count_splitted = splitted_ammo_data[-1].split()
-        if "reloads" in ammo_count_splitted[-1]:
-            reload_count = ammo_count_splitted[-2].replace("(+", "")
-            reload_count = reload_count if re.match(r'^-?\d+(?:\.\d+)*$', reload_count) is not None else 0
+        if not is_ATGM:
+            ammo_count_splitted = splitted_ammo_data[-1].split()
+            if "reloads" in ammo_count_splitted[-1]:
+                reload_count = ammo_count_splitted[-2].replace("(+", "")
+                reload_count = reload_count if re.match(r'^-?\d+(?:\.\d+)*$', reload_count) is not None else 0
+                
+                ammo_count = ammo_count_splitted[-3]
+            else:
+                reload_count = 0
+                ammo_count = ammo_count_splitted[-1]
             
-            ammo_count = ammo_count_splitted[-3]
-        else:
-            reload_count = 0
-            ammo_count = ammo_count_splitted[-1]
-        
         if re.match(r'^-?\d+(?:\.\d+)*$', ammo_count) is None:
             print("├ Invalid ammo count: " + ammo_count)
             ammo_count = 0
@@ -531,6 +572,8 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
             caliber=caliber,
             ammo_count=ammo_count,
             reload_count=reload_count,
+            reload=reload if is_ATGM else -1,
+            max_launch_speed=max_launch_speed if is_ATGM else -1,
             penetration_0deg=splitted_ammo_data[1].split(":")[1].replace("mm", ""),
             penetration_30deg=splitted_ammo_data[2].split(":")[1].replace("mm", ""),
             penetration_60deg=splitted_ammo_data[3].split(":")[1].replace("mm", ""),
@@ -552,6 +595,7 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
     print("└ Complete")
 
 sec_converting_time = round(time.time()-start_time-preapre_time-hulls_converting_time-turrets_converting_time-guns_converting_time, 2)
+sec_count = i
 print("!!! Secondary converting time: " + str(sec_converting_time))
 
 
@@ -569,3 +613,11 @@ print("Hulls: " + str(hulls_converting_time))
 print("Turrets: " + str(turrets_converting_time))
 print("Guns: " + str(guns_converting_time))
 print("Secondary: " + str(sec_converting_time))
+
+print("\nModules converted: " + str(hulls_count+turrets_count+guns_count+sec_count))
+print("Hulls: " + str(hulls_count) + f" ({round(hulls_converting_time/hulls_count, 3)}s per hull)")
+print("Turrets: " + str(turrets_count) + f" ({round(turrets_converting_time/turrets_count, 3)}s per turret)")
+print("Guns: " + str(guns_count) + f" ({round(guns_converting_time/guns_count, 3)}s per gun)")
+print("Secondaries: " + str(sec_count) + f" ({round(sec_converting_time/sec_count, 3)}s per secondary)")
+
+print("Database saved: "+JSON_PATH)

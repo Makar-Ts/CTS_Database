@@ -209,6 +209,8 @@ SECONDARIES = """{{
     "caliber": {caliber},
     "ammo_count": {ammo_count},
     "reload_count": {reload_count},
+    "reload": {reload},
+    "max_launch_speed": {max_launch_speed},
     "penetration": {{
         "0": {penetration_0deg},
         "30": {penetration_30deg},

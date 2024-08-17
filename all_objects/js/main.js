@@ -25,6 +25,11 @@ function compareByString(first, sign, second) {
     }
 }
 
+var max_output_modules = 45;
+function setMaxOutput(max_out) {
+    max_output_modules = max_out
+}
+
 const filter_templates = {
     "general": [
         {"path": "tier",                        "name": "Tier",             "getval": (obj) => obj.val(), "type": "number"},
@@ -405,7 +410,7 @@ $(document).ready(function() {
 
                 counter++;
 
-                if (counter >= 45) {
+                if (counter >= max_output_modules) {
                     break;
                 }
             }

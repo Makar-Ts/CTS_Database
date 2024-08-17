@@ -383,6 +383,8 @@ function calculateStringForItem(data, type, aps_img, secondary_data) {
             ammos += `<tr><th colspan="2" class="stat_header">${element.type} ${element.ammo_type}</th></tr>
             ${element.caliber != -1 ? `<tr><th>Caliber</th><td>${element.caliber}mm</td></tr>` : ""}
             <tr><th>Ammo</th><td>${element.ammo_count} ${element.reload_count != 0 ? "(+"+element.reload_count+" reloads)" : ""}</td></tr>
+            ${element.reload != -1 ? `<tr><th>Reload</th><td>${element.reload}s</td></tr>` : ""}
+            ${element.max_launch_speed != -1 ? `<tr><th>Max. Launch Speed</th><td>${element.max_launch_speed}km/h</td></tr>` : ""}
             <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
             <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
             <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>

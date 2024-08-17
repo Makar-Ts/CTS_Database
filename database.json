@@ -1136,44 +1136,44 @@
         "turret": ""
     }
 }
-,"Battlepass IV G": {
-    "description": "kruppstahl",
-    "tier": 3.0,
-    "rarity": "Uncommon",
-    "obtain": "Joe's Shack",
+,"FV701 Ferret": {
+    "description": "a humber man takes his humber car for a humber ride",
+    "tier": 2.0,
+    "rarity": "Common",
+    "obtain": "Unobtainable (August 2024 Incident)",
     "resources": {},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 15.00,
+        "weight": 3.40,
         "armor": {
             "front": 64,
             "back": 14,
             "side": 14
         },
         "speed": {
-            "acceleration": 7,
-            "forward": 40,
-            "backward": -9,
+            "acceleration": 8,
+            "forward": 96,
+            "backward": -96,
             "torque": 12,
-            "rate": 40
+            "rate": 4.2
         },
         "weaponry": {
-            "ammo_storage": 22.3,
+            "ammo_storage": 8.9,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Driver2"]
+        "crew": ["Driver"]
     },
-    "based_on": "Panzer IV G [Germany]",
+    "based_on": "Ferret Armoured Car [UK]",
     "paired": {
-        "gun": "75mm Ikonisch",
-        "turret": "Battlepass IV G"
+        "gun": "",
+        "turret": ""
     }
 }
 ,"Chi-Nu": {
@@ -1254,46 +1254,6 @@
     "paired": {
         "gun": "ZU-23 (Twin)",
         "turret": "ZU Platform"
-    }
-}
-,"Battlepass IV H": {
-    "description": "panzah vo",
-    "tier": 3.0,
-    "rarity": "Uncommon",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 50, "Steel": 20},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 16.00,
-        "armor": {
-            "front": 80,
-            "back": 20,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 10,
-            "forward": 40,
-            "backward": -13,
-            "torque": 12,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 25.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "Panzer IV H [Germany]",
-    "paired": {
-        "gun": "75mm Ikonisch",
-        "turret": "Battlepass IV H"
     }
 }
 ,"Ke Tao 2021": {
@@ -1476,7 +1436,7 @@
 ,"Quack ": {
     "description": "Quack",
     "tier": 3.0,
-    "rarity": "Legendary",
+    "rarity": "Uncommon",
     "obtain": "Monthly Reward,October 2022 / May 2023 | 4⭐ (Quack Set)",
     "resources": {},
     "requires": {
@@ -1553,10 +1513,67 @@
         "turret": ""
     }
 }
+,"UPL-E": {
+    "description": "description",
+    "tier": 3.0,
+    "rarity": "Uncommon",
+    "obtain": "Monthly Reward, August 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": -1,
+        "armor": {
+            "front": 13,
+            "back": 8,
+            "side": 13
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 64,
+            "backward": -24,
+            "torque": 11,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 7.5,
+            "blowout": 0,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": false,
+                "reload_multiplier": 0.8,
+                "reload_multiplier_caliber": 57,
+                "limits": {
+                    "up": 60,
+                    "down": 3,
+                    "left": 125,
+                    "right": 75
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 0,
+                    "zoom_lower": -1,
+                    "zoom_upper": -1
+                }
+            }
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "AMX 40 [France]",
+    "paired": {
+        "gun": "75mm Quack",
+        "turret": "Quack"
+    }
+}
 ,"Ke Tao 2020": {
     "description": "Received by playing the first open test.",
     "tier": 3.0,
-    "rarity": "Epic",
+    "rarity": "Uncommon",
     "obtain": "First Pre-Alpha Test Exclusive",
     "resources": {},
     "requires": {
@@ -1596,7 +1613,7 @@
 ,"Cromwheel": {
     "description": "",
     "tier": 3.0,
-    "rarity": "Epic",
+    "rarity": "Legendary",
     "obtain": "Second Pre-Alpha Test Exclusive",
     "resources": {},
     "requires": {
@@ -2332,7 +2349,7 @@
                     "right": 7.8
                 },
                 "sight": {
-                    "rangefinder": 0,
+                    "rangefinder": 1,
                     "thermal": 0,
                     "zoom_lower": 1.5,
                     "zoom_upper": 3.0
@@ -2345,6 +2362,86 @@
     "paired": {
         "gun": "190mm Bruh",
         "turret": ""
+    }
+}
+,"Battlepass IV G": {
+    "description": "kruppstahl",
+    "tier": 4.0,
+    "rarity": "Uncommon",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 64,
+            "back": 14,
+            "side": 14
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 40,
+            "backward": -9,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 22.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "Panzer IV G [Germany]",
+    "paired": {
+        "gun": "75mm Ikonisch",
+        "turret": "Battlepass IV G"
+    }
+}
+,"Battlepass IV H": {
+    "description": "panzah vo",
+    "tier": 4.0,
+    "rarity": "Uncommon",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 50, "Steel": 20},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 16.00,
+        "armor": {
+            "front": 80,
+            "back": 20,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 40,
+            "backward": -13,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 25.6,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "Panzer IV H [Germany]",
+    "paired": {
+        "gun": "75mm Ikonisch",
+        "turret": "Battlepass IV H"
     }
 }
 ,"Pak Pumi": {
@@ -2655,11 +2752,11 @@
         "turret": ""
     }
 }
-,"ZIT-122": {
-    "description": "Hawk!!!!!!!!",
+,"Zoonk-122": {
+    "description": "T-64 at home",
     "tier": 4.0,
     "rarity": "Legendary",
-    "obtain": "Multicrew Tank Combat Collaboration",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (ZIT-122 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -2673,26 +2770,26 @@
             "side": 44
         },
         "speed": {
-            "acceleration": 9,
-            "forward": 56,
-            "backward": -7,
+            "acceleration": 8,
+            "forward": 52,
+            "backward": -14,
             "torque": 12,
             "rate": 40
         },
         "weaponry": {
-            "ammo_storage": 16.1,
+            "ammo_storage": 12.7,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Driver2"]
+        "crew": ["Driver"]
     },
     "based_on": "None",
     "paired": {
         "gun": "122mm SM-30",
-        "turret": "ZIT-122"
+        "turret": "Zoonk-122"
     }
 }
 ,"Battlepacks": {
@@ -3066,6 +3163,46 @@
         "turret": "M3 Bradley"
     }
 }
+,"ERC": {
+    "description": "vive la france",
+    "tier": 5.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 6.50,
+        "armor": {
+            "front": 64,
+            "back": 14,
+            "side": 14
+        },
+        "speed": {
+            "acceleration": 6,
+            "forward": 95,
+            "backward": -32,
+            "torque": 9,
+            "rate": 2.1
+        },
+        "weaponry": {
+            "ammo_storage": 0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Panhard ERC [France]",
+    "paired": {
+        "gun": "",
+        "turret": ""
+    }
+}
 ,"HM41": {
     "description": "real IS-7",
     "tier": 5.0,
@@ -3379,7 +3516,7 @@
             "forward": 75,
             "backward": -12,
             "torque": 15,
-            "rate": 37
+            "rate": 44
         },
         "weaponry": {
             "ammo_storage": 138.7,
@@ -3597,7 +3734,7 @@
         "turret": "M48A3 [5] M48 Super"
     }
 }
-,"OF-40": {
+,"Palmaria": {
     "description": "otototototototo",
     "tier": 6.0,
     "rarity": "Rare",
@@ -3675,46 +3812,6 @@
     "paired": {
         "gun": "",
         "turret": "Dardi"
-    }
-}
-,"ERC": {
-    "description": "vive la france",
-    "tier": 6.0,
-    "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 6.50,
-        "armor": {
-            "front": 64,
-            "back": 14,
-            "side": 14
-        },
-        "speed": {
-            "acceleration": 6,
-            "forward": 95,
-            "backward": -32,
-            "torque": 9,
-            "rate": 2.1
-        },
-        "weaponry": {
-            "ammo_storage": 0,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "Panhard ERC [France]",
-    "paired": {
-        "gun": "",
-        "turret": ""
     }
 }
 ,"Bagelpanzer": {
@@ -3848,7 +3945,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 24.00,
+        "weight": 30.00,
         "armor": {
             "front": 100,
             "back": 60,
@@ -3856,13 +3953,13 @@
         },
         "speed": {
             "acceleration": 5,
-            "forward": 38,
+            "forward": 42,
             "backward": -15,
-            "torque": 15,
-            "rate": 29
+            "torque": 12,
+            "rate": 40
         },
         "weaponry": {
-            "ammo_storage": 13.3,
+            "ammo_storage": 27.1,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
@@ -4613,7 +4710,7 @@
                     "rangefinder": 2,
                     "thermal": 0,
                     "zoom_lower": 1.0,
-                    "zoom_upper": 1.0
+                    "zoom_upper": 15.0
                 }
             }
         },
@@ -4996,6 +5093,46 @@
         "turret": ""
     }
 }
+,"Cabin M": {
+    "description": "M3Lee at home",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, May 2024 | 4⭐ (Cabin M)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 47.00,
+        "armor": {
+            "front": 13,
+            "back": 8,
+            "side": 13
+        },
+        "speed": {
+            "acceleration": 6,
+            "forward": 47,
+            "backward": -17,
+            "torque": 17,
+            "rate": 15
+        },
+        "weaponry": {
+            "ammo_storage": 26.1,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver1", "Driver2"]
+    },
+    "based_on": "SU-152M [Fake]",
+    "paired": {
+        "gun": "",
+        "turret": ""
+    }
+}
 ,"XT1A IXWA": {
     "description": "Hey! I remember you!!!!!",
     "tier": 7.0,
@@ -5032,7 +5169,7 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "58mm Fusiler I",
+        "gun": "58mm Fusiler",
         "turret": "Universal"
     }
 }
@@ -5288,7 +5425,7 @@
             "side": 14
         },
         "speed": {
-            "acceleration": 6,
+            "acceleration": 9,
             "forward": 73,
             "backward": -34,
             "torque": 16,
@@ -5328,7 +5465,7 @@
             "side": 44
         },
         "speed": {
-            "acceleration": 9,
+            "acceleration": 13,
             "forward": 42,
             "backward": -17,
             "torque": 10,
@@ -5368,7 +5505,7 @@
             "side": 15
         },
         "speed": {
-            "acceleration": 13,
+            "acceleration": 12,
             "forward": 70,
             "backward": -70,
             "torque": 10,
@@ -5408,7 +5545,7 @@
             "side": 13
         },
         "speed": {
-            "acceleration": 12,
+            "acceleration": 5,
             "forward": 110,
             "backward": -52,
             "torque": 9,
@@ -5448,7 +5585,7 @@
             "side": 15
         },
         "speed": {
-            "acceleration": 5,
+            "acceleration": 11,
             "forward": 70,
             "backward": -32,
             "torque": 9,
@@ -5488,7 +5625,7 @@
             "side": 25
         },
         "speed": {
-            "acceleration": 11,
+            "acceleration": 21,
             "forward": 66,
             "backward": -14,
             "torque": 10,
@@ -5528,7 +5665,7 @@
             "side": 25
         },
         "speed": {
-            "acceleration": 21,
+            "acceleration": 10,
             "forward": 57,
             "backward": -25,
             "torque": 13,
@@ -5546,7 +5683,7 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "58mm Fusiler I",
+        "gun": "58mm Fusiler",
         "turret": "Export"
     }
 }
@@ -5568,7 +5705,7 @@
             "side": 44
         },
         "speed": {
-            "acceleration": 10,
+            "acceleration": 4.1,
             "forward": 56,
             "backward": -56,
             "torque": 24,
@@ -5608,7 +5745,7 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 4.1,
+            "acceleration": 5,
             "forward": 60,
             "backward": -35,
             "torque": 12,
@@ -5621,7 +5758,7 @@
             "aps": false,
             "have_gun": true,
             "gun": {
-                "fcs": -1,
+                "fcs": 2.5,
                 "stabilizer": false,
                 "reload_multiplier": 1.5,
                 "reload_multiplier_caliber": 145,
@@ -5632,8 +5769,8 @@
                     "right": 3
                 },
                 "sight": {
-                    "rangefinder": 1,
-                    "thermal": 0,
+                    "rangefinder": 2,
+                    "thermal": 1,
                     "zoom_lower": 4.0,
                     "zoom_upper": 12.0
                 }
@@ -6564,7 +6701,7 @@
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Gunner"]
+        "crew": ["Driver", "Driver2"]
     },
     "based_on": "Maus [Germamy]",
     "paired": {
@@ -6713,7 +6850,7 @@
     "description": "Safety first",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Monthly Reward, July 2024",
+    "obtain": "Monthly Reward, July 2024 | 4⭐ (AFG MK 2)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -6766,11 +6903,91 @@
         "turret": ""
     }
 }
+,"T-62BVMP": {
+    "description": "zoo enclosure",
+    "tier": 8.0,
+    "rarity": "Mythical",
+    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (OBT-2 Set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 150,
+            "back": 30,
+            "side": 60
+        },
+        "speed": {
+            "acceleration": 13,
+            "forward": 56,
+            "backward": -7,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 27.6,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-62 [Fake]",
+    "paired": {
+        "gun": "115mm U-5TS",
+        "turret": "T-62BVMP"
+    }
+}
+,"Battlepass-100": {
+    "description": "",
+    "tier": 8.0,
+    "rarity": "Mythical",
+    "obtain": "Unobtainable",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 98.20,
+        "armor": {
+            "front": 200,
+            "back": 120,
+            "side": 80
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 31,
+            "backward": -11,
+            "torque": 60,
+            "rate": 30
+        },
+        "weaponry": {
+            "ammo_storage": 27.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "E-100 [Germany]",
+    "paired": {
+        "gun": "128mm German Punch",
+        "turret": "The Battlepass"
+    }
+}
 ,"AFG MK 1": {
     "description": "ARGGGGG ",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Joe's Shack, April 1st 2024",
+    "obtain": "Joe's ShackApril 1st 2024",
     "resources": {},
     "requires": {
         "type": "None",
@@ -6821,86 +7038,6 @@
     "paired": {
         "gun": "66mm NUCLEAR WEAPON 5000",
         "turret": ""
-    }
-}
-,"OBT-2 Super": {
-    "description": "zoo enclosure",
-    "tier": 8.0,
-    "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 26.00,
-        "armor": {
-            "front": 150,
-            "back": 30,
-            "side": 60
-        },
-        "speed": {
-            "acceleration": 13,
-            "forward": 56,
-            "backward": -7,
-            "torque": 13,
-            "rate": 34
-        },
-        "weaponry": {
-            "ammo_storage": 32.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "T-62 [Fake]",
-    "paired": {
-        "gun": "115mm U-5TS",
-        "turret": "OBT-2 Super"
-    }
-}
-,"Battlepass-100": {
-    "description": "",
-    "tier": 8.0,
-    "rarity": "Mythical",
-    "obtain": "Unobtainable",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 98.20,
-        "armor": {
-            "front": 200,
-            "back": 120,
-            "side": 80
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 31,
-            "backward": -11,
-            "torque": 60,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 27.4,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "E-100 [Germany]",
-    "paired": {
-        "gun": "128mm German Punch",
-        "turret": "The Battlepass"
     }
 }
 ,"Puma TOW": {
@@ -7333,7 +7470,7 @@
     },
     "based_on": "None",
     "paired": {
-        "gun": "58mm Fusiler I [8] 62.7mm Fusiler II",
+        "gun": "58mm Fusiler [8] 62.7mm Fusiler II",
         "turret": "Export"
     }
 }
@@ -7434,34 +7571,34 @@
         "turret": ""
     }
 }
-,"LT-SE": {
-    "description": "",
+,"pretty decent tank, innit.": {
+    "description": "Peekaboo ahh tank",
     "tier": 9.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration",
+    "obtain": "Multicrew Tank Combat Collaboration | 3⭐ (LT-SE)",
     "resources": {},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 16.82,
+        "weight": 45.33,
         "armor": {
             "front": 15,
             "back": 15,
             "side": 15
         },
         "speed": {
-            "acceleration": 9,
-            "forward": 56,
-            "backward": -7,
+            "acceleration": 8,
+            "forward": 52,
+            "backward": -14,
             "torque": 12,
             "rate": 40
         },
         "weaponry": {
-            "ammo_storage": 8.0,
+            "ammo_storage": 19.8,
             "blowout": -1,
-            "hull_aim": 2,
+            "hull_aim": 0,
             "aps": false,
             "have_gun": true,
             "gun": {
@@ -7471,9 +7608,9 @@
                 "reload_multiplier_caliber": 50,
                 "limits": {
                     "up": 30,
-                    "down": 15,
-                    "left": 12,
-                    "right": 12
+                    "down": 24,
+                    "left": 180,
+                    "right": 180
                 },
                 "sight": {
                     "rangefinder": 2,
@@ -7495,7 +7632,7 @@
     "description": "STAR LORD",
     "tier": 10.0,
     "rarity": "Legendary",
-    "obtain": "Joe's ShackRequires Challenger 1 [Hull]",
+    "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
         "type": "hulls",
@@ -8028,6 +8165,46 @@
         "turret": "M1 Merry Chrysler"
     }
 }
+,"Turtle Tank": {
+    "description": "a helicopter with tracks",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Unobtainable (May 2024 Incident)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 100,
+            "back": 63,
+            "side": 90
+        },
+        "speed": {
+            "acceleration": 11,
+            "forward": 80,
+            "backward": -11,
+            "torque": 14,
+            "rate": 70
+        },
+        "weaponry": {
+            "ammo_storage": 0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-80BV [USSR] T-62 (Turtle) [Russia]",
+    "paired": {
+        "gun": "125mm 2A46M-1",
+        "turret": "T-80BV"
+    }
+}
 ,"EXM-SFSTC": {
     "description": "WHY DOES IT HAVE TEN WHEELS?",
     "tier": 11.0,
@@ -8272,7 +8449,7 @@
     "description": "Germany's Finest! (More details will be added soon)",
     "tier": 12.0,
     "rarity": "Mythical",
-    "obtain": "Joe's ShackRequires Leopard 2 [Hull]",
+    "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
         "type": "hulls",
@@ -8597,6 +8774,46 @@
     "paired": {
         "gun": "",
         "turret": "CATTB"
+    }
+}
+,"Leopard 2SG": {
+    "description": "SALVA SINGAPORE!!!",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Joe's ShackNational Day of Singapore 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 38.00,
+        "armor": {
+            "front": 560,
+            "back": 35,
+            "side": 170
+        },
+        "speed": {
+            "acceleration": 10,
+            "forward": 70,
+            "backward": -35,
+            "torque": 22,
+            "rate": 44
+        },
+        "weaponry": {
+            "ammo_storage": 29.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Leopard 2SG [Singapore]",
+    "paired": {
+        "gun": "120mm L44",
+        "turret": "Leopard 2SG"
     }
 }
 
@@ -10897,11 +11114,11 @@
         "gun": "75mm Freedom"
     }
 }
-,"ZIT-122": {
-    "description": "We are loyal to the Hawk Republic",
+,"Zoonk-122": {
+    "description": "What is this abomination?",
     "tier": 4.0,
     "rarity": "Legendary",
-    "obtain": "Multicrew Tank Combat Collaboration",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (ZIT-122 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -10915,7 +11132,7 @@
             "side": 44
         },
         "weaponry": {
-            "ammo_storage": 6.5,
+            "ammo_storage": 16.9,
             "blowout": -1,
             "clip": 0,
             "aps": false,
@@ -10931,12 +11148,12 @@
                 "reload_multiplier": 1.37,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 20,
+                    "up": 25,
                     "down": 12
                 },
                 "speed": {
-                    "vertical": 5.7,
-                    "horizontal": 35
+                    "vertical": 57.3,
+                    "horizontal": 21.3
                 }
             }
         },
@@ -10944,7 +11161,7 @@
     },
     "based_on": "None",
     "paired": {
-        "hull": "ZIT-122",
+        "hull": "Zoonk-122",
         "gun": "122mm SM-30"
     }
 }
@@ -13142,7 +13359,7 @@
     }
 }
 ,"XTPR Expeditionary": {
-    "description": "I love the queen!",
+    "description": "XTR technology testbed. XTRTT Program.",
     "tier": 7.0,
     "rarity": "Legendary",
     "obtain": "Monthly Reward, July 2023 | 8⭐ (XTPR Expeditionary Set)",
@@ -14056,7 +14273,7 @@
     "based_on": "None",
     "paired": {
         "hull": "XT1A IXWA",
-        "gun": "58mm Fusiler I"
+        "gun": "58mm Fusiler"
     }
 }
 ,"ZA-35": {
@@ -14365,54 +14582,54 @@
         "gun": "120mm L11A1"
     }
 }
-,"OBT-2 Super": {
+,"T-62BVMP": {
     "description": "zoo enclosure",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration",
+    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (OBT-2 Set)",
     "resources": {},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 15.00,
+        "weight": 18.00,
         "armor": {
             "front": 290,
             "back": 100,
             "side": 100
         },
         "weaponry": {
-            "ammo_storage": 6.6,
-            "blowout": -1,
+            "ammo_storage": 29.3,
+            "blowout": 0,
             "clip": 0,
             "aps": false,
             "fcs": -1,
             "stabilizer": true,
             "sight": {
-                "rangefinder": 1,
+                "rangefinder": 2,
                 "thermal": 0,
-                "zoom_lower": 3.0,
-                "zoom_upper": 6.0
+                "zoom_lower": 3.5,
+                "zoom_upper": 7.0
             },
             "gun": {
-                "reload_multiplier": 1.19,
+                "reload_multiplier": 1.23,
                 "reload_multiplier_caliber": 0,
                 "limits": {
-                    "up": 18,
-                    "down": 5
+                    "up": 15,
+                    "down": 7
                 },
                 "speed": {
-                    "vertical": 17.2,
-                    "horizontal": 20
+                    "vertical": 11.5,
+                    "horizontal": 27
                 }
             }
         },
-        "crew": ["Commander", "Loader", "Gunner"]
+        "crew": ["Commander", "Gunner"]
     },
     "based_on": "T-62 [Fake]",
     "paired": {
-        "hull": "OBT-2 Super",
+        "hull": "T-62BVMP",
         "gun": "115mm U-5TS"
     }
 }
@@ -14566,7 +14783,7 @@
     "based_on": "None",
     "paired": {
         "hull": "Export",
-        "gun": "58mm Fusiler I [8] 62.7mm Fusiler II"
+        "gun": "58mm Fusiler [8] 62.7mm Fusiler II"
     }
 }
 ,"M3A3 BUSK III": {
@@ -15386,7 +15603,7 @@
     }
 }
 ,"Yoyota MK1X": {
-    "description": "Pancake",
+    "description": "Premium light tank of the great oppressor",
     "tier": 10.0,
     "rarity": "Legendary",
     "obtain": "Blueprints",
@@ -15950,7 +16167,7 @@
     "description": " £ 3Million Tea making facility.",
     "tier": 11.0,
     "rarity": "Mythical",
-    "obtain": "Joe's ShackRequires Challenger 1 [Turret]",
+    "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
         "type": "turrets",
@@ -16460,7 +16677,7 @@
     "description": "It's all the same but worse",
     "tier": 12.0,
     "rarity": "Mythical",
-    "obtain": "Joe's ShackRequires T-90A [Turret]",
+    "obtain": "Joe's Shack",
     "resources": {},
     "requires": {
         "type": "turrets",
@@ -16580,7 +16797,7 @@
             "blowout": -1,
             "clip": 0,
             "aps": false,
-            "fcs": -1,
+            "fcs": 2,
             "stabilizer": true,
             "sight": {
                 "rangefinder": 2,
@@ -16620,7 +16837,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 13.20,
+        "weight": 26.00,
         "armor": {
             "front": 800,
             "back": 20,
@@ -16652,7 +16869,7 @@
                 }
             }
         },
-        "crew": ["Commander", "Gunner"]
+        "crew": ["Commander", "Gunner", "Loader"]
     },
     "based_on": "Leopard 2A7+ [Germany]",
     "paired": {
@@ -16811,6 +17028,57 @@
     "paired": {
         "hull": "CATTB",
         "gun": "120mm XM-291"
+    }
+}
+,"Leopard 2SG": {
+    "description": "Leopard 2PL??",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Joe's ShackNational Day of Singapore 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.50,
+        "armor": {
+            "front": 470,
+            "back": 40,
+            "side": 310
+        },
+        "weaponry": {
+            "ammo_storage": 21.1,
+            "blowout": 1,
+            "clip": 0,
+            "aps": false,
+            "fcs": 4,
+            "stabilizer": true,
+            "sight": {
+                "rangefinder": 2,
+                "thermal": 2,
+                "zoom_lower": 4.0,
+                "zoom_upper": 12.0
+            },
+            "gun": {
+                "reload_multiplier": 1.35,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 9
+                },
+                "speed": {
+                    "vertical": 10,
+                    "horizontal": 36
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Leopard 2SG [Singapore]",
+    "paired": {
+        "hull": "Leopard 2SG",
+        "gun": "120mm L44"
     }
 }
 
@@ -18667,7 +18935,7 @@
     "description": "",
     "tier": 4.0,
     "rarity": "Legendary",
-    "obtain": "Multicrew Tank Combat Collaboration",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (ZIT-122 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -20113,7 +20381,7 @@
     "type": "AP ",
     "penetration": {
         "0":  218,
-        "30":  285,
+        "30":  185,
         "60":  85
     },
     "velocity":  929,
@@ -20619,7 +20887,7 @@
     "based_on": "73mm 2A28 [USSR]",
     "paired": {
         "hull": "",
-        "turret": "BMP-1 [4] BMP-1 Early"
+        "turret": "BMP-1"
     }
 }
 ,"105mm Freedom IV": {
@@ -21006,11 +21274,11 @@
     "type": "APFSDS ",
     "penetration": {
         "0":  277,
-        "30":  251,
-        "60":  163
+        "30":  231,
+        "60":  126
     },
     "velocity":  1525,
-    "ricochet_angle":  82,
+    "ricochet_angle":  72,
     "stats": {}
 },
 {
@@ -21282,7 +21550,7 @@
         "turret": "FL-10"
     }
 }
-,"58mm Fusiler I": {
+,"58mm Fusiler": {
     "description": "Gun of the Export.",
     "tier": 8.0,
     "rarity": "Epic",
@@ -21851,7 +22119,7 @@
     "description": "Yet another soviet gun",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration",
+    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (OBT-2 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -21868,12 +22136,12 @@
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  287,
-        "30":  243,
-        "60":  135
+        "0":  270,
+        "30":  237,
+        "60":  140
     },
     "velocity":  1640,
-    "ricochet_angle":  79,
+    "ricochet_angle":  71,
     "stats": {}
 },
 {
@@ -21909,8 +22177,8 @@
     },
     "based_on": "115mm U-5TS (2A20) [USSR]",
     "paired": {
-        "hull": "OBT-2 Super",
-        "turret": "OBT-2 Super"
+        "hull": "",
+        "turret": "T-62BVMP"
     }
 }
 ,"35mm GA-35": {
@@ -22303,7 +22571,7 @@
 }]
         }
     },
-    "based_on": "58mm Fusiler I [Fake]",
+    "based_on": "58mm Fusiler [Fake]",
     "paired": {
         "hull": "",
         "turret": "Export"
@@ -22613,6 +22881,43 @@
         "turret": "TOS-1"
     }
 }
+,"30mm 2A72": {
+    "description": "Built-into LT-SE [9]",
+    "tier": 9.0,
+    "rarity": "Epic",
+    "obtain": "Built-Into LT-SE",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.33,
+        "weaponry": {
+            "clip": 20,
+            "reload": 0.1,
+            "accuracy": 20,
+            "ammo_volume": 0.05,
+            "caliber:": 30,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  130,
+        "30":  121,
+        "60":  90
+    },
+    "velocity":  1260,
+    "ricochet_angle":  81,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "30mm 2A72 [USSR]",
+    "paired": {
+        "hull": "pretty decent tank, innit.",
+        "turret": ""
+    }
+}
 ,"105mm Royal": {
     "description": "World Famous Gun",
     "tier": 10.0,
@@ -22810,6 +23115,20 @@
     "velocity":  1705,
     "ricochet_angle":  80,
     "stats": {}
+},
+{
+    "type": "HEAT (PF)",
+    "penetration": {
+        "0":  650,
+        "30":  563,
+        "60":  325
+    },
+    "velocity":  1030,
+    "ricochet_angle":  72,
+    "stats": {
+        "fuse_radius":  10,
+        "arming_distance":  200
+    }
 }]
         }
     },
@@ -23759,7 +24078,7 @@
     "based_on": "Rheinmetall RH-120 L/44 [Germany]",
     "paired": {
         "hull": "",
-        "turret": "Leopard 2K [8] Type 90 [10] TKX-90 [10] Leopard 2A4"
+        "turret": "Leopard 2K [8] Type 90 [10] TKX-90 [10] Leopard 2A4 [11] Leopard 2SG"
     }
 }
 ,"DRQ50": {
@@ -23799,43 +24118,6 @@
         "turret": "None"
     }
 }
-,"30mm 2A72": {
-    "description": "",
-    "tier": 11.0,
-    "rarity": "Epic",
-    "obtain": "Multicrew Tank Combat Collaboration",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 0.33,
-        "weaponry": {
-            "clip": 0,
-            "reload": 0.11,
-            "accuracy": 20,
-            "ammo_volume": 0.05,
-            "caliber:": 30,
-            "ammunition": [{
-    "type": "APFSDS ",
-    "penetration": {
-        "0":  102,
-        "30":  96,
-        "60":  75
-    },
-    "velocity":  1260,
-    "ricochet_angle":  81,
-    "stats": {}
-}]
-        }
-    },
-    "based_on": "30mm 2A72 [USSR]",
-    "paired": {
-        "hull": "LT-SE",
-        "turret": ""
-    }
-}
 ,"117mm Betwixt": {
     "description": "Not for the HEAT of battle.",
     "tier": 12.0,
@@ -23862,23 +24144,23 @@
         "60":  425
     },
     "velocity":  1880,
-    "ricochet_angle":  78,
+    "ricochet_angle":  79,
     "stats": {
         "fuse_radius":  5,
-        "arming_distance":  300
+        "arming_distance":  250
     }
 },
 {
     "type": "HESH ",
     "penetration": {
-        "0":  2,
-        "30":  2,
-        "60":  2
+        "0":  150,
+        "30":  150,
+        "60":  150
     },
-    "velocity":  1950,
+    "velocity":  266,
     "ricochet_angle":  80,
     "stats": {
-        "explosive_mass": " 2g",
+        "explosive_mass": " 8.34kg",
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -23905,18 +24187,18 @@
         "weight": 1.20,
         "weaponry": {
             "clip": 0,
-            "reload": 7.8,
+            "reload": 7.0,
             "accuracy": 260,
             "ammo_volume": 1.14,
             "caliber:": 120,
             "ammunition": [{
-    "type": "APFSDS ",
+    "type": "APFSDS (A-ERA)",
     "penetration": {
         "0":  530,
-        "30":  458,
-        "60":  264
+        "30":  464,
+        "60":  275 
     },
-    "velocity":  1760,
+    "velocity":  1780,
     "ricochet_angle":  81,
     "stats": {}
 },
@@ -24211,7 +24493,7 @@
     },
     "based_on": "2A82-1M [Russia]",
     "paired": {
-        "hull": "T-14 Armata [11] Object 148 Prototype",
+        "hull": "T-14 Armata [12] Object 148 Prototype",
         "turret": ""
     }
 }
@@ -24295,20 +24577,23 @@
         "weight": 2.40,
         "weaponry": {
             "clip": 0,
-            "reload": 15.0,
+            "reload": 20.0,
             "accuracy": 161,
             "ammo_volume": 2.40,
             "caliber:": 166,
             "ammunition": [{
-    "type": "APFSDS (A-ERA)",
+    "type": "HEAT (Tndm/PF)",
     "penetration": {
-        "0":  880,
+        "0":  915,
         "30":  792,
-        "60":  452
+        "60":  458
     },
-    "velocity":  1850,
-    "ricochet_angle":  80,
-    "stats": {}
+    "velocity":  1984,
+    "ricochet_angle":  79,
+    "stats": {
+        "fuse_radius":  5,
+        "arming_distance":  250
+    }
 },
 {
     "type": "HESH ",
@@ -24603,6 +24888,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24622,6 +24909,8 @@
     "caliber": 43.9,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  45,
         "30":  38,
@@ -24645,6 +24934,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24664,6 +24955,8 @@
     "caliber": 7.7,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24683,6 +24976,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24702,6 +24997,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24721,6 +25018,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24740,6 +25039,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24759,6 +25060,8 @@
     "caliber": 7.5,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24778,6 +25081,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24797,6 +25102,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24816,6 +25123,8 @@
     "caliber": 7.92,
     "ammo_count": 225,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24835,6 +25144,8 @@
     "caliber": 7.62,
     "ammo_count": 400,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24854,6 +25165,8 @@
     "caliber": 7.92,
     "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24869,6 +25182,8 @@
     "caliber": 7.92,
     "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24888,6 +25203,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24907,6 +25224,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24926,6 +25245,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24945,6 +25266,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24964,6 +25287,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -24981,8 +25306,10 @@
     "type": "Coax",
     "ammo_type": "Rocket",
     "caliber": 180,
-    "ammo_count": 4,
-    "reload_count": 4,
+    "ammo_count": 0,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  87,
@@ -24998,6 +25325,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25017,6 +25346,8 @@
     "caliber": 45,
     "ammo_count": 25,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  65,
         "30":  55,
@@ -25036,6 +25367,8 @@
     "caliber": 45,
     "ammo_count": 25,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  65,
         "30":  55,
@@ -25055,6 +25388,8 @@
     "caliber": 7.62,
     "ammo_count": 225,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25070,6 +25405,8 @@
     "caliber": 7.62,
     "ammo_count": 225,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25089,6 +25426,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25108,6 +25447,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25127,6 +25468,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25146,6 +25489,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25165,6 +25510,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25175,21 +25522,23 @@
     "stats": {}
 }
     ]
-},"ZIT-122-Turret":{
+},"Zoonk-122-Turret":{
     "tier": 4.0,
     "secondaries": [
         {
-    "type": "Coax",
+    "type": "Roof",
     "ammo_type": "AP",
-    "caliber": 14.5,
-    "ammo_count": 300,
+    "caliber": 12.7,
+    "ammo_count": 400,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
-        "0":  35,
-        "30":  29,
-        "60":  10
+        "0":  29,
+        "30":  24,
+        "60":  9
     },
-    "velocity":  823,
+    "velocity":  850,
     "ricochet_angle":  65,
     "stats": {}
 }
@@ -25203,6 +25552,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25218,6 +25569,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25237,6 +25590,8 @@
     "caliber": 7.5,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25256,6 +25611,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25275,6 +25632,8 @@
     "caliber": 20,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  46,
         "30":  39,
@@ -25283,6 +25642,31 @@
     "velocity":  1000,
     "ricochet_angle":  67,
     "stats": {}
+}
+    ]
+},"BMP-1-Turret":{
+    "tier": 5.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "ATGM",
+    "caliber": -1,
+    "ammo_count": 1,
+    "reload_count": 3,
+    "reload":  12,
+    "max_launch_speed":  10,
+    "penetration": {
+        "0":  400,
+        "30":  346,
+        "60":  200
+    },
+    "velocity":  100,
+    "ricochet_angle":  90,
+    "stats": {
+        "range":  3.0,
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
 }
     ]
 },"M48A3 Camo-Turret":{
@@ -25294,6 +25678,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25309,6 +25695,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25328,6 +25716,8 @@
     "caliber": 114,
     "ammo_count": 58,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  24,
         "30":  21,
@@ -25343,6 +25733,29 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  13,
+        "30":  11,
+        "60":  4
+    },
+    "velocity":  853,
+    "ricochet_angle":  65,
+    "stats": {}
+}
+    ]
+},"IS-2 Mod. 1944-Hull":{
+    "tier": 6.0,
+    "secondaries": [
+        {
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 7.62,
+    "ammo_count": 500,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25362,6 +25775,8 @@
     "caliber": 47,
     "ammo_count": 25,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  77,
         "30":  64,
@@ -25381,6 +25796,8 @@
     "caliber": 47,
     "ammo_count": 25,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  77,
         "30":  64,
@@ -25400,6 +25817,8 @@
     "caliber": 7.62,
     "ammo_count": 225,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25415,6 +25834,8 @@
     "caliber": 7.62,
     "ammo_count": 225,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25434,6 +25855,8 @@
     "caliber": 7.62,
     "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25449,6 +25872,8 @@
     "caliber": 7.62,
     "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25464,6 +25889,8 @@
     "caliber": 7.62,
     "ammo_count": 225,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25483,6 +25910,8 @@
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 10,
+    "reload":  12,
+    "max_launch_speed":  50,
     "penetration": {
         "0":  500,
         "30":  433,
@@ -25506,6 +25935,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25525,6 +25956,8 @@
     "caliber": 152,
     "ammo_count": 13,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  160,
         "30":  132,
@@ -25548,6 +25981,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25567,6 +26002,8 @@
     "caliber": 7.5,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25586,6 +26023,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25600,11 +26039,47 @@
     "tier": 6.0,
     "secondaries": [
         {
+    "type": "Roof",
+    "ammo_type": "AP",
+    "caliber": 12.7,
+    "ammo_count": 400,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  29,
+        "30":  24,
+        "60":  9
+    },
+    "velocity":  850,
+    "ricochet_angle":  65,
+    "stats": {}
+},
+{
     "type": "Coax",
     "ammo_type": "AP",
     "caliber": 7.62,
-    "ammo_count": 800,
+    "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  13,
+        "30":  11,
+        "60":  4
+    },
+    "velocity":  823,
+    "ricochet_angle":  65,
+    "stats": {}
+},
+{
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 7.62,
+    "ammo_count": 500,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25624,6 +26099,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25643,6 +26120,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25662,6 +26141,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25677,6 +26158,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25696,6 +26179,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25715,6 +26200,8 @@
     "caliber": 7.62,
     "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25730,6 +26217,8 @@
     "caliber": 7.62,
     "ammo_count": 500,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25749,6 +26238,8 @@
     "caliber": 7.92,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25768,6 +26259,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25787,6 +26280,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25806,6 +26301,8 @@
     "caliber": 7.62,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25825,6 +26322,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25840,6 +26339,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25859,6 +26360,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25878,6 +26381,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25897,6 +26402,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25912,6 +26419,8 @@
     "caliber": 20,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  57,
         "30":  48,
@@ -25931,6 +26440,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -25946,6 +26457,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -25965,6 +26478,8 @@
     "caliber": 20,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  57,
         "30":  48,
@@ -25984,6 +26499,8 @@
     "caliber": 12.7,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -26003,6 +26520,8 @@
     "caliber": 7.62,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26018,6 +26537,8 @@
     "caliber": 7.62,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26033,6 +26554,8 @@
     "caliber": 7.62,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26052,6 +26575,8 @@
     "caliber": 5.56,
     "ammo_count": 1000,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  10,
         "30":  8,
@@ -26071,6 +26596,8 @@
     "caliber": 7.62,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26086,6 +26613,8 @@
     "caliber": 7.62,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26101,6 +26630,8 @@
     "caliber": 7.62,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26120,6 +26651,8 @@
     "caliber": 15,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  40,
         "30":  34,
@@ -26139,6 +26672,8 @@
     "caliber": -1,
     "ammo_count": 1,
     "reload_count": 4,
+    "reload":  12,
+    "max_launch_speed":  -1,
     "penetration": {
         "0":  1000,
         "30":  866,
@@ -26162,6 +26697,8 @@
     "caliber": 75,
     "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  85,
@@ -26177,6 +26714,8 @@
     "caliber": 75,
     "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  85,
@@ -26192,6 +26731,8 @@
     "caliber": 75,
     "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  85,
@@ -26207,6 +26748,8 @@
     "caliber": 75,
     "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  85,
@@ -26219,46 +26762,35 @@
 {
     "type": "Hull",
     "ammo_type": "AP",
-    "caliber": 20,
-    "ammo_count": 150,
+    "caliber": 100,
+    "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
-        "0":  46,
-        "30":  39,
-        "60":  16
+        "0":  160,
+        "30":  133,
+        "60":  47
     },
-    "velocity":  1000,
-    "ricochet_angle":  67,
+    "velocity":  700,
+    "ricochet_angle":  65,
     "stats": {}
 },
 {
     "type": "Hull",
     "ammo_type": "AP",
-    "caliber": 20,
-    "ammo_count": 150,
+    "caliber": 100,
+    "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
-        "0":  46,
-        "30":  39,
-        "60":  16
+        "0":  160,
+        "30":  133,
+        "60":  47
     },
-    "velocity":  1000,
-    "ricochet_angle":  67,
-    "stats": {}
-},
-{
-    "type": "Hull",
-    "ammo_type": "AP",
-    "caliber": 20,
-    "ammo_count": 150,
-    "reload_count": 0,
-    "penetration": {
-        "0":  46,
-        "30":  39,
-        "60":  16
-    },
-    "velocity":  1000,
-    "ricochet_angle":  67,
+    "velocity":  700,
+    "ricochet_angle":  65,
     "stats": {}
 }
     ]
@@ -26271,6 +26803,8 @@
     "caliber": 75,
     "ammo_count": 30,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  85,
@@ -26286,6 +26820,8 @@
     "caliber": 75,
     "ammo_count": 30,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  100,
         "30":  85,
@@ -26301,6 +26837,8 @@
     "caliber": 100,
     "ammo_count": 20,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  160,
         "30":  133,
@@ -26316,36 +26854,8 @@
     "caliber": 100,
     "ammo_count": 20,
     "reload_count": 0,
-    "penetration": {
-        "0":  160,
-        "30":  133,
-        "60":  47
-    },
-    "velocity":  700,
-    "ricochet_angle":  65,
-    "stats": {}
-},
-{
-    "type": "Hull",
-    "ammo_type": "AP",
-    "caliber": 100,
-    "ammo_count": 20,
-    "reload_count": 0,
-    "penetration": {
-        "0":  160,
-        "30":  133,
-        "60":  47
-    },
-    "velocity":  700,
-    "ricochet_angle":  65,
-    "stats": {}
-},
-{
-    "type": "Hull",
-    "ammo_type": "AP",
-    "caliber": 100,
-    "ammo_count": 20,
-    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  160,
         "30":  133,
@@ -26365,6 +26875,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  29,
         "30":  24,
@@ -26380,6 +26892,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  8,
         "30":  7,
@@ -26399,6 +26913,8 @@
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 2,
+    "reload":  20,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  510,
         "30":  442,
@@ -26418,6 +26934,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26437,6 +26955,8 @@
     "caliber": -1,
     "ammo_count": 6,
     "reload_count": 0,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  400,
         "30":  346,
@@ -26456,6 +26976,8 @@
     "caliber": 7.5,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26475,6 +26997,8 @@
     "caliber": -1,
     "ammo_count": 1,
     "reload_count": 3,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  700,
         "30":  606,
@@ -26494,6 +27018,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26513,6 +27039,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26532,6 +27060,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -26547,6 +27077,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -26566,6 +27098,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  29,
         "30":  24,
@@ -26581,6 +27115,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  8,
         "30":  7,
@@ -26600,6 +27136,8 @@
     "caliber": 14.5,
     "ammo_count": 400,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  32,
         "30":  27,
@@ -26619,6 +27157,8 @@
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 4,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  500,
         "30":  433,
@@ -26638,6 +27178,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26657,6 +27199,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26676,6 +27220,8 @@
     "caliber": 75,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  110,
         "30":  95,
@@ -26698,6 +27244,8 @@
     "caliber": 20,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  57,
         "30":  48,
@@ -26717,6 +27265,8 @@
     "caliber": -1,
     "ammo_count": 1,
     "reload_count": 2,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  430,
         "30":  372,
@@ -26740,6 +27290,8 @@
     "caliber": 20,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  66,
         "30":  56,
@@ -26755,6 +27307,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26774,6 +27328,8 @@
     "caliber": 75,
     "ammo_count": 100,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  110,
         "30":  95,
@@ -26787,6 +27343,44 @@
     }
 }
     ]
+},"T-62BVMP-Turret":{
+    "tier": 8.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 23,
+    "ammo_count": 40,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  45,
+        "30":  36,
+        "60":  0
+    },
+    "velocity":  970,
+    "ricochet_angle":  55,
+    "stats": {}
+},
+{
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 23,
+    "ammo_count": 40,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  45,
+        "30":  36,
+        "60":  0
+    },
+    "velocity":  970,
+    "ricochet_angle":  55,
+    "stats": {}
+}
+    ]
 },"Speedsta II-Hull":{
     "tier": 9.0,
     "secondaries": [
@@ -26796,6 +27390,8 @@
     "caliber": -1,
     "ammo_count": 1,
     "reload_count": 3,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  700,
         "30":  606,
@@ -26819,6 +27415,8 @@
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 4,
+    "reload":  12,
+    "max_launch_speed":  100,
     "penetration": {
         "0":  510,
         "30":  442,
@@ -26833,7 +27431,7 @@
     }
 }
     ]
-},"LT-SE-Hull":{
+},"pretty decent tank, innit.-Hull":{
     "tier": 9.0,
     "secondaries": [
         {
@@ -26841,16 +27439,18 @@
     "ammo_type": "ATGM (Tandem)",
     "caliber": -1,
     "ammo_count": 4,
-    "reload_count": 4,
+    "reload_count": 8,
+    "reload":  12,
+    "max_launch_speed":  25,
     "penetration": {
         "0":  700,
         "30":  606,
         "60":  350
     },
-    "velocity":  400,
-    "ricochet_angle":  -1,
+    "velocity":  200,
+    "ricochet_angle":  80,
     "stats": {
-        "range":  10,
+        "range":  8.0,
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -26865,6 +27465,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -26880,6 +27482,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26895,10 +27499,12 @@
     "secondaries": [
         {
     "type": "Coax",
-    "ammo_type": "ATGM (Tndm/OTA)",
+    "ammo_type": "ATGM (Tndm/PF)",
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 4,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  800,
         "30":  693,
@@ -26918,6 +27524,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26937,6 +27545,8 @@
     "caliber": 20,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  57,
         "30":  48,
@@ -26956,6 +27566,8 @@
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 6,
+    "reload":  12,
+    "max_launch_speed":  -1,
     "penetration": {
         "0":  700,
         "30":  606,
@@ -26975,6 +27587,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -26994,6 +27608,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27009,6 +27625,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27028,6 +27646,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27047,6 +27667,8 @@
     "caliber": 21.2,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  62,
         "30":  56,
@@ -27064,8 +27686,10 @@
     "type": "Coax",
     "ammo_type": "Rocket",
     "caliber": 250,
-    "ammo_count": 24,
+    "ammo_count": 10,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  400,
         "30":  346,
@@ -27085,6 +27709,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27104,6 +27730,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27123,6 +27751,8 @@
     "caliber": -1,
     "ammo_count": 2,
     "reload_count": 4,
+    "reload":  20,
+    "max_launch_speed":  10,
     "penetration": {
         "0":  800,
         "30":  643,
@@ -27142,6 +27772,8 @@
     "caliber": 30,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  76,
         "30":  66,
@@ -27160,6 +27792,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27179,6 +27813,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  40,
         "30":  33,
@@ -27194,6 +27830,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27213,6 +27851,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27232,6 +27872,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  40,
         "30":  33,
@@ -27247,6 +27889,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27266,6 +27910,8 @@
     "caliber": 30,
     "ammo_count": 150,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  82,
         "30":  70,
@@ -27281,6 +27927,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27300,6 +27948,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27315,6 +27965,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27334,6 +27986,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27349,6 +28003,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27368,6 +28024,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27387,6 +28045,8 @@
     "caliber": -1,
     "ammo_count": 1,
     "reload_count": 4,
+    "reload":  12,
+    "max_launch_speed":  30,
     "penetration": {
         "0":  140,
         "30":  121,
@@ -27406,6 +28066,8 @@
     "caliber": 20,
     "ammo_count": 200,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  66,
         "30":  56,
@@ -27425,6 +28087,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27444,6 +28108,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27459,6 +28125,8 @@
     "caliber": 7.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27478,6 +28146,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27497,6 +28167,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27516,6 +28188,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27535,6 +28209,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27554,6 +28230,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27573,6 +28251,8 @@
     "caliber": 40,
     "ammo_count": 150,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  50,
         "30":  50,
@@ -27592,6 +28272,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27607,6 +28289,8 @@
     "caliber": 12.7,
     "ammo_count": 350,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27626,6 +28310,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27641,6 +28327,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27660,6 +28348,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27679,6 +28369,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  40,
         "30":  33,
@@ -27694,6 +28386,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27713,6 +28407,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  40,
         "30":  33,
@@ -27728,6 +28424,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27747,6 +28445,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27766,6 +28466,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27785,6 +28487,8 @@
     "caliber": 20,
     "ammo_count": 150,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  66,
         "30":  56,
@@ -27800,6 +28504,8 @@
     "caliber": 20,
     "ammo_count": 150,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  66,
         "30":  56,
@@ -27819,6 +28525,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27838,6 +28546,8 @@
     "caliber": -1,
     "ammo_count": 4,
     "reload_count": 4,
+    "reload":  30,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  750,
         "30":  650,
@@ -27861,6 +28571,8 @@
     "caliber": 7.62,
     "ammo_count": 800,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27880,6 +28592,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  34,
         "30":  28,
@@ -27895,6 +28609,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27914,6 +28630,8 @@
     "caliber": -1,
     "ammo_count": 4,
     "reload_count": 4,
+    "reload":  12,
+    "max_launch_speed":  25,
     "penetration": {
         "0":  700,
         "30":  606,
@@ -27937,6 +28655,8 @@
     "caliber": 12.7,
     "ammo_count": 450,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  26,
         "30":  22,
@@ -27952,6 +28672,8 @@
     "caliber": 7.62,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  13,
         "30":  11,
@@ -27971,6 +28693,8 @@
     "caliber": 12.7,
     "ammo_count": 600,
     "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  20,
         "30":  17,
@@ -27990,6 +28714,8 @@
     "caliber": -1,
     "ammo_count": 8,
     "reload_count": 0,
+    "reload":  12,
+    "max_launch_speed":  3,
     "penetration": {
         "0":  23,
         "30":  20,
@@ -28002,6 +28728,27 @@
         "fuse_radius":  8,
         "arming_distance":  300
     }
+}
+    ]
+},"Leopard 2SG-Turret":{
+    "tier": 12.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 7.62,
+    "ammo_count": 800,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  13,
+        "30":  11,
+        "60":  4
+    },
+    "velocity":  853,
+    "ricochet_angle":  65,
+    "stats": {}
 }
     ]
 }
