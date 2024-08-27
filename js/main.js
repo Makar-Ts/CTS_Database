@@ -188,14 +188,17 @@ function setSearchOutput(hull, type, data, secondary_data) {
     }
 
     console.log(window.location);
-    window.history.pushState("", "why this shit is here", `${window.location.pathname}?type=${type}&name=${hull.replace("+", "%2B")}`)
+    window.history.pushState(
+        "", 
+        "why this shit is here", 
+        `${window.location.pathname}?type=${type}&name=${hull.replace("+", "%2B")}`
+    )
 
     $("#search_results").hide();
     console.log(hull);
     $('#search_input').val(hull);
 
-    plain = ""
-    if (type == "hulls" | type == "turrets") { plain = " Plain"; }
+    plain = type == "hulls" | type == "turrets" ? " Plain" : ""
     $("#item_img_container").text("Image loading...");
     document.getElementById('item_img').onerror = function(event) {
         $("#item_img_container").text("No img, sorry Т_Т");

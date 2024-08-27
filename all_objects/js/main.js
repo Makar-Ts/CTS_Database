@@ -530,7 +530,24 @@ $(document).on("click", ".resource_item", function () {
 $(document).ready(function () {
     item_html = $(".item_container").html();
     $("#item_container_z").hide();
-    console.log(item_html);
+    $("#modules_contents_dict").hide();
+
+    max_output = getCookie("max_output")
+    if (max_output === "") {
+        document.cookie = `max_output=${$("#settings_max_output").val()}`;
+    } else {
+        $("#settings_max_output").val(max_output);
+    }
+
+    max_output_modules = +getCookie("max_output")
+
+    show_data = getCookie("show_data")
+    if (show_data === "") {
+        document.cookie = `show_data=${$("#settings_show_data").prop("checked")}`;
+    } else {
+        $("#settings_show_data").prop("checked", JSON.parse(show_data));
+    }
+
 
     loadResourcesData(fileResourcesPath);
 
@@ -559,6 +576,32 @@ $(document).ready(function () {
             console.log(data.hulls["TKS"]);
         }
     });
+
+    $("#settings_popup").click(function(e) {
+        $(".settings_popup").toggle()
+
+        $("#settings_max_output").val(getCookie("max_output"))
+        $("#settings_show_data").prop("checked", JSON.parse(getCookie("show_data")))
+    })
+
+    $("#settings_save").click(function(e) {
+        document.cookie = `max_output=${$("#settings_max_output").val()}`;
+        document.cookie = `show_data=${$("#settings_show_data").is(":checked")}`;
+
+        max_output_modules = +getCookie("max_output")
+
+        $(".settings_popup").hide()
+    })
+
+    $(".item_container").on("click", ".show_stats_button", function(e) {
+        $(this).parent().parent().parent().find("> tr:not(.shown)").toggle()
+
+        if ($(this).text() == "Show stats") {
+            $(this).text("Hide stats");
+        } else {
+            $(this).text("Show stats");
+        }
+    })
 
     $("#type").on("change", function () {
         $("#filter_container").empty();
@@ -680,6 +723,8 @@ $(document).ready(function () {
             console.log(filters[filters.length - 1]);
         }
 
+        document.getElementById("modules_contents_dict").innerHTML = ""
+
         for (var key of Object.keys(database[type])) {
             fit_in_filter = true;
 
@@ -712,6 +757,8 @@ $(document).ready(function () {
                     `item_container_${counter}`
                 );
 
+                document.getElementById("modules_contents_dict").innerHTML += `<li><a href="#item_container_${counter}">${key}</a></li>`
+
                 counter++;
 
                 if (counter >= max_output_modules) {
@@ -721,6 +768,11 @@ $(document).ready(function () {
         }
 
         console.log(ids);
+        if (counter === 0){
+            $("#modules_contents_dict").hide();
+        } else {
+            $("#modules_contents_dict").show();
+        }
         $(".item_container").html(str);
 
         for (var i = 0; i < ids.length; i++) {
@@ -756,13 +808,16 @@ $(document).ready(function () {
             $(`#item_container_${i} ` + "#obtain").text(data.obtain);
 
             if (Object.keys(data.resources).length == 0) {
-                $(`#item_container_${i} ` + "#resources")
-                    .closest("tr")
-                    .hide();
+                var tr_show = $(`#item_container_${i} ` + "#resources")
+                    .closest("tr");
+                
+                tr_show.hide();
+                tr_show.addClass("shown");
             } else {
-                $(`#item_container_${i} ` + "#resources")
-                    .closest("tr")
-                    .show();
+                var tr_show = $(`#item_container_${i} ` + "#resources")
+                    .closest("tr");
+
+                tr_show.show();
 
                 str = "";
                 for (let key of Object.keys(data.resources)) {
@@ -785,6 +840,10 @@ $(document).ready(function () {
                 $(`#item_container_${i} ` + "#resources_calculated").html(
                     calc_str
                 );
+            }
+
+            if (!JSON.parse(getCookie("show_data"))) {
+                $(`#item_container_${i} tbody`).find("> tr:not(.shown)").hide()
             }
 
             $(`#item_container_${i} ` + "#weight").text(
@@ -830,6 +889,7 @@ $(document).ready(function () {
                 $(`#item_container_${i} ` + `#paired_${count}`).html(
                     html_paired
                 );
+
                 switch (key) {
                     case "hull":
                         $(

@@ -21,7 +21,7 @@
 
         .type_search_select {
             width: 100%;
-            grid-column: 1 / -1;
+            grid-column: 1 / -2;
         }
 
         .search_container {
@@ -68,6 +68,102 @@
             color: var(--main);
             font-size: 1.5em;
         }
+
+        .contents_dict {
+            list-style-type: square;
+
+            background-color: var(--elem);
+            border-radius: 8px;
+            border: 1px solid var(--bord);
+
+            width: 100%;
+
+            margin: 0;
+            padding: 10px 10px 10px 30px;
+
+            max-height: 200px;
+
+            overflow-y: scroll;
+        }
+
+        .contents_dict::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        
+        .contents_dict::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .contents_dict li {
+            padding: 5px 0px;
+        }
+
+        .contents_dict li a {
+            width: 100%;
+        }
+
+        .settings_popup{
+            position: fixed;
+
+            top: 20%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+            width: 45%;
+            color:  var(--main);
+            background-color: var(--elem);
+            
+            border-radius: 8px;
+            border: 1px solid var(--bord);
+
+            z-index: 20;
+
+            box-shadow: 0px 0px 1000px 1000px #00000063;
+            -moz-box-shadow: 0px 0px 1000px 1000px #00000063;
+            -webkit-box-shadow: 0px 0px 1000px 1000px #00000063;
+
+            transition: 0.2s;
+        }
+        .settings_popup .heading{
+            font-size: 35px;
+            text-align: left;
+            padding: 6px;
+            margin-bottom: 10px;
+            color:  var(--main);
+            border: 1px solid var(--bord);
+            border-left: none;
+            border-right: none;
+            background-color: var(--back);
+        
+        }
+        .settings_popup .message_box{
+            margin: 20px;
+        }
+
+        .settings_popup .message_box p {
+            padding-left: 5px;
+            display: inline;
+        }
+
+        .settings_popup .message_box #settings_show_data {
+            display: inline;
+
+            margin: 0px 0px 20px 0px;
+        }
+
+        .settings_popup .message_box #settings_max_output {
+            margin: 0px 0px 10px 0px;
+        }
+
+        .settings_popup .message_box #settings_save {
+            height: 40px;
+        }
+
+        @media (orientation: portrait) {
+            .settings_popup{
+                width: 95%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -81,15 +177,20 @@
             <option value="turrets">Turrets</option>
             <option value="guns">Guns</option>
         </select>
+        <div style=""><button id="settings_popup" type="button" class="button_search"><img style="width: 80%;" src="./../img/setting.png"></button></div>
         <div id="filter_container" class="filter_container"></div>
         <div style="grid-row: -2; grid-column: 1;"><button id="button_add" type="button" class="button_search search_text" style="width: 80%;">+</button><button id="button_rem" type="button" class="button_search search_text" style="width: 20%;">-</button></div>
         <div style="grid-row-start: 2; grid-row-end: -1; grid-column: 2;"><button id="search" type="button" class="button_search"><img src="./../img/search.ico"></button></div>
+    
+        <ul id="modules_contents_dict" class="contents_dict" style="display: none;">
+        </ul>
     </div>
 
     <div class="item_container">
         <table id="item_container_z" class="item_table">
-            <tr><th colspan="2" id="name" class="stat_header">Name</th></tr>
-            <tr><td colspan="2" class="stat_header"><div id="item_img_container"></div><img src="" id="item_img" loading="eager"></td></tr>
+            <tr class="shown"><th colspan="2" id="name" class="stat_header">Name</th></tr>
+            <tr class="shown"><td colspan="2" class="stat_header"><div id="item_img_container"></div><img src="" id="item_img" loading="eager"></td></tr>
+            <tr class="shown"><th colspan="2"><button data="show" type="button" class="button_search show_stats_button" style="height: 40px;">Hide stats</button></th></tr>
             <tr><th>Description</th><td id="description">Test123</td></tr>
             <tr><th>Tier</th><td id="tier">Test123</td></tr>
             <tr><th>Rarity</th><td id="rarity">Test123</td></tr>
@@ -103,6 +204,17 @@
             <tr><th id="paired_1_text">Turret</th><td id="paired_1"></td></tr>
             <tr><th id="paired_2_text">Gun</th><td id="paired_2"></td></tr>
         </table>
+    </div>
+
+    <div class="settings_popup" style="display: none;">
+        <p class="heading">Filter Settings</p>
+        <div class="message_box">
+            <p>Max output</p>
+            <input type="number" id="settings_max_output" class="search_input" value=20 />
+            <p>Show stats</p>
+            <input type="checkbox" id="settings_show_data" checked />
+            <button id="settings_save" class="button_search">Save</button>
+        </div> 
     </div>
 
     <div class="footer">

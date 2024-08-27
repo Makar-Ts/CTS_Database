@@ -1,7 +1,7 @@
 :root {
     --main: rgb(0, 0, 0);
     --void: rgb(255, 255, 255);
-    --back: rgb(233, 233, 233);
+    --back: rgba(233, 233, 233, 0.247);
     --elem: rgb(220, 220, 220);
     --disb: rgb(181, 181, 181);
     --bord: rgb(154, 154, 154);
@@ -19,6 +19,11 @@
         -webkit-filter: invert(1);
         filter: invert(1);
     }
+}
+
+::-webkit-scrollbar{    
+    width: 12px;
+    height: 12px;
 }
 
 html {
