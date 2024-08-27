@@ -442,7 +442,7 @@ function sendToDiscordWebhook(data, webhookURL) {
     xhr.setRequestHeader("Content-Type", "application/json");
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
-            console.log('Everything ok')
+            console.log('Hook completed successfully')
         } else {
             console.error('Error:', xhr.statusText)
         }
@@ -455,6 +455,21 @@ function sendToDiscordWebhook(data, webhookURL) {
     xhr.send(requestBody)
 } 
 
+function stringToHash(string) {
+
+    let hash = 0;
+
+    if (string.length == 0) return hash;
+
+    for (i = 0; i < string.length; i++) {
+        char = string.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash;
+    }
+
+    return hash;
+}
+
 function createLog() {
     let id = fetch("https://api64.ipify.org?format=json")
             .then(response => response.ok ? response.json() : Promise.reject(''))
@@ -464,33 +479,50 @@ function createLog() {
                 let screenWidth = window.screen.width;
                 let screenHeight = window.screen.height;
                 let browserLanguage = navigator.language;
+                let userBrowser =  navigator.userAgentData
+                                            .brands
+                                            .map((brand) =>`${brand.brand} (${brand.version})`)
+                                            .join(" > ");
                 
+                const urlParams = new URLSearchParams(window.location.search);
+
                 var log = {
-                    "id": btoa(address),
-                    "location": window.location.href,
+                    "id": stringToHash(btoa(address)),
+                    "location": window.location.origin+window.location.pathname,
+                    "data":    Array.from(urlParams.keys())
+                                        .map((key) => `${key}: ${urlParams.get(key)}`)
+                                        .join("\n - "),
                     "deviceData": {
                         "userAgent": userAgent,
+                        "userBrowser": userBrowser,
                         "screenWidth": screenWidth,
                         "screenHeight": screenHeight,
                         "browserLanguage": browserLanguage
                     }
                 };
+
+                unique_up_id = stringToHash(JSON.stringify(log))
+                console.warn("UNIQUE USER-PAGE ID: "+unique_up_id)
             
                 sendToDiscordWebhook(`
-============================================================
-# ID: *${log.id}*
-## Location: ${log.location}
+[ ------------------------ ]
+# ID: ${log.id}
+## Location:
+- **Path**: ${log.location}
+- **Data**: 
+ - ${log.data}
 
 ## Device Data
-- User Agent: ${log.deviceData.userAgent}
-- Screen Width: ${log.deviceData.screenWidth}
-- Screen Height: ${log.deviceData.screenHeight}
-- Browser Language: ${log.deviceData.browserLanguage}
+- **User Agent**: \`\`\`${log.deviceData.userAgent}\`\`\`
+- **User Browser**: \`\`\`${log.deviceData.userBrowser}\`\`\`
+- **Screen**: ${log.deviceData.screenWidth}x${log.deviceData.screenHeight}
+- **Browser Language**: ${log.deviceData.browserLanguage.toUpperCase()}
 
-============================================================
+## Debug
+- **Unique User-Page ID**: ${unique_up_id}
 `, WEBHOOK_URL);
             })
             .catch(error => {
-                console.error('Error fetching IP:', error);
+                console.error('Error fetching:', error);
     });
 }
