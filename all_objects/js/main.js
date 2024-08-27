@@ -844,6 +844,7 @@ $(document).ready(function () {
 
             if (!JSON.parse(getCookie("show_data"))) {
                 $(`#item_container_${i} tbody`).find("> tr:not(.shown)").hide()
+                $(`#item_container_${i} tr th button.show_stats_button`).text("Show stats")
             }
 
             $(`#item_container_${i} ` + "#weight").text(
