@@ -508,9 +508,10 @@ function createLog() {
 [ ------------------------ ]
 # ID: ${log.id}
 ## Location:
-- **Path**: ${log.location}
+- **Path**: <${log.location}>${log.data.length != 0 ?
+`
 - **Data**: 
- - ${log.data}
+ - ${log.data}` : ""}
 
 ## Device Data
 - **User Agent**: \`\`\`${log.deviceData.userAgent}\`\`\`
