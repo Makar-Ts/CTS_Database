@@ -466,7 +466,7 @@ filter_item_template = `<div class="filter_item" id="{id}">
                 type="{type}" 
                 step="0.01" 
                 id="value" 
-                class="type_search_select filter_item_option" 
+                class="type_search_select filter_item_option enabled"  
                 style="width: 35%;"><div 
                         class="type_search_select filter_item_option toggle-rect" 
                         style=" display: none; 
@@ -642,10 +642,7 @@ $(document).ready(function () {
                 $(this).parent().find("select#value").hide();
 
                 $(this).parent().find("input#value").addClass("enabled");
-                $(this)
-                    .parent()
-                    .find("input.toggle-rect-input")
-                    .removeClass("enabled");
+                $(this).parent().find("input.toggle-rect-input").removeClass("enabled");
                 $(this).parent().find("select#value").removeClass("enabled");
             } else if (temp["type"] == "checkbox") {
                 $(this).parent().find("input#value").hide();
@@ -661,10 +658,7 @@ $(document).ready(function () {
                 $(this).parent().find("select#value").show();
 
                 $(this).parent().find("input#value").removeClass("enabled");
-                $(this)
-                    .parent()
-                    .find("input.toggle-rect-input")
-                    .removeClass("enabled");
+                $(this).parent().find("input.toggle-rect-input").removeClass("enabled");
                 $(this).parent().find("select#value").addClass("enabled");
 
                 str = "";
