@@ -25,14 +25,14 @@ async function getCommits() {
 async function displayCommits() {
     const commitsContainer = document.getElementById('commits-container');
     const commits = await getCommits();
-    commits.forEach(commit => {
+    commits.forEach((commit, i) => {
         const commitElement = document.createElement('div');
         const commitDate = new Date(commit.commit.author.date);
         commitElement.innerHTML = `
-            <strong>${commit.commit.author.name}</strong>: 
+            <a href="${commit.html_url}" style="text-decoration: none;"><strong>${commit.commit.author.name}</strong>: 
             ${commit.commit.message}
             <br>
-            <small>Date: ${commitDate.toLocaleString()}</small>
+            <small>Date: ${commitDate.toLocaleString()}</small></a>
         `;
         commitElement.setAttribute("style", 'padding-bottom: 5px; margin-left: 20px; margin-bottom: 15px; border-bottom: 1px solid var(--main);');
         commitsContainer.appendChild(commitElement);
