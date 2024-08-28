@@ -467,10 +467,20 @@ filter_item_template = `<div class="filter_item" id="{id}">
                 step="0.01" 
                 id="value" 
                 class="type_search_select filter_item_option" 
-                style="width: 35%;"><select 
-                                        id="value" 
-                                        class="type_search_select filter_item_option"
-                                        style="width: 35%; display: none;">
+                style="width: 35%;"><div 
+                        class="type_search_select filter_item_option toggle-rect" 
+                        style=" display: none; 
+                                width:fit-content; 
+                                padding:0; 
+                                width: 35%;
+                                text-align: -webkit-center;
+                                vertical-align: middle;">
+                    <input type="checkbox" class="toggle-rect-input" id="value_check{id}" name="check">
+                    <label for="value_check{id}"></label>
+                </div><select 
+                    id="value" 
+                    class="type_search_select filter_item_option"
+                    style="width: 35%; display: none;">
 </select>
 </div>`;
 
@@ -532,22 +542,23 @@ $(document).ready(function () {
     $("#item_container_z").hide();
     $("#modules_contents_dict").hide();
 
-    max_output = getCookie("max_output")
+    max_output = getCookie("max_output");
     if (max_output === "") {
         document.cookie = `max_output=${$("#settings_max_output").val()}`;
     } else {
         $("#settings_max_output").val(max_output);
     }
 
-    max_output_modules = +getCookie("max_output")
+    max_output_modules = +getCookie("max_output");
 
-    show_data = getCookie("show_data")
+    show_data = getCookie("show_data");
     if (show_data === "") {
-        document.cookie = `show_data=${$("#settings_show_data").prop("checked")}`;
+        document.cookie = `show_data=${$("#settings_show_data").prop(
+            "checked"
+        )}`;
     } else {
         $("#settings_show_data").prop("checked", JSON.parse(show_data));
     }
-
 
     loadResourcesData(fileResourcesPath);
 
@@ -577,31 +588,36 @@ $(document).ready(function () {
         }
     });
 
-    $("#settings_popup").click(function(e) {
-        $(".settings_popup").toggle()
+    $("#settings_popup").click(function (e) {
+        $(".settings_popup").toggle();
 
-        $("#settings_max_output").val(getCookie("max_output"))
-        $("#settings_show_data").prop("checked", JSON.parse(getCookie("show_data")))
-    })
+        $("#settings_max_output").val(getCookie("max_output"));
+        $("#settings_show_data").prop(
+            "checked",
+            JSON.parse(getCookie("show_data"))
+        );
+    });
 
-    $("#settings_save").click(function(e) {
+    $("#settings_save").click(function (e) {
         document.cookie = `max_output=${$("#settings_max_output").val()}`;
-        document.cookie = `show_data=${$("#settings_show_data").is(":checked")}`;
+        document.cookie = `show_data=${$("#settings_show_data").is(
+            ":checked"
+        )}`;
 
-        max_output_modules = +getCookie("max_output")
+        max_output_modules = +getCookie("max_output");
 
-        $(".settings_popup").hide()
-    })
+        $(".settings_popup").hide();
+    });
 
-    $(".item_container").on("click", ".show_stats_button", function(e) {
-        $(this).parent().parent().parent().find("> tr:not(.shown)").toggle()
+    $(".item_container").on("click", ".show_stats_button", function (e) {
+        $(this).parent().parent().parent().find("> tr:not(.shown)").toggle();
 
         if ($(this).text() == "Show stats") {
             $(this).text("Hide stats");
         } else {
             $(this).text("Show stats");
         }
-    })
+    });
 
     $("#type").on("change", function () {
         $("#filter_container").empty();
@@ -620,16 +636,36 @@ $(document).ready(function () {
                 );
             }
 
-            if ((temp["type"] == "number") | (temp["type"] == "checkbox")) {
+            if (temp["type"] == "number") {
                 $(this).parent().find("input#value").show();
+                $(this).parent().find("div.toggle-rect").hide();
                 $(this).parent().find("select#value").hide();
+
+                $(this).parent().find("input#value").addClass("enabled");
                 $(this)
                     .parent()
-                    .find("#value:visible")
-                    .attr("type", temp["type"]);
+                    .find("input.toggle-rect-input")
+                    .removeClass("enabled");
+                $(this).parent().find("select#value").removeClass("enabled");
+            } else if (temp["type"] == "checkbox") {
+                $(this).parent().find("input#value").hide();
+                $(this).parent().find("div.toggle-rect").show();
+                $(this).parent().find("select#value").hide();
+
+                $(this).parent().find("input#value").removeClass("enabled");
+                $(this).parent().find("input.toggle-rect-input").addClass("enabled");
+                $(this).parent().find("select#value").removeClass("enabled");
             } else if (temp["type"] == "select") {
                 $(this).parent().find("input#value").hide();
+                $(this).parent().find("div.toggle-rect").hide();
                 $(this).parent().find("select#value").show();
+
+                $(this).parent().find("input#value").removeClass("enabled");
+                $(this)
+                    .parent()
+                    .find("input.toggle-rect-input")
+                    .removeClass("enabled");
+                $(this).parent().find("select#value").addClass("enabled");
 
                 str = "";
                 for (let key of Object.keys(temp["options"])) {
@@ -673,7 +709,7 @@ $(document).ready(function () {
         $("#filter_container").append(
             filter_item_template
                 .replace(
-                    "{id}",
+                    /{id}/g,
                     `filter_item_${
                         $("#filter_container").children().length + 1
                     }`
@@ -717,13 +753,13 @@ $(document).ready(function () {
             filters.push([
                 filter.find("#option").val().split("#")[0],
                 filter.find("#calc").val(),
-                temp["getval"](filter.find("#value:visible")),
+                temp["getval"](filter.find(".enabled")),
                 temp["compare"],
             ]);
             console.log(filters[filters.length - 1]);
         }
 
-        document.getElementById("modules_contents_dict").innerHTML = ""
+        document.getElementById("modules_contents_dict").innerHTML = "";
 
         for (var key of Object.keys(database[type])) {
             fit_in_filter = true;
@@ -757,7 +793,9 @@ $(document).ready(function () {
                     `item_container_${counter}`
                 );
 
-                document.getElementById("modules_contents_dict").innerHTML += `<li><a href="#item_container_${counter}">${key}</a></li>`
+                document.getElementById(
+                    "modules_contents_dict"
+                ).innerHTML += `<li><a href="#item_container_${counter}">${key}</a></li>`;
 
                 counter++;
 
@@ -768,7 +806,7 @@ $(document).ready(function () {
         }
 
         console.log(ids);
-        if (counter === 0){
+        if (counter === 0) {
             $("#modules_contents_dict").hide();
         } else {
             $("#modules_contents_dict").show();
@@ -808,14 +846,16 @@ $(document).ready(function () {
             $(`#item_container_${i} ` + "#obtain").text(data.obtain);
 
             if (Object.keys(data.resources).length == 0) {
-                var tr_show = $(`#item_container_${i} ` + "#resources")
-                    .closest("tr");
-                
+                var tr_show = $(`#item_container_${i} ` + "#resources").closest(
+                    "tr"
+                );
+
                 tr_show.hide();
                 tr_show.addClass("shown");
             } else {
-                var tr_show = $(`#item_container_${i} ` + "#resources")
-                    .closest("tr");
+                var tr_show = $(`#item_container_${i} ` + "#resources").closest(
+                    "tr"
+                );
 
                 tr_show.show();
 
@@ -843,8 +883,10 @@ $(document).ready(function () {
             }
 
             if (!JSON.parse(getCookie("show_data"))) {
-                $(`#item_container_${i} tbody`).find("> tr:not(.shown)").hide()
-                $(`#item_container_${i} tr th button.show_stats_button`).text("Show stats")
+                $(`#item_container_${i} tbody`).find("> tr:not(.shown)").hide();
+                $(`#item_container_${i} tr th button.show_stats_button`).text(
+                    "Show stats"
+                );
             }
 
             $(`#item_container_${i} ` + "#weight").text(

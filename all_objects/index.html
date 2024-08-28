@@ -47,6 +47,7 @@
         }
 
         .filter_item_option {
+            display: inline-block;
             width: 45%;
             margin: 0;
         }
@@ -103,7 +104,7 @@
             width: 100%;
         }
 
-        .settings_popup{
+        .settings_popup {
             position: fixed;
 
             top: 20%;
@@ -142,13 +143,12 @@
 
         .settings_popup .message_box p {
             padding-left: 5px;
-            display: inline;
+
+            vertical-align: text-top;
         }
 
-        .settings_popup .message_box #settings_show_data {
-            display: inline;
-
-            margin: 0px 0px 20px 0px;
+        .settings_popup .message_box .toggle-rect {
+            margin-bottom: 10px;
         }
 
         .settings_popup .message_box #settings_max_output {
@@ -212,7 +212,10 @@
             <p>Max output</p>
             <input type="number" id="settings_max_output" class="search_input" value=20 />
             <p>Show stats</p>
-            <input type="checkbox" id="settings_show_data" checked />
+            <div class="toggle-rect">
+                <input type="checkbox" class="toggle-rect-input" id="settings_show_data" name="check">
+                <label for="settings_show_data"></label>
+            </div>
             <button id="settings_save" class="button_search">Save</button>
         </div> 
     </div>
