@@ -61,6 +61,7 @@ const filter_templates = {
             options: {
                 "Joe's Shack": "Joe's Shack",
                 Blueprints: "Blueprints",
+                Crate: "Crate Drop",
                 Unobtainable: "Unobtainable",
                 "⭐": "Monthly Reward",
                 Incident: "Incidents",
@@ -537,6 +538,66 @@ $(document).on("click", ".resource_item", function () {
     $(this).parent().parent().find("#resources_calculated").html(calc_str);
 });
 
+databases_loaded = [false, false];
+function onDatabaseLoad() {
+    if (!(databases_loaded[0] && databases_loaded[1])) {
+        return;
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get("type") == undefined || 
+        urlParams.get("filters") == undefined) {
+            console.error("Please check your URL parameters");
+            
+            return;
+        }
+    
+    type = urlParams.get("type");
+    $("#type").val(type)
+
+    filters = urlParams.get("filters").split(";");
+    console.log(filters)
+    filters.forEach((_filter) => {
+        filter = _filter.split("|");
+        
+        filter_path = filter[0];
+        filter_sign = filter[1];
+        filter_val  = filter[2];
+
+        $("#button_add").click();
+        filter_jq = $("#filter_container").children().last()
+
+        temp = filter_templates[type].find(
+            (x) => x["path"] == filter_path
+        );
+        if (!temp) {
+            temp = filter_templates["general"].find(
+                (x) => x["path"] == filter_path
+            );
+        }
+
+        filter_jq.find("#option").val(filter_path)
+        filter_jq.find("#option").trigger("change")
+        
+        filter_jq.find("#calc").val(filter_sign)
+
+        if (temp["type"] == "number") {
+            filter_jq.find(".enabled").val(filter_val)
+        } else if (temp["type"] == "checkbox") {
+            if (filter_val === "true") {
+                filter_jq.find(".enabled").prop("checked", true);
+            } else {
+                filter_jq.find(".enabled").prop("checked", false);
+            }
+        } else if (temp["type"] == "select") {
+            filter_jq.find(".enabled").val(filter_val)
+        }
+    })
+
+    $("#search").click();
+}
+
+
 $(document).ready(function () {
     item_html = $(".item_container").html();
     $("#item_container_z").hide();
@@ -571,7 +632,9 @@ $(document).ready(function () {
 
             database = data;
 
-            console.log(database.hulls["TKS"]);
+            databases_loaded[0] = true;
+
+            onDatabaseLoad()
         }
     });
 
@@ -584,7 +647,9 @@ $(document).ready(function () {
 
             img_database = data;
 
-            console.log(data.hulls["TKS"]);
+            databases_loaded[1] = true;
+
+            onDatabaseLoad()
         }
     });
 
@@ -728,6 +793,8 @@ $(document).ready(function () {
         type = $("#type").val();
 
         filters = [];
+        url_append = "?type=" + type + "&filters=";
+        filters_str = []
         for (
             let index = 0;
             index < $("#filter_container").children().length;
@@ -750,8 +817,17 @@ $(document).ready(function () {
                 temp["getval"](filter.find(".enabled")),
                 temp["compare"],
             ]);
+            
+            filters_str.push(`${filter.find("#option").val().replace("#", "%23")}|${filter.find("#calc").val()}|${temp["getval"](filter.find(".enabled"))}`);
+
             console.log(filters[filters.length - 1]);
         }
+
+
+        if (filters.length > 0) {
+            window.history.pushState("", "why this shit is here", window.location.pathname + url_append + filters_str.join(";"))
+        }
+
 
         document.getElementById("modules_contents_dict").innerHTML = "";
 

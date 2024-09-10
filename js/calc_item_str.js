@@ -486,12 +486,38 @@ function createLog() {
                 
                 const urlParams = new URLSearchParams(window.location.search);
 
+                if (window.location.pathname === "/all_objects/") {
+                    url_data = ""
+                    if (urlParams.get("type") == undefined || 
+                        urlParams.get("filters") == undefined) {
+                            //nothing to do
+                        } else {
+                            url_data = "type: "+urlParams.get("type")
+                            filters = urlParams.get("filters").split(";");
+                            
+                            str_filters = []
+                            filters.forEach((_filter) => {
+                                filter = _filter.split("|");
+                                
+                                filter_path = filter[0];
+                                filter_sign = filter[1];
+                                filter_val  = filter[2];
+
+                                str_filters.push(`${filter_path} ${filter_sign} ${filter_val}`)
+                            })
+
+                            url_data += "\n - " + str_filters.join("\n - ")
+                        }
+                } else {
+                    url_data = Array.from(urlParams.keys())
+                                    .map((key) => `${key}: ${urlParams.get(key)}`)
+                                    .join("\n - ")
+                }
+
                 var log = {
                     "id": stringToHash(btoa(address)),
                     "location": window.location.origin+window.location.pathname,
-                    "data":    Array.from(urlParams.keys())
-                                        .map((key) => `${key}: ${urlParams.get(key)}`)
-                                        .join("\n - "),
+                    "data": url_data,
                     "deviceData": {
                         "userAgent": userAgent,
                         "userBrowser": userBrowser,
