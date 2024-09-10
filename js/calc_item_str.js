@@ -486,7 +486,8 @@ function createLog() {
                 
                 const urlParams = new URLSearchParams(window.location.search);
 
-                if (window.location.pathname === "/all_objects/") {
+                a = window.location.pathname.split("/")
+                if (a[a.length-2] === "all_objects") {
                     url_data = ""
                     if (urlParams.get("type") == undefined || 
                         urlParams.get("filters") == undefined) {
