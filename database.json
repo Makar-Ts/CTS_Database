@@ -999,6 +999,63 @@
         "turret": ""
     }
 }
+,"UPL-E": {
+    "description": "description",
+    "tier": 2.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, August 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 7.40,
+        "armor": {
+            "front": 13,
+            "back": 8,
+            "side": 13
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 64,
+            "backward": -24,
+            "torque": 11,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 7.5,
+            "blowout": 0,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": true,
+                "reload_multiplier": 0.8,
+                "reload_multiplier_caliber": 57,
+                "limits": {
+                    "up": 60,
+                    "down": 3,
+                    "left": 125,
+                    "right": 75
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 0,
+                    "zoom_lower": 1.5,
+                    "zoom_upper": 6.0
+                }
+            }
+        },
+        "crew": ["Driver", "Commander", "Gunner"]
+    },
+    "based_on": "None",
+    "paired": {
+        "gun": "None",
+        "turret": ""
+    }
+}
 ,"BTrackless-7": {
     "description": "",
     "tier": 2.0,
@@ -1436,7 +1493,7 @@
 ,"Quack ": {
     "description": "Quack",
     "tier": 3.0,
-    "rarity": "Uncommon",
+    "rarity": "Legendary",
     "obtain": "Monthly Reward,October 2022 / May 2023 | 4⭐ (Quack Set)",
     "resources": {},
     "requires": {
@@ -1513,67 +1570,10 @@
         "turret": ""
     }
 }
-,"UPL-E": {
-    "description": "description",
-    "tier": 3.0,
-    "rarity": "Uncommon",
-    "obtain": "Monthly Reward, August 2024",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": -1,
-        "armor": {
-            "front": 13,
-            "back": 8,
-            "side": 13
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 64,
-            "backward": -24,
-            "torque": 11,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 7.5,
-            "blowout": 0,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "fcs": -1,
-                "stabilizer": false,
-                "reload_multiplier": 0.8,
-                "reload_multiplier_caliber": 57,
-                "limits": {
-                    "up": 60,
-                    "down": 3,
-                    "left": 125,
-                    "right": 75
-                },
-                "sight": {
-                    "rangefinder": 0,
-                    "thermal": 0,
-                    "zoom_lower": -1,
-                    "zoom_upper": -1
-                }
-            }
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "AMX 40 [France]",
-    "paired": {
-        "gun": "75mm Quack",
-        "turret": "Quack"
-    }
-}
 ,"Ke Tao 2020": {
     "description": "Received by playing the first open test.",
     "tier": 3.0,
-    "rarity": "Uncommon",
+    "rarity": "Epic",
     "obtain": "First Pre-Alpha Test Exclusive",
     "resources": {},
     "requires": {
@@ -1613,7 +1613,7 @@
 ,"Cromwheel": {
     "description": "",
     "tier": 3.0,
-    "rarity": "Legendary",
+    "rarity": "Epic",
     "obtain": "Second Pre-Alpha Test Exclusive",
     "resources": {},
     "requires": {
@@ -2752,11 +2752,11 @@
         "turret": ""
     }
 }
-,"Zoonk-122": {
+,"UPM-MT": {
     "description": "T-64 at home",
     "tier": 4.0,
     "rarity": "Legendary",
-    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (ZIT-122 Set)",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (Zoonmk-122 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -2789,14 +2789,14 @@
     "based_on": "None",
     "paired": {
         "gun": "122mm SM-30",
-        "turret": "Zoonk-122"
+        "turret": "UPM-MT"
     }
 }
 ,"Battlepacks": {
     "description": "Greatest German engineering!",
     "tier": 4.0,
     "rarity": "Uncommon",
-    "obtain": "Blueprints, Unobtainable",
+    "obtain": "Blueprintsб Unobtainable",
     "resources": {"Iron": 75, "Steel": 45},
     "requires": {
         "type": "None",
@@ -2984,63 +2984,6 @@
     "paired": {
         "gun": "8.8cm Ikonisch",
         "turret": "Battlepass VI"
-    }
-}
-,"Yoyota HMMWV (S)": {
-    "description": "RIP IT UP",
-    "tier": 5.0,
-    "rarity": "Rare",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 2.90,
-        "armor": {
-            "front": 13,
-            "back": 8,
-            "side": 13
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 110,
-            "backward": -70,
-            "torque": 12,
-            "rate": 1.96
-        },
-        "weaponry": {
-            "ammo_storage": 10.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "fcs": -1,
-                "stabilizer": false,
-                "reload_multiplier": 0.8,
-                "reload_multiplier_caliber": 57,
-                "limits": {
-                    "up": 35,
-                    "down": 17,
-                    "left": 180,
-                    "right": 180
-                },
-                "sight": {
-                    "rangefinder": 0,
-                    "thermal": 0,
-                    "zoom_lower": 1.0,
-                    "zoom_upper": 1.0
-                }
-            }
-        },
-        "crew": ["Driver", "Commander", "Loader1", "Loader2", "Gunner"]
-    },
-    "based_on": "Humvee [USA]",
-    "paired": {
-        "gun": "12.7mm M2 [1] 40mm MK19 GMG",
-        "turret": ""
     }
 }
 ,"Lorraine": {
@@ -3397,7 +3340,7 @@
         "turret": ""
     }
 }
-,"Yoyota HMMWV": {
+,"Humvee": {
     "description": "jeek 2",
     "tier": 5.0,
     "rarity": "Rare",
@@ -3408,7 +3351,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 2.40,
+        "weight": 5.0,
         "armor": {
             "front": 64,
             "back": 14,
@@ -3422,14 +3365,14 @@
             "rate": 1.96
         },
         "weaponry": {
-            "ammo_storage": 41.0,
+            "ammo_storage": 6.7,
             "blowout": -1,
             "hull_aim": 0,
             "aps": false,
             "have_gun": false,
             "gun": {}
         },
-        "crew": ["Driver", "Driver2"]
+        "crew": ["Driver"]
     },
     "based_on": "Humvee [USA]",
     "paired": {
@@ -3516,7 +3459,7 @@
             "forward": 75,
             "backward": -12,
             "torque": 15,
-            "rate": 44
+            "rate": 32
         },
         "weaponry": {
             "ammo_storage": 138.7,
@@ -4214,6 +4157,63 @@
         "turret": "Bank Prince"
     }
 }
+,"Armoured Humvee": {
+    "description": "RIP IT UP",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 7.20,
+        "armor": {
+            "front": 13,
+            "back": 8,
+            "side": 13
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 110,
+            "backward": -70,
+            "torque": 12,
+            "rate": 1.96
+        },
+        "weaponry": {
+            "ammo_storage": 6.7,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": false,
+                "reload_multiplier": 0.8,
+                "reload_multiplier_caliber": 57,
+                "limits": {
+                    "up": 25,
+                    "down": 16,
+                    "left": 180,
+                    "right": 180
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 0,
+                    "zoom_lower": 1.0,
+                    "zoom_upper": 8.0
+                }
+            }
+        },
+        "crew": ["Driver", "Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Humvee [USA]",
+    "paired": {
+        "gun": "12.7mm M2 [1] 40mm MK19 GMG",
+        "turret": ""
+    }
+}
 ,"O-I": {
     "description": "Heavy Weight Champion",
     "tier": 6.0,
@@ -4292,63 +4292,6 @@
     "paired": {
         "gun": "84mm 20pdr Type B [7] 105mm Royal [10] 183mm QF L4A1",
         "turret": "Centurion Mk3 [6] FV4005"
-    }
-}
-,"Battlepacks VI (B)": {
-    "description": "rev of the porsche wheyyyyy",
-    "tier": 6.0,
-    "rarity": "Rare",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 150, "Steel": 77, "Titanium": 19},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 76.00,
-        "armor": {
-            "front": 150,
-            "back": 80,
-            "side": 80
-        },
-        "speed": {
-            "acceleration": 6,
-            "forward": 42,
-            "backward": -10,
-            "torque": 25,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 59.1,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "fcs": -1,
-                "stabilizer": false,
-                "reload_multiplier": 1.37,
-                "reload_multiplier_caliber": 126,
-                "limits": {
-                    "up": 14,
-                    "down": 7,
-                    "left": 10,
-                    "right": 10
-                },
-                "sight": {
-                    "rangefinder": 0,
-                    "thermal": 0,
-                    "zoom_lower": 8.0,
-                    "zoom_upper": 10.0
-                }
-            }
-        },
-        "crew": ["Driver", "Driver2", "Loader1", "Loader2", "Commander", "Gunner"]
-    },
-    "based_on": "Jagdtiger [Germany]",
-    "paired": {
-        "gun": "128mm German Punch",
-        "turret": ""
     }
 }
 ,"M26": {
@@ -4562,7 +4505,7 @@
         },
         "crew": ["Driver", "Driver2", "Loader1", "Loader2", "Commander", "Gunner"]
     },
-    "based_on": "Object 225 (KV-5) (USSR)",
+    "based_on": "Object 225 (KV-5) [USSR]",
     "paired": {
         "gun": "107mm ZiS-6",
         "turret": ""
@@ -5133,6 +5076,46 @@
         "turret": ""
     }
 }
+,"FCM F1": {
+    "description": "Ewww brotha what is that eeew",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, September 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 100.00,
+        "armor": {
+            "front": 100,
+            "back": 50,
+            "side": 60
+        },
+        "speed": {
+            "acceleration": 1,
+            "forward": 24,
+            "backward": -24,
+            "torque": 10,
+            "rate": 15
+        },
+        "weaponry": {
+            "ammo_storage": 11.9,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver1", "Driver2"]
+    },
+    "based_on": "FCM F1 [France]",
+    "paired": {
+        "gun": "",
+        "turret": "FCM F1"
+    }
+}
 ,"XT1A IXWA": {
     "description": "Hey! I remember you!!!!!",
     "tier": 7.0,
@@ -5567,6 +5550,63 @@
         "turret": "TOW (from 4x4)"
     }
 }
+,"TOW Humvee": {
+    "description": "HEY, CHECK OUT OUR NEW TOW MISSILE! (TOW not included)",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 3.70,
+        "armor": {
+            "front": 13,
+            "back": 8,
+            "side": 13
+        },
+        "speed": {
+            "acceleration": 11,
+            "forward": 110,
+            "backward": -70,
+            "torque": 12,
+            "rate": 1.96
+        },
+        "weaponry": {
+            "ammo_storage": 25.1,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": false,
+                "reload_multiplier": 1.69,
+                "reload_multiplier_caliber": 180,
+                "limits": {
+                    "up": 15,
+                    "down": 18,
+                    "left": 180,
+                    "right": 180
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 1,
+                    "zoom_lower": 5.0,
+                    "zoom_upper": 15.0
+                }
+            }
+        },
+        "crew": ["Driver", "Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Humvee [USA]",
+    "paired": {
+        "gun": "TOW - HE [8] TOW",
+        "turret": ""
+    }
+}
 ,"MMWT": {
     "description": "nerd mobile",
     "tier": 7.0,
@@ -5585,7 +5625,7 @@
             "side": 15
         },
         "speed": {
-            "acceleration": 11,
+            "acceleration": 21,
             "forward": 70,
             "backward": -32,
             "torque": 9,
@@ -5604,7 +5644,7 @@
     "based_on": "Harimau [Indonesia] Kaplan MT [Turkey]",
     "paired": {
         "gun": "105mm High Pressure CV",
-        "turret": "MMWT"
+        "turret": "Cockerill 3105"
     }
 }
 ,"M3A3 BUSK III": {
@@ -5625,7 +5665,7 @@
             "side": 25
         },
         "speed": {
-            "acceleration": 21,
+            "acceleration": 10,
             "forward": 66,
             "backward": -14,
             "torque": 10,
@@ -5665,7 +5705,7 @@
             "side": 25
         },
         "speed": {
-            "acceleration": 10,
+            "acceleration": 4.1,
             "forward": 57,
             "backward": -25,
             "torque": 13,
@@ -5705,7 +5745,7 @@
             "side": 44
         },
         "speed": {
-            "acceleration": 4.1,
+            "acceleration": 5,
             "forward": 56,
             "backward": -56,
             "torque": 24,
@@ -5745,7 +5785,7 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 5,
+            "acceleration": 9,
             "forward": 60,
             "backward": -35,
             "torque": 12,
@@ -6039,63 +6079,6 @@
     "paired": {
         "gun": "",
         "turret": "Progetto C50"
-    }
-}
-,"Yoyota HMMWV (TOW)": {
-    "description": "HEY, CHECK OUT OUR NEW TOW MISSILE! (TOW not included)",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Joe's Shack",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 3.70,
-        "armor": {
-            "front": 13,
-            "back": 8,
-            "side": 13
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 110,
-            "backward": -70,
-            "torque": 12,
-            "rate": 1.96
-        },
-        "weaponry": {
-            "ammo_storage": 25.1,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": true,
-            "gun": {
-                "fcs": -1,
-                "stabilizer": false,
-                "reload_multiplier": 1.69,
-                "reload_multiplier_caliber": 180,
-                "limits": {
-                    "up": 15,
-                    "down": 18,
-                    "left": 180,
-                    "right": 180
-                },
-                "sight": {
-                    "rangefinder": 0,
-                    "thermal": 1,
-                    "zoom_lower": 5.0,
-                    "zoom_upper": 15.0
-                }
-            }
-        },
-        "crew": ["Driver", "Commander", "Loader1", "Gunner"]
-    },
-    "based_on": "Humvee [USA]",
-    "paired": {
-        "gun": "TOW - HE [8] TOW",
-        "turret": ""
     }
 }
 ,"Object 277": {
@@ -6907,7 +6890,7 @@
     "description": "zoo enclosure",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (OBT-2 Set)",
+    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (T-62BVMP Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -6941,46 +6924,6 @@
     "paired": {
         "gun": "115mm U-5TS",
         "turret": "T-62BVMP"
-    }
-}
-,"Battlepass-100": {
-    "description": "",
-    "tier": 8.0,
-    "rarity": "Mythical",
-    "obtain": "Unobtainable",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 98.20,
-        "armor": {
-            "front": 200,
-            "back": 120,
-            "side": 80
-        },
-        "speed": {
-            "acceleration": 7,
-            "forward": 31,
-            "backward": -11,
-            "torque": 60,
-            "rate": 30
-        },
-        "weaponry": {
-            "ammo_storage": 27.4,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver", "Driver2"]
-    },
-    "based_on": "E-100 [Germany]",
-    "paired": {
-        "gun": "128mm German Punch",
-        "turret": "The Battlepass"
     }
 }
 ,"AFG MK 1": {
@@ -7038,6 +6981,46 @@
     "paired": {
         "gun": "66mm NUCLEAR WEAPON 5000",
         "turret": ""
+    }
+}
+,"Battlepass-100": {
+    "description": "",
+    "tier": 8.0,
+    "rarity": "Mythical",
+    "obtain": "Unobtainable",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 98.20,
+        "armor": {
+            "front": 200,
+            "back": 120,
+            "side": 80
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 31,
+            "backward": -11,
+            "torque": 60,
+            "rate": 30
+        },
+        "weaponry": {
+            "ammo_storage": 27.4,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver", "Driver2"]
+    },
+    "based_on": "E-100 [Germany]",
+    "paired": {
+        "gun": "128mm German Punch",
+        "turret": "The Battlepass"
     }
 }
 ,"Puma TOW": {
@@ -7354,7 +7337,7 @@
         "turret": "MSC"
     }
 }
-,"B1 Centauro MK II": {
+,"B1 Centauro VRCC": {
     "description": "internal engine, internal armor and composite",
     "tier": 9.0,
     "rarity": "Legendary",
@@ -7391,7 +7374,7 @@
     "based_on": "B1 Centauro [Italy]",
     "paired": {
         "gun": "105mm OTO [9] 120mm OTO",
-        "turret": "B1 Centauro MK II"
+        "turret": "B1 Centauro VRCC"
     }
 }
 ,"Yoyota MK1X": {
@@ -7571,11 +7554,11 @@
         "turret": ""
     }
 }
-,"pretty decent tank, innit.": {
+,"UPM-TAH": {
     "description": "Peekaboo ahh tank",
     "tier": 9.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration | 3⭐ (LT-SE)",
+    "obtain": "Multicrew Tank Combat Collaboration | 3⭐ (thingy set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -7626,6 +7609,46 @@
     "paired": {
         "gun": "30mm 2A72",
         "turret": ""
+    }
+}
+,"Osório": {
+    "description": "BRAZIL NUMERO UNOOOO",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Joe's ShackIndependence Day of Brazil 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 25.00,
+        "armor": {
+            "front": 80,
+            "back": 20,
+            "side": 35
+        },
+        "speed": {
+            "acceleration": 12,
+            "forward": 70,
+            "backward": -26,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 29.3,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "EE-T1 Osório [Brazil]",
+    "paired": {
+        "gun": "120mm GIAT F1",
+        "turret": "Osório"
     }
 }
 ,"Challenger 2": {
@@ -7679,7 +7702,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 36.00,
+        "weight": 37.00,
         "armor": {
             "front": 380,
             "back": 20,
@@ -7788,7 +7811,7 @@
         "turret": "Contender 1E"
     }
 }
-,"Ariete": {
+,"C1 Ariete": {
     "description": "The Roman empire? It's all in the pasta now.",
     "tier": 10.0,
     "rarity": "Legendary",
@@ -8365,46 +8388,6 @@
         "turret": "T-84-120"
     }
 }
-,"Type 10": {
-    "description": "Japan I think",
-    "tier": 11.0,
-    "rarity": "Mythical",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 145, "Steel": 60, "Titanium": 36, "Carbon Fibre": 200, "Composite": 36, "Computer Systems": 1, "Cyberware": 4},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 34.00,
-        "armor": {
-            "front": 500,
-            "back": 25,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 14.2,
-            "forward": 73,
-            "backward": -73,
-            "torque": 21,
-            "rate": 34
-        },
-        "weaponry": {
-            "ammo_storage": 24.5,
-            "blowout": -1,
-            "hull_aim": 1,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver"]
-    },
-    "based_on": "Type 10 [Japan]",
-    "paired": {
-        "gun": "120mm TKG",
-        "turret": "Type 10"
-    }
-}
 ,"T-90M": {
     "description": "It's all the same but worse.",
     "tier": 12.0,
@@ -8538,7 +8521,7 @@
     },
     "based_on": "T-14 Armata [Russia]",
     "paired": {
-        "gun": "125mm 2A821M",
+        "gun": "125mm 2A82-1M",
         "turret": ""
     }
 }
@@ -8679,6 +8662,46 @@
         "turret": "Leopard 2A7+"
     }
 }
+,"Type 10": {
+    "description": "Japan I think",
+    "tier": 12.0,
+    "rarity": "Mythical",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 145, "Steel": 60, "Titanium": 36, "Carbon Fibre": 200, "Composite": 36, "Computer Systems": 1, "Cyberware": 4},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 36.00,
+        "armor": {
+            "front": 500,
+            "back": 25,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 14.2,
+            "forward": 73,
+            "backward": -73,
+            "torque": 21,
+            "rate": 34
+        },
+        "weaponry": {
+            "ammo_storage": 24.2,
+            "blowout": -1,
+            "hull_aim": 1,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "Type 10 [Japan]",
+    "paired": {
+        "gun": "120mm TKG",
+        "turret": "Type 10"
+    }
+}
 ,"Object 148 Prototype": {
     "description": "Russia is a beautiful country!",
     "tier": 12.0,
@@ -8732,7 +8755,7 @@
     },
     "based_on": "T-14 Armata [Russia]",
     "paired": {
-        "gun": "125mm 2A821M",
+        "gun": "125mm 2A82-1M",
         "turret": ""
     }
 }
@@ -8814,6 +8837,63 @@
     "paired": {
         "gun": "120mm L44",
         "turret": "Leopard 2SG"
+    }
+}
+,"T-84O": {
+    "description": "ROP Upgrade of T-84U using WW2 tactics of war.",
+    "tier": 12.0,
+    "rarity": "Legendary",
+    "obtain": "Joe's ShackIndependence Day of Ukraine 202440 000 000 Yen",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 31.00,
+        "armor": {
+            "front": 800,
+            "back": 40,
+            "side": 90
+        },
+        "speed": {
+            "acceleration": 12,
+            "forward": 69,
+            "backward": -40,
+            "torque": 12,
+            "rate": 45
+        },
+        "weaponry": {
+            "ammo_storage": 83.3,
+            "blowout": 1,
+            "hull_aim": 0,
+            "aps": true,
+            "have_gun": true,
+            "gun": {
+                "fcs": 5,
+                "stabilizer": true,
+                "reload_multiplier": 1.5,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 21,
+                    "down": 5,
+                    "left": 8,
+                    "right": 8
+                },
+                "sight": {
+                    "rangefinder": 2,
+                    "thermal": 3,
+                    "zoom_lower": 1.5,
+                    "zoom_upper": 18.0
+                }
+            }
+        },
+        "crew": ["Driver", "Commander", "Gunner"]
+    },
+    "based_on": "T-84U [Fake]",
+    "paired": {
+        "gun": "None",
+        "turret": ""
     }
 }
 
@@ -10881,7 +10961,7 @@
             "blowout": -1,
             "clip": 0,
             "aps": false,
-            "fcs": 5,
+            "fcs": -1,
             "stabilizer": false,
             "sight": {
                 "rangefinder": 1,
@@ -11114,11 +11194,11 @@
         "gun": "75mm Freedom"
     }
 }
-,"Zoonk-122": {
+,"UPM-MT": {
     "description": "What is this abomination?",
     "tier": 4.0,
     "rarity": "Legendary",
-    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (ZIT-122 Set)",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (Zoonmk-122 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -11161,7 +11241,7 @@
     },
     "based_on": "None",
     "paired": {
-        "hull": "Zoonk-122",
+        "hull": "UPM-MT",
         "gun": "122mm SM-30"
     }
 }
@@ -13001,6 +13081,57 @@
         "gun": "75mm AT-43 [3] 20mm M139 (?) [4] 99.7mm Fusiler LARP"
     }
 }
+,"FCM F1": {
+    "description": "Never let french cook",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, September 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 40.00,
+        "armor": {
+            "front": 120,
+            "back": 60,
+            "side": 70
+        },
+        "weaponry": {
+            "ammo_storage": 8.3,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "rangefinder": 0,
+                "thermal": 0,
+                "zoom_lower": 1.0,
+                "zoom_upper": 2.5
+            },
+            "gun": {
+                "reload_multiplier": 1.2,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 17.2,
+                    "horizontal": 8.6
+                }
+            }
+        },
+        "crew": ["Commander", "Loader1", "Loader2", "Gunner"]
+    },
+    "based_on": "FCM F1 [France]",
+    "paired": {
+        "hull": "FCM F1",
+        "gun": ""
+    }
+}
 ,"Type 74": {
     "description": "Glorious Nippon Steel.",
     "tier": 7.0,
@@ -13307,6 +13438,57 @@
         "gun": "8.8cm Ikonisch Zweimal"
     }
 }
+,"Universal Turret": {
+    "description": "its in the name",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 95, "Steel": 45, "Aluminum": 100, "Camera Module": 1, "Laser Module": 1},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 6.00,
+        "armor": {
+            "front": 80,
+            "back": 10,
+            "side": 30
+        },
+        "weaponry": {
+            "ammo_storage": 7.0,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "sight": {
+                "rangefinder": 2,
+                "thermal": 0,
+                "zoom_lower": 2.5,
+                "zoom_upper": 14.5
+            },
+            "gun": {
+                "reload_multiplier": 1.11,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 10,
+                    "down": 7
+                },
+                "speed": {
+                    "vertical": 11.5,
+                    "horizontal": 62
+                }
+            }
+        },
+        "crew": ["Loader", "Gunner"]
+    },
+    "based_on": "None",
+    "paired": {
+        "hull": "XT1A IXWA",
+        "gun": "58mm Fusiler"
+    }
+}
 ,"M48 Super": {
     "description": "Goodmorning USA!!!!",
     "tier": 7.0,
@@ -13386,7 +13568,7 @@
                 "rangefinder": 1,
                 "thermal": 1,
                 "zoom_lower": 5.0,
-                "zoom_upper": 5.0
+                "zoom_upper": 10.0
             },
             "gun": {
                 "reload_multiplier": 1.2,
@@ -14174,7 +14356,7 @@
         "gun": "145mm XL1K"
     }
 }
-,"MMWT": {
+,"Cockerill 3105": {
     "description": "I love Indonesia!",
     "tier": 8.0,
     "rarity": "Epic",
@@ -14223,57 +14405,6 @@
     "paired": {
         "hull": "MMWT",
         "gun": "105mm High Pressure CV"
-    }
-}
-,"Universal Turret": {
-    "description": "its in the name",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Blueprints",
-    "resources": {"Iron": 95, "Steel": 45, "Aluminum": 100, "Camera Module": 1, "Laser Module": 1},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 6.00,
-        "armor": {
-            "front": 80,
-            "back": 10,
-            "side": 30
-        },
-        "weaponry": {
-            "ammo_storage": 7.0,
-            "blowout": -1,
-            "clip": 0,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": true,
-            "sight": {
-                "rangefinder": 1,
-                "thermal": 0,
-                "zoom_lower": 2.5,
-                "zoom_upper": 10.0
-            },
-            "gun": {
-                "reload_multiplier": 1.11,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 10,
-                    "down": 7
-                },
-                "speed": {
-                    "vertical": 11.5,
-                    "horizontal": 62
-                }
-            }
-        },
-        "crew": ["Loader", "Gunner"]
-    },
-    "based_on": "None",
-    "paired": {
-        "hull": "XT1A IXWA",
-        "gun": "58mm Fusiler"
     }
 }
 ,"ZA-35": {
@@ -14476,7 +14607,7 @@
     },
     "based_on": "there's a lot [many]",
     "paired": {
-        "hull": "M113 [2] Yoyota HMMWV [6] Puma (from 4x4)",
+        "hull": "M113 [2] Humvee [5] Puma (from 4x4)",
         "gun": "TOW-HE [8] TOW"
     }
 }
@@ -14586,7 +14717,7 @@
     "description": "zoo enclosure",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (OBT-2 Set)",
+    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (T-62BVMP Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -14684,7 +14815,7 @@
         "gun": "120mm IMI"
     }
 }
-,"B1 Centauro MK II": {
+,"B1 Centauro VRCC": {
     "description": "Composite spaghetti",
     "tier": 9.0,
     "rarity": "Legendary",
@@ -14731,7 +14862,7 @@
     },
     "based_on": "B1 Centauro [Italy]",
     "paired": {
-        "hull": "B1 Centauro MK II",
+        "hull": "B1 Centauro VRCC",
         "gun": "105mm OTO [9] 120mm OTO"
     }
 }
@@ -15194,6 +15325,57 @@
         "gun": "TOS M2 Browning"
     }
 }
+,"Osório": {
+    "description": "abrams 0 brazil 1",
+    "tier": 9.0,
+    "rarity": "Legendary",
+    "obtain": "Joe's ShackIndependence Day of Brazil 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 16.00,
+        "armor": {
+            "front": 480,
+            "back": 20,
+            "side": 30
+        },
+        "weaponry": {
+            "ammo_storage": 10.7,
+            "blowout": 1,
+            "clip": 0,
+            "aps": false,
+            "fcs": 3,
+            "stabilizer": true,
+            "sight": {
+                "rangefinder": 2,
+                "thermal": 1,
+                "zoom_lower": 2.0,
+                "zoom_upper": 10.0
+            },
+            "gun": {
+                "reload_multiplier": 1.3,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 10
+                },
+                "speed": {
+                    "vertical": 19.5,
+                    "horizontal": 27
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "EE-T1 Osório [Brazil]",
+    "paired": {
+        "hull": "Osório",
+        "gun": "120mm GIAT F1"
+    }
+}
 ,"Contender 1E": {
     "description": "PHMETALL K14E Contender (Export Variant)",
     "tier": 10.0,
@@ -15511,7 +15693,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 24.80,
+        "weight": 26.80,
         "armor": {
             "front": 380,
             "back": 25,
@@ -15531,7 +15713,7 @@
                 "zoom_upper": 10.3
             },
             "gun": {
-                "reload_multiplier": 1.62,
+                "reload_multiplier": 1.5,
                 "reload_multiplier_caliber": 0,
                 "limits": {
                     "up": 10,
@@ -15598,7 +15780,7 @@
     },
     "based_on": "C1 Ariete [Italy]",
     "paired": {
-        "hull": "Ariete",
+        "hull": "C1 Ariete",
         "gun": "120mm OTO"
     }
 }
@@ -15882,7 +16064,7 @@
             "fcs": 3.5,
             "stabilizer": true,
             "sight": {
-                "rangefinder": 0,
+                "rangefinder": 2,
                 "thermal": 1,
                 "zoom_lower": 2.5,
                 "zoom_upper": 10.0
@@ -16378,7 +16560,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 23.50,
+        "weight": 26.00,
         "armor": {
             "front": 690,
             "back": 25,
@@ -17325,7 +17507,7 @@
     },
     "based_on": "M2 Browning [USA]",
     "paired": {
-        "hull": "Kettenkrad [1] Yoyota HMMWV (S) [5] NANO",
+        "hull": "Kettenkrad [1] Armoured Humvee [6] NANO",
         "turret": ""
     }
 }
@@ -17494,43 +17676,6 @@
     "paired": {
         "hull": "",
         "turret": ""
-    }
-}
-,"20mm M61 Vulcan": {
-    "description": "You did it! But at what cost? (You sold your soul to Faux)",
-    "tier": 1.0,
-    "rarity": "Legendary",
-    "obtain": "Unobtainable",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 0.20,
-        "weaponry": {
-            "clip": 0,
-            "reload": 0.03,
-            "accuracy": 30,
-            "ammo_volume": 0.02,
-            "caliber:": 20,
-            "ammunition": [{
-    "type": "AP ",
-    "penetration": {
-        "0":  46,
-        "30":  39,
-        "60":  16
-    },
-    "velocity":  1000,
-    "ricochet_angle":  68,
-    "stats": {}
-}]
-        }
-    },
-    "based_on": "M61 20mm Vulcan [USA]",
-    "paired": {
-        "hull": "",
-        "turret": "VADS"
     }
 }
 ,"130mm TG50": {
@@ -18935,7 +19080,7 @@
     "description": "",
     "tier": 4.0,
     "rarity": "Legendary",
-    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (ZIT-122 Set)",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (Zoonmk-122 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -18983,7 +19128,7 @@
     "based_on": "122mm M-30 [USSR]",
     "paired": {
         "hull": "",
-        "turret": "ZIT-122"
+        "turret": "UPM-MT"
     }
 }
 ,"75mm SA50": {
@@ -19436,9 +19581,9 @@
 {
     "type": "ATGM ",
     "penetration": {
-        "0":  300,
-        "30":  260,
-        "60":  150
+        "0":  230,
+        "30":  199,
+        "60":  115
     },
     "velocity":  120,
     "ricochet_angle":  81,
@@ -19929,7 +20074,7 @@
     },
     "based_on": "Mk.19 Grenade Launcher [USA]",
     "paired": {
-        "hull": "Yoyota HMMWV (S)",
+        "hull": "Armoured Humvee",
         "turret": ""
     }
 }
@@ -21200,6 +21345,43 @@
         "turret": "XTPR Expeditionary [7] Expeditionary"
     }
 }
+,"20mm M61 Vulcan": {
+    "description": "You did it! But at what cost? (You sold your soul to Faux)",
+    "tier": 7.0,
+    "rarity": "Legendary",
+    "obtain": "Unobtainable",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.20,
+        "weaponry": {
+            "clip": 0,
+            "reload": 0.03,
+            "accuracy": 30,
+            "ammo_volume": 0.02,
+            "caliber:": 20,
+            "ammunition": [{
+    "type": "AP ",
+    "penetration": {
+        "0":  46,
+        "30":  39,
+        "60":  16
+    },
+    "velocity":  1000,
+    "ricochet_angle":  68,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "M61 20mm Vulcan [USA]",
+    "paired": {
+        "hull": "",
+        "turret": "VADS"
+    }
+}
 ,"105mm L74": {
     "description": "LOOONG! With a nice perk when used with the STRV 103. Can get quite hot...",
     "tier": 8.0,
@@ -21584,7 +21766,7 @@
     "based_on": "None",
     "paired": {
         "hull": "",
-        "turret": "Universal [8] Export"
+        "turret": "Universal [7] Export"
     }
 }
 ,"75mm Qolop": {
@@ -21762,7 +21944,7 @@
     },
     "based_on": "BGM-71H TOW-2 [USA]",
     "paired": {
-        "hull": "Yoyota HMMWV (TOW) [8] Puma TOW",
+        "hull": "TOW Humvee [7] Puma TOW",
         "turret": "TOW"
     }
 }
@@ -22119,7 +22301,7 @@
     "description": "Yet another soviet gun",
     "tier": 8.0,
     "rarity": "Mythical",
-    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (OBT-2 Set)",
+    "obtain": "Multicrew Tank Combat Collaboration | 2⭐ (T-62BVMP Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -22411,7 +22593,7 @@
     "based_on": "Oto Melara 105mm/52 [Italy]",
     "paired": {
         "hull": "",
-        "turret": "B1 Centauro [8] B1 Centauro MK II"
+        "turret": "B1 Centauro [8] B1 Centauro VRCC"
     }
 }
 ,"TOW": {
@@ -22451,7 +22633,7 @@
     },
     "based_on": "BGM-71E TOW-2A [USA]",
     "paired": {
-        "hull": "Yoyota HMMWV (TOW) [8] Puma TOW",
+        "hull": "TOW Humvee [7] Puma TOW",
         "turret": "TOW"
     }
 }
@@ -22557,14 +22739,14 @@
 {
     "type": "HESH ",
     "penetration": {
-        "0":  37,
-        "30":  37,
-        "60":  37
+        "0":  27,
+        "30":  27,
+        "60":  27
     },
-    "velocity":  920,
+    "velocity":  400,
     "ricochet_angle":  80,
     "stats": {
-        "explosive_mass": " 767g",
+        "explosive_mass": " 757g",
         "fuse_radius": -1,
         "arming_distance": -1
     }
@@ -22882,10 +23064,10 @@
     }
 }
 ,"30mm 2A72": {
-    "description": "Built-into LT-SE [9]",
+    "description": "Built-Into UPM-TAH [9]",
     "tier": 9.0,
     "rarity": "Epic",
-    "obtain": "Built-Into LT-SE",
+    "obtain": "Multicrew Tank Combat CollaborationBuilt-Into UPM-TAH",
     "resources": {},
     "requires": {
         "type": "None",
@@ -22914,7 +23096,7 @@
     },
     "based_on": "30mm 2A72 [USSR]",
     "paired": {
-        "hull": "pretty decent tank, innit.",
+        "hull": "UPM-TAH",
         "turret": ""
     }
 }
@@ -23135,7 +23317,7 @@
     "based_on": "120mm OTO Breda [Italy]",
     "paired": {
         "hull": "",
-        "turret": "Centauro Mk II [9] Ariete"
+        "turret": "B1 Centauro VRCC [9] Ariete"
     }
 }
 ,"75mm XM274": {
@@ -23380,7 +23562,7 @@
     "based_on": "GIAT CN120-26 [France]",
     "paired": {
         "hull": "",
-        "turret": "MSC"
+        "turret": "Osório [9] MSC"
     }
 }
 ,"120mm Eagle": {
@@ -23660,7 +23842,7 @@
     "based_on": "105mm Cockerill CV [Belgium]",
     "paired": {
         "hull": "",
-        "turret": "MMWT"
+        "turret": "Cockerill 3105"
     }
 }
 ,"49.7mm DbGPAC": {
@@ -24431,7 +24613,7 @@
         "turret": "Terminator 2"
     }
 }
-,"125mm 2A821M": {
+,"125mm 2A82-1M": {
     "description": "Hi!",
     "tier": 12.0,
     "rarity": "Mythical",
@@ -25522,7 +25704,7 @@
     "stats": {}
 }
     ]
-},"Zoonk-122-Turret":{
+},"UPM-MT-Turret":{
     "tier": 4.0,
     "secondaries": [
         {
@@ -25714,7 +25896,7 @@
     "type": "Coax",
     "ammo_type": "Rocket",
     "caliber": 114,
-    "ammo_count": 58,
+    "ammo_count": 0,
     "reload_count": 0,
     "reload": -1,
     "max_launch_speed": -1,
@@ -25970,6 +26152,44 @@
         "fuse_delay":  1.2,
         "explosive_mass": " 4.85kg"
     }
+}
+    ]
+},"FCM F1-Hull":{
+    "tier": 6.0,
+    "secondaries": [
+        {
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 47,
+    "ammo_count": 0,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  -1,
+        "30":  -1,
+        "60":  -1
+    },
+    "velocity":  -1,
+    "ricochet_angle":  -1,
+    "stats": {}
+},
+{
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 7.5,
+    "ammo_count": 0,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  13,
+        "30":  11,
+        "60":  4
+    },
+    "velocity":  853,
+    "ricochet_angle":  65,
+    "stats": {}
 }
     ]
 },"LAV-25-Turret":{
@@ -26292,6 +26512,27 @@
     "stats": {}
 }
     ]
+},"TOW Humvee-Hull":{
+    "tier": 7.0,
+    "secondaries": [
+        {
+    "type": "Roof",
+    "ammo_type": "AP",
+    "caliber": 5.56,
+    "ammo_count": 1000,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  10,
+        "30":  8,
+        "60":  3
+    },
+    "velocity":  853,
+    "ricochet_angle":  65,
+    "stats": {}
+}
+    ]
 },"Battlepacks Leopard-Hull":{
     "tier": 7.0,
     "secondaries": [
@@ -26431,6 +26672,27 @@
     "stats": {}
 }
     ]
+},"Universal-Turret":{
+    "tier": 7.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 20,
+    "ammo_count": 800,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  57,
+        "30":  48,
+        "60":  20
+    },
+    "velocity":  1000,
+    "ricochet_angle":  68,
+    "stats": {}
+}
+    ]
 },"M48 Super-Turret":{
     "tier": 7.0,
     "secondaries": [
@@ -26560,27 +26822,6 @@
         "0":  13,
         "30":  11,
         "60":  4
-    },
-    "velocity":  853,
-    "ricochet_angle":  65,
-    "stats": {}
-}
-    ]
-},"Yoyota HMMWV (TOW)-Hull":{
-    "tier": 8.0,
-    "secondaries": [
-        {
-    "type": "Roof",
-    "ammo_type": "AP",
-    "caliber": 5.56,
-    "ammo_count": 1000,
-    "reload_count": 0,
-    "reload": -1,
-    "max_launch_speed": -1,
-    "penetration": {
-        "0":  10,
-        "30":  8,
-        "60":  3
     },
     "velocity":  853,
     "ricochet_angle":  65,
@@ -26762,35 +27003,52 @@
 {
     "type": "Hull",
     "ammo_type": "AP",
-    "caliber": 100,
-    "ammo_count": 20,
+    "caliber": 20,
+    "ammo_count": 150,
     "reload_count": 0,
     "reload": -1,
     "max_launch_speed": -1,
     "penetration": {
-        "0":  160,
-        "30":  133,
-        "60":  47
+        "0":  46,
+        "30":  39,
+        "60":  16
     },
-    "velocity":  700,
-    "ricochet_angle":  65,
+    "velocity":  1000,
+    "ricochet_angle":  67,
     "stats": {}
 },
 {
     "type": "Hull",
     "ammo_type": "AP",
-    "caliber": 100,
-    "ammo_count": 20,
+    "caliber": 20,
+    "ammo_count": 150,
     "reload_count": 0,
     "reload": -1,
     "max_launch_speed": -1,
     "penetration": {
-        "0":  160,
-        "30":  133,
-        "60":  47
+        "0":  46,
+        "30":  39,
+        "60":  16
     },
-    "velocity":  700,
-    "ricochet_angle":  65,
+    "velocity":  1000,
+    "ricochet_angle":  67,
+    "stats": {}
+},
+{
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 20,
+    "ammo_count": 150,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  46,
+        "30":  39,
+        "60":  16
+    },
+    "velocity":  1000,
+    "ricochet_angle":  67,
     "stats": {}
 }
     ]
@@ -26829,6 +27087,40 @@
     },
     "velocity":  780,
     "ricochet_angle":  70,
+    "stats": {}
+},
+{
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 100,
+    "ammo_count": 20,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  160,
+        "30":  133,
+        "60":  47
+    },
+    "velocity":  700,
+    "ricochet_angle":  65,
+    "stats": {}
+},
+{
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 100,
+    "ammo_count": 20,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  160,
+        "30":  133,
+        "60":  47
+    },
+    "velocity":  700,
+    "ricochet_angle":  65,
     "stats": {}
 },
 {
@@ -27235,27 +27527,6 @@
     }
 }
     ]
-},"Universal-Turret":{
-    "tier": 8.0,
-    "secondaries": [
-        {
-    "type": "Coax",
-    "ammo_type": "AP",
-    "caliber": 20,
-    "ammo_count": 800,
-    "reload_count": 0,
-    "reload": -1,
-    "max_launch_speed": -1,
-    "penetration": {
-        "0":  57,
-        "30":  48,
-        "60":  20
-    },
-    "velocity":  1000,
-    "ricochet_angle":  68,
-    "stats": {}
-}
-    ]
 },"Bagelpanzer-Turret":{
     "tier": 8.0,
     "secondaries": [
@@ -27431,7 +27702,7 @@
     }
 }
     ]
-},"pretty decent tank, innit.-Hull":{
+},"UPM-TAH-Hull":{
     "tier": 9.0,
     "secondaries": [
         {
@@ -27567,7 +27838,7 @@
     "ammo_count": 2,
     "reload_count": 6,
     "reload":  12,
-    "max_launch_speed":  -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  700,
         "30":  606,
@@ -27697,6 +27968,27 @@
     },
     "velocity":  130,
     "ricochet_angle":  90,
+    "stats": {}
+}
+    ]
+},"Osório-Turret":{
+    "tier": 9.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 12.7,
+    "ammo_count": 600,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  26,
+        "30":  22,
+        "60":  8
+    },
+    "velocity":  929,
+    "ricochet_angle":  65,
     "stats": {}
 }
     ]
@@ -28537,6 +28829,27 @@
     "stats": {}
 }
     ]
+},"T-84O-Hull":{
+    "tier": 12.0,
+    "secondaries": [
+        {
+    "type": "Roof",
+    "ammo_type": "AP",
+    "caliber": 14.5,
+    "ammo_count": 400,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  32,
+        "30":  27,
+        "60":  9
+    },
+    "velocity":  1005,
+    "ricochet_angle":  65,
+    "stats": {}
+}
+    ]
 },"EXM-SFSTC-Turret":{
     "tier": 12.0,
     "secondaries": [
@@ -28725,7 +29038,7 @@
     "ricochet_angle":  80,
     "stats": {
         "range":  10.0,
-        "fuse_radius":  8,
+        "fuse_radius":  20,
         "arming_distance":  300
     }
 }
@@ -28734,6 +29047,23 @@
     "tier": 12.0,
     "secondaries": [
         {
+    "type": "Roof",
+    "ammo_type": "AP",
+    "caliber": 7.62,
+    "ammo_count": 800,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0":  13,
+        "30":  11,
+        "60":  4
+    },
+    "velocity":  853,
+    "ricochet_angle":  65,
+    "stats": {}
+},
+{
     "type": "Coax",
     "ammo_type": "AP",
     "caliber": 7.62,

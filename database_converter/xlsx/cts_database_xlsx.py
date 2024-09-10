@@ -469,7 +469,7 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
     
     ammunition = ""
     for j in range(7):
-        ammo_data = ws.cell(SEC_OFFSET+4+j, i).value #Ammo stats
+        ammo_data = ws.cell(SEC_OFFSET+3+j, i).value #Ammo stats
         if ammo_data is None: break
         
         splitted_ammo_data = ammo_data.split("\n")
@@ -584,8 +584,8 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
         
     string = templates.SECONDARIES_ARRAY.format(
         name=ws.cell(SEC_OFFSET+0, i).value,
-        module=ws.cell(SEC_OFFSET+3, i).value,
-        tier=ws.cell(SEC_OFFSET+2, i).value,
+        module=ws.cell(SEC_OFFSET+2, i).value,
+        tier=ws.cell(SEC_OFFSET+1, i).value,
         secondaries=ammunition
     )
     

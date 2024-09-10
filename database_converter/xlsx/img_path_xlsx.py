@@ -68,7 +68,6 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
     print(ws.cell(GUNS_OFFSET+0, i).value)
     
     name = ws.cell(GUNS_OFFSET+0, i).value\
-                                    .replace("\\", "")\
                                     .replace("?", "")\
                                     .replace(" (!)", "")
     
@@ -82,5 +81,5 @@ output_string = templates.DATABASE.format(
     secondaries=""
 )
 
-with open(JSON_PATH, 'w') as f:
+with open(JSON_PATH, 'w',encoding='utf-8') as f:
     f.write(output_string)
