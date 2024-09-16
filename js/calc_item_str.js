@@ -519,6 +519,7 @@ function createLog() {
                     "id": stringToHash(btoa(address)),
                     "location": window.location.origin+window.location.pathname,
                     "data": url_data,
+                    "refferer": document.referrer,
                     "deviceData": {
                         "userAgent": userAgent,
                         "userBrowser": userBrowser,
@@ -539,6 +540,7 @@ function createLog() {
 `
 - **Data**: 
  - ${log.data}` : ""}
+- **Refferer**: ${log.refferer ? `<${log.refferer}>` : "Empty or hidden"}
 
 ## Device Data
 - **User Agent**: \`\`\`${log.deviceData.userAgent}\`\`\`

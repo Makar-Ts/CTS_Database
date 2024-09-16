@@ -5,6 +5,10 @@ var database;
 var item_html;
 detectColorScheme();
 
+const signs = [
+    "==", "!=", ">=", "<=", ">", "<"
+]
+
 function compareByString(first, sign, second) {
     switch (sign) {
         case "==":
@@ -51,7 +55,7 @@ const filter_templates = {
                 Legendary: "Legendary",
                 Mythical: "Mythical",
             },
-            compare: (data, val) => data == val,
+            compare: (data, val, sign) => sign == "==" ? data == val : data != val,
         },
         {
             path: "obtain",
@@ -66,7 +70,7 @@ const filter_templates = {
                 "⭐": "Monthly Reward",
                 Incident: "Incidents",
             },
-            compare: (data, val) => data.includes(val),
+            compare: (data, val, sign) => sign == "==" ? data.includes(val) : !data.includes(val),
         },
         {
             path: "stats.weight",
@@ -118,7 +122,7 @@ const filter_templates = {
             getval: (obj) => obj.val(),
             type: "select",
             options: { "-1": "None", 0: "Partial", 1: "Yes" },
-            compare: (data, val) => data == val,
+            compare: (data, val, sign) => data == val,
         },
         {
             path: "stats.weaponry.hull_aim",
@@ -126,7 +130,7 @@ const filter_templates = {
             getval: (obj) => obj.val(),
             type: "select",
             options: { 0: "No", 1: "Suspension only", 2: "Yes" },
-            compare: (data, val) => data == val,
+            compare: (data, val, sign) => data == val,
         },
         {
             path: "stats.weaponry.aps",
@@ -160,7 +164,7 @@ const filter_templates = {
             getval: (obj) => obj.val(),
             type: "select",
             options: { "-1": "None", 0: "Partial", 1: "Yes" },
-            compare: (data, val) => data == val,
+            compare: (data, val, sign) => data == val,
         },
         {
             path: "stats.weaponry.stabilizer",
@@ -283,10 +287,10 @@ const filter_templates = {
                         .split(" ")[0]
                         .replace("HEATFS", "HEAT");
 
-                    if (val_form == one) return true;
+                    if (val_form == one) return sign == "==" ? true : false;
                 }
 
-                return false;
+                return sign == "==" ? false : true;
             },
         },
         {
@@ -709,6 +713,16 @@ $(document).ready(function () {
                 $(this).parent().find("input#value").addClass("enabled");
                 $(this).parent().find("input.toggle-rect-input").removeClass("enabled");
                 $(this).parent().find("select#value").removeClass("enabled");
+
+                $(this).parent().find("#calc").html(`
+                    <option value="==">==</option>
+                    <option value="!=">!=</option>
+                    <option value=">=">>=</option>
+                    <option value="<="><=</option>
+                    <option value=">"> ></option>
+                    <option value="<"> <</option>
+                `)
+                $(this).parent().find("#calc").removeAttr("disabled");
             } else if (temp["type"] == "checkbox") {
                 $(this).parent().find("input#value").hide();
                 $(this).parent().find("div.toggle-rect").show();
@@ -717,6 +731,9 @@ $(document).ready(function () {
                 $(this).parent().find("input#value").removeClass("enabled");
                 $(this).parent().find("input.toggle-rect-input").addClass("enabled");
                 $(this).parent().find("select#value").removeClass("enabled");
+
+                $(this).parent().find("#calc").val("==");
+                $(this).parent().find("#calc").attr("disabled", "disabled");
             } else if (temp["type"] == "select") {
                 $(this).parent().find("input#value").hide();
                 $(this).parent().find("div.toggle-rect").hide();
@@ -726,18 +743,17 @@ $(document).ready(function () {
                 $(this).parent().find("input.toggle-rect-input").removeClass("enabled");
                 $(this).parent().find("select#value").addClass("enabled");
 
+                $(this).parent().find("#calc").html(`
+                    <option value="==">==</option>
+                    <option value="!=">!=</option>
+                `)
+                $(this).parent().find("#calc").removeAttr("disabled");
+
                 str = "";
                 for (let key of Object.keys(temp["options"])) {
                     str += `<option value="${key}">${temp["options"][key]}</option>`;
                 }
                 $(this).parent().find("select#value").html(str);
-            }
-
-            if (temp["type"] != "number") {
-                $(this).parent().find("#calc").val("==");
-                $(this).parent().find("#calc").attr("disabled", "disabled");
-            } else {
-                $(this).parent().find("#calc").removeAttr("disabled");
             }
         }
     );
