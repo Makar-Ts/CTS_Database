@@ -35,14 +35,11 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         hulls_string += ", \n"
     print(ws.cell(HULLS_OFFSET+0, i).value)
     
-    name = ws.cell(HULLS_OFFSET+0, i).value.replace('"', '')\
-                                    .replace("/", "")\
-                                    .replace("\\", "")\
+    name = ws.cell(HULLS_OFFSET+0, i).value\
                                     .replace("?", "")\
-                                    .replace("*", "")\
                                     .replace(" (!)", "")
     
-    hulls_string += '"'+name.replace("\n", "\\n").replace('"', '\\"')+'"'+": "+'"'+PATH_IMG+f"hulls/Tier {round(ws.cell(HULLS_OFFSET+2, i).value)}/"+name.replace("\n", "\\n").replace('"', '\\"')+" Plain.png"+'"'
+    hulls_string += '"'+name.replace("\n", "\\n").replace('"', '\\"')+'"'+": "+'"'+PATH_IMG+f"hulls/Tier {round(ws.cell(HULLS_OFFSET+2, i).value)}/"+name.replace("\n", "\\n").replace('"', '\\"').replace("/", "").replace('"', '').replace("*", "")+" Plain.png"+'"'
     i += 1
     
 i = 2
@@ -51,14 +48,11 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         turrets_string += ", \n"
     print(ws.cell(TURRETS_OFFSET+0, i).value)
     
-    name = ws.cell(TURRETS_OFFSET+0, i).value.replace('"', '')\
-                                    .replace("/", "")\
-                                    .replace("\\", "")\
-                                    .replace("?", "")\
-                                    .replace("*", "")\
-                                    .replace(" (!)", "")
+    name = ws.cell(TURRETS_OFFSET+0, i).value\
+                                        .replace("?", "")\
+                                        .replace(" (!)", "")
     
-    turrets_string += '"'+name.replace("\n", "\\n").replace('"', '\\"')+'"'+": "+'"'+PATH_IMG+f"turrets/Tier {round(ws.cell(TURRETS_OFFSET+2, i).value)}/"+name.replace("\n", "\\n").replace('"', '\\"')+" Plain.png"+'"'
+    turrets_string += '"'+name.replace("\n", "\\n").replace('"', '\\"')+'"'+": "+'"'+PATH_IMG+f"turrets/Tier {round(ws.cell(TURRETS_OFFSET+2, i).value)}/"+name.replace("\n", "\\n").replace('"', '\\"').replace("/", "").replace('"', '').replace("*", "")+" Plain.png"+'"'
     i += 1
     
 i = 2
