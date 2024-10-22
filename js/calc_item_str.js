@@ -158,6 +158,26 @@ function getDataByString(o, s) {
     return o;
 }
 
+function getPenGraphComponents(pen_0, pen_30, pen_60) {
+    var a = (
+                (pen_30-pen_0)/30
+                - 
+                (pen_60-pen_0)/60
+            )
+            /
+            (30 - 60)
+    
+    var b = (
+                pen_30 - a*(30**2) - pen_0
+            ) / 30
+    
+    return {
+        a: a,
+        b: b,
+        c: pen_0
+    }
+}
+
 function detectColorScheme(){
     var theme="light";    //default to light
     //local storage is used to override OS theme settings
@@ -198,7 +218,7 @@ if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
     if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
+        //toggleSwitch.checked = true;
     }
 }
 
@@ -376,6 +396,11 @@ function calculateStringForItem(data, type, aps_img, secondary_data) {
                 <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
                 <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
                 <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
+                <tr><th colspan="2" class="pen_graf_container" 
+                        pen-0="${element.penetration["0"]}"
+                        pen-30="${element.penetration["30"]}"
+                        pen-60="${element.penetration["60"]}"
+                        ric_angle="${element.ricochet_angle}"></th></tr>
                 <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
                 <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
                 ${ammo_stats}`
@@ -430,6 +455,469 @@ function calculateStringForItem(data, type, aps_img, secondary_data) {
 
     return stats_str;
 }
+
+
+
+class GraphBase {
+    constructor(element) {
+        this.element = element;
+
+        this.padding = 25
+        this.size = 1
+        this.raito_factor = 1
+
+        this.text_size = 15
+
+
+        this.end_arrow = {
+            length: this.padding*0.6,
+            width: this.padding*0.3
+        }
+
+        this.base_lines = {
+            axis: 4,
+            divider: 4,
+            divider_dashes: [12, 12]
+        }
+
+        this.base_lines_colors = {
+            axis: "black",
+            divider: "black",
+            divider_line: "gray"
+        }
+
+
+        this.canvas = document.createElement("canvas")
+        this.element.appendChild(this.canvas);
+
+        this.ctx = this.canvas.getContext("2d")
+    }
+
+    init() {
+        this.canvas.width = parseInt(this.element.clientWidth-this.padding*2)*this.size;
+        this.canvas.height = parseInt(this.raito*this.canvas.width)
+
+        this.width = this.canvas.width
+        this.height = this.canvas.height
+        this.raito = 1*this.raito_factor
+
+        this.canvas.width += this.padding*2
+        this.canvas.height += this.padding*2
+    }
+
+    draw_base() {
+        this.ctx.lineWidth = this.base_lines.axis;
+        this.ctx.fillStyle = this.base_lines_colors.axis;
+
+        this.ctx.fillRect(
+            this.padding, this.end_arrow.length, 4, this.canvas.height
+        )
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.padding+this.base_lines.axis/2, 0);
+        this.ctx.lineTo(this.padding+this.end_arrow.width+this.base_lines.axis/2, this.end_arrow.length);
+        this.ctx.lineTo(this.padding-this.end_arrow.width+this.base_lines.axis/2, this.end_arrow.length);
+        this.ctx.fill();
+
+
+        this.ctx.fillRect(
+            0, this.canvas.height-this.padding, this.canvas.width-this.end_arrow.length, 4
+        )
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.canvas.width, this.canvas.height-this.padding+this.base_lines.axis/2);
+        this.ctx.lineTo(this.canvas.width-this.end_arrow.length, this.canvas.height-this.padding+this.end_arrow.width+this.base_lines.axis/2);
+        this.ctx.lineTo(this.canvas.width-this.end_arrow.length, this.canvas.height-this.padding-this.end_arrow.width+this.base_lines.axis/2);
+        this.ctx.fill();
+    }
+
+    draw_0y_divider(pix_pos, text, postfix="") {
+        this.ctx.strokeStyle = this.base_lines_colors.divider;
+
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.padding+pix_pos, this.canvas.height-this.padding-this.end_arrow.width);
+        this.ctx.lineTo(this.padding+pix_pos, this.canvas.height-this.padding+this.end_arrow.width+this.base_lines.axis);
+        this.ctx.stroke();
+
+        
+        this.ctx.strokeStyle = this.base_lines_colors.divider_line;
+
+        this.ctx.setLineDash(this.base_lines.divider_dashes);
+        this.ctx.beginPath();
+        this.ctx.moveTo(this.padding+pix_pos, this.canvas.height-this.padding-this.end_arrow.width);
+        this.ctx.lineTo(this.padding+pix_pos, 0);
+        this.ctx.stroke();
+
+        this.ctx.setLineDash([]);
+
+
+        this.ctx.fillStyle = this.base_lines_colors.divider_line;
+        this.ctx.font = `${this.text_size}px consolas`;
+        this.ctx.fillText(text+postfix, this.padding+pix_pos-this.ctx.measureText(text).width/2, this.canvas.height);
+    }
+}
+
+
+class PenetrationGraph extends GraphBase {
+    constructor(element, pen_0, pen_30, pen_60, ric_angle) {
+        super(element);
+
+        this.element = element;
+        this.pen_0 = pen_0;
+        this.pen_30 = pen_30;
+        this.pen_60 = pen_60;
+        this.ric_angle = ric_angle;
+
+        this.recalculateGraphComponents()
+        this.init()
+        this.draw()
+
+        
+        window.addEventListener("mousemove", (event) => this.interaction(event), false)
+    }
+
+    init() {
+        this.canvas.width = parseInt(this.element.clientWidth-this.padding*2)*this.size;
+        this.width = this.canvas.width
+        this.raito = (this.pen_0/this.canvas.width)*this.raito_factor
+
+        this.canvas.height = parseInt(this.raito*this.canvas.width);
+        this.height = this.canvas.height
+
+        this.canvas.width += this.padding*2
+        this.canvas.height += this.padding*2
+
+    }
+
+    draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        this.draw_base()
+
+        this.draw_0y_divider((30 / this.ric_angle) * this.width, "30", "°")
+        this.draw_0y_divider((60 / this.ric_angle) * this.width, "60", "°")
+        this.draw_0y_divider(this.width, this.ric_angle.toString(), "°")
+
+        this.ctx.beginPath();
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth = 5;
+
+        for (var i = 0; i < this.width; i++) {
+            let x = i
+
+            let angle = (x / (this.width)) * this.ric_angle
+            let pen = this.graph(angle)
+
+            
+
+            let y = (this.pen_0-pen)*this.raito_factor
+
+            if (y > this.height) {
+                y = this.height
+
+                this.ctx.lineTo(this.padding+x, this.padding+y);
+
+                break
+            }
+
+            this.ctx.lineTo(this.padding+x, this.padding+y);
+        }
+
+        this.ctx.stroke();
+        this.ctx.closePath();
+    }
+
+    interaction(event) {
+        var rect = this.canvas.getBoundingClientRect();
+        var x = event.clientX - rect.left - this.padding;
+        var y = event.clientY - rect.top - this.padding;
+
+        if (x < 0 || y < 0 || x > this.width || y > this.height) {
+            return
+        }
+
+        let angle = (x / (this.width)) * this.ric_angle
+        let pen = this.graph(angle)
+
+        this.draw()
+        this.draw_pen_line(x, angle, pen)
+    }
+
+    draw_pen_line(x, angle, pen) {
+        this.ctx.fillStyle = currentTheme == "dark" ? "white" : "black";
+        this.ctx.font = this.text_size.toString()+"px consolas";
+
+        this.ctx.fillRect(
+            this.padding+x, 0, 3, this.canvas.height
+        )
+
+        let y = (this.pen_0-pen)*this.raito_factor
+
+        let text = `${Math.round(angle)}deg\n${Math.round(pen)}mm`
+        let text_size = this.ctx.measureText(text)
+
+        let fx = this.padding+x
+        let fy = y
+
+        
+        if (y - text_size.hangingBaseline + this.padding < 0) {
+            fy += text_size.hangingBaseline*4
+        } else {
+            fy += text_size.hangingBaseline*2
+        }
+
+        if (x + text_size.width > this.width) {
+            fx -= text_size.width+this.text_size
+            fy += this.text_size*2
+        } else {
+            fx += this.text_size
+        }
+
+        this.ctx.fillText(text, fx, fy);
+    }
+
+    recalculateGraphComponents() {
+        this.components = getPenGraphComponents(this.pen_0, this.pen_30, this.pen_60)
+
+        this.graph = (angle) => this.components.a*(angle**2)+this.components.b*angle+this.components.c
+    }
+}
+
+
+class PenetrationGraphsCompare extends GraphBase {
+    constructor(element, pen_0, pen_30, pen_60, ric_angle,
+                        fpen_0, fpen_30, fpen_60, fric_angle) {
+        
+        super(element)
+
+        this.element = element;
+        this.graph_main = {
+            pen_0: pen_0,
+            pen_30: pen_30,
+            pen_60: pen_60,
+            ric_angle: ric_angle
+        }
+
+        this.graph_sec = {
+            pen_0: fpen_0,
+            pen_30: fpen_30,
+            pen_60: fpen_60,
+            ric_angle: fric_angle
+        }
+
+        this.recalculateGraphComponents()
+        this.init()
+        this.draw()
+
+        window.addEventListener("mousemove", (event) => this.interaction(event), false)
+    }
+
+    init() {
+        this.canvas.width = parseInt(this.element.clientWidth-this.padding*2)*this.size;
+        this.width = this.canvas.width
+        this.raito = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)/this.canvas.width)*this.raito_factor
+
+        this.canvas.height = parseInt(this.raito*this.canvas.width);
+        this.height = this.canvas.height
+
+        this.canvas.width += this.padding*2
+        this.canvas.height += this.padding*2
+    }
+
+    draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        this.draw_base()
+        this.draw_0y_divider((30 / Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)) * this.width, "30", "°")
+        this.draw_0y_divider((60 / Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)) * this.width, "60", "°")
+        this.draw_0y_divider((  Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle) 
+                                        / 
+                                    Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)) * this.width, 
+                                    Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle).toString(),
+                                    "°")
+        if (this.graph_main.ric_angle != this.graph_sec.ric_angle) {
+            this.draw_0y_divider((  Math.min(this.graph_main.ric_angle, this.graph_sec.ric_angle) 
+                                        / 
+                                    Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)) * this.width, 
+                                    Math.min(this.graph_main.ric_angle, this.graph_sec.ric_angle).toString(),
+                                    "°")
+        }
+
+        if (this.graph_main.pen_0 != this.graph_sec.pen_0) {
+            this.ctx.fillStyle = this.base_lines_colors.divider_line
+            this.ctx.fillText(  "(1)",
+                                0, 
+                                    (      
+                                        Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)
+                                            -
+                                        this.main_graph(0)
+                                    )
+                                        *
+                                    this.raito_factor
+                                        +
+                                    this.padding
+                                )
+            this.ctx.fillText(  "(2)",
+                                0, 
+                                    (      
+                                        Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)
+                                            -
+                                        this.sec_graph(0)
+                                    )
+                                        *
+                                    this.raito_factor
+                                        +
+                                    this.padding
+                                )
+        }
+
+        
+
+        this.ctx.beginPath();
+        this.ctx.strokeStyle = "red";
+        this.ctx.lineWidth = 5;
+
+        for (var i = 0; i < this.width; i++) {
+            let x = i
+
+            let angle = (x / (this.width)) * Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)
+            
+            if (this.graph_main.ric_angle >= angle) {
+                let pen = this.main_graph(angle)
+
+                let y = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-pen)*this.raito_factor
+
+                if (y > this.height) {
+                    y = this.height
+
+                    this.ctx.lineTo(this.padding+x, this.padding+y);
+
+                    break
+                }
+
+                this.ctx.lineTo(this.padding+x, this.padding+y);
+            } else {
+                break
+            }
+        }
+
+        this.ctx.stroke();
+        this.ctx.closePath();
+
+
+        this.ctx.beginPath();
+        this.ctx.strokeStyle = "lime";
+        this.ctx.lineWidth = 5;
+
+        for (var i = 0; i < this.width; i++) {
+            let x = i
+
+            let angle = (x / (this.width)) * Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)
+            if (this.graph_sec.ric_angle >= angle) {
+                let pen = this.sec_graph(angle)
+
+                let y = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-pen)*this.raito_factor
+
+                if (y > this.height) {
+                    y = this.height
+
+                    this.ctx.lineTo(this.padding+x, this.padding+y);
+
+                    break
+                }
+
+                this.ctx.lineTo(this.padding+x, this.padding+y);
+            } else {
+                break
+            }
+        }
+
+        this.ctx.stroke();
+        this.ctx.closePath();
+    }
+
+
+    interaction(event) {
+        var rect = this.canvas.getBoundingClientRect();
+        var x = event.clientX - rect.left - this.padding;
+        var y = event.clientY - rect.top - this.padding;
+
+        if (x < 0 || y < 0 || x > this.width || y > this.height) {
+            return
+        }
+
+        let angle = (x / (this.width)) * Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)
+        let pen1 = this.main_graph(angle)
+        let pen2 = this.sec_graph(angle)
+
+        this.draw()
+        this.draw_pen_line(x, angle, pen1, pen2)
+    }
+
+    draw_pen_line(x, angle, pen1, pen2) {
+        this.ctx.fillStyle = currentTheme == "dark" ? "white" : "black";
+        this.ctx.font = this.text_size.toString()+"px consolas";
+
+        this.ctx.fillRect(
+            this.padding+x, 0, 3, this.canvas.height
+        )
+
+        let y1 = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-pen1)*this.raito_factor
+        let y2 = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-pen2)*this.raito_factor
+
+        let text1 = `${Math.round(angle)}deg\n${angle <= this.graph_main.ric_angle ? Math.round(pen1) : "-"}mm`
+        let text2 = `${Math.round(angle)}deg\n${angle <= this.graph_sec.ric_angle ? Math.round(pen2) : "-"}mm`
+
+        let text1_size = this.ctx.measureText(text1)
+        let text2_size = this.ctx.measureText(text2)
+
+        let fx = x
+
+        let fy1 = y1
+        let fy2 = y2
+
+        if (y1 - this.text_size + this.padding < 0) {
+            fy1 += text1_size.hangingBaseline*4
+        } else {
+            fy1 += text1_size.hangingBaseline
+        }
+
+        if (y2 - this.text_size + this.padding < 0) {
+            fy2 += text2_size.hangingBaseline*4
+        } else {
+            fy2 += text2_size.hangingBaseline
+        }
+
+        if (x + Math.max(text1_size.width, text2_size.width) > this.width) {
+            fx -= Math.max(text1_size.width, text2_size.width)-this.text_size
+            fy1 += this.text_size*2
+            fy2 += this.text_size*2
+        } else {
+            fx += this.text_size*2
+        }
+
+        if (Math.abs(fy1 - fy2) <= this.text_size) {
+            fy1 -= (fy1 - fy2)/2+this.text_size
+            fy2 += (fy2 - fy1)/2+this.text_size
+        }
+
+        this.ctx.fillText(text1, fx, fy1);
+        this.ctx.fillText(text2, fx, fy2);
+    }
+
+
+    recalculateGraphComponents() {
+        this.main_components = getPenGraphComponents(this.graph_main.pen_0, this.graph_main.pen_30, this.graph_main.pen_60)
+
+        this.main_graph = (angle) => this.main_components.a*(angle**2)+this.main_components.b*angle+this.main_components.c
+
+
+        this.sec_components = getPenGraphComponents(this.graph_sec.pen_0, this.graph_sec.pen_30, this.graph_sec.pen_60)
+
+        this.sec_graph = (angle) => this.sec_components.a*(angle**2)+this.sec_components.b*angle+this.sec_components.c
+    }
+}
+
 
 
 // =================================== LOGGING =================================

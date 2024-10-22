@@ -1042,5 +1042,19 @@ $(document).ready(function () {
                 count++;
             }
         }
+
+        if (type == "guns") {
+            console.warn("Check")
+            var pen_graphs = Array.from(document.getElementsByClassName('pen_graf_container'));
+            pen_graphs.forEach(el => {
+                new PenetrationGraph(
+                    el,
+                    parseInt(el.getAttribute("pen-0")),
+                    parseInt(el.getAttribute("pen-30")),
+                    parseInt(el.getAttribute("pen-60")),
+                    parseInt(el.getAttribute("ric_angle"))
+                )
+            })
+        }
     });
 });

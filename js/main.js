@@ -248,10 +248,12 @@ function setSearchOutput(hull, type, data, secondary_data) {
         $("#resources").show();
     }
 
+
     console.log(secondary_data);
     $("#weight").text(data.stats.weight+"t");
     $("#stats").html(calculateStringForItem(data, type, `./img/aps/${hull}.png`, secondary_data));
     $("#based_on").text(data.based_on);
+
 
     count = 1
     for (let key of Object.keys(data.paired)) {
@@ -288,4 +290,19 @@ function setSearchOutput(hull, type, data, secondary_data) {
 
 
     $("#item_container").show();
+
+
+    if (type == "guns") {
+        console.warn("Check")
+        var pen_graphs = Array.from(document.getElementsByClassName('pen_graf_container'));
+        pen_graphs.forEach(el => {
+            console.log(new PenetrationGraph(
+                el,
+                parseInt(el.getAttribute("pen-0")),
+                parseInt(el.getAttribute("pen-30")),
+                parseInt(el.getAttribute("pen-60")),
+                parseInt(el.getAttribute("ric_angle"))
+            ))
+        })
+    }
 }

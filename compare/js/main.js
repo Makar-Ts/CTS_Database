@@ -472,6 +472,25 @@ function createCompareList() {
 
 
     $("#item_container").show();
+
+    if (item1_type == "guns") {
+        console.warn("Check")
+        var pen_graphs = Array.from(document.getElementsByClassName('pen_graf_container'));
+        pen_graphs.forEach(el => {
+            new PenetrationGraphsCompare(
+                el,
+                parseInt(el.getAttribute("pen_0")),
+                parseInt(el.getAttribute("pen_30")),
+                parseInt(el.getAttribute("pen_60")),
+                parseInt(el.getAttribute("ric_angle")),
+
+                parseInt(el.getAttribute("fpen_0")),
+                parseInt(el.getAttribute("fpen_30")),
+                parseInt(el.getAttribute("fpen_60")),
+                parseInt(el.getAttribute("fric_angle")),
+            )
+        })
+    }
 }
 
 function redOrGreen(num1, num2) {
@@ -796,7 +815,7 @@ function calculateStringFor2Items(data1, data2, type) {
                 var indexof = data1.stats.weaponry.ammunition.indexOf(element);
 
                 ammos += `<div style="
-                grid-row: ${indexof + 1};
+                grid-row: ${indexof*2 + 1};
                 grid-column: 1;
                 ${ammoTypeGridStyle}
                 "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
@@ -812,7 +831,7 @@ function calculateStringFor2Items(data1, data2, type) {
                     gun2_rows.push(indexof);
 
                     ammos2 += `<div style="
-                    grid-row: ${indexof + 1};
+                    grid-row: ${indexof*2 + 1};
                     grid-column: 2;
                     ${ammoTypeGridStyle}
                     font-size: clamp(0.2em, 100%, 1em);
@@ -823,7 +842,22 @@ function calculateStringFor2Items(data1, data2, type) {
                     <tr><th></th><td style="color: ${redOrGreen(element.penetration["60"], foundElement.penetration["60"])};">60deg: ${foundElement.penetration["60"]}mm</td></tr>
                     <tr><th>Velocity</th><td style="color: ${redOrGreen(element.velocity, foundElement.velocity)};">${foundElement.velocity}m/s</td></tr>
                     <tr><th>Ricochet Angle</th><td style="color: ${redOrGreen(element.ricochet_angle, foundElement.ricochet_angle)};">${foundElement.ricochet_angle}deg</td></tr>
-                    ${ammo_stats2}</table></div>`; } });
+                    ${ammo_stats2}</table></div>
+                    <div class="pen_graf_container" style="
+                        grid-row: ${(indexof+1)*2};
+                        grid-column: 1 / 3;
+                    "   pen_0  = "${element.penetration["0"]}"
+                        pen_30 = "${element.penetration["30"]}"
+                        pen_60 = "${element.penetration["60"]}"
+                        ric_angle = "${element.ricochet_angle}"
+
+                        fpen_0 = "${foundElement.penetration["0"]}"
+                        fpen_30 = "${foundElement.penetration["30"]}"
+                        fpen_60 = "${foundElement.penetration["60"]}"
+                        fric_angle = "${foundElement.ricochet_angle}"
+                    ></div>`; 
+                } 
+            });
 
             
             data2.stats.weaponry.ammunition.forEach(element => {
@@ -854,7 +888,7 @@ function calculateStringFor2Items(data1, data2, type) {
                 }
 
                 ammos2 += `<div style="
-                grid-row: ${indexof + 1};
+                grid-row: ${indexof*2 + 1};
                 grid-column: 2;
                 ${ammoTypeGridStyle}
                 "><table><tr><th colspan="3" class="stat_header">${element.type}</th></tr>
