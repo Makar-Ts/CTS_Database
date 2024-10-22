@@ -2,6 +2,16 @@ const filePath = "./../database.json";
 const fileImgPath = "./../imgPaths.json";
 const fileResourcesPath = "./../resources.json";
 const ammoTypeGridStyle = `width: 100%;`;
+const simillar_ammo_types = {
+    AP: ["AP", "APDS", "APFSDS", "APHE"],
+    APHE: ["APHE", "AP", "APDS", "APFSDS"],
+    APDS: ["APDS", "APFSDS", "AP", "APHE"],
+    APFSDS: ["APFSDS", "APDS", "AP", "APHE"],
+    HEAT: ["HEAT", "ATGM"],
+    ATGM: ["ATGM", "HEAT"],
+    HE: ["HE", "HESH"],
+    HESH: ["HESH", "HE"]
+}
 detectColorScheme();
 
 var database;
@@ -778,12 +788,46 @@ function calculateStringFor2Items(data1, data2, type) {
             data1.stats.weaponry.ammunition.forEach(element => {
                 ammo_stats = "", ammo_stats2 = "";
 
-                var foundElement = data2.stats.weaponry.ammunition.find(function(Felement) {
+                var foundElement = undefined
+                for (var Felement of data2.stats.weaponry.ammunition) {
                     let one = Felement.type.split(" ")[0].replace("HEATFS", "HEAT");
                     let two = element.type.split(" ")[0].replace("HEATFS", "HEAT");
 
-                    return (one == two);
-                });
+                    if (one == two) {
+                        foundElement = Felement
+
+                        break
+                    }
+                }
+
+                if (!foundElement) {
+                    var similar_ammo = 
+                            simillar_ammo_types[
+                                element.type.split(" ")[0]
+                                    .replace("HEATFS", "HEAT")
+                                ];
+
+                    foundElement = 
+                        data2.stats.weaponry.ammunition.find(function (felem) {
+                            let one = felem.type.split(" ")[0].replace("HEATFS", "HEAT");
+
+                            let type = similar_ammo.find((val) => val == one)
+
+                            if (type) {
+                                let same_ammo = data1.stats.weaponry.ammunition.find(
+                                    (val) => val.type.split(" ")[0].replace("HEATFS", "HEAT") == type
+                                )
+                                if (!same_ammo) {
+                                    return true
+                                }
+                            }
+
+                            return false
+                        })
+                    
+                    console.warn(foundElement)
+                }
+
 
                 for (var key of Object.keys(element.stats)) {
                     if (element.stats[key] != -1) {
@@ -859,12 +903,14 @@ function calculateStringFor2Items(data1, data2, type) {
                 } 
             });
 
-            
+
             data2.stats.weaponry.ammunition.forEach(element => {
                 var indexof = data2.stats.weaponry.ammunition.indexOf(element);
                 ammo_stats = ""
 
                 if (gun2_alreadyCheckedAmmos.indexOf(indexof) != -1) return;
+
+                gun2_rows.sort()
 
                 if (gun2_rows.indexOf(indexof) != -1) {
                     var indexof = gun2_rows[gun2_rows.length-1]+1;
