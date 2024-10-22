@@ -73,15 +73,21 @@ $(document).ready(function() {
 
     $('#search_input').bind('input', function (e) {
         $("#search_results").show();
-        var search_for = $('#search_input').val().toLowerCase().replace("-", "").replace(" ", "");
-        var greek_search_for = replaceGreekNumerals($('#search_input').val()).toLowerCase().replace("-", "").replace(" ", "");
+
+        const convert = {
+            main: (value) => value.toLowerCase().replace(/[-./\\ ,"'*!]/g, ""),
+            greek: (value) => replaceGreekNumerals(value).toLowerCase().replace(/[-./\\ ,"'*!]/g, "")
+        }
+
+        var search_for = convert.main($('#search_input').val());
+        var greek_search_for = convert.greek($('#search_input').val());
         
         str = ""
 
         count = 12;
         for (let key of Object.keys(database.hulls)) {
-            var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
-            var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+            var greek_search_key = convert.greek(key)
+            var orig_search_key = convert.main(key)
 
             if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                 str += `<tr class="search_result_item" data-item="${key.replace(/\"/g, "&quot;")}" data-type="hulls"><td>Hull: &nbsp;&nbsp;${key}</td></tr>`
@@ -93,8 +99,8 @@ $(document).ready(function() {
 
         count = 12;
         for (let key of Object.keys(database.turrets)) {
-            var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
-            var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+            var greek_search_key = convert.greek(key)
+            var orig_search_key = convert.main(key)
 
             if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                 str += `<tr class="search_result_item" data-item="${key.replace(/\"/g, "&quot;")}" data-type="turrets"><td>Turret: ${key}</td></tr>`
@@ -106,8 +112,8 @@ $(document).ready(function() {
 
         count = 12;
         for (let key of Object.keys(database.guns)) {
-            var greek_search_key = replaceGreekNumerals(key).toLowerCase().replace("-", "").replace(" ", "")
-            var orig_search_key = key.toLowerCase().replace("-", "").replace(" ", "")
+            var greek_search_key = convert.greek(key)
+            var orig_search_key = convert.main(key)
 
             if (orig_search_key.includes(search_for) | greek_search_key.includes(greek_search_for)) {
                 str += `<tr class="search_result_item" data-item="${key.replace(/\"/g, "{quot")}" data-type="guns"><td>Gun: &nbsp;&nbsp;&nbsp;${key}</td></tr>`
