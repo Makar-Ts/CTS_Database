@@ -20,6 +20,10 @@ const rangefinder_to_string = {
     2: "Laser"
 }
 
+function isDigit(n) {
+    return /^[0-9.]+$/.test(n);
+}
+
 function createCookie(name, value, days) {
     var expires;
     if (days) {
@@ -651,29 +655,25 @@ class PenetrationGraph extends GraphBase {
             this.padding+x, 0, 3, this.canvas.height
         )
 
-        let y = (this.pen_0-pen)*this.raito_factor
-
         let text = `${Math.round(angle)}deg\n${Math.round(pen)}mm`
         let text_size = this.ctx.measureText(text)
 
-        let fx = this.padding+x
-        let fy = y
-
+        let fx = x
         
-        if (y - text_size.hangingBaseline + this.padding < 0) {
-            fy += text_size.hangingBaseline*4
-        } else {
-            fy += text_size.hangingBaseline*2
-        }
-
         if (x + text_size.width > this.width) {
             fx -= text_size.width+this.text_size
-            fy += this.text_size*2
         } else {
             fx += this.text_size
         }
 
-        this.ctx.fillText(text, fx, fy);
+        var l_corner_projection = (this.pen_0-this.graph((fx / this.width)*this.ric_angle))*this.raito_factor
+        var r_corner_projection = (this.pen_0-this.graph(((fx+text_size.width) / this.width)*this.ric_angle))*this.raito_factor
+
+        var height = Math.min(l_corner_projection, r_corner_projection)
+        let fy = height
+
+
+        this.ctx.fillText(text, this.padding+fx, this.padding+fy-text_size.hangingBaseline);
     }
 
     recalculateGraphComponents() {
@@ -685,8 +685,8 @@ class PenetrationGraph extends GraphBase {
 
 
 class PenetrationGraphsCompare extends GraphBase {
-    constructor(element, pen_0, pen_30, pen_60, ric_angle,
-                        fpen_0, fpen_30, fpen_60, fric_angle) {
+    constructor(element, pen_0, pen_30, pen_60, ric_angle, name,
+                        fpen_0, fpen_30, fpen_60, fric_angle, fname) {
         
         super(element)
 
@@ -695,14 +695,16 @@ class PenetrationGraphsCompare extends GraphBase {
             pen_0: pen_0,
             pen_30: pen_30,
             pen_60: pen_60,
-            ric_angle: ric_angle
+            ric_angle: ric_angle,
+            name: isDigit(name.replace("mm", "").split(' ')[0]) ? name.split(' ')[1] : name
         }
 
         this.graph_sec = {
             pen_0: fpen_0,
             pen_30: fpen_30,
             pen_60: fpen_60,
-            ric_angle: fric_angle
+            ric_angle: fric_angle,
+            name: isDigit(fname.replace("mm", "").split(' ')[0]) ? fname.split(' ')[1] : fname
         }
 
         this.recalculateGraphComponents()
@@ -865,44 +867,38 @@ class PenetrationGraphsCompare extends GraphBase {
         let y1 = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-pen1)*this.raito_factor
         let y2 = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-pen2)*this.raito_factor
 
-        let text1 = `${Math.round(angle)}deg\n${angle <= this.graph_main.ric_angle ? Math.round(pen1) : "-"}mm`
-        let text2 = `${Math.round(angle)}deg\n${angle <= this.graph_sec.ric_angle ? Math.round(pen2) : "-"}mm`
+        let text1 = `${Math.round(angle)}° ${angle <= this.graph_main.ric_angle ? Math.round(pen1) : "-"}mm (${this.graph_main.name})`
+        let text2 = `${Math.round(angle)}° ${angle <= this.graph_sec.ric_angle ? Math.round(pen2) : "-"}mm (${this.graph_sec.name})`
 
         let text1_size = this.ctx.measureText(text1)
         let text2_size = this.ctx.measureText(text2)
 
         let fx = x
 
-        let fy1 = y1
-        let fy2 = y2
-
-        if (y1 - this.text_size + this.padding < 0) {
-            fy1 += text1_size.hangingBaseline*4
-        } else {
-            fy1 += text1_size.hangingBaseline
-        }
-
-        if (y2 - this.text_size + this.padding < 0) {
-            fy2 += text2_size.hangingBaseline*4
-        } else {
-            fy2 += text2_size.hangingBaseline
-        }
 
         if (x + Math.max(text1_size.width, text2_size.width) > this.width) {
-            fx -= Math.max(text1_size.width, text2_size.width)-this.text_size
-            fy1 += this.text_size*2
-            fy2 += this.text_size*2
+            fx -= Math.max(text1_size.width, text2_size.width)+text1_size.hangingBaseline
         } else {
-            fx += this.text_size*2
+            fx += text1_size.hangingBaseline
         }
 
-        if (Math.abs(fy1 - fy2) <= this.text_size) {
-            fy1 -= (fy1 - fy2)/2+this.text_size
-            fy2 += (fy2 - fy1)/2+this.text_size
+
+        var l_corner1_projection = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-this.main_graph((fx / this.width)*Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)))*this.raito_factor
+        var r_corner1_projection = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-this.main_graph(((fx+text1_size.width) / this.width)*Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)))*this.raito_factor
+
+        var l_corner2_projection = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-this.sec_graph((fx / this.width)*Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)))*this.raito_factor
+        var r_corner2_projection = (Math.max(this.graph_main.pen_0, this.graph_sec.pen_0)-this.sec_graph(((fx+text2_size.width) / this.width)*Math.max(this.graph_main.ric_angle, this.graph_sec.ric_angle)))*this.raito_factor
+
+        if (r_corner1_projection < r_corner2_projection) {
+            var fy1 = Math.min(l_corner1_projection, r_corner1_projection)-text1_size.hangingBaseline
+            var fy2 = Math.max(l_corner2_projection, r_corner2_projection)+text2_size.hangingBaseline*2
+        } else {
+            var fy1 = Math.max(l_corner1_projection, r_corner1_projection)+text1_size.hangingBaseline*2
+            var fy2 = Math.min(l_corner2_projection, r_corner2_projection)-text2_size.hangingBaseline
         }
 
-        this.ctx.fillText(text1, fx, fy1);
-        this.ctx.fillText(text2, fx, fy2);
+        this.ctx.fillText(text1, fx+this.padding, fy1+this.padding);
+        this.ctx.fillText(text2, fx+this.padding, fy2+this.padding);
     }
 
 

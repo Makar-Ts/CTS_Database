@@ -503,11 +503,13 @@ function createCompareList() {
                 parseInt(el.getAttribute("pen_30")),
                 parseInt(el.getAttribute("pen_60")),
                 parseInt(el.getAttribute("ric_angle")),
+                item1_name,
 
                 parseInt(el.getAttribute("fpen_0")),
                 parseInt(el.getAttribute("fpen_30")),
                 parseInt(el.getAttribute("fpen_60")),
                 parseInt(el.getAttribute("fric_angle")),
+                item2_name
             )
         })
     }
