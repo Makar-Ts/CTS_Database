@@ -11749,7 +11749,7 @@
                 },
                 "speed": {
                     "vertical": 4.6,
-                    "horizontal": 11.5
+                    "horizontal": 9.7
                 }
             }
         },
@@ -18646,16 +18646,16 @@
             "ammo_volume": 0.52,
             "caliber:": 85,
             "ammunition": [{
-    "type": "APHE",
+    "type": "APHE ",
     "penetration": {
-        "0": 110,
-        "30": 85,
-        "60": 40
+        "0":  110,
+        "30":  93,
+        "60":  44
     },
     "velocity":  792,
     "ricochet_angle":  71,
     "stats": {
-        "fuse_sensitive": 14,
+        "fuse_sensitive":  14,
         "fuse_delay":  1.2,
         "explosive_mass": " 164g"
     }
@@ -19668,6 +19668,61 @@
         "turret": ""
     }
 }
+,"122mm SM-30": {
+    "description": "",
+    "tier": 5.0,
+    "rarity": "Legendary",
+    "obtain": "Multicrew Tank Combat Collaboration | 1⭐ (Zoonmk-122 Set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.60,
+        "weaponry": {
+            "clip": 0,
+            "reload": 15.0,
+            "accuracy": 112,
+            "ammo_volume": 1.18,
+            "caliber:": 122,
+            "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  147,
+        "30":  127,
+        "60":  74
+    },
+    "velocity":  621,
+    "ricochet_angle":  89,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE ",
+    "penetration": {
+        "0":  37,
+        "30":  37,
+        "60":  37
+    },
+    "velocity":  710,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 3.78kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "122mm M-30 [USSR]",
+    "paired": {
+        "hull": "",
+        "turret": "UPM-MT"
+    }
+}
 ,"122mm D-25T": {
     "description": "RUSSIAN BIAS! PLINK!",
     "tier": 6.0,
@@ -20346,6 +20401,220 @@
         "turret": "2S1"
     }
 }
+,"190mm Bruh": {
+    "description": "Bruh",
+    "tier": 6.0,
+    "rarity": "Rare",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 150, "Steel": 77},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.20,
+        "weaponry": {
+            "clip": 0,
+            "reload": 20.0,
+            "accuracy": 10000,
+            "ammo_volume": 3.28,
+            "caliber:": 190,
+            "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  500,
+        "30":  433,
+        "60":  250
+    },
+    "velocity":  157,
+    "ricochet_angle":  87,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HE (PF)",
+    "penetration": {
+        "0":  142,
+        "30":  142,
+        "60":  142
+    },
+    "velocity":  230,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 25.01kg",
+        "fuse_radius":  3,
+        "arming_distance":  100
+    }
+}]
+        }
+    },
+    "based_on": "",
+    "paired": {
+        "hull": "Speedsta",
+        "turret": ""
+    }
+}
+,"94mm 28 Pdr": {
+    "description": "What do you mean it isn't a 17pdr??!!!",
+    "tier": 6.0,
+    "rarity": "Epic",
+    "obtain": "Blueprints",
+    "resources": {"Iron": 47, "Steel": 26, "Aluminium": 47, "Chromium": 60},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.90,
+        "weaponry": {
+            "clip": 0,
+            "reload": 8.0,
+            "accuracy": 161,
+            "ammo_volume": 0.65,
+            "caliber:": 94,
+            "ammunition": [{
+    "type": "AP ",
+    "penetration": {
+        "0":  218,
+        "30":  185,
+        "60":  85
+    },
+    "velocity":  929,
+    "ricochet_angle":  70,
+    "stats": {}
+}]
+        }
+    },
+    "based_on": "Ordnance QF 28-Pounder [UK]",
+    "paired": {
+        "hull": "",
+        "turret": "TOG II*"
+    }
+}
+,"165mm Demolition Charge Projector": {
+    "description": "We are the Royal Engineers!",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Epic Crate Drop",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.34,
+        "weaponry": {
+            "clip": 0,
+            "reload": 20.0,
+            "accuracy": 45,
+            "ammo_volume": 2.37,
+            "caliber:": 165,
+            "ammunition": [{
+    "type": "HESH ",
+    "penetration": {
+        "0":  231,
+        "30":  231,
+        "60":  231
+    },
+    "velocity":  160,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 15.35kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "Royal Ordnance L9 [UK]",
+    "paired": {
+        "hull": "",
+        "turret": "Centurion AVRE"
+    }
+}
+,"90mm Needle": {
+    "description": "yarr",
+    "tier": 6.0,
+    "rarity": "Legendary",
+    "obtain": "Monthly Reward, September 2022 | 7⭐ (Ferret Set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.30,
+        "weaponry": {
+            "clip": 0,
+            "reload": 8.0,
+            "accuracy": 100,
+            "ammo_volume": 0.59,
+            "caliber:": 90,
+            "ammunition": [{
+    "type": "APFSDS ",
+    "penetration": {
+        "0":  180,
+        "30":  160,
+        "60":  98
+    },
+    "velocity":  1200,
+    "ricochet_angle":  80,
+    "stats": {}
+},
+{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  260,
+        "30":  225,
+        "60":  130
+    },
+    "velocity":  865,
+    "ricochet_angle":  71,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "HESH ",
+    "penetration": {
+        "0":  90,
+        "30":  90,
+        "60":  90
+    },
+    "velocity":  800,
+    "ricochet_angle":  71,
+    "stats": {
+        "explosive_mass": " 1.72kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "ATGM ",
+    "penetration": {
+        "0":  280,
+        "30":  242,
+        "60":  140
+    },
+    "velocity":  220,
+    "ricochet_angle":  90,
+    "stats": {
+        "range":  1.8,
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "",
+    "paired": {
+        "hull": "Ferret",
+        "turret": ""
+    }
+}
 ,"100mm Brochette": {
     "description": "lorrrrr",
     "tier": 7.0,
@@ -20870,11 +21139,11 @@
             "ammo_volume": 0.59,
             "caliber:": 90,
             "ammunition": [{
-    "type": "HEATFS ",
+    "type": "HEAT ",
     "penetration": {
-        "0":  400,
-        "30":  346,
-        "60":  200
+        "0":  230,
+        "30":  199,
+        "60":  115
     },
     "velocity":  730,
     "ricochet_angle":  77,
@@ -22132,8 +22401,8 @@
     "type": "APFSDS ",
     "penetration": {
         "0":  210,
-        "30":  82 ,
-        "60":  40
+        "30":  82,
+        "60":  57
     },
     "velocity":  1400,
     "ricochet_angle":  80,
@@ -23350,8 +23619,8 @@
         "30":  372,
         "60":  215
     },
-    "velocity":  -1,
-    "ricochet_angle":  -1,
+    "velocity": -1,
+    "ricochet_angle": -1,
     "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
@@ -23506,7 +23775,7 @@
             "ammo_volume": 0.15,
             "caliber:": 49.7,
             "ammunition": [{
-    "type": "HEATFS (Tandem)",
+    "type": "HEAT (Tandem)",
     "penetration": {
         "0":  175,
         "30":  152,
@@ -26535,7 +26804,7 @@
     "ammo_count": 1,
     "reload_count": 4,
     "reload":  12,
-    "max_launch_speed":  -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  1000,
         "30":  866,
@@ -27497,7 +27766,7 @@
     "ammo_count": 2,
     "reload_count": 6,
     "reload":  12,
-    "max_launch_speed":  -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0":  700,
         "30":  606,

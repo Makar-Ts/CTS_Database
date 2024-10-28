@@ -445,6 +445,11 @@ function calculateStringForItem(data, type, aps_img, secondary_data) {
             <tr><th>Penetration</th><td>0deg: ${element.penetration["0"]}mm</td></tr>
             <tr><th></th><td>30deg: ${element.penetration["30"]}mm</td></tr>
             <tr><th></th><td>60deg: ${element.penetration["60"]}mm</td></tr>
+            <tr><th colspan="2" class="pen_graf_container" 
+                        pen-0="${element.penetration["0"]}"
+                        pen-30="${element.penetration["30"]}"
+                        pen-60="${element.penetration["60"]}"
+                        ric_angle="${element.ricochet_angle}"></th></tr>
             <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
             <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
             ${ammo_stats}`

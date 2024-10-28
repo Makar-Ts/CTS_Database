@@ -298,17 +298,14 @@ function setSearchOutput(hull, type, data, secondary_data) {
     $("#item_container").show();
 
 
-    if (type == "guns") {
-        console.warn("Check")
-        var pen_graphs = Array.from(document.getElementsByClassName('pen_graf_container'));
-        pen_graphs.forEach(el => {
-            console.log(new PenetrationGraph(
-                el,
-                parseInt(el.getAttribute("pen-0")),
-                parseInt(el.getAttribute("pen-30")),
-                parseInt(el.getAttribute("pen-60")),
-                parseInt(el.getAttribute("ric_angle"))
-            ))
-        })
-    }
+    var pen_graphs = Array.from(document.getElementsByClassName('pen_graf_container'));
+    pen_graphs.forEach(el => {
+        console.log(new PenetrationGraph(
+            el,
+            parseInt(el.getAttribute("pen-0")),
+            parseInt(el.getAttribute("pen-30")),
+            parseInt(el.getAttribute("pen-60")),
+            parseInt(el.getAttribute("ric_angle"))
+        ))
+    })
 }
