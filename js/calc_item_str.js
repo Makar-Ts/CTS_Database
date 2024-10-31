@@ -406,6 +406,10 @@ function calculateStringForItem(data, type, aps_img, secondary_data) {
                         pen-60="${element.penetration["60"]}"
                         ric_angle="${element.ricochet_angle}"></th></tr>
                 <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
+                <tr><th colspan="2" class="pen_per_dist_graf_container" 
+                        pen="${element.penetration["0"]}"
+                        shellSpeed="${element.velocity}"
+                        caliber="${data.stats.weaponry["caliber:"]}"></th></tr>
                 <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
                 ${ammo_stats}`
             });
@@ -580,8 +584,8 @@ class PenetrationGraph extends GraphBase {
         this.recalculateGraphComponents()
         this.init()
         this.draw()
-
         
+
         window.addEventListener("mousemove", (event) => this.interaction(event), false)
     }
 
@@ -916,6 +920,160 @@ class PenetrationGraphsCompare extends GraphBase {
         this.sec_components = getPenGraphComponents(this.graph_sec.pen_0, this.graph_sec.pen_30, this.graph_sec.pen_60)
 
         this.sec_graph = (angle) => this.sec_components.a*(angle**2)+this.sec_components.b*angle+this.sec_components.c
+    }
+}
+
+class PenetrationPerDistanceGraph extends GraphBase {
+    constructor(element, pen_0, caliber, shellSpeed) {
+        super(element);
+
+        this.element = element;
+        this.pen_0 = pen_0;
+        this.caliber = caliber;
+        this.shellSpeed = shellSpeed;
+
+        this.maxDistance = 4000
+
+        this.base_lines.divider = 2
+
+        this.init()
+        this.compileGraphValues()
+        this.draw()
+
+        
+        window.addEventListener("mousemove", (event) => this.interaction(event), false)
+    }
+
+    init() {
+        this.canvas.width = parseInt(this.element.clientWidth-this.padding*2)*this.size;
+        this.width = this.canvas.width
+        this.raito = (this.pen_0/this.canvas.width)*this.raito_factor
+
+        this.canvas.height = parseInt(this.raito*this.canvas.width);
+        this.height = this.canvas.height
+
+        this.canvas.width += this.padding*2
+        this.canvas.height += this.padding*2
+    }
+
+    compileGraphValues() {
+        this.graph_values = []
+
+        for (let x = 0; x < this.width+1; x++) {
+            var dist = (x / (this.width)) * this.maxDistance
+            this.graph_values.push({
+                distance: dist,
+                pen: this.getPenAtDist(dist)
+            })
+        }
+    }
+
+    getGraphValues(x) {
+        return this.graph_values[x > this.width ? this.width : x < 0 ? 0 : x]
+    }
+
+    draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+        this.draw_base()
+
+        for (let index = 500; index < this.maxDistance; index+=500) {
+            this.draw_0y_divider((index / this.maxDistance) * this.width, index, "m")
+        }
+        //this.draw_0y_divider((30 / this.ric_angle) * this.width, "30", "°")
+        //this.draw_0y_divider((60 / this.ric_angle) * this.width, "60", "°")
+        //this.draw_0y_divider(this.width, this.ric_angle.toString(), "°")
+
+        this.ctx.beginPath();
+        this.ctx.strokeStyle = "orange";
+        this.ctx.lineWidth = 5;
+
+        for (var i = 0; i < this.width+1; i++) {
+            let x = i
+
+            let pen = this.graph_values[i].pen
+
+            
+
+            let y = (this.pen_0-pen)*this.raito_factor
+
+            if (y > this.height) {
+                y = this.height
+
+                this.ctx.lineTo(this.padding+x, this.padding+y);
+
+                break
+            }
+
+            this.ctx.lineTo(this.padding+x, this.padding+y);
+        }
+
+        this.ctx.stroke();
+        this.ctx.closePath();
+    }
+
+
+    getPenAtDist(distance) {
+        var timeStart = new Date().getTime()
+        var pen = this.pen_0
+        const step = 1/400
+        var currentDist = 0
+        
+        while (currentDist < (distance * 3.57)) {
+            currentDist += (this.shellSpeed * 3.57) * step
+            pen -= pen * currentDist / (200 / step * this.caliber)
+        }
+        
+        var timeEnd = new Date().getTime()
+        //console.log("Calculation time:", timeEnd - timeStart, "ms")
+        return pen
+    }
+
+
+    interaction(event) {
+        var rect = this.canvas.getBoundingClientRect();
+        var x = Math.round(event.clientX - rect.left - this.padding);
+        var y = event.clientY - rect.top - this.padding;
+
+        if (x < 0 || y < 0 || x > this.width || y > this.height) {
+            return
+        }
+
+        let graph_val = this.getGraphValues(x)
+        let dist = graph_val.distance
+        let pen = graph_val.pen
+
+        this.draw()
+        this.draw_pen_line(x, dist, pen)
+    }
+
+    draw_pen_line(x, dist, pen) {
+        this.ctx.fillStyle = currentTheme == "dark" ? "white" : "black";
+        this.ctx.font = this.text_size.toString()+"px consolas";
+
+        this.ctx.fillRect(
+            this.padding+x, 0, 3, this.canvas.height
+        )
+
+        let text = `${Math.round(dist)}m\n${Math.round(pen)}mm`
+        let text_size = this.ctx.measureText(text)
+
+        let fx = x
+        
+        if (x + text_size.width > this.width) {
+            fx -= text_size.width+this.text_size
+        } else {
+            fx += this.text_size
+        }
+        
+        var l_corner_projection = (this.pen_0-this.getGraphValues(Math.round(fx)).pen)*this.raito_factor
+        var r_corner_projection = (this.pen_0-this.getGraphValues(Math.round(fx+text_size.width)).pen)*this.maxDistance*this.raito_factor
+
+        var height = Math.min(l_corner_projection, r_corner_projection)
+        let fy = height
+
+
+        this.ctx.fillText(text, this.padding+fx, this.padding+fy-text_size.hangingBaseline);
     }
 }
 

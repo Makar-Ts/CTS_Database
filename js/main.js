@@ -308,4 +308,14 @@ function setSearchOutput(hull, type, data, secondary_data) {
             parseInt(el.getAttribute("ric_angle"))
         ))
     })
+
+    var pen_per_dist_graphs = Array.from(document.getElementsByClassName('pen_per_dist_graf_container'));
+    pen_per_dist_graphs.forEach(el => {
+        console.log(new PenetrationPerDistanceGraph(
+            el,
+            parseInt(el.getAttribute("pen")),
+            parseInt(el.getAttribute("caliber")),
+            parseInt(el.getAttribute("shellSpeed"))
+        ))
+    })
 }
