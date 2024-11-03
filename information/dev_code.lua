@@ -27,7 +27,7 @@ function getPenAtDist(penetration, distance, caliber, shellSpeed)
     local step = 1/60
     local currentDist = 0
     
-    while currentDist < (distance * 3.57) do
+    while currentDist < (distance * 3.57) do -- @Makar-Ts: 1m = 3.57studs
         currentDist += (shellSpeed * 3.57) * step
         pen -= pen * currentDist / (200 / step * caliber)
     end
@@ -37,24 +37,73 @@ end
 
 --qolop: its dependent on armour thickness and kinetic shell type. this is the actual caclculation used.
 
+local function getAPFSDSIndex(angle, index60, normalThickness, shellPenetration)
+    local angleIndex = 1 + (angle / 60) * (index60 - 1)
+    local normalizedThickness = normalThickness / math.cos(math.rad(angle))  / shellPenetration
+    return 1 + normalizedThickness * (angleIndex - 1)
+end
+
+local function getOtherIndex(ricochetAngle, angle, normalThickness, shellPenetration)
+    local ricochetIndex = math.sin(math.rad(ricochetAngle))
+    local normalizedThickness = normalThickness / math.cos(math.rad(angle)) / shellPenetration
+    return 1 + normalizedThickness * (ricochetIndex - 1)
+end
+
+
 local ricochetAngle = shellFolder.RicochetAngle.Value
 local index = 1
 
 if not (shellFolder.Name == "HEAT" or shellFolder.Name == "ATGM") then --@Makar-Ts: HEAT and ATGM are not normalize
     local hitAngle = (math.acos(rayDir:Dot(-surfaceNormal)))
-    local normalThickness = (hitPositionT - hit).Magnitude*280.112/mult
+    local normalThickness = (hitPositionT - hit).Magnitude * 280.112 / mult
 
     if shellFolder.Name == "APFSDS" then
-        local index60 = (shellFolder:FindFirstChild("Penetration60").Value*2)/shellFolder.Penetration.Value
+        local index60 = 
+            (
+                shellFolder:FindFirstChild("Penetration60").Value*2
+            ) / shellFolder.Penetration.Value
         
-        index = getAPFSDSIndex(angleDeg, index60, normalThickness, shellFolder.Penetration.Value)^-1
+        index = getAPFSDSIndex( --@Makar-Ts: magic func
+            angleDeg, 
+            index60, 
+            normalThickness, 
+            shellFolder.Penetration.Value
+        )^-1
     else -- other kinetic rounds
-        index = getOtherIndex(ricochetAngle, angleDeg, normalThickness, shellFolder.Penetration.Value)^-1
+        index = getOtherIndex( --@Makar-Ts: magic func
+            ricochetAngle, 
+            angleDeg, 
+            normalThickness, 
+            shellFolder.Penetration.Value
+        )^-1
     end
 
     local minDeflectionAngle = 10 --@Makar-Ts: min "normalize angle" i think 
     if angleDeg > minDeflectionAngle then
-        local refDir = math.sqrt(1-index^2*(1-(-surfaceNormal:Dot(rayDir))^2))*-surfaceNormal+index*(rayDir-(-surfaceNormal:Dot(rayDir))*-surfaceNormal)
+        local refDir = 
+            math.sqrt(
+                1
+                    -
+                    index^2
+                        *
+                    (
+                        1
+                            -
+                        (-surfaceNormal:Dot(rayDir))^2
+                    )
+            )
+                *
+            -surfaceNormal
+                +
+            index
+                *
+            (
+                rayDir
+                    -
+                    (-surfaceNormal:Dot(rayDir))
+                        *
+                    -surfaceNormal
+            ) -- @Makar-Ts: i dont fkn know what is this
         rayDir = refDir
     end
 end

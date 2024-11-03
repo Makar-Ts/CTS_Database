@@ -20,6 +20,14 @@ const rangefinder_to_string = {
     2: "Laser"
 }
 
+function ammoType(name) {
+    if (name.includes("AP")) {
+        return "KE";
+    } else {
+        return "CE";
+    }
+}
+
 function isDigit(n) {
     return /^[0-9.]+$/.test(n);
 }
@@ -406,10 +414,10 @@ function calculateStringForItem(data, type, aps_img, secondary_data) {
                         pen-60="${element.penetration["60"]}"
                         ric_angle="${element.ricochet_angle}"></th></tr>
                 <tr><th>Velocity</th><td>${element.velocity}m/s</td></tr>
-                <tr><th colspan="2" class="pen_per_dist_graf_container" 
+                ${ammoType(element.type) == "KE" ? `<tr><th colspan="2" class="pen_per_dist_graf_container" 
                         pen="${element.penetration["0"]}"
                         shellSpeed="${element.velocity}"
-                        caliber="${data.stats.weaponry["caliber:"]}"></th></tr>
+                        caliber="${data.stats.weaponry["caliber:"]}"></th></tr>` : ""}
                 <tr><th>Ricochet Angle</th><td>${element.ricochet_angle}deg</td></tr>
                 ${ammo_stats}`
             });
@@ -941,6 +949,12 @@ class PenetrationPerDistanceGraph extends GraphBase {
         this.maxDistance = 4000
 
         this.base_lines.divider = 2
+
+        if (shellSpeed <= 0) {
+            console.error("Shell speed must be greater than 0")
+
+            return
+        }
 
         this.init()
         this.compileGraphValues()
