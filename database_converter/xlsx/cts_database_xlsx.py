@@ -143,6 +143,18 @@ def obtain_parcing(obtain):
     return obtain_str, resources, requires
 
 
+def isNumber(val: str):
+    if isinstance(val, (int, float)): 
+        return val
+    
+    out = val.lstrip().rstrip()
+    
+    if re.match(r'^-?\d+(\.\d+|)°?$', out) is not None:
+        return out
+    
+    print(f"├ {val} is not a number")
+    return -1
+
 
 # ---------------------------------------------------------------------------- #
 #                                 Prepare Time                                 #
@@ -298,16 +310,16 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         hull_gun = templates.HULL_GUN.format(
             reload_multi=reload_multi[0],
             reload_multi_caliber=reload_multi[1].replace("(", "").replace(")", "").replace("mm", ""),
-            limits_up=limits_ver[1],
-            limits_down=limits_ver[0].replace("-", ""),
-            limits_left=limits_hor[0].replace("-", ""),
-            limits_right=limits_hor[1],
+            limits_up=isNumber(limits_ver[1]),
+            limits_down=isNumber(limits_ver[0].replace("-", "")),
+            limits_left=isNumber(limits_hor[0].replace("-", "")),
+            limits_right=isNumber(limits_hor[1]),
             sight_rangefinder=rangefinder,
             sight_thermal=thermal,
-            sight_zoom_lower=zoom[0],
-            sight_zoom_upper=zoom[1],
+            sight_zoom_lower=isNumber(zoom[0]),
+            sight_zoom_upper=isNumber(zoom[1]),
             stabilizer=stab,
-            fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
+            fcs=isNumber(fcs),
         )
         
     
@@ -316,21 +328,21 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
     string = templates.HULL.format(
         name=ws.cell(HULLS_OFFSET+0, i).value.replace("\n", "\\n").replace('"', '\\"'),
         description=as_string(ws.cell(HULLS_OFFSET+1, i).value),
-        tier=ws.cell(HULLS_OFFSET+2, i).value,
+        tier=isNumber(ws.cell(HULLS_OFFSET+2, i).value),
         rarity=as_string(ws.cell(HULLS_OFFSET+3, i).value),
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
-        weight= ws.cell(HULLS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(HULLS_OFFSET+8, i).value) is not None else -1,
+        weight= isNumber(ws.cell(HULLS_OFFSET+8, i).value),
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
-        armor_front=armor[0],
-        armor_back=armor[2],
-        armor_side=armor[1],
+        armor_front=isNumber(armor[0]),
+        armor_back=isNumber(armor[2]),
+        armor_side=isNumber(armor[1]),
         speed_acceleration=ws.cell(HULLS_OFFSET+4, i).value,
-        speed_forward=speed[0],
-        speed_backward=speed[1],
-        speed_torque=ws.cell(HULLS_OFFSET+7, i).value.replace("k", ""),
-        speed_rate=ws.cell(HULLS_OFFSET+9, i).value.replace("m", ""),
+        speed_forward=isNumber(speed[0]),
+        speed_backward=isNumber(speed[1]),
+        speed_torque=isNumber(ws.cell(HULLS_OFFSET+7, i).value.replace("k", "")),
+        speed_rate=isNumber(ws.cell(HULLS_OFFSET+9, i).value.replace("m", "")),
         weapon_ammo_storage=ammo,
         weapon_blowout=blowout,
         weapon_hull_aim=aim,
@@ -477,32 +489,32 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     string = templates.TURRET.format(
         name=ws.cell(TURRETS_OFFSET, i).value.replace("\n", "\\n").replace('"', '\\"'),
         description=as_string(ws.cell(TURRETS_OFFSET+1, i).value),
-        tier=ws.cell(TURRETS_OFFSET+2, i).value,
+        tier=isNumber(ws.cell(TURRETS_OFFSET+2, i).value),
         rarity=as_string(ws.cell(TURRETS_OFFSET+3, i).value),
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
-        weight= ws.cell(TURRETS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(TURRETS_OFFSET+8, i).value) is not None else -1,
+        weight= isNumber(ws.cell(TURRETS_OFFSET+8, i).value),
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
-        armor_front=armor[0],
-        armor_back=armor[2],
-        armor_side=armor[1],
+        armor_front=isNumber(armor[0]),
+        armor_back=isNumber(armor[2]),
+        armor_side=isNumber(armor[1]),
         weapon_ammo_storage=ammo,
         weapon_blowout=blowout,
         weapon_clip=clip,
         weapon_aps=aps,
-        weapon_fcs=fcs if re.match(r'^\d+(\.\d+|)$', fcs) is not None  else -1,
+        weapon_fcs=isNumber(fcs),
         weapon_stabilizer=stab,
         weapon_sight_thermal = thermal,
         weapon_sight_rangefinder=rangefinder,
-        weapon_zoom_lower = zoom[0],
-        weapon_zoom_upper = zoom[1],
-        weapon_gun_reload_multi=reload_multi[0],
-        weapon_gun_reload_multi_caliber=reload_multi[1].replace("(", "").replace(")", "").replace("mm", ""),
-        weapon_gun_limits_up=limits_ver[1],
-        weapon_gun_limits_down=limits_ver[0].replace("-", ""),
-        weapon_gun_speed_vertical=speed[1][1:],
-        weapon_gun_speed_horizontal=speed[0][1:],
+        weapon_zoom_lower = isNumber(zoom[0]),
+        weapon_zoom_upper = isNumber(zoom[1]),
+        weapon_gun_reload_multi=isNumber(reload_multi[0]),
+        weapon_gun_reload_multi_caliber=isNumber(reload_multi[1].replace("(", "").replace(")", "").replace("mm", "")),
+        weapon_gun_limits_up=isNumber(limits_ver[1]),
+        weapon_gun_limits_down=isNumber(limits_ver[0].replace("-", "")),
+        weapon_gun_speed_vertical=isNumber(speed[1][1:]),
+        weapon_gun_speed_horizontal=isNumber(speed[0][1:]),
         crew='["'+ws.cell(TURRETS_OFFSET+16, i).value.replace("\n", '", "')+'"]',
         based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+18, i).value.split()) if ws.cell(TURRETS_OFFSET+17, i).value is not None else "None"),
         paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+20, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+19, i).value is not None else "None"),
@@ -622,18 +634,18 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
     string = templates.GUNS.format(
         name=ws.cell(GUNS_OFFSET, i).value.replace("\n", "\\n").replace('"', '\\"'),
         description=as_string(ws.cell(GUNS_OFFSET+1, i).value),
-        tier=ws.cell(GUNS_OFFSET+2, i).value,
+        tier=isNumber(ws.cell(GUNS_OFFSET+2, i).value),
         rarity=as_string(ws.cell(GUNS_OFFSET+3, i).value),
         obtain=as_string(obtain_str.replace("\n", "")),
         resources=resources,
-        weight= ws.cell(GUNS_OFFSET+8, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(GUNS_OFFSET+8, i).value) is not None else -1,
+        weight=isNumber(ws.cell(GUNS_OFFSET+8, i).value),
         requires_type = as_string(requires[0]),
         requires_name = as_string(requires[1]),
         weapon_clip=ws.cell(GUNS_OFFSET+9, i).value if type(ws.cell(GUNS_OFFSET+9, i).value) == int else 0,
-        weapon_reload=ws.cell(GUNS_OFFSET+7, i).value.replace("s", "") if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(GUNS_OFFSET+7, i).value.replace("s", "")) else -1,
-        weapon_accuracy=ws.cell(GUNS_OFFSET+4, i).value if ws.cell(GUNS_OFFSET+4, i).value.isdigit() else -1,
-        weapon_ammo_volume=ws.cell(GUNS_OFFSET+5, i).value if re.match(r'^-?\d+(?:\.\d+)*$', ws.cell(GUNS_OFFSET+5, i).value) else -1,
-        weapon_caliber=ws.cell(GUNS_OFFSET+6, i).value.replace("mm", ""),
+        weapon_reload=isNumber(ws.cell(GUNS_OFFSET+7, i).value.replace("s", "")),
+        weapon_accuracy=isNumber(ws.cell(GUNS_OFFSET+4, i).value),
+        weapon_ammo_volume=isNumber(ws.cell(GUNS_OFFSET+5, i).value),
+        weapon_caliber=isNumber(ws.cell(GUNS_OFFSET+6, i).value.replace("mm", "")),
         weapon_ammunition=ammunition,
         based_on=as_string(" ".join(ws.cell(GUNS_OFFSET+15, i).value.split()) if "None" not in ws.cell(GUNS_OFFSET+15, i).value else ""),
         paired_turret=as_string(" ".join(ws.cell(GUNS_OFFSET+16, i).value.split()[:-1]) if "None" not in ws.cell(GUNS_OFFSET+16, i).value else ""),
@@ -804,15 +816,15 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
         ammunition += templates.SECONDARIES.format(
             type=as_string(att_type),
             ammo_type=as_string(ammo_type),
-            caliber=caliber,
-            ammo_count=ammo_count,
-            reload_count=reload_count,
+            caliber=isNumber(caliber),
+            ammo_count=isNumber(ammo_count),
+            reload_count=isNumber(reload_count),
             reload=reload if is_ATGM else -1,
             max_launch_speed=max_launch_speed if is_ATGM else -1,
-            penetration_0deg=splitted_ammo_data[1].split(":")[1].replace("mm", ""),
-            penetration_30deg=splitted_ammo_data[2].split(":")[1].replace("mm", ""),
-            penetration_60deg=splitted_ammo_data[3].split(":")[1].replace("mm", ""),
-            velocity=splitted_ammo_data[4].split(":")[1].replace("m/s", ""),
+            penetration_0deg=isNumber(splitted_ammo_data[1].split(":")[1].replace("mm", "")),
+            penetration_30deg=isNumber(splitted_ammo_data[2].split(":")[1].replace("mm", "")),
+            penetration_60deg=isNumber(splitted_ammo_data[3].split(":")[1].replace("mm", "")),
+            velocity=isNumber(splitted_ammo_data[4].split(":")[1].replace("m/s", "")),
             ricochet_angle=splitted_ammo_data[5].split(":")[1],
             stats=stats
         )
