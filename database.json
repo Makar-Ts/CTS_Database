@@ -388,7 +388,7 @@
         "turret": "Recon"
     }
 }
-,"L3 new": {
+,"L3": {
     "description": "Why are you using this? Stop Hurting Yourself",
     "tier": 1.0,
     "rarity": "Common",
@@ -636,6 +636,63 @@
     "based_on": "Forklift [Forklift]",
     "paired": {
         "gun": "",
+        "turret": ""
+    }
+}
+,"AFS MK 1": {
+    "description": " Assault Fire Support vehicle",
+    "tier": 1.0,
+    "rarity": "Legendary",
+    "obtain": "Common Crate Drop",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 8.19,
+        "armor": {
+            "front": 13,
+            "back": 8,
+            "side": 13
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 20,
+            "backward": -20,
+            "torque": 12,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 7.1,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": false,
+                "reload_multiplier": 0.9,
+                "reload_multiplier_caliber": 70,
+                "limits": {
+                    "up": 19,
+                    "down": 19,
+                    "left": 48,
+                    "right": 40
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 0,
+                    "zoom_lower": 1.5,
+                    "zoom_upper": 4.0
+                }
+            }
+        },
+        "crew": ["Driver", "Gunner"]
+    },
+    "based_on": "None",
+    "paired": {
+        "gun": "None",
         "turret": ""
     }
 }
@@ -1003,7 +1060,7 @@
     "description": "description",
     "tier": 2.0,
     "rarity": "Legendary",
-    "obtain": "Monthly Reward, August 2024",
+    "obtain": "Monthly Reward, August 2024 | 3⭐ (UPLE Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -1229,7 +1286,64 @@
     },
     "based_on": "Ferret Armoured Car [UK]",
     "paired": {
-        "gun": "",
+        "gun": "ZU-23 (Twin)",
+        "turret": "ZU Platform"
+    }
+}
+,"Trigonometry": {
+    "description": "Great sloped frontal armor, but suffers the drawbacks of hull aiming.",
+    "tier": 3.0,
+    "rarity": "Uncommon",
+    "obtain": "Joe's Shack",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 5.20,
+        "armor": {
+            "front": 70,
+            "back": 32,
+            "side": 32
+        },
+        "speed": {
+            "acceleration": 9,
+            "forward": 38,
+            "backward": -14,
+            "torque": 5,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 10.5,
+            "blowout": -1,
+            "hull_aim": 2,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": false,
+                "reload_multiplier": 1.07,
+                "reload_multiplier_caliber": 85,
+                "limits": {
+                    "up": 6,
+                    "down": 6,
+                    "left": 0,
+                    "right": 0
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 0,
+                    "zoom_lower": 2.0,
+                    "zoom_upper": 7.5
+                }
+            }
+        },
+        "crew": ["Driver", "Gunner"]
+    },
+    "based_on": "Speedster [Fake]",
+    "paired": {
+        "gun": "57mm Scimitar",
         "turret": ""
     }
 }
@@ -1730,7 +1844,7 @@
         "turret": "Battlepass III"
     }
 }
-,"KV-1 (1940)": {
+,"KV-1": {
     "description": "As a WWII tank enthusiats PLEASE add K V tank ##### and turrets. Same for the Tiger and King Tiger.",
     "tier": 4.0,
     "rarity": "Uncommon",
@@ -3448,7 +3562,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 5.0,
+        "weight": 5.00,
         "armor": {
             "front": 64,
             "back": 14,
@@ -3488,7 +3602,7 @@
         "name": ""
     },
     "stats": {
-        "weight": 2.3,
+        "weight": 2.30,
         "armor": {
             "front": 0,
             "back": 0,
@@ -3578,7 +3692,7 @@
     "description": "Ewww brotha what is that eeew",
     "tier": 5.0,
     "rarity": "Legendary",
-    "obtain": "Monthly Reward, September 2024",
+    "obtain": "Monthly Reward, September 2024 | 4⭐ (FCM F1 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -3612,6 +3726,46 @@
     "paired": {
         "gun": "",
         "turret": "FCM F1"
+    }
+}
+,"Elk": {
+    "description": "you deer",
+    "tier": 5.0,
+    "rarity": "Rare",
+    "obtain": "Monthly Reward, January 2025 | 4⭐ (Elk set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 10.00,
+        "armor": {
+            "front": 20,
+            "back": 20,
+            "side": 20
+        },
+        "speed": {
+            "acceleration": 4,
+            "forward": 110,
+            "backward": -70,
+            "torque": 12,
+            "rate": 1.4
+        },
+        "weaponry": {
+            "ammo_storage": 0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver1", "Driver2"]
+    },
+    "based_on": "None (?)",
+    "paired": {
+        "gun": "",
+        "turret": "Elk"
     }
 }
 ,"T93E2 Whitetail": {
@@ -4815,7 +4969,7 @@
                 "reload_multiplier": 1.24,
                 "reload_multiplier_caliber": 106,
                 "limits": {
-                    "up": 20,
+                    "up": 90,
                     "down": 8,
                     "left": 4,
                     "right": 4
@@ -4974,7 +5128,7 @@
             "side": 30
         },
         "speed": {
-            "acceleration": 9,
+            "acceleration": 14,
             "forward": 89,
             "backward": -42,
             "torque": 7,
@@ -4997,7 +5151,7 @@
     }
 }
 ,"Trolley ": {
-    "description": "Mall Cop",
+    "description": "The Ultimate Vehicle",
     "tier": 6.0,
     "rarity": "Legendary",
     "obtain": "Monthly Reward, June 2023 | 3⭐ (Trolley Set)",
@@ -5029,8 +5183,8 @@
             "gun": {
                 "fcs": 1,
                 "stabilizer": false,
-                "reload_multiplier": 0.20,
-                "reload_multiplier_caliber": 17,
+                "reload_multiplier": 1.0,
+                "reload_multiplier_caliber": 75,
                 "limits": {
                     "up": 12,
                     "down": 15,
@@ -5038,7 +5192,7 @@
                     "right": 5
                 },
                 "sight": {
-                    "rangefinder": 0,
+                    "rangefinder": 1,
                     "thermal": 0,
                     "zoom_lower": 1.0,
                     "zoom_upper": 1.5
@@ -5936,6 +6090,46 @@
     "paired": {
         "gun": "105mm Royal",
         "turret": ""
+    }
+}
+,"Bank Prince ATDU": {
+    "description": "Challenger Challenged",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Monthly Reward, December 2024 | 4⭐ (Bank Price ATDU Set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 37.00,
+        "armor": {
+            "front": 450,
+            "back": 32,
+            "side": 30
+        },
+        "speed": {
+            "acceleration": 7,
+            "forward": 25,
+            "backward": -16,
+            "torque": 15,
+            "rate": 40
+        },
+        "weaponry": {
+            "ammo_storage": 51.6,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver1", "Driver2"]
+    },
+    "based_on": "Black Prince [Fake]",
+    "paired": {
+        "gun": "None",
+        "turret": "Bank Prince ATDU"
     }
 }
 ,"Rooikat": {
@@ -7080,46 +7274,6 @@
         "turret": "T-62BVMP"
     }
 }
-,"Bank Prince ATDU": {
-    "description": "Challenger Challenged",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Monthly Reward, December 2024",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 37.00,
-        "armor": {
-            "front": 450,
-            "back": 32,
-            "side": 30
-        },
-        "speed": {
-            "acceleration": 9,
-            "forward": 25,
-            "backward": -16,
-            "torque": 15,
-            "rate": 40
-        },
-        "weaponry": {
-            "ammo_storage": 51.6,
-            "blowout": -1,
-            "hull_aim": 0,
-            "aps": false,
-            "have_gun": false,
-            "gun": {}
-        },
-        "crew": ["Driver1", "Driver2"]
-    },
-    "based_on": "Black Prince [Fake]",
-    "paired": {
-        "gun": "None",
-        "turret": "Bank Prince ATDU"
-    }
-}
 ,"AFG MK 1": {
     "description": "ARGGGGG ",
     "tier": 8.0,
@@ -7903,7 +8057,7 @@
             "side": 25
         },
         "speed": {
-            "acceleration": 13,
+            "acceleration": 11,
             "forward": 73,
             "backward": -34,
             "torque": 20,
@@ -8200,7 +8354,7 @@
             "side": 90
         },
         "speed": {
-            "acceleration": 11,
+            "acceleration": 10,
             "forward": 80,
             "backward": -11,
             "torque": 14,
@@ -8386,7 +8540,7 @@
     "description": "Long german word 1-2",
     "tier": 10.0,
     "rarity": "Legendary",
-    "obtain": "Monthly Reward, November 2024",
+    "obtain": "Monthly Reward, November 2024 | 5⭐ (VT1-2 Set)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -8437,6 +8591,103 @@
     "paired": {
         "gun": "120mm L44",
         "turret": ""
+    }
+}
+,"Sleigh": {
+    "description": "Ho! Ho! Ho!",
+    "tier": 10.0,
+    "rarity": "Mythical",
+    "obtain": "Joe's ShackChristmas 2024",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 1.65,
+        "armor": {
+            "front": 10,
+            "back": 10,
+            "side": 10
+        },
+        "speed": {
+            "acceleration": 15,
+            "forward": 70,
+            "backward": -13,
+            "torque": 25,
+            "rate": 1.68
+        },
+        "weaponry": {
+            "ammo_storage": 41.7,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": true,
+            "gun": {
+                "fcs": -1,
+                "stabilizer": false,
+                "reload_multiplier": 0.98,
+                "reload_multiplier_caliber": 73,
+                "limits": {
+                    "up": 20,
+                    "down": 12,
+                    "left": 180,
+                    "right": 180
+                },
+                "sight": {
+                    "rangefinder": 0,
+                    "thermal": 0,
+                    "zoom_lower": 1.0,
+                    "zoom_upper": 5.0
+                }
+            }
+        },
+        "crew": ["Driver1", "Driver2", "Gunner", "Commander"]
+    },
+    "based_on": "Santa's Sleigh [Real]",
+    "paired": {
+        "gun": "150mm Jolly Gift",
+        "turret": ""
+    }
+}
+,"Turtle Tank": {
+    "description": "a helicopter with tracks",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Unobtainable (May 2024 Incident)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 30.00,
+        "armor": {
+            "front": 100,
+            "back": 63,
+            "side": 90
+        },
+        "speed": {
+            "acceleration": 11,
+            "forward": 80,
+            "backward": -11,
+            "torque": 14,
+            "rate": 70
+        },
+        "weaponry": {
+            "ammo_storage": 0,
+            "blowout": -1,
+            "hull_aim": 0,
+            "aps": false,
+            "have_gun": false,
+            "gun": {}
+        },
+        "crew": ["Driver"]
+    },
+    "based_on": "T-80BV [USSR] T-62 (Turtle) [Russia]",
+    "paired": {
+        "gun": "125mm 2A46M-1",
+        "turret": "T-80BV"
     }
 }
 ,"EXM-SFSTC": {
@@ -8595,7 +8846,7 @@
     },
     "based_on": "T-84U [Ukraine]",
     "paired": {
-        "gun": "125mm 2A46M",
+        "gun": "",
         "turret": "T-84-120"
     }
 }
@@ -9084,7 +9335,7 @@
                 "fcs": 5,
                 "stabilizer": true,
                 "reload_multiplier": 1.5,
-                "reload_multiplier_caliber": -1,
+                "reload_multiplier_caliber": 145,
                 "limits": {
                     "up": 21,
                     "down": 5,
@@ -9975,6 +10226,57 @@
     "paired": {
         "hull": "Ka-Chi",
         "gun": "47mm Type 1"
+    }
+}
+,"Elk": {
+    "description": "50 CAL WOOOO",
+    "tier": 2.0,
+    "rarity": "Rare",
+    "obtain": "Monthly Reward, January 2025 | 4⭐ (Elk set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.50,
+        "armor": {
+            "front": 20,
+            "back": 20,
+            "side": 20
+        },
+        "weaponry": {
+            "ammo_storage": 3.9,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": false,
+            "sight": {
+                "rangefinder": -1,
+                "thermal": 0,
+                "zoom_lower": 1.0,
+                "zoom_upper": 8.0
+            },
+            "gun": {
+                "reload_multiplier": 0.8,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 70,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 57.3,
+                    "horizontal": 27
+                }
+            }
+        },
+        "crew": ["Gunner"]
+    },
+    "based_on": "None (?)",
+    "paired": {
+        "hull": "Elk",
+        "gun": ""
     }
 }
 ,"EGG Mk 5": {
@@ -11146,7 +11448,7 @@
     },
     "based_on": "KV-2 [USSR]",
     "paired": {
-        "hull": "KV-1 (1940)",
+        "hull": "KV-1",
         "gun": "152mm Devastator [4] 107mm ZIS-6"
     }
 }
@@ -11501,7 +11803,7 @@
         },
         "crew": ["Commander", "Loader", "Gunner"]
     },
-    "based_on": "90mm GMC M18 \"Super Hellcat\" [USA]",
+    "based_on": "90mm GMC M18 \"Super Hellcat\" [USA] M36 GMC Jackson [USA]",
     "paired": {
         "hull": "T93E2 Whitetail",
         "gun": "90mm Freedom II"
@@ -12115,7 +12417,7 @@
     },
     "based_on": "KV-1 [USSR]",
     "paired": {
-        "hull": "KV-1 (1940)",
+        "hull": "KV-1",
         "gun": ""
     }
 }
@@ -12370,7 +12672,7 @@
     },
     "based_on": "ZU-23-2 Mount [USSR]",
     "paired": {
-        "hull": "MT-LB",
+        "hull": "FV701 Ferret [2] MT-LB",
         "gun": "ZU-23 (Twin)"
     }
 }
@@ -13802,6 +14104,57 @@
         "gun": "112mm HATG"
     }
 }
+,"Bank Prince ATDU": {
+    "description": "Challenger challenged",
+    "tier": 7.0,
+    "rarity": "Epic",
+    "obtain": "Monthly Reward, December 2024 | 4⭐ (Bank Price ATDU Set)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 15.00,
+        "armor": {
+            "front": 152,
+            "back": 101,
+            "side": 95
+        },
+        "weaponry": {
+            "ammo_storage": 5.9,
+            "blowout": -1,
+            "clip": 0,
+            "aps": false,
+            "fcs": -1,
+            "stabilizer": true,
+            "sight": {
+                "rangefinder": 1,
+                "thermal": 0,
+                "zoom_lower": 2.0,
+                "zoom_upper": 10.0
+            },
+            "gun": {
+                "reload_multiplier": 1.3,
+                "reload_multiplier_caliber": 0,
+                "limits": {
+                    "up": 20,
+                    "down": 12
+                },
+                "speed": {
+                    "vertical": 57.3,
+                    "horizontal": 27
+                }
+            }
+        },
+        "crew": ["Commander", "Loader", "Gunner"]
+    },
+    "based_on": "Black Prince [Fake]",
+    "paired": {
+        "hull": "Bank Prince ATDU",
+        "gun": "None"
+    }
+}
 ,"T-55": {
     "description": "hi",
     "tier": 8.0,
@@ -15077,57 +15430,6 @@
         "gun": "115mm U-5TS"
     }
 }
-,"Bank Prince ATDU": {
-    "description": "Challenger challenged",
-    "tier": 8.0,
-    "rarity": "Epic",
-    "obtain": "Monthly Reward, February 2024 | 4⭐ (Chieftain SID Set)",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 15.00,
-        "armor": {
-            "front": 152,
-            "back": 101,
-            "side": 95
-        },
-        "weaponry": {
-            "ammo_storage": 5.9,
-            "blowout": -1,
-            "clip": 0,
-            "aps": false,
-            "fcs": -1,
-            "stabilizer": true,
-            "sight": {
-                "rangefinder": 0,
-                "thermal": 0,
-                "zoom_lower": 3.0,
-                "zoom_upper": 6.0
-            },
-            "gun": {
-                "reload_multiplier": 1.3,
-                "reload_multiplier_caliber": 0,
-                "limits": {
-                    "up": 20,
-                    "down": 12
-                },
-                "speed": {
-                    "vertical": 57.3,
-                    "horizontal": 27
-                }
-            }
-        },
-        "crew": ["Commander", "Loader", "Gunner"]
-    },
-    "based_on": "Chieftain SID [UK]",
-    "paired": {
-        "hull": "Chieftain SID",
-        "gun": "120mm L11A1"
-    }
-}
 ,"Merkava Mk 3": {
     "description": "",
     "tier": 9.0,
@@ -15532,7 +15834,7 @@
     },
     "based_on": "Otomatic [Italy]",
     "paired": {
-        "hull": "OF-40",
+        "hull": "Palmaria",
         "gun": "76mm OTO"
     }
 }
@@ -18541,7 +18843,7 @@
         "turret": "XM800TX"
     }
 }
-,"Quack": {
+,"75mm Quack": {
     "description": "",
     "tier": 3.0,
     "rarity": "Legendary",
@@ -20078,9 +20380,9 @@
             "ammunition": [{
     "type": "APDS ",
     "penetration": {
-        "0":  227,
-        "30":  195,
-        "60":  106
+        "0":  220,
+        "30":  187,
+        "60":  88
     },
     "velocity":  1200,
     "ricochet_angle":  78,
@@ -20445,9 +20747,9 @@
             "ammunition": [{
     "type": "HEAT ",
     "penetration": {
-        "0":  380,
-        "30":  329,
-        "60":  190
+        "0":  310,
+        "30":  268,
+        "60":  155
     },
     "velocity":  682,
     "ricochet_angle":  73,
@@ -20677,9 +20979,9 @@
             "ammunition": [{
     "type": "AP ",
     "penetration": {
-        "0":  218,
-        "30":  185,
-        "60":  85
+        "0":  192,
+        "30":  163,
+        "60":  75
     },
     "velocity":  929,
     "ricochet_angle":  70,
@@ -20989,6 +21291,20 @@
             "ammo_volume": 2.05,
             "caliber:": 155,
             "ammunition": [{
+    "type": "HEAT ",
+    "penetration": {
+        "0":  400,
+        "30":  346,
+        "60":  200
+    },
+    "velocity":  682,
+    "ricochet_angle":  87,
+    "stats": {
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
     "type": "HE (PF)",
     "penetration": {
         "0":  61,
@@ -21001,20 +21317,6 @@
         "explosive_mass": " 9.14kg",
         "fuse_radius":  3,
         "arming_distance":  300
-    }
-},
-{
-    "type": "HEAT ",
-    "penetration": {
-        "0":  400,
-        "30":  346,
-        "60":  200
-    },
-    "velocity":  682,
-    "ricochet_angle":  87,
-    "stats": {
-        "fuse_radius": -1,
-        "arming_distance": -1
     }
 }]
         }
@@ -21727,7 +22029,7 @@
 }]
         }
     },
-    "based_on": "120mm SA46 [France]",
+    "based_on": "120mm SA46 D.1203 [France]",
     "paired": {
         "hull": "L'bunkre",
         "turret": ""
@@ -21796,7 +22098,7 @@
         "60":  120
     },
     "velocity":  1200,
-    "ricochet_angle":  80,
+    "ricochet_angle":  71,
     "stats": {}
 },
 {
@@ -22401,8 +22703,8 @@
         "weight": 1.20,
         "weaponry": {
             "clip": 0,
-            "reload": 8.7,
-            "accuracy": 161,
+            "reload": 9.2,
+            "accuracy": 100,
             "ammo_volume": 1.03,
             "caliber:": 115,
             "ammunition": [{
@@ -22419,12 +22721,12 @@
 {
     "type": "HEAT ",
     "penetration": {
-        "0":  432,
-        "30":  374,
-        "60":  216
+        "0":  360,
+        "30":  312,
+        "60":  180
     },
     "velocity":  960,
-    "ricochet_angle":  89,
+    "ricochet_angle":  74,
     "stats": {
         "fuse_radius": -1,
         "arming_distance": -1
@@ -22433,9 +22735,9 @@
 {
     "type": "HE ",
     "penetration": {
-        "0":  40,
-        "30":  40,
-        "60":  40
+        "0":  32,
+        "30":  32,
+        "60":  32
     },
     "velocity":  800,
     "ricochet_angle":  81,
@@ -22527,56 +22829,60 @@
         "turret": ""
     }
 }
-,"66mm NUCLEAR WEAPON 5000": {
-    "description": "Built-into AFG MK 1 [8]",
+,"140mm Japanese glory": {
+    "description": "Built-into Naval [8]",
     "tier": 8.0,
-    "rarity": "Mythical",
-    "obtain": "Joe's Shack, April 1st 2024Built-Into AFG MK 1",
+    "rarity": "Epic",
+    "obtain": "Monthly Reward, February 2025Built-Into Naval",
     "resources": {},
     "requires": {
         "type": "None",
         "name": ""
     },
     "stats": {
-        "weight": 3.00,
+        "weight": 10.00,
         "weaponry": {
             "clip": 0,
-            "reload": 70.0,
-            "accuracy": 161,
-            "ammo_volume": 47.91,
-            "caliber:": 610,
+            "reload": 18.5,
+            "accuracy": 80,
+            "ammo_volume": 1.62,
+            "caliber:": 140,
             "ammunition": [{
-    "type": "AP ",
+    "type": "APHE ",
     "penetration": {
-        "0":  600,
-        "30":  519,
-        "60":  297
+        "0":  250,
+        "30":  212,
+        "60":  97
     },
-    "velocity":  80,
-    "ricochet_angle":  85,
-    "stats": {}
+    "velocity":  1000,
+    "ricochet_angle":  70,
+    "stats": {
+        "fuse_sensitive":  12,
+        "fuse_delay":  1.2,
+        "explosive_mass": " 400g"
+    }
 },
 {
-    "type": "HE (PF)",
+    "type": "HE ",
     "penetration": {
-        "0":  130,
-        "30":  130,
-        "60":  130
+        "0":  100,
+        "30":  100,
+        "60":  100
     },
-    "velocity":  80,
-    "ricochet_angle":  89,
+    "velocity":  600,
+    "ricochet_angle":  75,
     "stats": {
-        "explosive_mass": " 1034.42kg",
-        "fuse_radius":  30,
-        "arming_distance":  500
+        "explosive_mass": " 7.15kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 }]
         }
     },
-    "based_on": "",
+    "based_on": "40cm/45 Type 94 [Japan]",
     "paired": {
-        "hull": "AFG MK 1",
-        "turret": ""
+        "hull": "",
+        "turret": "Naval"
     }
 }
 ,"62.7mm Fusiler II": {
@@ -22605,7 +22911,7 @@
         "60":  57
     },
     "velocity":  1400,
-    "ricochet_angle":  80,
+    "ricochet_angle":  71,
     "stats": {}
 },
 {
@@ -22767,47 +23073,6 @@
     "paired": {
         "hull": "",
         "turret": "Battlepass Zweimal"
-    }
-}
-,"MistleTOW": {
-    "description": "SPREAD THE HOLIDAY CHEER",
-    "tier": 9.0,
-    "rarity": "Legendary",
-    "obtain": "Legendary Crate Drop(Christmas 2023)",
-    "resources": {},
-    "requires": {
-        "type": "None",
-        "name": ""
-    },
-    "stats": {
-        "weight": 0.019,
-        "weaponry": {
-            "clip": 0,
-            "reload": 9.0,
-            "accuracy": 260,
-            "ammo_volume": 1.96,
-            "caliber:": 152,
-            "ammunition": [{
-    "type": "ATGM (Tandem)",
-    "penetration": {
-        "0":  870,
-        "30":  753,
-        "60":  435
-    },
-    "velocity":  400,
-    "ricochet_angle":  80,
-    "stats": {
-        "range":  4.0,
-        "fuse_radius": -1,
-        "arming_distance": -1
-    }
-}]
-        }
-    },
-    "based_on": "BGM-71C ITOW [Fake]",
-    "paired": {
-        "hull": "",
-        "turret": ""
     }
 }
 ,"25mm Oerlikon": {
@@ -23036,7 +23301,7 @@
     "based_on": "M68A1 [USA]",
     "paired": {
         "hull": "",
-        "turret": "XT3R Faux LEP [9] M1 [10] M1 Merry Chrysler [10] M1 Special"
+        "turret": "XT3R Faux LEP [10] M1 [10] M1 Merry Chrysler [10] M1 Special"
     }
 }
 ,"105mm F2 48 Calibre": {
@@ -23716,6 +23981,47 @@
         "turret": "M1 FREEDOM"
     }
 }
+,"MistleTOW": {
+    "description": "SPREAD THE HOLIDAY CHEER",
+    "tier": 10.0,
+    "rarity": "Legendary",
+    "obtain": "Legendary Crate Drop(Christmas 2023)",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.019,
+        "weaponry": {
+            "clip": 0,
+            "reload": 9.0,
+            "accuracy": 260,
+            "ammo_volume": 1.96,
+            "caliber:": 152,
+            "ammunition": [{
+    "type": "ATGM (Tandem)",
+    "penetration": {
+        "0":  870,
+        "30":  753,
+        "60":  435
+    },
+    "velocity":  400,
+    "ricochet_angle":  80,
+    "stats": {
+        "range":  4.0,
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "BGM-71C ITOW [Fake]",
+    "paired": {
+        "hull": "",
+        "turret": ""
+    }
+}
 ,"30mm KBA-1": {
     "description": "Built-into BTR-4E [10]",
     "tier": 10.0,
@@ -23751,6 +24057,62 @@
     "paired": {
         "hull": "",
         "turret": "BTR-4E"
+    }
+}
+,"150mm Jolly Gift": {
+    "description": "Built-into Sleigh [10]",
+    "tier": 10.0,
+    "rarity": "Mythical",
+    "obtain": "Built-Into Sleigh",
+    "resources": {},
+    "requires": {
+        "type": "None",
+        "name": ""
+    },
+    "stats": {
+        "weight": 0.33,
+        "weaponry": {
+            "clip": 0,
+            "reload": 15.0,
+            "accuracy": 80,
+            "ammo_volume": 1.9,
+            "caliber:": 150,
+            "ammunition": [{
+    "type": "HE ",
+    "penetration": {
+        "0":  40,
+        "30":  40,
+        "60":  40
+    },
+    "velocity":  120,
+    "ricochet_angle":  80,
+    "stats": {
+        "explosive_mass": " 17.58kg",
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "ATGM (Tandem/SG)",
+    "penetration": {
+        "0":  30,
+        "30":  26,
+        "60":  15
+    },
+    "velocity":  200,
+    "ricochet_angle":  90,
+    "stats": {
+        "range":  0.8,
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+}]
+        }
+    },
+    "based_on": "Christmas Gifts [Real]",
+    "paired": {
+        "hull": "",
+        "turret": "Sleigh"
     }
 }
 ,"Pan": {
@@ -23868,7 +24230,7 @@
             "ammo_volume": 65.75,
             "caliber:": 700,
             "ammunition": [{
-    "type": "ATGM ",
+    "type": "ATGM (SG)",
     "penetration": {
         "0":  10000,
         "30":  8660,
@@ -23911,7 +24273,7 @@
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  508,
+        "0":  500,
         "30":  427,
         "60":  240
     },
@@ -24268,10 +24630,10 @@
     "based_on": "OTO Melara 76mm [Italy]",
     "paired": {
         "hull": "",
-        "turret": "Oto"
+        "turret": "OTO"
     }
 }
-,"120mm L15": {
+,"120mm L11A5": {
     "description": "BRITISH BIAS",
     "tier": 11.0,
     "rarity": "Mythical",
@@ -24415,7 +24777,7 @@
     "description": "hello",
     "tier": 11.0,
     "rarity": "Mythical",
-    "obtain": "Monthly Reward, December 2024",
+    "obtain": "Monthly Reward, December 2024 | 8⭐ (130mm TG50)",
     "resources": {},
     "requires": {
         "type": "None",
@@ -24425,18 +24787,18 @@
         "weight": 2.10,
         "weaponry": {
             "clip": 0,
-            "reload": 10.0,
+            "reload": 13.0,
             "accuracy": 80,
             "ammo_volume": 1.37,
             "caliber:": 130,
             "ammunition": [{
     "type": "APFSDS ",
     "penetration": {
-        "0":  620,
-        "30":  516,
-        "60":  280
+        "0":  550,
+        "30":  459,
+        "60":  250
     },
-    "velocity":  1650,
+    "velocity":  1550,
     "ricochet_angle":  80,
     "stats": {}
 },
@@ -24941,7 +25303,7 @@
             "ammo_volume": 2.40,
             "caliber:": 166,
             "ammunition": [{
-    "type": "HEAT (Tndm/PF)",
+    "type": "HEAT (Tandem)",
     "penetration": {
         "0":  915,
         "30":  792,
@@ -24950,8 +25312,8 @@
     "velocity":  1984,
     "ricochet_angle":  79,
     "stats": {
-        "fuse_radius":  5,
-        "arming_distance":  250
+        "fuse_radius": -1,
+        "arming_distance": -1
     }
 },
 {
@@ -24981,7 +25343,7 @@
     "stats": {
         "explosive_mass": " 15.49kg",
         "fuse_radius":  5,
-        "arming_distance":  300
+        "arming_distance":  1000
     }
 }]
         }
@@ -25163,7 +25525,7 @@
             "clip": 0,
             "reload": 13.5,
             "accuracy": 260,
-            "ammo_volume": 1.14,
+            "ammo_volume": 1.62,
             "caliber:": 140,
             "ammunition": [{
     "type": "APFSDS ",
@@ -25192,7 +25554,7 @@
 }]
         }
     },
-    "based_on": "XM291 (120mm) [USA]",
+    "based_on": "XM291 ATAC (140) [USA]",
     "paired": {
         "hull": "",
         "turret": "CATTB"
@@ -26975,6 +27337,27 @@
     "stats": {}
 }
     ]
+},"Bank Prince ATDU-Turret":{
+    "tier": 7.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "AP",
+    "caliber": 7.62,
+    "ammo_count": 800,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0": 13,
+        "30": 11,
+        "60": 4
+    },
+    "velocity": 853,
+    "ricochet_angle":  65,
+    "stats": {}
+}
+    ]
 },"106mm Recoilless-Gun":{
     "tier": 7.0,
     "secondaries": [
@@ -27175,7 +27558,7 @@
     "ammo_count": 1,
     "reload_count": 4,
     "reload":  12,
-    "max_launch_speed":  -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0": 1000,
         "30": 866,
@@ -28019,27 +28402,6 @@
     "stats": {}
 }
     ]
-},"Bank Prince ATDU-Turret":{
-    "tier": 8.0,
-    "secondaries": [
-        {
-    "type": "Coax",
-    "ammo_type": "AP",
-    "caliber": 7.62,
-    "ammo_count": 800,
-    "reload_count": 0,
-    "reload": -1,
-    "max_launch_speed": -1,
-    "penetration": {
-        "0": 13,
-        "30": 11,
-        "60": 4
-    },
-    "velocity": 853,
-    "ricochet_angle":  65,
-    "stats": {}
-}
-    ]
 },"Speedsta II-Hull":{
     "tier": 9.0,
     "secondaries": [
@@ -28264,7 +28626,7 @@
     "ammo_count": 2,
     "reload_count": 6,
     "reload":  12,
-    "max_launch_speed":  -1,
+    "max_launch_speed": -1,
     "penetration": {
         "0": 700,
         "30": 606,
@@ -28415,6 +28777,65 @@
     },
     "velocity": 1509,
     "ricochet_angle":  80,
+    "stats": {}
+}
+    ]
+},"Sleigh-Hull":{
+    "tier": 10.0,
+    "secondaries": [
+        {
+    "type": "Coax",
+    "ammo_type": "ATGM (Tandem)",
+    "caliber": -1,
+    "ammo_count": 2,
+    "reload_count": 8,
+    "reload":  12,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0": 60,
+        "30": 52,
+        "60": 30
+    },
+    "velocity": 15,
+    "ricochet_angle":  90,
+    "stats": {
+        "range":  2.0,
+        "fuse_radius": -1,
+        "arming_distance": -1
+    }
+},
+{
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 12.7,
+    "ammo_count": 600,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0": 26,
+        "30": 22,
+        "60": 8
+    },
+    "velocity": 929,
+    "ricochet_angle":  65,
+    "stats": {}
+},
+{
+    "type": "Hull",
+    "ammo_type": "AP",
+    "caliber": 12.7,
+    "ammo_count": 600,
+    "reload_count": 0,
+    "reload": -1,
+    "max_launch_speed": -1,
+    "penetration": {
+        "0": 26,
+        "30": 22,
+        "60": 8
+    },
+    "velocity": 929,
+    "ricochet_angle":  65,
     "stats": {}
 }
     ]
@@ -28715,7 +29136,7 @@
         "30": 121,
         "60": 70
     },
-    "velocity": 480,
+    "velocity": 240,
     "ricochet_angle":  90,
     "stats": {
         "range":  2.0,

