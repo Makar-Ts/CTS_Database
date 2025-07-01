@@ -46,6 +46,10 @@ HULL = """"{name}": {{
             "have_gun": {weapon_have_gun},
             "gun": {weapon_gun}
         }},
+        "modules": {{
+            "drone": {modules_drone},
+            "sensors": {modules_sensors}
+        }},
         "crew": {crew}
     }},
     "based_on": {based_on},
@@ -117,6 +121,10 @@ TURRET = """"{name}": {{
                 }}
             }}
         }},
+        "modules": {{
+            "drone": {modules_drone},
+            "sensors": {modules_sensors}
+        }},
         "crew": {crew}
     }},
     "based_on": {based_on},
@@ -184,7 +192,15 @@ AMMO_TYPES = {
     "ATGM": """{{
         "range": {range},
         "fuse_radius": {fuse_radius},
-        "arming_distance": {arming_distance}
+        "arming_distance": {arming_distance},
+        "guidance": "{guidance}",
+        "acceleration": {acceleration},
+        "max_g_force": {max_g_force},
+        "ignore_smoke": {ignore_smoke},
+        "guide_time": {guide_time},
+        "kinetic": {kinetic},
+        "irccm": {irccm},
+        "launch_speed": {launch_speed}
     }}""",
     "HE": """{{
         "explosive_mass": {explosive_mass},

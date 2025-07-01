@@ -9,7 +9,7 @@
 
 import time
 
-DATABASE_NAME = input()
+DATABASE_NAME = input()+".xlsx"
 start_time = time.time()
 
 
@@ -45,9 +45,9 @@ ws = wb['Raw Data']
 
 
 HULLS_OFFSET = 1    #Index offset
-TURRETS_OFFSET = 28
-GUNS_OFFSET = 50
-SEC_OFFSET = 69
+TURRETS_OFFSET = 30
+GUNS_OFFSET = 54
+SEC_OFFSET = 73
 
 hulls_string = ""
 turrets_string = ""
@@ -156,6 +156,14 @@ def isNumber(val: str):
     return -1
 
 
+def findStat(stats, find, ifFound, fallback):
+    for i, val in enumerate(stats):
+        if val.startswith(find):
+            return ifFound(val.split(': ')[1])
+    
+    return fallback
+
+
 # ---------------------------------------------------------------------------- #
 #                                 Prepare Time                                 #
 # ---------------------------------------------------------------------------- #
@@ -183,7 +191,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
     print("┌", ws.cell(HULLS_OFFSET+0, i).value)
     print("├ index:", i)
     
-    obtain_str, resources, requires = obtain_parcing(ws.cell(HULLS_OFFSET+22, i).value)
+    obtain_str, resources, requires = obtain_parcing(ws.cell(HULLS_OFFSET+24, i).value)
     
     
     # ----------------------------- Simple Data Parce ---------------------------- #
@@ -233,11 +241,9 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
     
     
     # Active Protection System
-    aps = ws.cell(HULLS_OFFSET+20, i).value.replace("N/A", "No")
-    if "Yes" in aps:
-        aps = "true"
-    else:
-        aps = "false"
+    aps = ws.cell(HULLS_OFFSET+20, i).value
+    if aps and "None" in aps.replace("N/A", "None"):
+        aps = "None"
     
     
     # -------------------------------- Turretless -------------------------------- #
@@ -255,7 +261,7 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         rangefinder = ws.cell(HULLS_OFFSET+19, i).value
         if "No" in rangefinder:
             rangefinder = "-1"
-        elif "Eyeball Mk.1" in rangefinder:
+        elif "Eyeball Mk. 1" in rangefinder:
             rangefinder = "0"
         elif "Stereoscopic" in rangefinder:
             rangefinder = "1"
@@ -349,10 +355,12 @@ while ws.cell(HULLS_OFFSET+0, i).value is not None:
         weapon_aps=aps,
         weapon_have_gun=have_gun,
         weapon_gun=hull_gun,
-        crew='["'+ws.cell(HULLS_OFFSET+21, i).value.replace("\n", '", "')+'"]',
-        based_on=as_string(" ".join(ws.cell(HULLS_OFFSET+23, i).value.split()) if ws.cell(HULLS_OFFSET+18, i).value is not None else "None"),
-        paired_gun=as_string(" ".join(ws.cell(HULLS_OFFSET+25, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+20, i).value is not None else "None"),
-        paired_turret=as_string(" ".join(ws.cell(HULLS_OFFSET+24, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+19, i).value is not None else "None")
+        modules_drone="true" if ws.cell(HULLS_OFFSET+22, i).value and "Yes" in ws.cell(HULLS_OFFSET+22, i).value else "false",
+        modules_sensors='["'+'", "'.join(ws.cell(HULLS_OFFSET+21, i).value.split(', '))+'"]' if ws.cell(HULLS_OFFSET+21, i).value and "None" not in ws.cell(HULLS_OFFSET+21, i).value else '[]',
+        crew='["'+ws.cell(HULLS_OFFSET+23, i).value.replace(", ", '", "')+'"]',
+        based_on=as_string(" ".join(ws.cell(HULLS_OFFSET+25, i).value.split()) if ws.cell(HULLS_OFFSET+25, i).value is not None else "None"),
+        paired_gun=as_string(" ".join(ws.cell(HULLS_OFFSET+27, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+27, i).value is not None else "None"),
+        paired_turret=as_string(" ".join(ws.cell(HULLS_OFFSET+26, i).value.split()[:-1]) if ws.cell(HULLS_OFFSET+26, i).value is not None else "None")
     )
     
     hulls_string += string.replace("#VALUE!", "0").replace("°", "").replace("�", "").replace(" (!)", "")
@@ -423,11 +431,9 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     
     
     # Active Protection System
-    aps = ws.cell(TURRETS_OFFSET+15, i).value.replace("N/A", "No")
-    if "Yes" in aps:
-        aps = "true"
-    else:
-        aps = "false"
+    aps = ws.cell(HULLS_OFFSET+20, i).value
+    if aps and "None" in aps.replace("N/A", "None"):
+        aps = "None"
     
     
     # Thermal generation
@@ -458,7 +464,7 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
     rangefinder = ws.cell(TURRETS_OFFSET+14, i).value
     if "No" in rangefinder:
         rangefinder = "-1"
-    elif "Eyeball Mk.1" in rangefinder:
+    elif "Eyeball Mk. 1" in rangefinder:
         rangefinder = "0"
     elif "Stereoscopic" in rangefinder:
         rangefinder = "1"
@@ -515,10 +521,12 @@ while ws.cell(TURRETS_OFFSET+0, i).value is not None:
         weapon_gun_limits_down=isNumber(limits_ver[0].replace("-", "")),
         weapon_gun_speed_vertical=isNumber(speed[1][1:]),
         weapon_gun_speed_horizontal=isNumber(speed[0][1:]),
-        crew='["'+ws.cell(TURRETS_OFFSET+16, i).value.replace("\n", '", "')+'"]',
-        based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+18, i).value.split()) if ws.cell(TURRETS_OFFSET+17, i).value is not None else "None"),
-        paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+20, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+19, i).value is not None else "None"),
-        paired_hull=as_string(" ".join(ws.cell(TURRETS_OFFSET+19, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+18, i).value is not None else "None")
+        modules_drone="true" if ws.cell(HULLS_OFFSET+17, i).value and "Yes" in ws.cell(HULLS_OFFSET+17, i).value else "false",
+        modules_sensors='["'+'", "'.join(ws.cell(HULLS_OFFSET+16, i).value.split(', '))+'"]' if ws.cell(HULLS_OFFSET+16, i).value and "None" not in ws.cell(HULLS_OFFSET+16, i).value else '[]',
+        crew='["'+ws.cell(TURRETS_OFFSET+18, i).value.replace(", ", '", "')+'"]',
+        based_on=as_string(" ".join(ws.cell(TURRETS_OFFSET+20, i).value.split()) if ws.cell(TURRETS_OFFSET+20, i).value is not None else "None"),
+        paired_gun=as_string(" ".join(ws.cell(TURRETS_OFFSET+22, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+22, i).value is not None else "None"),
+        paired_hull=as_string(" ".join(ws.cell(TURRETS_OFFSET+21, i).value.split()[:-1]) if ws.cell(TURRETS_OFFSET+21, i).value is not None else "None")
     )
     
     turrets_string += string.replace("#VALUE!", "0").replace("°", "").replace(" (!)", "")
@@ -585,32 +593,39 @@ while ws.cell(GUNS_OFFSET+0, i).value is not None:
         # APHE
         elif "APHE" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["APHE"].format(
-                fuse_sensitive=splitted_ammo_data[6].split(":")[1].replace("mm", ""),
-                fuse_delay=splitted_ammo_data[7].split(":")[1].replace("m", ""),
-                explosive_mass=as_string(splitted_ammo_data[8].split(":")[1])
+                fuse_sensitive=findStat(splitted_ammo_data, "Fuse Sens", lambda x: x.replace("mm", ""), "-1"),
+                fuse_delay=findStat(splitted_ammo_data, "Fuse Delay", lambda x: x.replace("mm", ""), "-1"),
+                explosive_mass=as_string(findStat(splitted_ammo_data, "Expl. Mass", lambda x: x, "-1"))
             )
         
         # HEAT and HEATFS
         elif "HEAT" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["HEAT"].format(
-                fuse_radius=splitted_ammo_data[6].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 6 else -1,
-                arming_distance=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 6 else -1
+                fuse_radius=findStat(splitted_ammo_data, "Fuse Radius", lambda x: x.replace("m", ""), "-1"),
+                arming_distance=findStat(splitted_ammo_data, "Arming Distance", lambda x: x.replace("m", ""), "-1")
             )
         
         # HE and HESH
         elif "HE" in splitted_ammo_data[0] or "HESH" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["HE"].format(
-                explosive_mass=as_string(splitted_ammo_data[6].split(":")[1]),
-                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1,
-                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1
+                explosive_mass=as_string(findStat(splitted_ammo_data, "Expl. Mass", lambda x: x, "-1")),
+                fuse_radius=findStat(splitted_ammo_data, "Fuse Radius", lambda x: x.replace("m", ""), "-1"),
+                arming_distance=findStat(splitted_ammo_data, "Arming Distance", lambda x: x.replace("m", ""), "-1")
             )
         
         # ATGM
         elif "ATGM" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["ATGM"].format(
-                range=splitted_ammo_data[6].split(":")[1].replace("km", ""),
-                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1,
-                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1
+                range=findStat(splitted_ammo_data, "Range", lambda x: x.replace("km", ""), "-1"),
+                fuse_radius=findStat(splitted_ammo_data, "Fuse Radius", lambda x: x.replace("m", ""), "-1"),
+                arming_distance=findStat(splitted_ammo_data, "Arming Distance", lambda x: x.replace("m", ""), "-1"),
+                guidance=as_string(findStat(splitted_ammo_data, "Guidance", lambda x: x.replace("m", ""), "Manual")),
+                acceleration=findStat(splitted_ammo_data, "Acceleration", lambda x: x.replace("s", ""), "-1"),
+                max_g_force=findStat(splitted_ammo_data, "Max G Force", lambda x: x.replace("G", ""), "-1"),
+                ignore_smoke=findStat(splitted_ammo_data, "Ignore Smoke", lambda x: "true" if "Yes" in x else "false", "false"),
+                guide_time=findStat(splitted_ammo_data, "Guide Time", lambda x: x.replace("s", ""), "-1"),
+                kinetic="true" if "KE" in splitted_ammo_data[0] else "false",
+                irccm=findStat(splitted_ammo_data, "IRCCM", lambda x: "true" if "Yes" in x else "false", "false")
             )
         else:
             stats="""{}"""
@@ -705,6 +720,8 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
         
         is_ATGM = False
         
+        ammo = findStat(splitted_ammo_data, "Ammo Count", lambda x: x.split('x'), ['-1', '-1'])
+        
         
         # ----------------------------------- Type ----------------------------------- #
         
@@ -715,59 +732,41 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
         # APHE
         elif "APHE" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["APHE"].format(
-                fuse_sensitive=splitted_ammo_data[6].split(":")[1].replace("mm", ""),
-                fuse_delay=splitted_ammo_data[7].split(":")[1].replace("m", ""),
-                explosive_mass=as_string(splitted_ammo_data[8].split(":")[1])
+                fuse_sensitive=findStat(splitted_ammo_data, "Fuse Sens", lambda x: x.replace("mm", ""), "-1"),
+                fuse_delay=findStat(splitted_ammo_data, "Fuse Delay", lambda x: x.replace("mm", ""), "-1"),
+                explosive_mass=as_string(findStat(splitted_ammo_data, "Expl. Mass", lambda x: x, "-1"))
             )
-            
+        
         # HEAT and HEATFS
         elif "HEAT" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["HEAT"].format(
-                fuse_radius=splitted_ammo_data[6].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1,
-                arming_distance=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 7 else -1
+                fuse_radius=findStat(splitted_ammo_data, "Fuse Radius", lambda x: x.replace("m", ""), "-1"),
+                arming_distance=findStat(splitted_ammo_data, "Arming Distance", lambda x: x.replace("m", ""), "-1")
             )
         
         # HE and HESH
         elif "HE" in splitted_ammo_data[0] or "HESH" in splitted_ammo_data[0]:
             stats=templates.AMMO_TYPES["HE"].format(
-                explosive_mass=as_string(splitted_ammo_data[6].split(":")[1]),
-                fuse_radius=splitted_ammo_data[7].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1,
-                arming_distance=splitted_ammo_data[8].split(":")[1].replace("m", "") if len(splitted_ammo_data) > 8 else -1
+                explosive_mass=as_string(findStat(splitted_ammo_data, "Expl. Mass", lambda x: x, "-1")),
+                fuse_radius=findStat(splitted_ammo_data, "Fuse Radius", lambda x: x.replace("m", ""), "-1"),
+                arming_distance=findStat(splitted_ammo_data, "Arming Distance", lambda x: x.replace("m", ""), "-1")
             )
         
         # ATGM
         elif "ATGM" in splitted_ammo_data[0]:
             is_ATGM = True
             
-            
-            # ATGM OTA or FS
-            if len(splitted_ammo_data) > 8:
-                if "Fuse Radius" in splitted_ammo_data[7].split(":")[0]:
-                    fuse_radius     = splitted_ammo_data[7].split(":")[1].replace("m", "")
-                    arming_distance = splitted_ammo_data[8].split(":")[1].replace("m", "")
-                else:
-                    fuse_radius     = -1
-                    arming_distance = -1
-            else:
-                fuse_radius     = -1
-                arming_distance = -1
-            
-            
-            reload = splitted_ammo_data[-3].split(":")[1].replace("s", "")
-            
-            ammo_count_splitted = splitted_ammo_data[-2].split()
-            reload_count = ammo_count_splitted[-2].replace("(+", "")
-            reload_count = reload_count if re.match(r'^-?\d+(?:\.\d+)*$', reload_count) is not None else 0
-            
-            ammo_count = ammo_count_splitted[-3]
-            
-            max_launch_speed = splitted_ammo_data[-1].split(":")[1]
-            
-            
             stats=templates.AMMO_TYPES["ATGM"].format(
-                range=splitted_ammo_data[6].split(":")[1].replace("km", ""),
-                fuse_radius=fuse_radius,
-                arming_distance=arming_distance
+                range=findStat(splitted_ammo_data, "Range", lambda x: x.replace("km", ""), "-1"),
+                fuse_radius=findStat(splitted_ammo_data, "Fuse Radius", lambda x: x.replace("m", ""), "-1"),
+                arming_distance=findStat(splitted_ammo_data, "Arming Dist", lambda x: x.replace("m", ""), "-1"),
+                guidance=findStat(splitted_ammo_data, "Guidance", lambda x: x, "Manual"),
+                acceleration=findStat(splitted_ammo_data, "Acceleration", lambda x: x.replace("s", ""), "-1"),
+                max_g_force=findStat(splitted_ammo_data, "Max G Force", lambda x: x.replace("G", ""), "-1"),
+                ignore_smoke=findStat(splitted_ammo_data, "Ignore Smoke", lambda x: "true" if "Yes" in x else "false", "false"),
+                guide_time=findStat(splitted_ammo_data, "Guide Time", lambda x: x.replace("s", ""), "-1"),
+                kinetic=findStat(splitted_ammo_data, "Kinetic", lambda x: "true" if "Yes" in x else "false", "false"),
+                irccm=findStat(splitted_ammo_data, "IRCCM", lambda x: "true" if "Yes" in x else "false", "false"),
             )
         else:
             stats="""{}"""
@@ -792,35 +791,16 @@ while ws.cell(SEC_OFFSET+0, i).value is not None:
             print("├ Unknown secondary type: " + types[0])
             continue
         
-        
-        # ------------------------------- Reloads Count ------------------------------ #
-        
-        if not is_ATGM:
-            ammo_count_splitted = splitted_ammo_data[-1].split()
-            if "reloads" in ammo_count_splitted[-1]:
-                reload_count = ammo_count_splitted[-2].replace("(+", "")
-                reload_count = reload_count if re.match(r'^-?\d+(?:\.\d+)*$', reload_count) is not None else 0
-                
-                ammo_count = ammo_count_splitted[-3]
-            else:
-                reload_count = 0
-                ammo_count = ammo_count_splitted[-1]
-            
-        if re.match(r'^-?\d+(?:\.\d+)*$', ammo_count) is None:
-            print("├ Invalid ammo count: " + ammo_count)
-            ammo_count = 0
-
-        
         # -------------------------------- Format Data ------------------------------- #
         
         ammunition += templates.SECONDARIES.format(
             type=as_string(att_type),
             ammo_type=as_string(ammo_type),
             caliber=isNumber(caliber),
-            ammo_count=isNumber(ammo_count),
-            reload_count=isNumber(reload_count),
-            reload=reload if is_ATGM else -1,
-            max_launch_speed=max_launch_speed if is_ATGM else -1,
+            ammo_count=isNumber(ammo[1]),
+            reload_count=isNumber(ammo[0]),
+            reload=findStat(splitted_ammo_data, "Reload", lambda x: x.replace("s", ""), "-1"),
+            max_launch_speed=findStat(splitted_ammo_data, "Launch Speed", lambda x: '-1' if 'N/A' in x else x, "-1"),
             penetration_0deg=isNumber(splitted_ammo_data[1].split(":")[1].replace("mm", "")),
             penetration_30deg=isNumber(splitted_ammo_data[2].split(":")[1].replace("mm", "")),
             penetration_60deg=isNumber(splitted_ammo_data[3].split(":")[1].replace("mm", "")),
